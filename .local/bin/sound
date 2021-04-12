@@ -1,0 +1,14 @@
+#! /bin/sh
+
+case "${1}" in
+	"increase") amixer sset Master 5%+ & dunstify -t 500 -u low -r '92813' "Volume: $(amixer sget Master | awk -F'[][]' '/dB/ { print $2 }')"
+	;;
+	"decrease") amixer sset Master 5%-; dunstify -t 500 -u low -r '92813' "Volume: $(amixer sget Master | awk -F'[][]' '/dB/ { print $2 }')"
+	;;
+	"mute") amixer sset Master toggle; dunstify -t 500 -u low -r '92813' "Volume $(amixer sget Master | awk -F '[][]' '/dB/ {print $6}')"
+	;;
+	"mincrease") amixer set 'Digital',0 60; dunstify -t 500 -u low -r '92813' "Mic on"
+	;;
+	"mdecrease") amixer set 'Digital',0 0; dunstify -t 500 -u low -r '92813' "Mic off"
+	;;
+esac
