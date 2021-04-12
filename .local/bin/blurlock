@@ -1,0 +1,16 @@
+#!/bin/bash
+# /usr/bin/blurlock
+
+# take screenshot
+icon="$HOME/Pictures/adigen.png"
+import -window root /tmp/screenshot.png
+
+# blur it
+convert /tmp/screenshot.png -scale 10% -scale 1000% /tmp/screenshotblur.png
+convert /tmp/screenshotblur.png $icon -gravity center -composite -matte /tmp/screenshotblur.png
+rm /tmp/screenshot.png
+
+# lock the screen
+i3lock -u -i /tmp/screenshotblur.png
+
+exit 0

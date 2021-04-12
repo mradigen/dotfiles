@@ -1,0 +1,127 @@
+# BSPWM Hotkeys/Keybindings
+
+
+###---Launch stuff---###
+
+# Terminal Emulator
+super + c
+	alacritty
+
+# Web Browser
+super + v
+	vivaldi-stable
+
+# File Browser
+super + x
+	alacritty --title=Ranger -e ranger ~/.config
+
+# Music Player
+super + z
+	alacritty --class=Music -e 'mocp'
+
+# Program Launcher
+super + f
+	rofi -show drun
+
+# Theme switcher
+super + t
+	rofigen $HOME/.config/rofi/menus/theme-switcher
+
+# Alsamixer
+super + m
+	alacritty --class=Alsamixer -e 'alsamixer'
+
+# nlyt dir
+super + n
+	alacritty --title=nlyt -e ranger ~/Desktop/nlyt/
+
+# Screenshot
+Print
+	i3-scrot
+
+# Clipboard
+super + h
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+######------------######
+
+###---Keybinds---###
+
+# Quit application
+super + {_,shift + }q
+	bspc node -{c,k}
+
+# Restart BSPWM
+super + shift + r
+	bspc wm -r
+
+# Exit BSPWM
+super + shift + x
+	bspc quit
+
+######------------######
+
+###---Moving Around---###
+
+# Switch between nodes
+super + Tab
+	bspc node -f next.local
+
+# Focus or move
+super + {_,shift + }{a,s,w,d}
+	bspc node -{f,s} {west,south,north,east}
+
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
+
+super + shift + {1-9,0}
+	id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}
+
+### Never going to use the resizing anyways cause right click resize is better
+# Expand a window from the outsides
+super + ctrl + {a,s,w,d}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# Expand a window from the insides
+super + ctrl + shift + {a,s,w,d}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+super + {_,shift +}e
+	{bspc desktop -l next, bspc node -t \~fullscreen}
+
+# Floating Windows
+super + space
+	if [ -z "$(bspc query -N -n focused.floating)" ]; then \
+        bspc node focused -t floating; \
+    else \
+        bspc node focused -t tiled; \
+    fi
+
+super + alt + space
+	if [ -z "$(bspc query -N -n focused.pseudo_tiled)" ]; then \
+        bspc node focused -t pseudo_tiled; \
+    else \
+        bspc node focused -t tiled; \
+    fi
+
+######-------------######
+
+###---Extras---###
+
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+	sound {increase,decrease}
+
+XF86AudioMute
+	exec ~/.config/polybar/mic.sh toggle
+
+ctrl + {o, p}
+	sound {mdecrease,mincrease}
+
+{XF86MonBrightnessUp,XF86MonBrightnessDown} 
+	{brightness 5 & dunstify -t 500 -u low -r "92813" "Brightness: $(cat /sys/class/backlight/intel_backlight/brightness)", brightness -5 & dunstify -t 500 -u low -r "92813" "Brightness: $(cat /sys/class/backlight/intel_backlight/brightness)"}
+
+XF86Display
+	desk
+
+super + {_,shift +}b
+	{blurlock, blurlock; systemctl suspend}

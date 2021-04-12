@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/adigen/Pictures/Wallpapers/nord.jpg' 

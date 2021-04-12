@@ -1,0 +1,16 @@
+#!/bin/sh
+
+cd /home/aadivishnu/.screenlayout
+
+current=$(cat current)
+
+case "$current" in
+	"single") echo "exec ~/.screenlayout/dualoffset.sh" > fix.sh && echo "dual" > current
+	;;
+	"dual") echo "exec ~/.screenlayout/mirror.sh" > fix.sh && echo "mirror" > current
+	;;
+	"mirror") echo "exec ~/.screenlayout/single.sh" > fix.sh && echo "single" > current
+	;;
+esac
+
+bspc wm -r

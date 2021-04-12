@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wal -i $HOME/Pictures/Wallpapers/${1}.jpg
+
+bspc wm -r
+exec ~/.config/alacritty/fixtheme.sh ~/.config/alacritty/alacritty.yml

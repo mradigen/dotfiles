@@ -1,0 +1,7 @@
+#BRIGHTNESS_FILE="/sys/class/backlight/intel_backlight/brightness"
+
+#brightness=`cat $BRIGHTNESS_FILE`
+#brightness=`expr $brightness + $1`
+#sudo echo $brightness > $BRIGHTNESS_FILE
+
+xbacklight -inc $1

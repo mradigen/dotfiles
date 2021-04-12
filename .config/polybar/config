@@ -1,0 +1,255 @@
+;-------------------------------------------------
+;                                                ;
+;           POLYBAR CONFIG FOR CYBERPUNK         ;
+;                                                ;
+;-------------------------------------------------
+
+;-------------------------------------------------
+;                                                ;
+;          			COLORS 				         ;
+;                                                ;
+;-------------------------------------------------
+[colors]
+#background = #660C0C0B
+background = ${xrdb:color0:#0C0C0B}
+foreground = ${xrdb:color5:#798D8F}
+blue  = ${xrdb:color3:#244E64}
+white = ${xrdb:color7:#E0E0E0}
+
+;-------------------------------------------------
+;                                                ;
+;          			BAR MODULE 				     ;
+;                                                ;
+;-------------------------------------------------
+[bar/example]
+width = 80%
+height = 30px
+offset-x = 10%
+offset-y = 1%
+fixed-center = true
+
+#radius = 12
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-size = 2
+border-color = ${colors.foreground}
+
+wm-restack = bspwm
+
+scroll-up = #bspwm.prev
+scroll-down = #bspwm.next
+
+modules-left = bspwm
+modules-center = music-prev music music-next
+modules-right = temperature cpu memory date powermenu
+
+#font-0 = "Dank Mono:size=11:weight=bold;2"
+font-0 = "Iosevka:size=11:weight=bold;3"
+font-1 = "Font Awesome 5 Free Solid:size=12;3"
+font-2 = "Font Awesome 5 Free Solid:size=10;2"
+font-3 = "Font Awesome 5 Brands:size=12;3"
+#font-3 = "Unifont:size=12:weight=bold;2"
+#font-3 = "FuraMono NF:size=12:weight=bold;2"
+font-4 = "Font Awesome 5 Free Regular:size=12;3"
+#font-3 = "Roboto Thin:size=11;3"
+#font-2 = "Unifont:size=12:antialias=false;2"
+
+;-------------------------------------------------
+;                                                ;
+;          			BSPWM PARAMETERS 		     ;
+;                                                ;
+;-------------------------------------------------
+[module/bspwm]
+type = internal/bspwm
+format-padding = 1
+
+format = <label-state> <label-mode>
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+
+label-focused = %{T3}%icon%%{T-}
+label-focused-foreground = ${colors.blue}
+#label-focused = %{T3}%{T-}
+#label-focused-foreground = ${colors.white}
+label-focused-padding = 1
+
+label-occupied = %{T3}%icon%%{T-}
+#label-occupied = %{T3}%{T-}
+label-occupied-foreground = ${colors.white}
+label-occupied-padding = 1
+
+label-empty =
+label-empty-foreground = ${colors.white}
+label-empty-padding = 1
+
+;;;;;EXPERIMENT;;;;;;;
+label-monocle = %{T5}%{T-}
+;label-tiled = 
+;label-fullscreen = 
+;label-floating = 
+;label-pseudotiled = P
+;label-locked = 
+;label-locked-foreground = #bd2c40
+;label-sticky = 
+;label-sticky-foreground = #fba922
+;label-private = 
+;label-private-foreground = #bd2c40
+;label-marked = M
+;;;;;;;;;;;;;;;;;;;;;;
+
+;-------------------------------------------------
+;                                                ;
+;          		DATE PARAMETERS		 		     ;
+;                                                ;
+;-------------------------------------------------
+[module/date]
+type = internal/date
+interval = 1.0
+date =
+time = "%I:%M %p"
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = " %A, %d %B %y |"
+time-alt = "%H:%M:%S"
+
+format = "<label>"
+format-foreground = ${colors.white}
+
+label = %date% %time%
+label-foreground = ${colors.white}
+
+;-------------------------------------------------
+;                                                ;
+;          		POWER MENU PARAMETERS		 	 ;
+;                                                ;
+;-------------------------------------------------
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+label-open = 
+label-open-foreground = ${colors.foreground}
+label-close = " CANCEL"
+label-close-foreground = ${colors.blue}
+label-separator = |
+label-separator-foreground = ${colors.blue}
+label-open-padding = 2
+
+menu-padding = 2
+menu-0-padding = 1
+
+menu-0-0 = "SHUTDOWN "
+menu-0-0-exec = "systemctl poweroff"
+
+;------------------------------------------------
+;                                               ;
+;              TEMPERATURE MODULE               ;
+;                                               ;
+;-------------------------------------------------
+[module/temperature]
+type = internal/temperature
+
+interval = 1
+
+thermal-zone = 6
+
+base-temperature = 50
+warn-temperature = 80
+
+format = "<ramp> "
+format-warn = "<ramp> <label-warn> "
+
+label-warn = "%temperature-c%"
+label-warn-foreground = #f00
+
+ramp-0 = %{F#00f}%{F-}
+ramp-1 = 
+ramp-2 = 
+ramp-3 = %{F#f00}%{F-}
+ramp-foreground = ${colors.white}
+
+;-------------------------------------------------
+;                                                ;
+;          		CPU MODULE PARAMETERS		 	 ;
+;                                                ;
+;-------------------------------------------------
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+format = "<label> <ramp-coreload> "
+label = 
+label-foreground = ${colors.white}
+
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+;-------------------------------------------------
+;                                                ;
+;          		RAM MODULE PARAMETERS		 	 ;
+;                                                ;
+;-------------------------------------------------
+[module/memory]
+type = internal/memory
+interval = 1
+format = " <label> <ramp-used> "
+label =  
+label-foreground = ${colors.white}
+
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █
+
+;--------------USER DEFINED MODULES---------------
+;These modules require scripts to run, you can find
+;the scripts and how to run them here:
+;https://github.com/jaagr/polybar/wiki/User-contributed-modules
+
+[module/music]
+type = custom/script
+exec = /home/adigen/.config/polybar/music.sh
+interval = 1
+label-padding = 1
+label-foreground = ${colors.white}
+click-left = mocp -G
+click-right = alacritty --class="Music" -e mocp &
+
+[module/music-next]
+type = custom/text
+content = ""
+content-foreground = ${colors.blue}
+click-left = mocp -f
+click-right = alacritty --class="Music" -e mocp &
+
+[module/music-prev]
+type = custom/text
+content = ""
+content-foreground = ${colors.blue}
+click-left = mocp -r
+click-right = alacritty --class="Music" -e mocp &
+
+[module/mic]
+type = custom/script
+exec = /home/adigen/.config/polybar/mic.sh
+interval = 1
+label-padding = 1
+label-foreground = ${colors.white}
+click-left = /home/adigen/.config/polybar/mic.sh toggle
