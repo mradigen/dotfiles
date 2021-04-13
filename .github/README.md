@@ -1,17 +1,30 @@
 # Dotfiles
-Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, which can be choosen by pressing `Ctrl + T`.
+Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, which can be choosen by pressing `Super + T`.
+
+---
+
+# Themes:
 
 ## Nyt
 ![Nyt](../Pictures/Screenshots/nyt.png "Nyt")
 
+---
+
 ## Cysis
 ![Cysis](../Pictures/Screenshots/cysis.png "Cysis")
 
-## Japan
+---
+
+## Japan 
+(idk what it is in the background wallpaper pls dont get offended :D)
 ![Japan](../Pictures/Screenshots/japan.png "Japan")
+
+---
 
 ## Nord
 ![Nord](../Pictures/Screenshots/nord.png "Nord")
+
+---
 
 ### Applications visible in screenshot above (from top left):
 
