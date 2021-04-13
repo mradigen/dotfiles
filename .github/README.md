@@ -2,7 +2,7 @@
 Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, which can be choosen by pressing `Ctrl + T`.
 
 ## Nyt
-![nyt](https://github.com/mradigen/nyt/blob/main/Pictures/Screenshots/nyt.png?raw=true "nyt")
+![nyt](../Pictures/Screenshots/nyt.png "nyt")
 
 ## Cysis
 
