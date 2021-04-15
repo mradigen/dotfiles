@@ -11,6 +11,6 @@ convert /tmp/screenshotblur.png $icon -gravity center -composite -matte /tmp/scr
 rm /tmp/screenshot.png
 
 # lock the screen
-i3lock -u -i /tmp/screenshotblur.png
+i3lock -i /tmp/screenshotblur.png
 
 exit 0

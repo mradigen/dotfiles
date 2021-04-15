@@ -28,6 +28,8 @@ offset-x = 10%
 offset-y = 1%
 fixed-center = true
 
+monitor = ${env:MONITOR:}
+
 #radius = 12
 
 background = ${colors.background}

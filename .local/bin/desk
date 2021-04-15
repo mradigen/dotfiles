@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /home/aadivishnu/.screenlayout
+cd ~/.screenlayout
 
 current=$(cat current)
 
