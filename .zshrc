@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # Environment Variables
 export ALSA_CARD=PCH
 export ANDROID_HOME="$HOME/.android"
+export ANDROID_NDK="$HOME/.android/ndk"
 export PATH="$PATH:$HOME/.android/platform-tools"
 export NLYT="$HOME/Desktop/nlyt"
 export EDITOR=/usr/bin/nvim
@@ -122,7 +123,7 @@ alias school="setup school; exit"
 alias mnt="sudo mount -o umask=0,uid=$(echo $USER),gid=$(echo $USER) $1 $2"
 alias umnt="sudo umount $1"
 alias reset="reset; cat ~/.cache/wal/sequences"
-#alias fixtheme="exec ~/.config/alacritty/fixtheme.sh ~/.config/alacritty/alacritty.yml"
+#alias fixtheme="fixtheme ~/.config/alacritty/alacritty.yml"
 alias pak="systemctl --user stop pulseaudio.socket; systemctl --user stop pulseaudio.service"
 alias pas="systemctl --user start pulseaudio.socket; systemctl --user start pulseaudio.service"
 alias nlyt="exec $HOME/Desktop/nlyt/code/compile"

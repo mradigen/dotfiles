@@ -1,5 +1,7 @@
 #EXTM3U
-#MOCSERIAL: 6144
+#MOCSERIAL: 17408
+#EXTINF:266,/home/adigen/Music/YT/Overthinker
+/home/adigen/Music/YT/Overthinker.flac
 #EXTINF:192,/home/adigen/Music/YT/Skyrim
 /home/adigen/Music/YT/Skyrim.flac
 #EXTINF:234,/home/adigen/Music/YT/Meiko - Leave The Lights On (Mellen Gi Remix)

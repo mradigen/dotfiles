@@ -2,7 +2,7 @@
 
 ###--Close these programs---###
 
-killall -q sxhkd xss-lock dunst picom greenclip kdeconnectd
+killall -q sxhkd xss-lock dunst picom greenclip kdeconnectd polybar
 
 ###---SXKHD---###
 sxhkd &
@@ -24,7 +24,7 @@ picom -b &
 exec ~/.fehbg &
 pbstart &
 greenclip daemon &
-#exec /usr/lib/kdeconnectd &
+##exec /usr/lib/kdeconnectd &
 
 ###---BSPWM---###
 bspc monitor -d I II III IV V VI VII VIII IX X
