@@ -32,7 +32,7 @@ Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, wh
 - [polybar](https://github.com/polybar/polybar) [top bar]
 - [dunst](https://github.com/dunst-project/dunst) [notifications]
 - [alacritty](https://github.com/alacritty/alacritty) [terminal emulator]
-- [kakoune](https://github.com/mawww/kakoune) [text editor]
+- [neovim](https://github.com/neovim/neovim) [text editor] (With the [Goyo](https://github.com/junegunn/goyo.vim) extention)
 - [ranger](https://github.com/ranger/ranger) [file manager]
 - [mocp](https://github.com/jonsafari/mocp) [music player]
 - [pipes.sh](https://github.com/pipeseroni/pipes.sh) [just for visuals :)]
