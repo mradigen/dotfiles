@@ -38,7 +38,7 @@ Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, wh
 - [pipes.sh](https://github.com/pipeseroni/pipes.sh) [just for visuals :)]
 - [vivaldi](https://github.com/mawww/kakoune) [web browser] (will upload config and settings in the future :D)
 - ~[neofetch](https://github.com/dylanaraps/neofetch) [terminal fetch for info]~
-- fet [a custom fetch script definitely not stolen from [here](https://github.com/safinsingh/)]
+- fet [a custom fetch script definitely not stolen from [them](https://github.com/safinsingh/)]
 - [rofi](https://github.com/davatorium/rofi) [application opener]
 
 ### Etc.
