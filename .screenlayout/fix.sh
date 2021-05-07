@@ -1,0 +1,1 @@
+exec ~/.screenlayout/single.sh

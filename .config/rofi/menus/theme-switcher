@@ -7,6 +7,7 @@ menu=(
     [Cysis]="switch-theme cysis"
     [Nyt]="switch-theme nyt"
 	[Nord]="switch-theme nord"
+	[Bluple]="switch-theme bluple"
 	[Korean]="switch-theme korean"
 	[Japan]="switch-theme japan"
 )
