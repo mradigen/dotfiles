@@ -2,5 +2,9 @@
 
 wal -i $HOME/Pictures/Wallpapers/${1}.jpg
 
+# Lockscreen background caching.
+#convert $HOME/Pictures/Wallpapers/${1}.jpg -blur 0x6 /tmp/screenshotblur.png
+#convert /tmp/screenshotblur.png $HOME/Pictures/adigen.png -gravity center -composite -matte /tmp/screenshotblur.png
+
 bspc wm -r
 exec fixtheme ~/.config/alacritty/alacritty.yml
