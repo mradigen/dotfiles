@@ -25,7 +25,9 @@ html {
 }
 
 body {
-    background: var(--background);
+    /* background: var(--background); */
+	background: var(--wallpaper);
+	background-size: cover;
 }
 
 .container {

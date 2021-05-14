@@ -10,5 +10,6 @@ menu=(
 	[Bluple]="switch-theme bluple"
 	[Korean]="switch-theme korean"
 	[Japan]="switch-theme japan"
+	[Blue]="switch-theme blue"
 )
 

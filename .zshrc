@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 export ALSA_CARD=PCH
 export ANDROID_HOME="$HOME/.android"
 export ANDROID_NDK="$HOME/.android/ndk"
-export PATH="$PATH:$HOME/.android/platform-tools"
+export PATH="$PATH:$HOME/.android/platform-tools:$HOME/.emacs.d/bin"
 export NLYT="$HOME/Desktop/nlyt"
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/subl
@@ -129,7 +129,7 @@ alias pas="systemctl --user start pulseaudio.socket; systemctl --user start puls
 alias nlyt="exec $HOME/Desktop/nlyt/code/compile"
 alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-format flac --audio-quality 0 -o '%(title)s.%(ext)s' $1"
 alias dump="sudo pacman -S $1"
-alias yeet="sudo pacman -Rs $1"
+alias yeet="sudo pacman -Rsn $1"
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
