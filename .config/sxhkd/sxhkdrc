@@ -89,6 +89,10 @@ super + ctrl + shift + {a,s,w,d}
 super + {_,shift +}e
 	{bspc desktop -l next, bspc node -t \~fullscreen}
 
+# Hiding polybar
+super + shift + f
+	pbtoggle
+
 # Floating Windows
 super + space
 	if [ -z "$(bspc query -N -n focused.floating)" ]; then \

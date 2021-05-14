@@ -10,8 +10,9 @@
 ;                                                ;
 ;-------------------------------------------------
 [colors]
-#background = #660C0C0B
-background = ${xrdb:color0:#0C0C0B}
+background = #660C0C0B
+#background = ${xrdb:color0:#0C0C0B}
+#background = #B40C0C0B
 foreground = ${xrdb:color5:#798D8F}
 blue  = ${xrdb:color3:#244E64}
 white = ${xrdb:color7:#E0E0E0}
@@ -27,6 +28,8 @@ height = 30px
 offset-x = 10%
 offset-y = 1%
 fixed-center = true
+
+enable-ipc = true
 
 monitor = ${env:MONITOR:}
 
@@ -54,6 +57,7 @@ modules-right = temperature cpu memory date powermenu
 
 #font-0 = "Dank Mono:size=11:weight=bold;2"
 font-0 = "Iosevka:size=11:weight=bold;3"
+#font-0 = "scientifica:size=14:weight=Medium:antialias=false;3"
 font-1 = "Font Awesome 5 Free Solid:size=12;3"
 font-2 = "Font Awesome 5 Free Solid:size=10;2"
 font-3 = "Font Awesome 5 Brands:size=12;3"
