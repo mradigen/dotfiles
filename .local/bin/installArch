@@ -1,0 +1,44 @@
+#! /bin/sh
+
+HOSTNAME_HOST="cysis"
+USERNAME_USER="adigen"
+
+# set local time
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+
+hwclock --systohc
+
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+
+locale-gen
+
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+
+# Hostname
+echo "${HOSTNAME_HOST}" > /etc/hostname
+
+# Hosts
+echo "\n\n127.0.0.1	localhost\n::1		localhost\n127.0.1.1	${HOSTNAME_HOST}.localdomain ${HOSTNAME_HOST}" >> /etc/hosts
+
+mkinitcpio -P
+
+# Password
+passwd
+
+pacman -S wpa_supplicant connman nano ranger grub vim sudo
+
+systemctl enable wpa_supplicant.service
+systemctl enable connman.service
+
+useradd -m ${USERNAME_USER}
+passwd ${USERNAME_USER}
+
+usermod -aG wheel,audio,video,optical,storage,network ${USERNAME_USER}
+
+visudo
+
+grub-install /dev/sda
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+#systemctl poweroff
