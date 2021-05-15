@@ -1,0 +1,6 @@
+#! /bin/sh
+
+polybar-msg cmd toggle &&
+bspc config top_padding 0 
+
+exit
