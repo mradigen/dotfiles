@@ -138,6 +138,35 @@ if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
 fi
 
+function hcenter {
+  text=$@
+  cols=`tput cols`
+
+  IFS=$'\n'$'\r'
+  for line in $(echo -e $text); do
+    line_length=`echo $line | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" | wc -c`
+    half_of_line_length=`expr $line_length / 2`
+    is_odd=`expr $line_length % 2 == 1`
+    half_of_line_length=`expr $half_of_line_length + $is_odd`
+    center=`expr \( $cols / 2 \) - $half_of_line_length`
+    spaces=""
+
+    for ((i=0; i < $center; i++)) {
+      spaces+=" "
+    }
+    echo "$spaces$line"
+  done
+}
+
+print_center(){
+    local x
+    local y
+    text="$*"
+    x=$(( ($(tput cols) - ${#text}) / 2))
+    echo -ne "\E[6n";read -sdR y; y=$(echo -ne "${y#*[}" | cut -d';' -f1)
+    echo -ne "\033[${y};${x}f$*"
+}
+
 # Startup
 #Enters a line at top
 echo
@@ -145,6 +174,8 @@ echo
 #PF_COL1=3 PF_COL2=2 PF_COL3=4 pfetch
 #neofetch
 fet
+
+motivate
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>

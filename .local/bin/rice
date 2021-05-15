@@ -4,6 +4,8 @@ alacritty --class=Music -e 'mocp' &
 alacritty -e ranger ~/.config/alacritty &
 alacritty -e pipes.sh -p 5 &
 
-bspc config window_gap 40
+bspc config window_gap 40 &
 
-${EDITOR} ~/Documents/Startpages/style.css
+${EDITOR} ~/Documents/Startpages/style.css &
+sound increase &
+
