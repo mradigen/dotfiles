@@ -100,72 +100,34 @@ source $ZSH/oh-my-zsh.sh
 export ALSA_CARD=PCH
 export ANDROID_HOME="$HOME/.android"
 export ANDROID_NDK="$HOME/.android/ndk"
-export PATH="$PATH:$HOME/.android/platform-tools:$HOME/.emacs.d/bin"
+export PATH="$PATH:$HOME/.android/platform-tools"
 export NLYT="$HOME/Desktop/nlyt"
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/subl
-#EDITOR="/home/aadivishnu/Documents/Applications/Sublime\ Text\ 3/sublime_text"
 
-# Example aliases
+# Aliases
 alias zshconf="${EDITOR} ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bspconf="${EDITOR} ~/.config/bspwm/bspwmrc"
 alias sxconf="${EDITOR} ~/.config/sxhkd/sxhkdrc"
-#alias i3conf="${EDITOR} ~/.config/i3/config"
 alias pbconf="${EDITOR} ~/.config/polybar/config"
-alias PASSWORDLESS="/bin/brightness"
 alias asdf="setxkbmap dvorak"
 alias aoeu="setxkbmap us"
 alias c="clear"
 alias cls="clear"
-alias pro="setup pro; exit"
-alias school="setup school; exit"
 alias mnt="sudo mount -o umask=0,uid=$(echo $USER),gid=$(echo $USER) $1 $2"
 alias umnt="sudo umount $1"
 alias reset="reset; cat ~/.cache/wal/sequences"
-#alias fixtheme="fixtheme ~/.config/alacritty/alacritty.yml"
-alias pak="systemctl --user stop pulseaudio.socket; systemctl --user stop pulseaudio.service"
-alias pas="systemctl --user start pulseaudio.socket; systemctl --user start pulseaudio.service"
 alias nlyt="exec $HOME/Desktop/nlyt/code/compile"
 alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-format flac --audio-quality 0 -o '%(title)s.%(ext)s' $1"
 alias dump="sudo pacman -S $1"
 alias yeet="sudo pacman -Rsn $1"
-
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # startx if we are on tty1
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
 fi
-
-function hcenter {
-  text=$@
-  cols=`tput cols`
-
-  IFS=$'\n'$'\r'
-  for line in $(echo -e $text); do
-    line_length=`echo $line | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" | wc -c`
-    half_of_line_length=`expr $line_length / 2`
-    is_odd=`expr $line_length % 2 == 1`
-    half_of_line_length=`expr $half_of_line_length + $is_odd`
-    center=`expr \( $cols / 2 \) - $half_of_line_length`
-    spaces=""
-
-    for ((i=0; i < $center; i++)) {
-      spaces+=" "
-    }
-    echo "$spaces$line"
-  done
-}
-
-print_center(){
-    local x
-    local y
-    text="$*"
-    x=$(( ($(tput cols) - ${#text}) / 2))
-    echo -ne "\E[6n";read -sdR y; y=$(echo -ne "${y#*[}" | cut -d';' -f1)
-    echo -ne "\033[${y};${x}f$*"
-}
 
 # Startup
 #Enters a line at top
