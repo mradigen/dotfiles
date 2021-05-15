@@ -236,7 +236,7 @@ ramp-used-7 = █
 
 [module/music]
 type = custom/script
-exec = /home/adigen/.config/polybar/music.sh
+exec = ~/.config/polybar/music.sh
 interval = 1
 label-padding = 1
 label-foreground = ${colors.white}
@@ -256,11 +256,3 @@ content = ""
 content-foreground = ${colors.blue}
 click-left = mocp -r
 click-right = alacritty --class="Music" -e mocp &
-
-[module/mic]
-type = custom/script
-exec = /home/adigen/.config/polybar/mic.sh
-interval = 1
-label-padding = 1
-label-foreground = ${colors.white}
-click-left = /home/adigen/.config/polybar/mic.sh toggle
