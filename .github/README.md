@@ -31,6 +31,11 @@ Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, wh
 
 ---
 
+## Same themes can be applied with rounded corners:
+![Rounded Blue](../Pictures/Screenshots/rounded_blue.png "Rounded Blue")
+
+---
+
 ### Applications visible in screenshot above (from top left):
 
 - [bspwm](https://github.com/baskerville/bspwm) [window manager]
