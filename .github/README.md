@@ -5,6 +5,11 @@ Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, wh
 
 # Themes:
 
+## Blue
+![Blue](../Pictures/Screenshots/blue.png "Blue")
+
+---
+
 ## Nyt
 ![Nyt](../Pictures/Screenshots/nyt.png "Nyt")
 
@@ -46,5 +51,3 @@ Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, wh
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) [shell]
 - [feh](https://github.com/derf/feh) [image viewer and wallpaper setter]
 - [pywal](https://github.com/dylanaraps/pywal) [theme color generator from wallpaper]
-- [wallpaper](https://pixabay.com/photos/dreary-storm-mountains-drama-mood-4453740/)
-

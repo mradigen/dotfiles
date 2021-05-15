@@ -7,5 +7,5 @@ alacritty -e pipes.sh -p 5 &
 bspc config window_gap 40 &
 
 ${EDITOR} ~/Documents/Startpages/style.css &
-sound increase &
-
+dunstify -t 5000 -u low -r '92813' "Volume: $(amixer sget Master | awk -F'[][]' '/dB/ { print $2 }')" &
+sleep 3 && scrot
