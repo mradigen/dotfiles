@@ -1,5 +1,7 @@
 # BSPWM Hotkeys/Keybindings
 
+#button1
+#	xdotool click --repeat 10 --delay 100 1
 
 ###---Launch stuff---###
 
