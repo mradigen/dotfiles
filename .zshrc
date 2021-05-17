@@ -107,10 +107,12 @@ export VISUAL=/usr/bin/subl
 
 # Aliases
 alias zshconf="${EDITOR} ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bspconf="${EDITOR} ~/.config/bspwm/bspwmrc"
 alias sxconf="${EDITOR} ~/.config/sxhkd/sxhkdrc"
 alias pbconf="${EDITOR} ~/.config/polybar/config"
+alias piconf="${EDITOR} ~/.config/picom/picom.conf"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
 alias asdf="setxkbmap dvorak"
 alias aoeu="setxkbmap us"
 alias c="clear"
@@ -118,11 +120,9 @@ alias cls="clear"
 alias mnt="sudo mount -o umask=0,uid=$(echo $USER),gid=$(echo $USER) $1 $2"
 alias umnt="sudo umount $1"
 alias reset="reset; cat ~/.cache/wal/sequences"
-alias nlyt="exec $HOME/Desktop/nlyt/code/compile"
 alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-format flac --audio-quality 0 -o '%(title)s.%(ext)s' $1"
 alias dump="sudo pacman -S $1"
 alias yeet="sudo pacman -Rsn $1"
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # startx if we are on tty1
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
