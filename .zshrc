@@ -137,7 +137,17 @@ echo
 #neofetch
 fet
 
-motivate
+tput bold
+
+#echo "I am going to make a Tik-Tok clone for searching music.
+#No matter what happens.
+#I am not stopping.
+#The idea might be shit, but I am doing it.
+#It will be a boom."
+
+echo
+
+#motivate
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
