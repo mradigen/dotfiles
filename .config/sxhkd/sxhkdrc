@@ -1,6 +1,8 @@
-# BSPWM Hotkeys/Keybindings
+# BSPWM Hotkeys/eybindings
 
-#button1
+#button2
+#	xdotool click 1
+
 #	xdotool click --repeat 10 --delay 100 1
 
 ###---Launch stuff---###
@@ -39,7 +41,8 @@ super + n
 
 # Screenshot
 Print
-	i3-scrot
+	flameshot gui -p ~/Pictures/Screenshots
+#	i3-scrot
 
 # Clipboard
 super + h

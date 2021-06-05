@@ -2,7 +2,7 @@
 
 ###--Close these programs---###
 
-killall -q sxhkd xss-lock dunst picom greenclip kdeconnectd polybar
+killall -q sxhkd xss-lock dunst picom greenclip kdeconnectd polybar discord-rpc-status
 
 ###---SXKHD---###
 sxhkd &
@@ -25,6 +25,8 @@ exec ~/.fehbg &
 pbstart &
 greenclip daemon &
 ##exec /usr/lib/kdeconnectd &
+
+LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
 
 ###---BSPWM---###
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -60,9 +62,9 @@ bspc config presel_feedback_color "$color1"
 bspc rule -a Vivaldi-stable desktop=I
 #bspc rule -a Alacritty desktop=II
 bspc rule -a discord desktop=III
-bspc rule -a minecraft-launcher:Minecraft\ Launcher desktop=IV
+bspc rule -a Element desktop=III
+bspc rule -a minecraft-launcher desktop=IV
 bspc rule -a Minecraft\ 1.16.5 desktop=IV
-
 
 bspc rule -a Alacritty:Alsamixer state=floating rectangle=600x300+383+234
 bspc rule -a Alacritty:Startup state=floating rectangle=600x300+383+234
