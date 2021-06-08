@@ -13,7 +13,8 @@ super + c
 
 # Web Browser
 super + v
-	vivaldi-stable
+	qutebrowser
+	#vivaldi-stable
 
 # File Browser
 super + x

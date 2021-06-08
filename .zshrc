@@ -113,6 +113,8 @@ alias pbconf="${EDITOR} ~/.config/polybar/config"
 alias piconf="${EDITOR} ~/.config/picom/picom.conf"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
+# Stuff
+alias sudo='sudo -p "$(shuf -n 1 ~/.local/bin/sudo-prompts) "'
 alias asdf="setxkbmap dvorak"
 alias aoeu="setxkbmap us"
 alias c="clear"
@@ -149,6 +151,8 @@ tput bold
 echo
 
 motivate
+
+alias tts="./tts.sh '$(shuf -n 1 ~/.local/bin/sudo-prompts)'"
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
