@@ -1,26 +1,26 @@
 background_opacity: 0.5
 colors:
   bright:
-    black: '#829498'
-    blue: '#549DB2'
-    cyan: '#79C0CE'
-    green: '#47758C'
-    magenta: '#6CB4C5'
-    red: '#2D718D'
-    white: '#bbd4da'
-    yellow: '#348CA6'
+    black: '#8b8e89'
+    blue: '#82887D'
+    cyan: '#8A9187'
+    green: '#6C726A'
+    magenta: '#7F8980'
+    red: '#61665E'
+    white: '#c7cbc4'
+    yellow: '#7C837A'
   normal:
-    black: '#12181a'
-    blue: '#549DB2'
-    cyan: '#79C0CE'
-    green: '#47758C'
-    magenta: '#6CB4C5'
-    red: '#2D718D'
-    white: '#bbd4da'
-    yellow: '#348CA6'
+    black: '#0C0C0B'
+    blue: '#82887D'
+    cyan: '#8A9187'
+    green: '#6C726A'
+    magenta: '#7F8980'
+    red: '#61665E'
+    white: '#c7cbc4'
+    yellow: '#7C837A'
   primary:
-    background: '#12181a'
-    foreground: '#bbd4da'
+    background: '#0C0C0B'
+    foreground: '#c7cbc4'
 font:
   normal:
     family: Iosevka
