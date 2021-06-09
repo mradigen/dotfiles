@@ -8,9 +8,11 @@ sudo pacman -S xorg xorg-xinit mesa xf86-video-intel xf86-video-vesa libva libva
 
 # Externals
 
+# Oh my Zsh
 sudo pacman -S zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# yay (AUR)
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -24,7 +26,7 @@ sudo pacman -S fuse ueberzug unzip youtube-dl rsync
 # Programs
 sudo pacman -S bspwm sxhkd ranger alacritty dunst htop neovim rofi rofi-calc vivaldi vivaldi-ffmpeg-codecs feh python-pywal
 
-yay -S i3-scrot rofigen-git rofi-greenclip polybar sublime-text-3 picom-ibhagwan-git connman-gtk discord_arch_electron apulse
+yay -S flameshot rofigen-git rofi-greenclip polybar sublime-text-4 picom-ibhagwan-git connman-gtk discord_arch_electron apulse themix-theme-oomox-git
 
 # Copy dotfiles
 rsync rsync --exclude ".git/" . ~
