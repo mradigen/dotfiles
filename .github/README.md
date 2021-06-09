@@ -46,13 +46,13 @@ Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, wh
 - [ranger](https://github.com/ranger/ranger) [file manager]
 - [mocp](https://github.com/jonsafari/mocp) [music player]
 - [pipes.sh](https://github.com/pipeseroni/pipes.sh) [just for visuals :)]
-- [vivaldi](https://github.com/mawww/kakoune) [web browser] (will upload config and settings in the future :D)
+- [qutebrowser](https://github.com/qutebrowser/qutebrowser) [web browser] (Older browser was [vivaldi](https://vivaldi.com/))
 - ~[neofetch](https://github.com/dylanaraps/neofetch) [terminal fetch for info]~
 - fet [a custom fetch script definitely not stolen from [them](https://github.com/safinsingh/)]
 - [rofi](https://github.com/davatorium/rofi) [application opener]
 
 ### Etc.
-- [compton](https://aur.archlinux.org/packages/picom-ibhagwan-git/) [compositor]
+- [picom](https://aur.archlinux.org/packages/picom-ibhagwan-git/) [compositor]
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) [shell]
 - [feh](https://github.com/derf/feh) [image viewer and wallpaper setter]
 - [pywal](https://github.com/dylanaraps/pywal) [theme color generator from wallpaper]
