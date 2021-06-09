@@ -1,3 +1,6 @@
 [submodule "Documents/todo-startpage"]
 	path = Documents/todo-startpage
 	url = https://github.com/mradigen/todo-startpage.git
+[submodule ".config/nvim/plugged/wal.vim"]
+	path = .config/nvim/plugged/wal.vim
+	url = https://github.com/dylanaraps/wal.vim.git

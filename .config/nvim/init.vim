@@ -1,7 +1,11 @@
 call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/goyo.vim'
 	Plug 'preservim/nerdtree'
+	Plug 'dylanaraps/wal.vim'
 call plug#end()
+
+" wal.vim
+colorscheme wal
 
 set autoindent
 set noexpandtab

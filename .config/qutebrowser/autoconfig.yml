@@ -62,19 +62,19 @@ settings:
     - alacritty
     - -e
     - ranger
-    - --choosedir={}
+    - '{}'
   fileselect.multiple_files.command:
     global:
     - alacritty
     - -e
     - ranger
-    - --choosefiles={}
+    - '{}'
   fileselect.single_file.command:
     global:
     - alacritty
     - -e
     - ranger
-    - --choosefile={}
+    - '{}'
   fonts.default_family:
     global: Iosevka
   fonts.default_size:
