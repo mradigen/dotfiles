@@ -23,13 +23,19 @@ settings:
     global: lightness-cielab
   colors.webpage.darkmode.enabled:
     global: false
+  completion.open_categories:
+    global:
+    - searchengines
+    - quickmarks
+    - bookmarks
+    - history
+    - filesystem
   content.autoplay:
     global: false
   content.blocking.adblock.lists:
     global:
     - https://easylist.to/easylist/easylist.txt
     - https://easylist.to/easylist/easyprivacy.txt
-    - https://downloads.vivaldi.com/ddg/tds-v2-current.json
   content.blocking.hosts.lists:
     global:
     - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
@@ -38,6 +44,8 @@ settings:
   content.headers.user_agent:
     global: Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko)
       {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}
+  content.javascript.can_access_clipboard:
+    global: true
   content.mouse_lock:
     https://krunker.io: true
   content.notifications.enabled:
@@ -90,7 +98,7 @@ settings:
   statusbar.position:
     global: bottom
   statusbar.show:
-    global: always
+    global: in-mode
   tabs.favicons.scale:
     global: 0.9
   tabs.favicons.show:
@@ -120,7 +128,8 @@ settings:
   url.searchengines:
     global:
       DEFAULT: https://www.startpage.com/do/search?q={}
-      ddg: https://duckduckgo.com/?q={}
+      d: https://duckduckgo.com/?q={}
+      yt: https://www.youtube.com/results?search_query={}
   url.start_pages:
     global: file:///home/adigen/Documents/Startpages/index.html
   window.transparent:
