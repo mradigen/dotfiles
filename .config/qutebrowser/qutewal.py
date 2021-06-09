@@ -279,11 +279,11 @@ if os.path.isfile(colors_absolute):
 
     # Background color of the tab bar.
     # Type: QtColor
-    c.colors.tabs.bar.bg = blue
+    c.colors.tabs.bar.bg = magenta
 
     # Background color of unselected even tabs.
     # Type: QtColor
-    c.colors.tabs.even.bg = blue
+    c.colors.tabs.even.bg = magenta
 
     # Foreground color of unselected even tabs.
     # Type: QtColor
@@ -312,7 +312,7 @@ if os.path.isfile(colors_absolute):
 
     # Background color of unselected odd tabs.
     # Type: QtColor
-    c.colors.tabs.odd.bg = blue
+    c.colors.tabs.odd.bg = magenta
 
     # Foreground color of unselected odd tabs.
     # Type: QtColor
