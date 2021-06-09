@@ -124,7 +124,7 @@ super + alt + space
 XF86AudioMute
 	exec ~/.config/polybar/mic.sh toggle
 
-ctrl + {o, p}
+super + {o, p}
 	sound {mdecrease,mincrease}
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown} 

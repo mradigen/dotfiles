@@ -15,9 +15,33 @@ settings:
       wqa: quit --save
   auto_save.session:
     global: true
+  bindings.commands:
+    global:
+      normal:
+        ;M: hint links spawn mpv {hint-url}
+  colors.webpage.darkmode.algorithm:
+    global: lightness-cielab
+  colors.webpage.darkmode.enabled:
+    global: false
+  content.autoplay:
+    global: false
+  content.blocking.adblock.lists:
+    global:
+    - https://easylist.to/easylist/easylist.txt
+    - https://easylist.to/easylist/easyprivacy.txt
+    - https://downloads.vivaldi.com/ddg/tds-v2-current.json
+  content.blocking.hosts.lists:
+    global:
+    - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  content.blocking.method:
+    global: both
   content.headers.user_agent:
     global: Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko)
       {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}
+  content.mouse_lock:
+    https://krunker.io: true
+  content.notifications.enabled:
+    https://www.reddit.com: false
   editor.command:
     global:
     - nvim
@@ -66,9 +90,9 @@ settings:
   statusbar.position:
     global: bottom
   statusbar.show:
-    global: in-mode
+    global: always
   tabs.favicons.scale:
-    global: 1.0
+    global: 0.9
   tabs.favicons.show:
     global: always
   tabs.focus_stack_size:
@@ -90,9 +114,9 @@ settings:
   tabs.title.format:
     global: '{current_title}'
   tabs.width:
-    global: 30
+    global: 29
   url.default_page:
-    global: file:///home/adigen/Documents/Startpages/index.html
+    global: file:///home/adigen/Documents/todo-startpage/index.html
   url.searchengines:
     global:
       DEFAULT: https://www.startpage.com/do/search?q={}
