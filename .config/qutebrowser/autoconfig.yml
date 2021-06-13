@@ -39,7 +39,7 @@ settings:
     - https://easylist.to/easylist/easylist.txt
     - https://easylist.to/easylist/easyprivacy.txt
   content.blocking.enabled:
-    global: false
+    global: true
   content.blocking.hosts.lists:
     global:
     - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
@@ -50,9 +50,16 @@ settings:
       {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}
   content.javascript.can_access_clipboard:
     global: true
+  content.media.audio_capture:
+    https://meet.jit.si: true
+  content.media.video_capture:
+    https://meet.jit.si: true
   content.mouse_lock:
     https://krunker.io: true
   content.notifications.enabled:
+    https://5418.allow-to-continue.com: false
+    https://7997.allow-to-continue.com: false
+    https://9529.allow-to-continue.com: false
     https://www.reddit.com: false
   editor.command:
     global:
