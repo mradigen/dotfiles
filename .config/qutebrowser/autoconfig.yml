@@ -109,7 +109,7 @@ settings:
   statusbar.position:
     global: bottom
   statusbar.show:
-    global: in-mode
+    global: always
   tabs.favicons.scale:
     global: 0.9
   tabs.favicons.show:
