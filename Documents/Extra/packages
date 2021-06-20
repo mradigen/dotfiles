@@ -6,6 +6,7 @@ audacity
 autoconf
 automake
 base
+bat
 bc
 binutils
 bison
@@ -27,7 +28,7 @@ fuse2
 gcc
 git
 glfw-x11
-go-ethereum
+gomuks
 grub
 htop
 i3lock
@@ -44,12 +45,15 @@ linux-headers
 lxappearance-gtk3
 m4
 make
+marktext-bin
 minecraft-launcher
 moc
 mpv
 neofetch
 neovim
 noto-fonts
+noto-fonts-emoji
+npm
 obs-studio
 openal
 openssh
@@ -68,6 +72,7 @@ python-yaml
 python37
 qutebrowser
 ranger
+reflector
 rofi
 rofi-calc
 rofi-greenclip

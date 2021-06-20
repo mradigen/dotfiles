@@ -42,8 +42,8 @@ super + n
 
 # Screenshot
 Print
-	flameshot gui -p ~/Pictures/Screenshots
-#	i3-scrot
+#	flameshot gui -p ~/Pictures/Screenshots
+	scrot
 
 # Clipboard
 super + h
@@ -124,7 +124,7 @@ super + alt + space
 XF86AudioMute
 	exec ~/.config/polybar/mic.sh toggle
 
-super + {o, p}
+ctrl + {o, p}
 	sound {mdecrease,mincrease}
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown} 

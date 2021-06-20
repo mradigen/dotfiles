@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/adigen/Pictures/Wallpapers/mountain.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#101622",
+        "foreground": "#e6cfe6",
+        "cursor": "#e6cfe6"
+    },
+    "colors": {
+        "color0": "#101622",
+        "color1": "#fe6aa1",
+        "color2": "#87dd94",
+        "color3": "#eacf87",
+        "color4": "#7990e6",
+        "color5": "#f29fdf",
+        "color6": "#79aeeb",
+        "color7": "#e6cfe6",
+        "color8": "#38395f",
+        "color9": "#fe6aa1",
+        "color10": "#87dd94",
+        "color11": "#eacf87",
+        "color12": "#7990e6",
+        "color13": "#f29fdf",
+        "color14": "#79aeeb",
+        "color15": "#e6cfe6"
+    }
+}
