@@ -1,37 +1,58 @@
 # Dotfiles
+
 Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, which can be choosen by pressing `Super + T`.
 
 ---
 
-# Themes:
+# Theme (w/o blur):
+
+## Mountain
+
+![Mountain](../Pictures/Screenshots/mountain.png)
+
+---
+
+## Yosemite
+
+![Yosemite](../Pictures/Screenshots/yosemite.png)
+
+---
+
+# Themes (w/ blur):
 
 ## Blue
+
 ![Blue](../Pictures/Screenshots/blue.png "Blue")
 
 ---
 
 ## Nyt
+
 ![Nyt](../Pictures/Screenshots/nyt.png "Nyt")
 
 ---
 
 ## Cysis
+
 ![Cysis](../Pictures/Screenshots/cysis.png "Cysis")
 
 ---
 
-## Japan 
+## Japan
+
 (idk what it is in the background wallpaper pls dont get offended :D)
 ![Japan](../Pictures/Screenshots/japan.png "Japan")
 
 ---
 
 ## Nord
+
 ![Nord](../Pictures/Screenshots/nord.png "Nord")
 
 ---
 
 ## Same themes can be applied with rounded corners:
+
 ![Rounded Blue](../Pictures/Screenshots/rounded_blue.png "Rounded Blue")
 
 ---
@@ -52,6 +73,7 @@ Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, wh
 - [rofi](https://github.com/davatorium/rofi) [application opener]
 
 ### Etc.
+
 - [picom](https://aur.archlinux.org/packages/picom-ibhagwan-git/) [compositor]
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) [shell]
 - [feh](https://github.com/derf/feh) [image viewer and wallpaper setter]
