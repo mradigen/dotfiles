@@ -39,7 +39,7 @@ settings:
     - https://easylist.to/easylist/easylist.txt
     - https://easylist.to/easylist/easyprivacy.txt
   content.blocking.enabled:
-    global: true
+    global: false
   content.blocking.hosts.lists:
     global:
     - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
