@@ -68,6 +68,7 @@ polybar
 python-adblock
 python-chardet
 python-pywal
+python-requests
 python-yaml
 python37
 qutebrowser
@@ -145,6 +146,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xsel
 yay
 youtube-dl
 zip

@@ -1,0 +1,12 @@
+Had to install about 40 packages just to run vimb.
+
+These packages enabled video playback:
+
+gst-plugins-bad gst-plugins-bad-libs gst-plugins-base gst-plugins-base-libs gst-plugins-good
+
+Installed python-adblock for adblocking which doesn't work on qutebrowser.
+Also, pdfjs for qutebrowser pdf viewing.
+
+Installed `telnet` from `inetutils` for learning c-networking
+
+Installed `python-requests` to run FSG seed generator findSeed.py.
