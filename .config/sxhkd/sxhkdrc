@@ -135,3 +135,9 @@ XF86Display
 
 super + {_,shift +}b
 	{blurlock, blurlock; systemctl suspend}
+
+~ctrl + 9
+	xdotool key --clearmodifiers Escape shift+Tab Return
+
+~ctrl + 0
+	fsg

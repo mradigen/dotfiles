@@ -1,0 +1,64 @@
+#! /bin/sh
+
+############
+### SEED ###
+############
+
+cd ~/.minecraft/FSG
+
+echo "Finding Seed..."
+# genOutput="$(python3 findSeed.py)"
+# seed="$(echo $genOutput | awk -F" "  '{print $6}')"
+seed="-6503325994153349321"
+echo "Seed found! Seed: $seed"
+
+
+##############
+### MACROS ###
+##############
+
+### Clipboard ###
+echo $seed | xsel -b -i
+clipboardSeed="$(xsel -b -o)"
+
+if [[ $clipboardSeed == $seed ]]
+then
+	echo "Seed succesfully copied to clipboard."
+else
+	echo "Seed was not copied to clipboard succesfully."
+fi
+################
+
+
+### Automation ###
+alias k="xdotool key"
+
+## Exit World ##
+# k Escape shift+Tab
+##
+
+## New Seed ##
+k Tab Return
+
+k --repeat 3 Tab
+
+k Return
+
+k --repeat 2 Tab
+
+k --repeat 3 Return
+
+k --repeat 4 Tab
+
+k Return
+
+k --repeat 3 Tab
+
+k key ctrl+v
+
+k --repeat 2 shift+Tab
+
+k Return
+##
+
+##################
