@@ -1,9 +1,11 @@
-# BSPWM Hotkeys/eybindings
+# BSPWM Hotkeys/keybindings
 
-#button2
-#	xdotool click 1
+#~7
+#	xdotool click --clearmodifiers --repeat 20 --delay 150 1
+#	autoclick
 
-#	xdotool click --repeat 10 --delay 100 1
+#m
+#	xdotool click --repeat 5 --delay 150 1
 
 ###---Launch stuff---###
 
@@ -136,8 +138,8 @@ XF86Display
 super + {_,shift +}b
 	{blurlock, blurlock; systemctl suspend}
 
-~ctrl + 9
-	xdotool key --clearmodifiers Escape shift+Tab Return
+~ctrl + End
+	xdotool key Escape shift+Tab Return
 
-~ctrl + 0
+~ctrl + Page_Down
 	fsg
