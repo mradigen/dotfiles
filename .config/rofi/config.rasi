@@ -6,7 +6,7 @@ configuration {
 /*	width: 50;*/
 /*	lines: 1;*/
 /*	columns: 1;*/
-	font: "FuraMono NF 12";
+	font: "Iosevka 13";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
