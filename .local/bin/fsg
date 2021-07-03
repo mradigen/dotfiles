@@ -35,7 +35,7 @@ fi
 
 
 ### Automation ###
-alias k="xdotool key"
+alias k="xdotool key --delay 100"
 
 ## New Seed ##
 k Tab Return

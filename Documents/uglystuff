@@ -10,3 +10,8 @@ Also, pdfjs for qutebrowser pdf viewing.
 Installed `telnet` from `inetutils` for learning c-networking
 
 Installed `python-requests` to run FSG seed generator findSeed.py.
+
+Application Launchers currently installed:
+
+rofi
+dmenu
