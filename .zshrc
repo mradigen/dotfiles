@@ -112,6 +112,7 @@ alias sxconf="${EDITOR} ~/.config/sxhkd/sxhkdrc"
 alias pbconf="${EDITOR} ~/.config/polybar/config"
 alias piconf="${EDITOR} ~/.config/picom/picom.conf"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+#alias mocp="mocp --moc-dir ~/.config/moc"
 
 # Stuff
 alias sudo='sudo -p "$(shuf -n 1 ~/.local/bin/sudo-prompts) "'

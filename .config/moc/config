@@ -9,3 +9,4 @@ ShowFormat = no
 ShowTime = no
 PlaylistFullPaths = no
 
+MOCDir = ~/.config/moc
