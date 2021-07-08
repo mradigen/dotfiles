@@ -1,0 +1,4 @@
+#! /bin/sh
+# Overrides original .moc config directory
+# and instead uses ~/.config/moc
+/usr/bin/mocp --moc-dir ~/.config/moc $@
