@@ -1,3 +1,3 @@
 export ALSA_CARD=PCH
-export PATH="$PATH:/home/adigen/.local/bin"
+export PATH="/home/adigen/.local/bin:$PATH"
 export EDITOR="/usr/bin/nvim"
