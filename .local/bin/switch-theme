@@ -1,8 +1,10 @@
 #! /bin/sh
-wal -i $HOME/Pictures/Wallpapers/${1}.jpg
+wal -i $HOME/Pictures/Wallpapers/${1}.* &&
 
-oomox-cli -o wal -t $HOME/.local/share/themes $HOME/.cache/wal/colors-oomox
+feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
 
-bspc wm -r
+oomox-cli -o wal -t $HOME/.local/share/themes $HOME/.cache/wal/colors-oomox &&
+
+bspc wm -r &&
 
 exec fixtheme ~/.config/alacritty/alacritty.yml

@@ -15,6 +15,7 @@ bspwm
 connman
 connman-gtk
 discord_arch_electron
+dmenu
 dunst
 element-desktop
 fakeroot
@@ -31,6 +32,7 @@ grub
 htop
 i3lock
 inetutils
+j4-dmenu-desktop-git
 jq
 jre-openjdk-headless
 lib32-glibc
@@ -67,7 +69,6 @@ python-chardet
 python-pywal
 python-requests
 python-yaml
-python37
 qutebrowser
 ranger
 reflector
