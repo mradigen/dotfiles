@@ -70,7 +70,8 @@ Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, wh
 - [qutebrowser](https://github.com/qutebrowser/qutebrowser) [web browser] (Older browser was [vivaldi](https://vivaldi.com/))
 - ~[neofetch](https://github.com/dylanaraps/neofetch) [terminal fetch for info]~
 - fet [a custom fetch script definitely not stolen from [them](https://github.com/safinsingh/)]
-- [rofi](https://github.com/davatorium/rofi) [application opener]
+- ~[rofi](https://github.com/davatorium/rofi) [application opener]~
+- [dmenu](https://tools.suckless.org/dmenu/) [application opener] (With [j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop) for .desktop files)
 
 ### Etc.
 
