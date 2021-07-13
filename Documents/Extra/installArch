@@ -1,6 +1,6 @@
 #! /bin/sh
 
-HOSTNAME_HOST="cysis"
+HOSTNAME_HOST="Cysis"
 USERNAME_USER="adigen"
 
 # set local time

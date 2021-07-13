@@ -26,13 +26,21 @@ super + x
 super + z
 	alacritty --class=Music -e 'mocp'
 
+# Dmenu
+super + {f, t, h}
+	run_dmenu -{ ,t,c}
+
 # Program Launcher
-super + f
-	rofi -show drun
+#~super + f
+	#rofi -show drun
 
 # Theme switcher
-super + t
-	rofigen $HOME/.config/rofi/menus/theme-switcher
+#super + t
+	#rofigen $HOME/.config/rofi/menus/theme-switcher
+
+# Clipboard
+#super + h
+	#rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # Alsamixer
 super + m
@@ -42,14 +50,14 @@ super + m
 super + n
 	alacritty --title=nlyt -e ranger ~/Desktop/nlyt/
 
+# Scratchpad
+super + r
+	scratchpad discord "apulse discord"
+
 # Screenshot
 Print
 #	flameshot gui -p ~/Pictures/Screenshots
 	scrot
-
-# Clipboard
-super + h
-	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 ######------------######
 

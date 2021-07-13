@@ -10,8 +10,8 @@
 ;                                                ;
 ;-------------------------------------------------
 [colors]
-#background = #660C0C0B
-background = ${xrdb:color0:#0C0C0B}
+background = #660C0C0B
+#background = ${xrdb:color0:#0C0C0B}
 #background = #B40C0C0B
 foreground = ${xrdb:color5:#798D8F}
 blue  = ${xrdb:color3:#244E64}
@@ -63,7 +63,7 @@ font-2 = "Font Awesome 5 Free Solid:size=10;2"
 font-3 = "Font Awesome 5 Brands:size=12;3"
 #font-3 = "Unifont:size=12:weight=bold;2"
 #font-3 = "FuraMono NF:size=12:weight=bold;2"
-font-4 = "Font Awesome 5 Free Regular:size=12;3"
+font-4 = "Font Awesome 5 Free Regular:size=10;2"
 #font-3 = "Roboto Thin:size=11;3"
 #font-2 = "Unifont:size=12:antialias=false;2"
 
@@ -78,36 +78,37 @@ format-padding = 1
 
 format = <label-state> <label-mode>
 
-ws-icon-0 = I;
-ws-icon-1 = II;
-ws-icon-2 = III;
-ws-icon-3 = IV;
-ws-icon-4 = V;
-
-label-focused = %{T3}%icon%%{T-}
-label-focused-foreground = ${colors.blue}
-#label-focused = %{T3}%{T-}
-#label-focused-foreground = ${colors.white}
 label-focused-padding = 1
-
-label-occupied = %{T3}%icon%%{T-}
-#label-occupied = %{T3}%{T-}
-label-occupied-foreground = ${colors.white}
 label-occupied-padding = 1
-
-label-empty =
-label-empty-foreground = ${colors.white}
 label-empty-padding = 1
+label-occupied-foreground = ${colors.white}
+label-empty-foreground = ${colors.white}
+
+label-focused = %{T3}%{T-}
+label-focused-foreground = ${colors.white}
+label-occupied = %{T3}%{T-}
+label-empty = %{T5}%{T-}
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+;ws-icon-2 = 3;
+;ws-icon-3 = 4;
+;ws-icon-4 = 5;
+ws-icon-2 = 3;
+
+#label-focused = %{T3}%icon%%{T-}
+#label-focused-foreground = ${colors.blue}
+#label-occupied = %{T3}%icon%%{T-}
+#label-empty =
 
 ;;;;;EXPERIMENT;;;;;;;
 label-monocle = %{T5}%{T-}
 ;label-tiled = 
 ;label-fullscreen = 
-;label-floating = 
+;label-floating = %{T5}%{T-}
 ;label-pseudotiled = P
 ;label-locked = 
-;label-locked-foreground = #bd2c40
-;label-sticky = 
+;label-locked-foreground = #bd2c40label-sticky = 
 ;label-sticky-foreground = #fba922
 ;label-private = 
 ;label-private-foreground = #bd2c40

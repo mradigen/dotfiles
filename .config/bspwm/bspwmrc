@@ -26,7 +26,7 @@ greenclip daemon &
 LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
 
 ###---BSPWM---###
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d 1 2 3 4 5
 
 bspc config border_width 		2
 bspc config window_gap 			20
@@ -50,16 +50,13 @@ bspc config focused_border_color "$color5"
 # Use the line below if you are on bspwm >= 0.9.4
 bspc config presel_feedback_color "$color1"
 
-#bspc config focused_border_color "#a7a57f"
-#bspc config normal_border_color "#30302f"
-
 ###---Rules---###
 
 # Open on specific workspace
 bspc rule -a qutebrowser desktop=I
 bspc rule -a vivaldi-stable desktop=I
 #bspc rule -a Alacritty desktop=II
-bspc rule -a discord desktop=III
+#bspc rule -a discord desktop=III
 bspc rule -a Element desktop=III
 bspc rule -a minecraft-launcher desktop=IV
 bspc rule -a Minecraft\ 1.16.5 desktop=IV
@@ -68,3 +65,4 @@ bspc rule -a Alacritty:Alsamixer state=floating rectangle=600x300+383+234
 bspc rule -a Alacritty:Startup state=floating rectangle=600x300+383+234
 bspc rule -a Alacritty:Music state=floating rectangle=600x300+383+234
 bspc rule -a Connman-gtk state=floating
+bspc rule -a discord state=floating rectangle=1362x384+0+0
