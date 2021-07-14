@@ -52,7 +52,8 @@ super + n
 
 # Scratchpad
 super + r
-	scratchpad discord "apulse discord"
+	scratchpad-modified
+#	scratchpad discord "apulse discord"
 
 # Screenshot
 Print
@@ -81,7 +82,8 @@ super + shift + x
 
 # Switch between nodes
 super + Tab
-	bspc node -f next.local
+	bspc node last --focus
+#	bspc node -f next.local
 
 # Focus or move
 super + {_,shift + }{a,s,w,d}
