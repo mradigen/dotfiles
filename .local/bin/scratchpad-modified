@@ -1,49 +1,35 @@
 #! /bin/sh
 
-#if [ $# = 0 ]; then
-#    cat <<EOF
-#Usage: $(basename "${0}") process_name [executable_name] [--take-first]
-#    process_name       As recognized by 'xdo' command
-#    executable_name    As used for launching from terminal
-#    --take-first       In case 'xdo' returns multiple process IDs
-#EOF
-#    exit 0
-#fi
+# a togglable scratchpad
+# Once ran, it will move the focused window into the scratchpad.
+# Running it again brings back the window.
+# Killing the window will free the scratchpad so a new window can be added!
 
-# Get id of process by class name
-#id=$(xdotool search --classname "${1}")
+# Todo: 
 
-#if [ -z "$1" ]; then
-	id=$(cat ~/.cache/scratchpad)
-	if [ $? -ne 0 ]; then
-		id=$(xdotool getactivewindow)
-		echo "$id" > ~/.cache/scratchpad
-	fi
-#else
-#	id=$(xdotool search --classname "${1}")
-#fi
+# Cache the pid of the current window on the scratchpad
+cache_file="$HOME/.cache/scratchpad"
 
+cat ${cache_file}
+# If file doesn't exist, then make one
+if [ $? -ne 0 ]; then
+	echo `xdotool getactivewindow` > ${cache_file}
+fi
 
-executable=${1}
-shift
+id=`cat ${cache_file} | head -1`
 
-while [ -n "${1}" ]; do
-    case ${1} in
-    --take-first)
-        id=$(head -1 <<<"${id}" | cut -f1 -d' ')
-        ;;
-    *)
-        executable=${1}
-        ;;
-    esac
-    shift
-done
+# Toggle hide, set it to be on top of all windows, on the focused monitor.
+bspc node "${id}" --flag hidden --flag sticky=on --to-monitor focused
 
-if [ -z "${id}" ]; then
-    ${executable} && rm ~/.cache/scratchpad
+# Check if the previous command worked properly
+if [ $? -eq 0 ]; then
+	# If yes, focus on it regardless of being hidden (makes code simpler)
+	bspc node "${id}" --focus
+	# Set it t
+	bspc node "${id}" -t floating
 else
-    while read -r instance; do
-        #bspc node "${instance}" --flag hidden --to-monitor focused --focus
-        bspc node "${instance}" --flag hidden --to-monitor focused --focus -t floating
-    done <<<"${id}"
+	# If it failed due to invalid pid, means that the window was exited
+	# Delete the cache file and move the current focused window into scratchpad
+	rm ${cache_file}
+	scratchpad-modified
 fi

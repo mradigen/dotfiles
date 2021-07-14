@@ -135,6 +135,7 @@ fi
 
 # Startup
 #Enters a line at top
+echo "\033[7;34m ~ \033[0;34m\ue0b0 \033[0mfet"
 echo
 #PF_COL1=2 PF_COL2=0 PF_COL3=0 pfetch
 #PF_COL1=3 PF_COL2=2 PF_COL3=4 pfetch
