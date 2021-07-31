@@ -1,13 +1,12 @@
 #! /bin/sh
 
 # scrot='modified-scrot'
-scrot='scrot -s -f'
+scrot='scrot -sfz'
 notifier='dunstify'
 filenameFormat='%Y-%m-%d-%T.png'
 filenameToSave=`date +$filenameFormat`
 screenshotDir="$HOME/Pictures/Screenshots/"
 
-#sleep 0.2; $scrot $filenameFormat -e 'mv $f ~/Pictures/Screenshots' &&
 $scrot ${screenshotDir}${filenameToSave} &&
 $notifier -t 1000 -r '12345' "Screenshot saved in ${screenshotDir}!" &&
 
