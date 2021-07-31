@@ -9,7 +9,15 @@ sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Update
 sudo pacman -Syyuu
-sudo pacman -S --needed git base-devel
+sudo pacman -S --needed git base-devel wget
+
+git clone https://github.com/mradigen/dotfiles.git
+
+cd dotfiles
+
+wget https://raw.githubusercontent.com/mradigen/dotfiles/main/Documents/Extra/packages
+
+# yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si

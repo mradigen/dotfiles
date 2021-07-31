@@ -1,13 +1,18 @@
 # BSPWM Hotkeys/keybindings
 
-#~7
-#	xdotool click --clearmodifiers --repeat 20 --delay 150 1
+~alt+g
+	godbridge
+#	xdotool click --clearmodifiers --repeat 10 --delay 100 3
+#	xdotool click --repeat 1000 --delay 65 3 & xdotool keydown s & xdotool keydown a
 #	autoclick
 
 #m
 #	xdotool click --repeat 5 --delay 150 1
 
 ###---Launch stuff---###
+
+alt+f
+	bspc node `cat $HOME/.cache/scratchpad | head -1` --focus
 
 # Terminal Emulator
 super + c
@@ -113,6 +118,7 @@ super + shift + f
 
 # Floating Windows
 super + space
+#	bspc node focused -t "~floating"
 	if [ -z "$(bspc query -N -n focused.floating)" ]; then \
         bspc node focused -t floating; \
     else \
@@ -136,7 +142,7 @@ super + alt + space
 XF86AudioMute
 	exec ~/.config/polybar/mic.sh toggle
 
-ctrl + {o, p}
+ctrl + {semicolon, apostrophe}
 	sound {mdecrease,mincrease}
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown} 
@@ -152,4 +158,5 @@ super + {_,shift +}b
 	xdotool key Escape shift+Tab Return
 
 ~ctrl + Page_Down
-	fsg
+	rsg-sw
+	#fsg

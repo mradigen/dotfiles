@@ -51,8 +51,12 @@ settings:
   content.javascript.can_access_clipboard:
     global: true
   content.media.audio_capture:
+    https://meet.google.com: false
     https://meet.jit.si: true
+  content.media.audio_video_capture:
+    https://meet.google.com: true
   content.media.video_capture:
+    https://meet.google.com: false
     https://meet.jit.si: true
   content.mouse_lock:
     https://krunker.io: true
@@ -60,6 +64,8 @@ settings:
     https://5418.allow-to-continue.com: false
     https://7997.allow-to-continue.com: false
     https://9529.allow-to-continue.com: false
+    https://meet.google.com: false
+    https://www.extra.com: false
     https://www.reddit.com: false
   editor.command:
     global:
