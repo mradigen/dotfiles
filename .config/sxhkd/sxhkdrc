@@ -62,8 +62,8 @@ super + r
 
 # Screenshot
 Print
+	screenshot
 #	flameshot gui -p ~/Pictures/Screenshots
-	scrot
 
 ######------------######
 
