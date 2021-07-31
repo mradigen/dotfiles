@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/sh
 
 function hcenter {
   text=$@
@@ -47,8 +47,8 @@ function center {
 s='\033[0m'
 i="aaaa"
 
-# bla='\033[0;30;40m'
-bla='\033[7;30m'
+ bla='\033[0;30;40m'
+#bla='\033[7;30m'
 r='\033[0;31;41m'
 g='\033[0;32;42m'
 y='\033[0;33;43m'
@@ -66,4 +66,4 @@ bl='\033[0;32m'
 # echo -E "${boldb}Cysis\033[1;37mOS\n${boldb}dis:${boldw} Arch"
 # echo -E "$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s"
 
-center "${boldb}Cysis${boldw}OS\n${boldb}dis:${boldw} Arch\n${boldb}pkg:${boldw} $(pacman -Qq | wc -l)\n${boldb}cpu:${boldw} i5 \n${boldb}ram:${boldw} $(free -m | grep Mem | awk '{print $3}')\n${boldb}sda:${boldw} $(df -h | grep sda1 | awk '{print $3}')\n \n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s"
+center "${boldb}Cysis${boldw}OS\n${boldb}dis:${boldw} Arch\n${boldb}pkg:${boldw} $(pacman -Qq | wc -l)\n${boldb}cpu:${boldw} i5 \n${boldb}ram:${boldw} $(free -m | grep Mem | awk '{print $3}')\n${boldb}sda:${boldw} $(df -h | grep sda1 | awk '{print $3}')\n $s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s"

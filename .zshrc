@@ -120,8 +120,8 @@ alias asdf="setxkbmap dvorak"
 alias aoeu="setxkbmap us"
 alias c="clear"
 alias cls="clear"
-alias mnt="sudo mount -o umask=0,uid=$(echo $USER),gid=$(echo $USER) $1 $2"
-alias umnt="sudo umount $1"
+alias mnt="sudo mount -o umask=0,uid=$(echo $USER),gid=$(echo $USER)"
+alias umnt="sudo umount"
 alias reset="reset; cat ~/.cache/wal/sequences"
 alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-format flac --audio-quality 0 -o '%(title)s.%(ext)s' $1"
 alias dump="sudo pacman -S"
@@ -144,15 +144,8 @@ fet
 
 tput bold
 
-#echo "I am going to make a Tik-Tok clone for searching music.
-#No matter what happens.
-#I am not stopping.
-#The idea might be shit, but I am doing it.
-#It will be a boom."
-
-echo
-
-motivate
+#echo
+#motivate
 
 alias tts="./tts.sh '$(shuf -n 1 ~/.local/bin/sudo-prompts)'"
 
