@@ -1,4 +1,4 @@
 #! /bin/sh
 
 blurlock
-bspwm
+exec dbus-launch bspwm
