@@ -119,6 +119,7 @@ alias sudo='sudo -p "$(shuf -n 1 ~/.local/bin/sudo-prompts) "'
 alias asdf="setxkbmap dvorak"
 alias aoeu="setxkbmap us"
 alias c="clear"
+alias x="exit"
 alias cls="clear"
 alias mnt="sudo mount -o umask=0,uid=$(echo $USER),gid=$(echo $USER)"
 alias umnt="sudo umount"

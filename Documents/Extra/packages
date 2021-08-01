@@ -28,6 +28,7 @@ gcc
 git
 glfw-x11
 gomuks
+groff
 grub
 htop
 i3lock
@@ -35,6 +36,7 @@ inetutils
 j4-dmenu-desktop-git
 jq
 jre-openjdk-headless
+jre8-openjdk-headless
 lib32-glibc
 libtool
 libva-intel-driver
@@ -44,15 +46,18 @@ linux-firmware
 linux-headers
 lxappearance-gtk3
 m4
+maim
 make
 marktext-bin
 minecraft-launcher
 moc
 mpv
+nano
 neovim
 noto-fonts
 noto-fonts-emoji
 npm
+ntfs-3g
 obs-studio
 openal
 openssh
@@ -69,6 +74,7 @@ python-chardet
 python-pywal
 python-requests
 python-yaml
+qemu
 qutebrowser
 ranger
 reflector
@@ -77,6 +83,7 @@ rofi-calc
 rofi-greenclip
 rofigen-git
 rsync
+slop
 sublime-text-4
 sudo
 sxhkd
@@ -86,10 +93,13 @@ typora
 ueberzug
 unzip
 vi
+vim
 vivaldi
 vivaldi-ffmpeg-codecs
 which
+wine
 wpa_supplicant
+xclip
 xdotool
 xf86-video-intel
 xf86-video-vesa
@@ -141,7 +151,6 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xsel
 yay
 youtube-dl
 zip

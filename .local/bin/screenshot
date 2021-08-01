@@ -1,14 +1,11 @@
 #! /bin/sh
 
 # scrot='modified-scrot'
-scrot='scrot -sfz'
+scrot='maim -squl -b 3 -c 0.8,0.6,0.9,0.3'
 notifier='dunstify'
 filenameFormat='%Y-%m-%d-%T.png'
-filenameToSave=`date +$filenameFormat`
-screenshotDir="$HOME/Pictures/Screenshots/"
+fileLoc="$HOME/Pictures/Screenshots/$(date +${filenameFormat})"
 
-$scrot ${screenshotDir}${filenameToSave} &&
-$notifier -t 1000 -r '12345' "Screenshot saved in ${screenshotDir}!" &&
-
-xclip -selection clipboard -t image/png -i ${screenshotDir}${filenameToSave} &&
-$notifier -t 1000 -r '12346' "Screenshot successfully copied to clipboard!"
+$scrot ${fileLoc} &&
+xclip -selection clipboard -t image/png -i ${fileLoc} &&
+$notifier -t 3000 -r '12345' -i ${fileLoc} Screenshot "Saved and copied to clipboard!"
