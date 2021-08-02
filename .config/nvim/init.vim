@@ -15,6 +15,7 @@ set softtabstop=4
 
 let g:goyo_width = 100
 let g:goyo_height = 100
+autocmd VimResized * if exists('#goyo') | exe "normal \<c-w>=" | endif
 
 autocmd VimEnter * Goyo
 " autocmd VimEnter * NERDTree | wincmd p

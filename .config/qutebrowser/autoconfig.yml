@@ -45,6 +45,8 @@ settings:
     - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
   content.blocking.method:
     global: both
+  content.desktop_capture:
+    https://meet.jit.si: true
   content.headers.user_agent:
     global: Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko)
       {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}
