@@ -1,0 +1,52 @@
+#! /bin/sh
+
+# A simple shell script to read xkcd comics (https://xkcd.com/)
+
+for arg in "$@"
+do
+    case $arg in
+		-h|--help)
+			cat <<EOF
+Usage: 
+       $(basename "${0}")               Get the latest xkcd comic
+       $(basename "${0}") [OPTIONS]
+
+Options:
+       -r, --random       Get a random xkcd comic
+	   -c, --check        Check whether a new comic was released
+       -h, --help         Output this help
+EOF
+			exit 0
+			shift
+		;;
+        -r|--random)
+			random=true
+			shift
+        ;;
+		-c|--check)
+			if [ `curl -s https://xkcd.com/info.0.json | jq -r '.num'` != `cat $HOME/.cache/xkcd` ]; then
+				echo "xkcd new comic has been released!"
+				exit 0
+			else
+				exit 1
+			fi
+			shift
+		;;
+        *)
+			random=false
+			shift # Remove generic argument from processing
+        ;;
+    esac
+done
+
+res=$(curl -s https://xkcd.com/info.0.json)
+if [[ $random == true ]]; then
+	res=`curl -s https://xkcd.com/$(shuf -i 0-$(echo $res | jq -r '.num') -n 1)/info.0.json`
+else
+	echo $res | jq -r '.num' > $HOME/.cache/xkcd
+fi
+
+curl -s `echo $res | jq -r '.img'` -o /tmp/xkcd.png
+feh /tmp/xkcd.png
+rm /tmp/xkcd.png
+echo "https://xkcd.com/$(echo $res | jq -r '.num')"
