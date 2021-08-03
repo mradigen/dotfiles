@@ -1,30 +1,36 @@
 #! /bin/sh
 
-# A simple shell script to read xkcd comics (https://xkcd.com/)
+# A simple shell script to read xkcd comics (https://xkcd.com/).
+# Uses `curl` to get the comics and `feh` to display them.
+cache_directory="$HOME/.cache/"
+feh_opts="--borderless --draw-filename --class xkcd --start-at"
+
+mkdir -p $cache_directory/xkcd
 
 for arg in "$@"
 do
-    case $arg in
+	case $arg in
 		-h|--help)
 			cat <<EOF
 Usage: 
-       $(basename "${0}")               Get the latest xkcd comic
-       $(basename "${0}") [OPTIONS]
+	$(basename "${0}")               Get the latest xkcd comic from https://xkcd.com/
+	$(basename "${0}") {n}           Get a specific xkcd comic from https://xkcd.com/
+	$(basename "${0}") [OPTIONS] {n}
 
 Options:
-       -r, --random       Get a random xkcd comic
-	   -c, --check        Check whether a new comic was released
-       -h, --help         Output this help
+	-r, --random       Get {n} number of random xkcd comic(s)
+	-c, --check        Check whether a new comic was released
+	-h, --help         Output this help
 EOF
 			exit 0
-			shift
 		;;
-        -r|--random)
+		-r|--random)
 			random=true
 			shift
-        ;;
+			break
+		;;
 		-c|--check)
-			if [ `curl -s https://xkcd.com/info.0.json | jq -r '.num'` != `cat $HOME/.cache/xkcd` ]; then
+			if [ `curl -s https://xkcd.com/info.0.json | jq -r '.num'` != `cat $cache_directory/xkcd/latest` ]; then
 				echo "xkcd new comic has been released!"
 				exit 0
 			else
@@ -32,21 +38,32 @@ EOF
 			fi
 			shift
 		;;
-        *)
-			random=false
-			shift # Remove generic argument from processing
-        ;;
-    esac
+	esac
 done
 
-res=$(curl -s https://xkcd.com/info.0.json)
 if [[ $random == true ]]; then
-	res=`curl -s https://xkcd.com/$(shuf -i 0-$(echo $res | jq -r '.num') -n 1)/info.0.json`
+	i=0
+	while [[ $i < $[$@ + 1] ]]; do
+		res=`curl -s https://xkcd.com/$(shuf -i 0-$(cat $cache_directory/xkcd/latest) -n 1)/info.0.json`
+		curl -s `echo $res | jq -r '.img'` -o $cache_directory/xkcd/xkcd${i}.png
+
+		echo "https://xkcd.com/$(echo $res | jq -r '.num')" # Output the comic link
+
+		echo -ne "${i}/${@}\r" # Show progress
+
+		i=$[$i + 1] # Increment for while loop
+	done
 else
-	echo $res | jq -r '.num' > $HOME/.cache/xkcd
+	res=$(curl -s https://xkcd.com/info.0.json)
+	if [[ $@ != "" ]]; then
+		res=$(curl -s https://xkcd.com/$@/info.0.json)
+	else
+		res=$(curl -s https://xkcd.com/info.0.json)
+	fi
+	echo $res | jq -r '.num' > $cache_directory/xkcd/latest # Store the latest comic number
+	curl -s `echo $res | jq -r '.img'` -o $cache_directory/xkcd/xkcd0.png
+	echo "https://xkcd.com/$(echo $res | jq -r '.num')"
 fi
 
-curl -s `echo $res | jq -r '.img'` -o /tmp/xkcd.png
-feh /tmp/xkcd.png
-rm /tmp/xkcd.png
-echo "https://xkcd.com/$(echo $res | jq -r '.num')"
+feh $feh_opts $cache_directory/xkcd/xkcd0.png
+rm $cache_directory/xkcd/xkcd*
