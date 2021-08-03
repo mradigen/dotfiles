@@ -143,8 +143,7 @@ echo
 #neofetch
 fet
 
-tput bold
-
+#tput bold
 #echo
 #motivate
 
