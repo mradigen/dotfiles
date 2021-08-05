@@ -97,7 +97,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Environment Variables
-export ALSA_CARD=PCH
+
+# Shifted task to ~/.asoundrc
+#export ALSA_CARD=PCH
 export ANDROID_HOME="$HOME/.android"
 export ANDROID_NDK="$HOME/.android/ndk"
 export PATH="$PATH:$HOME/.android/platform-tools"
