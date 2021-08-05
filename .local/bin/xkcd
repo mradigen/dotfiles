@@ -43,14 +43,17 @@ done
 
 if [[ $random == true ]]; then
 	i=0
-	while [[ $i < $[$@ + 1] ]]; do
+	while [ $i -lt $[$@ + 1] ]; do
 		res=`curl -s https://xkcd.com/$(shuf -i 0-$(cat $cache_directory/xkcd/latest) -n 1)/info.0.json`
 		curl -s `echo $res | jq -r '.img'` -o $cache_directory/xkcd/xkcd${i}.png
 
 		echo "https://xkcd.com/$(echo $res | jq -r '.num')" # Output the comic link
 
-		echo -ne "${i}/${@}\r" # Show progress
+		echo -ne "${i}/${@}\r" # Show progress		
 
+#		if [ $i -lt 1 ]; then
+#			feh $feh_opts $cache_directory/xkcd/xkcd0.png && rm $cache_directory/xkcd/xkcd* && exit &
+#		fi
 		i=$[$i + 1] # Increment for while loop
 	done
 else
