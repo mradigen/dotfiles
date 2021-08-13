@@ -47,6 +47,14 @@ super + {f, t, h}
 #super + h
 	#rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
+# Switch desktops on secondary monitor
+super + g
+	if [[ `bspc query --desktops --monitor \^2 --desktop focused --names` = 6 ]]; then \
+        bspc desktop -f 7; \
+    else \
+        bspc desktop -f 6; \
+    fi
+
 # Alsamixer
 super + m
 	alacritty --class=Alsamixer -e 'alsamixer'
