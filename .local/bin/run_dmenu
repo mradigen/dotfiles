@@ -11,4 +11,4 @@ while getopts 'tcd' flag; do
 	exit
 done
 
-j4-dmenu-desktop --dmenu="run_dmenu -d"
+j4-dmenu-desktop --dmenu="run_dmenu -d" & disown
