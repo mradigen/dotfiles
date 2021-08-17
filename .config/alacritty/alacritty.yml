@@ -24,7 +24,7 @@ colors:
 font:
   normal:
     family: Iosevka
-  size: 11
+  size: 10.5
 window:
   padding:
     x: 10
