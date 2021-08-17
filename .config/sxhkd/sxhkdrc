@@ -150,8 +150,10 @@ super + alt + space
 XF86AudioMute
 	exec ~/.config/polybar/mic.sh toggle
 
-ctrl + {semicolon, apostrophe}
-	sound {mdecrease,mincrease}
+#ctrl + {semicolon, apostrophe}
+#	sound {mdecrease,mincrease}
+ctrl + apostrophe
+	amixer set Capture toggle
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown} 
 	{brightness 5 & dunstify -t 500 -u low -r "92813" "Brightness: $(cat /sys/class/backlight/intel_backlight/brightness)", brightness -5 & dunstify -t 500 -u low -r "92813" "Brightness: $(cat /sys/class/backlight/intel_backlight/brightness)"}

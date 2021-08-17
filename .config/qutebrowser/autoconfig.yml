@@ -53,6 +53,7 @@ settings:
   content.javascript.can_access_clipboard:
     global: true
   content.media.audio_capture:
+    https://discord.com: true
     https://meet.google.com: false
     https://meet.jit.si: true
   content.media.audio_video_capture:
