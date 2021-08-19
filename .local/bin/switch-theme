@@ -3,6 +3,8 @@ wal -i $HOME/Pictures/Wallpapers/${1}.* &&
 
 feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
 
+{ echo -n '//META{"name":"wal","description":"Generated based on pywal colors","author":"wal-discord","version":"1.0"}*//'; sassc -t compact -I $HOME/.config/wal-discord -s < $HOME/.config/wal-discord/master.scss; } > $HOME/.config/BetterDiscord/themes/wall.theme.css &&
+
 oomox-cli -o wal -t $HOME/.local/share/themes $HOME/.cache/wal/colors-oomox &&
 
 bspc wm -r &&
