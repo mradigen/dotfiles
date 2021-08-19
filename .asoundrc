@@ -12,6 +12,15 @@ pcm.MainSpliter {
 	type asym
 	playback.pcm "OutputSpliter"
 	capture.pcm "dsnoop"
+	# Optional, kept for fun
+	#capture.pcm "LoopbackIntoMic"
+}
+
+# Optional, kept for fun
+pcm.LoopbackIntoMic {
+	type dsnoop
+	ipc_key 1026
+	slave.pcm "hw:Loopback,1,0"
 }
 
 pcm.OutputSpliter {
