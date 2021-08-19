@@ -67,7 +67,8 @@ Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, wh
 - [ranger](https://github.com/ranger/ranger) [file manager]
 - [mocp](https://github.com/jonsafari/mocp) [music player]
 - [pipes.sh](https://github.com/pipeseroni/pipes.sh) [just for visuals :)]
-- [qutebrowser](https://github.com/qutebrowser/qutebrowser) [web browser] (Older browser was [vivaldi](https://vivaldi.com/))
+- ~[qutebrowser](https://github.com/qutebrowser/qutebrowser) [web browser]~
+- [vivaldi](https://vivaldi.com/) [web browser]
 - ~[neofetch](https://github.com/dylanaraps/neofetch) [terminal fetch for info]~
 - fet [a custom fetch script definitely not stolen from [them](https://github.com/safinsingh/)]
 - ~[rofi](https://github.com/davatorium/rofi) [application opener]~

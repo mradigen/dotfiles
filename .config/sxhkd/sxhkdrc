@@ -20,8 +20,8 @@ super + c
 
 # Web Browser
 super + v
-	qutebrowser
-	#vivaldi-stable
+	vivaldi-stable
+	#qutebrowser
 
 # File Browser
 super + x
@@ -152,7 +152,8 @@ XF86AudioMute
 
 #ctrl + {semicolon, apostrophe}
 #	sound {mdecrease,mincrease}
-ctrl + apostrophe
+XF86AudioMicMute
+#ctrl + apostrophe
 	amixer set Capture toggle
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown} 

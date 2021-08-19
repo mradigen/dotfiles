@@ -54,7 +54,8 @@ bspc config presel_feedback_color "$color1"
 ###---Rules---###
 
 # Open on specific workspace
-bspc rule -a qutebrowser desktop=1
+#bspc rule -a qutebrowser desktop=1
+bspc rule -a Vivaldi-stable desktop=1
 #bspc rule -a Alacritty desktop=2
 #bspc rule -a discord desktop=3
 #bspc rule -a Element desktop=3
