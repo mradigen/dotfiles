@@ -1,0 +1,54 @@
+/*@import url('/home/adigen/.cache/wal/colors.css');*/
+@import url('colors.css');
+
+div {
+	--colorBg: var(--background);
+	--colorFg: var(--color3);
+	--colorHighlightBg: var(--color3);
+	--colorAccentBg: var(--color5);
+}
+
+/* Hide top menu */
+#header {
+	display: none !important;
+}
+
+/* Hide trash can on tab bar */
+#tabs-container .toggle-trash {
+	display: none !important;
+}
+
+/* Hide new tab button */
+.newtab {
+	display: none;
+}
+
+/* Prevent tab bar resizing */
+.SlideBar--FullHeight {
+    pointer-events: none;
+}
+
+/* Set fixed width */
+/* DOESN'T WORK, GETS OVERWRITTEN BY INLINE STYLING */
+div#tabs-tabbar-container {
+	width: 31px;
+}
+
+/* Remove margin on tab bar */
+.tabs-left .tab-position .tab, .tabs-right .tab-position .tab {
+    margin: 0;
+}
+
+/* Remove background filter on tab favicon */
+.theme-dark .tab-position .tab.active .tab-header .favicon:not(.svg), .acc-dark.color-behind-tabs-off .tab-position .tab.active .tab-header .favicon:not(.svg) {
+    filter: none;
+}
+
+/* Prevent favicon glitch */
+/*#tabs-container .tab.tab-small .tab-header, #tabs-container .tab.pinned.tab-mini .tab-header {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}*/
