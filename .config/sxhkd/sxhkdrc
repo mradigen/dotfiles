@@ -20,7 +20,7 @@ super + c
 
 # Web Browser
 super + v
-	vivaldi-stable
+	vivaldi-stable --profile-directory="Default"
 	#qutebrowser
 
 # File Browser

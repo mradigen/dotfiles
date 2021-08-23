@@ -127,9 +127,12 @@ alias mnt="sudo mount -o umask=0,uid=$(echo $USER),gid=$(echo $USER)"
 alias umnt="sudo umount"
 alias reset="reset; cat ~/.cache/wal/sequences"
 alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-format flac --audio-quality 0 -o '%(title)s.%(ext)s' $1"
+alias vpn="sudo openvpn ~/Documents/VPN/Cysis.ovpn & disown"
+
+# Pacman
 alias dump="sudo pacman -S"
 alias yeet="sudo pacman -Rsn"
-alias vpn="sudo openvpn ~/Documents/VPN/Cysis.ovpn & disown"
+alias search="pacman -Ss"
 
 # startx if we are on tty1
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then

@@ -7,17 +7,17 @@ pcm.!default {
 }
 
 # We need a separate splitter cause `apulse` (for Discord)
-# cannot connect is default type is asym
+# cannot connect if default pcm type is `asym`
 pcm.MainSpliter {
 	type asym
 	playback.pcm "OutputSpliter"
 	capture.pcm "dsnoop"
 	# Optional, kept for fun
-	#capture.pcm "LoopbackIntoMic"
+	#capture.pcm "LoopbackOutputIntoMic"
 }
 
 # Optional, kept for fun
-pcm.LoopbackIntoMic {
+pcm.LoopbackOutputIntoMic {
 	type dsnoop
 	ipc_key 1026
 	slave.pcm "hw:Loopback,1,0"
