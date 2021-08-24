@@ -7,6 +7,7 @@ automake
 base
 bat
 bc
+betterdiscord-installer
 binutils
 bison
 broadcom-wl-dkms
@@ -21,7 +22,6 @@ fakeroot
 feh
 ffmpeg
 flex
-flite
 fuse2
 gcc
 git
