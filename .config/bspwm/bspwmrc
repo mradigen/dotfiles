@@ -12,8 +12,11 @@ xsetroot -cursor_name left_ptr &
 ##---Fix Displays---###
 exec ~/.screenlayout/fix.sh &
 
-###---Autostart---###
+###---Themeing---###
 wal -R
+$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
+
+###---Autostart---###
 #xautolock -time "10" -locker "blurlock" -notify "10" -notifier "dunst" -killtime "10" -killer "systemctl suspend" -detectsleep &
 #alacritty --class="Startup" &
 dunst-start &
@@ -23,6 +26,7 @@ pbstart &
 greenclip daemon &
 #exec /usr/lib/kdeconnectd &
 
+###---Discord RPC---###
 LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
 
 ###---BSPWM---###

@@ -120,9 +120,10 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 #alias mocp="mocp --moc-dir ~/.config/moc"
 
 # Stuff
-alias sudo='sudo -p "$(shuf -n 1 ~/.local/bin/sudo-prompts) "'
+#alias sudo='sudo -p "Welcome back. Known? "'
 alias asdf="setxkbmap dvorak"
 alias aoeu="setxkbmap us"
+alias cat="bat"
 alias c="clear"
 alias x="exit"
 alias cls="clear"
@@ -151,11 +152,12 @@ echo
 #neofetch
 fet
 
-#tput bold
-#echo
+tput bold
+echo
+emos
 #motivate
 
-alias tts="./tts.sh '$(shuf -n 1 ~/.local/bin/sudo-prompts)'"
+#alias tts="./tts.sh '$(shuf -n 1 ~/.local/bin/sudo-prompts)'"
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
