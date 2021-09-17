@@ -1,0 +1,18 @@
+#! /bin/sh
+
+image=$1
+output=$2
+text_pos_x=$3
+text_pos_y=$4
+shift
+shift
+shift
+shift
+text="$@"
+length_wrap="512"
+
+convert -fill white -background transparent -font Iosevka -pointsize 36 \
+	-size ${length_wrap}x caption:"${text}" \
+	$output
+
+convert $image $output -gravity SouthWest -geometry +${text_pos_x}+${text_pos_y} -compose over -composite $output

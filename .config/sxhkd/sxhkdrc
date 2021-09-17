@@ -168,9 +168,9 @@ XF86Display
 super + {_,shift +}b
 	{blurlock, blurlock; systemctl suspend}
 
-~ctrl + End
-	xdotool key Escape shift+Tab Return
+#~ctrl + End
+#	xdotool key Escape shift+Tab Return
 
 ~ctrl + Page_Down
-	rsg-sw
 	#fsg
+	rsg-sw
