@@ -1,0 +1,43 @@
+[general]
+mode = normal
+framerate = 60
+autosens = 1
+overshoot = 0
+
+sensitivity = 100
+
+bar_spacing = 1
+
+lower_cutoff_freq = 100
+higher_cutoff_freq = 20000
+sleep_timer = 0
+
+[input]
+method = alsa
+source = hw:Loopback,1
+
+[output]
+method = ncurses
+channels = mono
+raw_target = /dev/stdout
+data_format = binary
+bit_format = 64bit
+ascii_max_range = 900
+bar_delimiter = 59
+frame_delimiter = 10
+
+[color]
+background = default
+foreground = default
+gradient = 1
+#gradient_count = 3
+#gradient_color_3 = "#d58bc4"
+#gradient_color_2 = "#dcc895"
+#gradient_color_1 = "#7585ce"
+
+[smoothing]
+monstercat = 1
+waves = 1
+integral = 77
+gravity = 100
+ignore = 0
