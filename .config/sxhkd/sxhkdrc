@@ -152,8 +152,8 @@ super + alt + space
 
 #ctrl + {semicolon, apostrophe}
 #	sound {mdecrease,mincrease}
-XF86AudioMicMute
 #ctrl + apostrophe
+XF86AudioMicMute
 	amixer set Capture toggle
 
 XF86AudioMute
@@ -172,5 +172,5 @@ super + {_,shift +}b
 #	xdotool key Escape shift+Tab Return
 
 ~ctrl + Page_Down
-	#fsg
 	rsg-sw
+	#fsg
