@@ -11,5 +11,8 @@ killall -q polybar
 # polybar example & 
 
 for m in $(polybar --list-monitors | cut -d":" -f1); do
-    MONITOR=$m polybar --reload example &
+	MONITOR=$m polybar --reload example &
+	#MONITOR=$m polybar -r wm &
+	#MONITOR=$m polybar -r music &
+	#MONITOR=$m polybar -r utilities &
 done

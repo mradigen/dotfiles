@@ -1,17 +1,8 @@
-Had to install about 40 packages just to run vimb.
-
 These packages enabled video playback:
-
-gst-plugins-bad gst-plugins-bad-libs gst-plugins-base gst-plugins-base-libs gst-plugins-good
-
-Installed python-adblock for adblocking which doesn't work on qutebrowser.
-Also, pdfjs for qutebrowser pdf viewing.
+gst-plugins-base-libs
 
 Installed `telnet` from `inetutils` for learning c-networking
 
 Installed `python-requests` to run FSG seed generator findSeed.py.
 
-Application Launchers currently installed:
-
-rofi
-dmenu
+# Installed webkit2gtk which installed 103 MB of packages just to run Focalboard
