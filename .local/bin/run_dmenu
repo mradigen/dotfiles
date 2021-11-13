@@ -1,6 +1,6 @@
 #! /bin/sh
 
-dmenu_command="dmenu -i -fn "Iosevka-10" -nb "$(xrdb -query | grep '*color0'| awk '{print $NF}')" -nf "$(xrdb -query | grep '*color5'| awk '{print $NF}')" -sb "$(xrdb -query | grep '*color5'| awk '{print $NF}')" -sf "$(xrdb -query | grep '*color0'| awk '{print $NF}')" -l 10"
+dmenu_command="dmenu -i -fn "Iosevka-13" -nb "$(xrdb -query | grep '*color0'| awk '{print $NF}')" -nf "$(xrdb -query | grep '*color5'| awk '{print $NF}')" -sb "$(xrdb -query | grep '*color5'| awk '{print $NF}')" -sf "$(xrdb -query | grep '*color0'| awk '{print $NF}')" -l 10"
 
 while getopts 'tcd' flag; do
 	case "${flag}" in
