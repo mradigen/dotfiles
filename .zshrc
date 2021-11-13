@@ -130,8 +130,8 @@ alias cls="clear"
 alias mnt="sudo mount -o umask=0,uid=$(echo $USER),gid=$(echo $USER)"
 alias umnt="sudo umount"
 alias reset="reset; cat ~/.cache/wal/sequences"
-alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-format flac --audio-quality 0 -o '%(title)s.%(ext)s' $1"
-alias vpn="sudo openvpn ~/Documents/VPN/Cysis.ovpn & disown"
+alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-format flac --audio-quality 0 -o '%(title)s.%(ext)s'"
+alias vpn="sudo openvpn ~/Documents/VPN/cysis.ovpn & disown"
 
 # Pacman
 alias dump="sudo pacman -S"
