@@ -3,6 +3,8 @@
 HOSTNAME_HOST="Cysis"
 USERNAME_USER="adigen"
 
+alias echo="echo -e"
+
 # set local time
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 
