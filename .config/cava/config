@@ -13,8 +13,8 @@ higher_cutoff_freq = 20000
 sleep_timer = 0
 
 [input]
-method = alsa
-source = hw:Loopback,1
+method = pulse
+#source = hw:Loopback,1
 
 [output]
 method = ncurses

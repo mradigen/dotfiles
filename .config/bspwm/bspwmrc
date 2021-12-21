@@ -26,6 +26,9 @@ pbstart &
 greenclip daemon &
 #exec /usr/lib/kdeconnectd &
 
+###---Fix Audio---###
+amixer -D hw:PCH sset Speaker+LO on 75% &
+
 ###---Discord RPC---###
 LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
 
