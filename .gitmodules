@@ -7,3 +7,6 @@
 [submodule ".config/nvim/plugged/goyo.vim"]
 	path = .config/nvim/plugged/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "Documents/DiscordRPC"]
+	path = Documents/DiscordRPC
+	url = https://github.com/mradigen/discord-rpc-status.git
