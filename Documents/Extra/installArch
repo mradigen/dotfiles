@@ -3,6 +3,7 @@
 HOSTNAME_HOST="Cysis"
 USERNAME_USER="adigen"
 
+# Very Important:
 alias echo="echo -e"
 
 # set local time

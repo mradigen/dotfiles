@@ -4,3 +4,6 @@
 [submodule ".config/nvim/plugged/wal.vim"]
 	path = .config/nvim/plugged/wal.vim
 	url = https://github.com/dylanaraps/wal.vim.git
+[submodule ".config/nvim/plugged/goyo.vim"]
+	path = .config/nvim/plugged/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
