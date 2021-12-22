@@ -38,6 +38,8 @@ export VISUAL=/usr/bin/subl
 #############
 
 # General
+alias androidvnc="adb forward tcp:2301 tcp:5901"
+alias androidvnc-kill="adb forward --remove-all"
 alias asdf="setxkbmap dvorak"
 alias aoeu="setxkbmap us"
 #alias cat="bat" # meh, gonna just use cat
