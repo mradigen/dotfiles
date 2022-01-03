@@ -1,1 +1,1 @@
-exec ~/.screenlayout/single.sh
+exec ~/.screenlayout/G24F.sh

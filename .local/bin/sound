@@ -1,14 +1,17 @@
 #! /bin/sh
 
-amixer -D pipewire sset Master 100% on
-amixer -D hw:PCH sset Speaker+LO on
+#amixer -D pipewire sset Master 100% on
+#amixer -D hw:PCH sset Speaker+LO on
+
+#alias amixer='amixer -D pipewire'
+alias amixer='amixer -D hw:1'
 
 case "${1}" in
-	#"increase") amixer -D pipewire sset Master 5%+ & dunstify -t 500 -u low -r '92813' "Volume: `amixer sget Master | awk -F'[][]' '/%/ { print $2 }' | head -1`"
-	"increase") amixer -D hw:PCH sset Speaker+LO 5%+ & dunstify -t 500 -u low -r '92813' "Volume: `amixer -D hw:PCH sget Speaker+LO | awk -F'[][]' '/%/ { print $2 }' | head -1`"
+	"increase") amixer sset Master 5%+ & dunstify -t 500 -u low -r '92813' "Volume: `amixer sget Master | awk -F'[][]' '/%/ { print $2 }' | head -1`"
+	#"increase") amixer -D hw:PCH sset Speaker+LO 5%+ & dunstify -t 500 -u low -r '92813' "Volume: `amixer -D hw:PCH sget Speaker+LO | awk -F'[][]' '/%/ { print $2 }' | head -1`"
 	;;
-	#"decrease") amixer -D pipewire sset Master 5%-; dunstify -t 500 -u low -r '92813' "Volume: `amixer sget Master | awk -F'[][]' '/%/ { print $2 }' | head -1`"	
-	"decrease") amixer -D hw:PCH sset Speaker+LO 5%-; dunstify -t 500 -u low -r '92813' "Volume: `amixer -D hw:PCH sget Speaker+LO | awk -F'[][]' '/%/ { print $2 }' | head -1`"
+	"decrease") amixer sset Master 5%-; dunstify -t 500 -u low -r '92813' "Volume: `amixer sget Master | awk -F'[][]' '/%/ { print $2 }' | head -1`"
+	#"decrease") amixer -D hw:PCH sset Speaker+LO 5%-; dunstify -t 500 -u low -r '92813' "Volume: `amixer -D hw:PCH sget Speaker+LO | awk -F'[][]' '/%/ { print $2 }' | head -1`"
 	;;
 	"mute") amixer sset Master toggle; dunstify -t 500 -u low -r '92813' "Volume $(amixer sget Master | awk -F '[][]' '/dB/ {print $6}')"
 	;;
