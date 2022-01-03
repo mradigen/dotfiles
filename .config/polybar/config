@@ -53,7 +53,7 @@ scroll-down = #bspwm.next
 
 modules-left = bspwm
 modules-center = music-prev music music-next
-modules-right = temperature cpu memory date powermenu
+modules-right = gpu temperature memory date powermenu
 
 #font-0 = "Dank Mono:size=11:weight=bold;2"
 font-0 = "Iosevka:size=11:weight=bold;3"
@@ -170,22 +170,29 @@ type = internal/temperature
 
 interval = 1
 
-thermal-zone = 6
+#thermal-zone = 6
+
+hwmon-path = /sys/devices/platform/nct6687.2592/hwmon/hwmon2/temp1_input
 
 base-temperature = 50
 warn-temperature = 80
 
-format = "<ramp> "
-format-warn = "<ramp> <label-warn> "
-
-label-warn = "%temperature-c%"
-label-warn-foreground = #f00
-
-ramp-0 = %{F#00f}%{F-}
-ramp-1 = 
-ramp-2 = 
-ramp-3 = %{F#f00}%{F-}
+format = " <ramp> <label> "
+ramp-0 = ""
 ramp-foreground = ${colors.white}
+label = "%temperature-c%"
+
+#format = "<ramp> "
+#format-warn = "<ramp> <label-warn> "
+#
+#label-warn = "%temperature-c%"
+#label-warn-foreground = #f00
+#
+#ramp-0 = %{F#00f}%{F-}
+#ramp-1 = 
+#ramp-2 = 
+#ramp-3 = %{F#f00}%{F-}
+#ramp-foreground = ${colors.white}
 
 ;-------------------------------------------------
 ;                                                ;
@@ -229,6 +236,16 @@ ramp-used-4 = ▅
 ramp-used-5 = ▆
 ramp-used-6 = ▇
 ramp-used-7 = █
+
+;-------------------------------------------------
+;                                                ;
+;          		GPU MODULE PARAMETERS		 	 ;
+;                                                ;
+;-------------------------------------------------
+[module/gpu]
+type = custom/script
+exec = echo "%{F$(xrdb -query | grep '*color7'| awk '{print $NF}')}%{F-} `nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits`°C "
+interval = 1
 
 ;--------------USER DEFINED MODULES---------------
 ;These modules require scripts to run, you can find

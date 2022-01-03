@@ -3,31 +3,25 @@
 ###--Close these programs---###
 killall -q sxhkd xss-lock dunst picom greenclip kdeconnectd polybar discord-rpc-status
 
-###---SXKHD---###
-sxhkd &
-
 ###---Fix Cursor---###
 xsetroot -cursor_name left_ptr &
 
 ##---Fix Displays---###
 exec ~/.screenlayout/fix.sh &
-
-###---Themeing---###
-wal -R
-$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
+xcalib ~/.local/share/icc/techless_G24F.icm &
 
 ###---Autostart---###
-#xautolock -time "10" -locker "blurlock" -notify "10" -notifier "dunst" -killtime "10" -killer "systemctl suspend" -detectsleep &
-#alacritty --class="Startup" &
+sxhkd &
 dunst-start &
 picom -b &
 #exec ~/.fehbg &
 pbstart &
 greenclip daemon &
-#exec /usr/lib/kdeconnectd &
 
 ###---Fix Audio---###
-amixer -D hw:PCH sset Speaker+LO on 75% &
+amixer -D hw:1 sset Master 60%
+#amixer -D hw:PCH sset Speaker+LO on 75% &
+#amixer -D pipewire sset Master on 1% &
 
 ###---Discord RPC---###
 LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
@@ -49,6 +43,8 @@ bspc config focus_follows_pointer true
 bspc config ignore_ewmh_focus on
 
 ###---Theme!---###
+wal -R
+$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
 
 . "${HOME}/.cache/wal/colors.sh"
 
@@ -59,7 +55,6 @@ bspc config focused_border_color "$color5"
 bspc config presel_feedback_color "$color1"
 
 ###---Rules---###
-
 # Open on specific workspace
 #bspc rule -a qutebrowser desktop=1
 bspc rule -a Vivaldi-stable desktop=1
@@ -73,7 +68,8 @@ bspc rule -a Alacritty:Alsamixer state=floating rectangle=600x300+383+234
 bspc rule -a Alacritty:Startup state=floating rectangle=600x300+383+234
 bspc rule -a Alacritty:Music state=floating rectangle=600x300+383+234
 bspc rule -a Connman-gtk state=floating
-bspc rule -a discord state=floating rectangle=1362x384+0+380 sticky=on layer=above
+#bspc rule -a discord state=floating rectangle=1362x384+0+380 sticky=on layer=above
+bspc rule -a discord state=floating rectangle=960x1080+0+0 sticky=on layer=above
 bspc rule -a Vivaldi-stable:discord.com__app state=floating rectangle=1362x384+0+380 sticky=on layer=above
 bspc rule -a xkcd state=floating
 #bspc rule -a discord state=fullscreen sticky=on layer=ABOVE
