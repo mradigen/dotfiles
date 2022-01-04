@@ -56,7 +56,7 @@ alias update="yay -Syu"
 alias dump="yay -S"
 alias yeet="yay -Rsn"
 alias search="yay -Ss"
-alias polish="sudo reflector --verbose --latest 5 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist"
+alias polish="sudo reflector --verbose --latest 10 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist"
 
 # Ricing
 alias zshconf="${EDITOR} ~/.zshrc"
