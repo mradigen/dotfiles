@@ -174,5 +174,6 @@ super + {_,shift +}b
 #	xdotool key Escape shift+Tab Return
 
 ~ctrl + Page_Down
-	rsg-sw
+	ssg
 	#fsg
+	#rsg-sw

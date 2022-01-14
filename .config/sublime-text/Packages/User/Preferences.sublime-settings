@@ -2,7 +2,7 @@
 	"color_scheme": "Packages/ayu/ayu-dark.sublime-color-scheme",
 	// "color_scheme": "Packages/User/PyWal.sublime-color-scheme",
 	"font_face": "Iosevka",
-	"font_size": 11,
+	"font_size": 12,
 	"ignored_packages":
 	[
 		"Vintage",

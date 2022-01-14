@@ -66,8 +66,11 @@ alias pbconf="${EDITOR} ~/.config/polybar/config"
 alias piconf="${EDITOR} ~/.config/picom/picom.conf"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dots="dotfiles"
-alias updots="dotfiles commit -a -m 'updots' && dotfiles push origin main"
+alias updots="pacman -Qttqe > ~/Documents/Extra/packages && dotfiles commit -a -m 'updots' && dotfiles push origin main"
 #alias mocp="mocp --moc-dir ~/.config/moc"
+
+# PC Specifics
+alias turnofflights="sudo openrgb -c 000000 -m direct"
 
 ###############
 ## Autostart ##
