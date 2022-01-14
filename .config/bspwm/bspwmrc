@@ -6,10 +6,6 @@ killall -q sxhkd xss-lock dunst picom greenclip kdeconnectd polybar discord-rpc-
 ###---Fix Cursor---###
 xsetroot -cursor_name left_ptr &
 
-##---Fix Displays---###
-exec ~/.screenlayout/fix.sh &
-xcalib ~/.local/share/icc/techless_G24F.icm &
-
 ###---Autostart---###
 sxhkd &
 dunst-start &
@@ -17,6 +13,10 @@ picom -b &
 #exec ~/.fehbg &
 pbstart &
 greenclip daemon &
+
+##---Fix Displays---###
+exec ~/.screenlayout/fix.sh &
+xcalib ~/.local/share/icc/techless_G24F.icm &
 
 ###---Fix Audio---###
 amixer -D hw:1 sset Master 60%
