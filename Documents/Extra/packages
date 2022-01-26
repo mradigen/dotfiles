@@ -2,7 +2,6 @@ alacritty
 alsa-utils
 amd-ucode
 android-file-transfer
-android-sdk-platform-tools
 archiso
 autoconf
 automake
@@ -20,6 +19,7 @@ connman
 connman-gtk
 discord_arch_electron
 dunst
+electron13
 fakeroot
 feh
 flex
@@ -30,6 +30,7 @@ i3lock
 inetutils
 intel-ucode
 j4-dmenu-desktop-git
+jdk8-openjdk
 jq
 lib32-gnutls
 lib32-vkd3d
@@ -44,9 +45,11 @@ maim
 man-db
 marktext-bin
 masscan
+mcrcon
 minecraft-launcher
 moc
 mpv
+multimc5
 nano
 nct6687d-dkms-git
 neovim
@@ -54,6 +57,7 @@ noto-fonts-emoji
 npm
 ntfs-3g
 nvidia
+nvidia-fake-powerd
 nvidia-settings
 obs-studio
 openal
@@ -62,7 +66,6 @@ openvpn
 picom-ibhagwan-git
 pipes.sh
 pipewire-alsa
-pipewire-jack-dropin
 pipewire-pulse
 pkgconf
 polybar

@@ -1,18 +1,19 @@
-#! /bin/sh
+#! /bin/bash
 
 # scrot='scrot -s'
 scrot='maim -squl -b 3 -c 0.8,0.6,0.9,0.3'
 notifier='dunstify'
 filenameFormat='%Y-%m-%d-%T.png'
-fileSaveLoc="$HOME/Pictures/Screenshots/$(date +${filenameFormat})"
+fileSaveLoc=`echo $HOME/Pictures/Screenshots/$(date +${filenameFormat})`
 fileCacheLoc="/tmp/screenshot_cache_temp.png"
 
 ${scrot} ${fileCacheLoc} &&
 xclip -selection clipboard -t image/png -i ${fileCacheLoc} &&
-save=`${notifier} -t 5000 -r '12345' Screenshot "Copied to clipboard!<br><b>RIGHT CLICK TO SAVE</b>" -i ${fileCacheLoc} -A "yes, "`
+save=`${notifier} -t 5000 -r '12345' Screenshot "Copied to clipboard!<br><b>MIDDLE CLICK TO SAVE</b>" -i ${fileCacheLoc} -A "yes, "`
 
 if [[ ${save} = "yes" ]]; then
-	xclip -selection clipboard -o > ${fileSaveLoc}
+	#xclip -selection clipboard -o > ${fileSaveLoc}
+	cp ${fileCacheLoc} ${fileSaveLoc}
 	${notifier} -t 3000 -r '12345' Screenshot "Saved to ${fileSaveLoc}!"
 fi
 
