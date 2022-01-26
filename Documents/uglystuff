@@ -6,3 +6,5 @@ Installed `telnet` from `inetutils` for learning c-networking
 Installed `python-requests` to run FSG seed generator findSeed.py.
 
 # Installed webkit2gtk which installed 103 MB of packages just to run Focalboard
+
+Installed electron13 along side electron16 just to run BetterDiscord.

@@ -66,7 +66,8 @@ alias pbconf="${EDITOR} ~/.config/polybar/config"
 alias piconf="${EDITOR} ~/.config/picom/picom.conf"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dots="dotfiles"
-alias updots="pacman -Qttqe > ~/Documents/Extra/packages && dotfiles commit -a -m 'updots' && dotfiles push origin main"
+alias updots="pacman -Qqtte > ~/Documents/Extra/packages && dotfiles commit -a -m 'updots' && dotfiles push origin main"
+alias clean="yay -Qqdtt | yay -Rsn - && yay -Sc"
 #alias mocp="mocp --moc-dir ~/.config/moc"
 
 # PC Specifics
