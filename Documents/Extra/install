@@ -17,12 +17,12 @@ sudoloop=$!
 
 # Get closest mirrors before installing stuff
 sudo pacman -Syy
-sudo pacman -S reflector
+sudo pacman -S --noconfirm reflector
 sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Update
 sudo pacman -Syyuu
-sudo pacman -S --needed git base-devel
+sudo pacman -S --needed --noconfirm git base-devel rsync
 
 # Yay
 git clone https://aur.archlinux.org/yay-bin.git
@@ -32,7 +32,7 @@ cd ..
 sudo rm -rf yay-bin
 
 # Oh my Zsh
-sudo pacman -S zsh
+sudo pacman -S --noconfirm zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # Plugin zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -49,6 +49,7 @@ cd dotfiles
 
 sudo mv /etc/pacman.conf /etc/pacman.conf.old
 sudo cp Documents/Extra/ROOT_DIR/etc/pacman.conf /etc/pacman.conf
+sudo cp Documents/Extra/ROOT_DIR/etc/profile.d/customvars.sh /etc/profile.d
 
 # Install EVERYTHING
 yay -S --needed --noconfirm - < Documents/Extra/packages
@@ -59,15 +60,15 @@ cp -r .git ~/.dotfiles
 
 # Change execution permissions
 cd ~
-chmod +x .config/alacritty/fixtheme.sh
 chmod +x .config/bspwm/bspwmrc
 chmod +x .config/sxhkd/sxhkdrc
 chmod +x .config/polybar/music.sh
-chmod +x .config/polybar/mic.sh
 chmod +x .local/bin/*
 chmod +x .fehbg .xinitrc
 chmod +x .screenlayout/*.sh
 
 kill "$sudoloop"
+
+switch-theme mountain
 
 #systemctl reboot

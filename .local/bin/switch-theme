@@ -11,8 +11,12 @@ feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
 
 oomox-cli -o wal -t $HOME/.local/share/themes $HOME/.cache/wal/colors-oomox &&
 
-sudo openrgb -c `xrdb -query | grep '*color7' | awk '{print $2}' | cut -c 2-` -m breathing &&
-
 bspc wm -r &&
 
-exec fixtheme ~/.config/alacritty/alacritty.yml
+fixtheme ~/.config/alacritty/alacritty.yml &&
+
+# Doesn't work needs workaround below
+#sudo openrgb -c `xrdb -query | grep '*color7' | awk '{print $2}' | cut -c 2-` -m direct
+sudo openrgb -c `xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-` -m direct
+sudo openrgb -d 0 -c `xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-` -m breathing
+sudo openrgb -d 1 -c `xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-` -m breathing
