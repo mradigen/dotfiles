@@ -66,8 +66,14 @@ alias pbconf="${EDITOR} ~/.config/polybar/config"
 alias piconf="${EDITOR} ~/.config/picom/picom.conf"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dots="dotfiles"
-alias updots="pacman -Qqtte > ~/Documents/Extra/packages && dotfiles commit -a -m 'updots' && dotfiles push origin main"
-alias clean="yay -Qqdtt | yay -Rsn - && yay -Sc"
+# This one only counts packages the minimal way.
+# For eg, package `nvidia` installs `xorg-server`.
+# So `xorg-server` will not be added to the list.
+# If you remove `nvidia` from packages, pacman won't install `xorg-server` because it wasn't in the list.
+#alias updots="pacman -Qqtte > ~/Documents/Extra/packages && dotfiles commit -a -m 'updots' && dotfiles push origin main"
+# This one counts all explicitly installed packages.
+alias updots="pacman -Qqe > ~/Documents/Extra/packages && dotfiles commit -a -m 'updots' && dotfiles push origin main"
+alias clean="yay -Qqdtt | yay -Rsn - || yay -Sc"
 #alias mocp="mocp --moc-dir ~/.config/moc"
 
 # PC Specifics

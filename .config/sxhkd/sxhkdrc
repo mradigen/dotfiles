@@ -156,10 +156,10 @@ super + alt + space
 #	sound {mdecrease,mincrease}
 #ctrl + apostrophe
 XF86AudioMicMute
-	amixer set Capture toggle
+	sound mic
 
 XF86AudioMute
-	amixer set Capture toggle
+	sound mic
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown} 
 	{brightness 5 & dunstify -t 500 -u low -r "92813" "Brightness: $(cat /sys/class/backlight/intel_backlight/brightness)", brightness -5 & dunstify -t 500 -u low -r "92813" "Brightness: $(cat /sys/class/backlight/intel_backlight/brightness)"}
@@ -167,13 +167,19 @@ XF86AudioMute
 XF86Display
 	desk
 
+super + Escape
+	dunstctl history-pop
+
 super + {_,shift +}b
-	{blurlock, blurlock; systemctl suspend}
+	{blurlock, blurlock; sudo systemctl suspend}
 
 #~ctrl + End
 #	xdotool key Escape shift+Tab Return
 
 ~ctrl + Page_Down
-	rsg-sw
-	#fsg
+	fsg
+	#rsg-sw
 	#ssg
+
+~alt + s
+	multi-macro-c

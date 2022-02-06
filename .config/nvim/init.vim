@@ -20,6 +20,9 @@ set softtabstop=4
 " Mouse support
 set mouse=a
 
+"map <Leader>y "*y
+vnoremap y "+y
+
 " Goyo (Distraction Free)
 let g:goyo_width = 100
 let g:goyo_height = 100

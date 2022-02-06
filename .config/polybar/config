@@ -158,7 +158,7 @@ menu-padding = 2
 menu-0-padding = 1
 
 menu-0-0 = "SHUTDOWN "
-menu-0-0-exec = "systemctl poweroff"
+menu-0-0-exec = "sudo systemctl poweroff"
 
 ;------------------------------------------------
 ;                                               ;
@@ -244,7 +244,8 @@ ramp-used-7 = █
 ;-------------------------------------------------
 [module/gpu]
 type = custom/script
-exec = echo "%{F$(xrdb -query | grep '*color7'| awk '{print $NF}')}%{F-} `nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits`°C "
+exec = ~/.config/polybar/gpu.sh
+#exec = echo "%{F$(xrdb -query | grep '*color7'| awk '{print $NF}')}%{F-} `nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits`°C "
 interval = 1
 
 ;--------------USER DEFINED MODULES---------------
