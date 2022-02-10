@@ -69,6 +69,6 @@ chmod +x .screenlayout/*.sh
 
 kill "$sudoloop"
 
-switch-theme mountain
+~/.local/bin/switch-theme mountain
 
 #systemctl reboot

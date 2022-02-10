@@ -8,7 +8,7 @@ alias amixer='amixer -D hw:1'
 
 case "${1}" in
 	"increase") amixer sset Master 5%+ && dunstify -t 500 -u low -r '92813' "Volume: `amixer sget Master | awk -F'[][]' '/%/ { print $2 }' | head -1`"
-	#"increase") amixer -D hw:PCH sset Speaker+LO 5%+ & dunstify -t 500 -u low -r '92813' "Volume: `amixer -D hw:PCH sget Speaker+LO | awk -F'[][]' '/%/ { print $2 }' | head -1`"
+	#"increase") amixer -D hw:PCH sset Speaker+LO 5%+ && dunstify -t 500 -u low -r '92813' "Volume: `amixer -D hw:PCH sget Speaker+LO | awk -F'[][]' '/%/ { print $2 }' | head -1`"
 	;;
 	"decrease") amixer sset Master 5%- && dunstify -t 500 -u low -r '92813' "Volume: `amixer sget Master | awk -F'[][]' '/%/ { print $2 }' | head -1`"
 	#"decrease") amixer -D hw:PCH sset Speaker+LO 5%-; dunstify -t 500 -u low -r '92813' "Volume: `amixer -D hw:PCH sget Speaker+LO | awk -F'[][]' '/%/ { print $2 }' | head -1`"

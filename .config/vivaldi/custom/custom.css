@@ -6,6 +6,7 @@ div {
 	--colorFg: var(--color3);
 	--colorHighlightBg: var(--color3);
 	--colorAccentBg: var(--color5);
+	--colorTabBar: var(--color5);
 }
 
 /* Hide top menu */
@@ -21,17 +22,6 @@ div {
 /* Hide new tab button */
 .newtab {
 	display: none;
-}
-
-/* Prevent tab bar resizing */
-.SlideBar--FullHeight {
-    pointer-events: none;
-}
-
-/* Set fixed width */
-/* DOESN'T WORK, GETS OVERWRITTEN BY INLINE STYLING */
-div#tabs-tabbar-container {
-	width: 31px;
 }
 
 /* Remove margin on tab bar */
