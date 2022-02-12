@@ -1,0 +1,16 @@
+#! /bin/sh
+
+#-- lights --#
+# Change rgb lights on my PC
+# Dependencies:
+#	- openrgb
+#	- Execute `openrgb` with sudo privileges without password.
+# ~ ADIGEN
+
+color_choosen=${1:-`xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-`}
+
+# Doesn't work needs workaround below
+#sudo openrgb -c ${color_choosen} -m breathing
+sudo openrgb -c ${color_choosen} -m direct
+sudo openrgb -d 0 -c ${color_choosen} -m breathing
+sudo openrgb -d 1 -c ${color_choosen} -m breathing

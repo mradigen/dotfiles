@@ -1,5 +1,12 @@
 #! /bin/sh
 
+#-- rsg-sw --#
+# Custom single-thread old shipwreck FSG filter.
+# Dependencies:
+#	- xclip
+#	- xdotool
+# ~ ADIGEN
+
 ############
 ### SEED ###
 ############

@@ -15,8 +15,4 @@ bspc wm -r &&
 
 fixtheme ~/.config/alacritty/alacritty.yml &&
 
-# Doesn't work needs workaround below
-#sudo openrgb -c `xrdb -query | grep '*color7' | awk '{print $2}' | cut -c 2-` -m direct
-sudo openrgb -c `xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-` -m direct
-sudo openrgb -d 0 -c `xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-` -m breathing
-sudo openrgb -d 1 -c `xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-` -m breathing
+lights

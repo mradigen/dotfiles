@@ -65,8 +65,8 @@ super + n
 
 # Scratchpad
 super + r
-	scratchpad-modified
-#	scratchpad discord "apulse discord"
+	scratchpad
+#	scratchpad-old discord "apulse discord"
 
 # Screenshot
 Print
@@ -177,8 +177,8 @@ super + {_,shift +}b
 #	xdotool key Escape shift+Tab Return
 
 ~ctrl + Page_Down
-	fsg
-	#rsg-sw
+	rsg-sw
+	#fsg
 	#ssg
 
 ~alt + s

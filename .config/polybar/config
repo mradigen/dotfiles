@@ -55,17 +55,11 @@ modules-left = bspwm
 modules-center = music-prev music music-next
 modules-right = gpu temperature memory date powermenu
 
-#font-0 = "Dank Mono:size=11:weight=bold;2"
 font-0 = "Iosevka:size=11:weight=bold;3"
-#font-0 = "scientifica:size=14:weight=Medium:antialias=false;3"
-font-1 = "Font Awesome 5 Free Solid:size=12;3"
-font-2 = "Font Awesome 5 Free Solid:size=10;2"
-font-3 = "Font Awesome 5 Brands:size=12;3"
-#font-3 = "Unifont:size=12:weight=bold;2"
-#font-3 = "FuraMono NF:size=12:weight=bold;2"
-font-4 = "Font Awesome 5 Free Regular:size=10;2"
-#font-3 = "Roboto Thin:size=11;3"
-#font-2 = "Unifont:size=12:antialias=false;2"
+# For icons as icons and workspaces logos are messed up in sizing
+font-1 = "Font Awesome 6 Free Solid:size=12;3"
+font-2 = "Font Awesome 6 Free Solid:size=10;2"
+font-3 = "Font Awesome 6 Free Regular:size=10;2"
 
 ;-------------------------------------------------
 ;                                                ;
@@ -87,7 +81,7 @@ label-empty-foreground = ${colors.white}
 label-focused = %{T3}%{T-}
 label-focused-foreground = ${colors.white}
 label-occupied = %{T3}%{T-}
-label-empty = %{T5}%{T-}
+label-empty = %{T4}%{T-}
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
@@ -102,10 +96,10 @@ ws-icon-2 = 3;
 #label-empty =
 
 ;;;;;EXPERIMENT;;;;;;;
-label-monocle = %{T5}%{T-}
+label-monocle = %{T4}%{T-}
 ;label-tiled = 
 ;label-fullscreen = 
-;label-floating = %{T5}%{T-}
+;label-floating = %{T4}%{T-}
 ;label-pseudotiled = P
 ;label-locked = 
 ;label-locked-foreground = #bd2c40label-sticky = 

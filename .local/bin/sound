@@ -1,9 +1,12 @@
 #! /bin/sh
 
-#amixer -D pipewire sset Master 100% on
-#amixer -D hw:PCH sset Speaker+LO on
+#-- sound --#
+# Script to change sound related settings.
+# Dependencies:
+#	- dunst
+#	- amixer (alsa-utils)
+# ~ ADIGEN
 
-#alias amixer='amixer -D pipewire'
 alias amixer='amixer -D hw:1'
 
 case "${1}" in

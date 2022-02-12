@@ -1,15 +1,20 @@
 #!/bin/bash
-# /usr/bin/blurlock
 
-## take screenshot
+#-- blurlock --#
+# Lock the screen using a blur effect.
+# Dependencies:
+#	- imagemagick
+#	- i3lock
+# ~ ADIGEN
+
+# Take screenshot.
 icon="$HOME/Pictures/adigen.png"
 import -window root /tmp/screenshot.png
 
-## blur it
+# Blur it.
 convert /tmp/screenshot.png -scale 10% -scale 1000% $icon -gravity center -composite -matte /tmp/screenshotblur.png
 rm /tmp/screenshot.png
 
-#---- NEW SHORT METHOD
-#modified-scrot -B 6 -i $icon /tmp/screenshotblur.png
+# Lock screen displaying this image.
 i3lock -i /tmp/screenshotblur.png
 exit 0
