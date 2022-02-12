@@ -1,0 +1,52 @@
+#! /bin/sh
+
+#-- multi-macro --#
+# Custom macro to switch between and reset Minecraft instances.
+# Used for multi-instancing.
+# Also includes OBS keybinds for scene switching.
+# Uses pids of java to find window ids.
+# Dependencies:
+#	- xdotool
+#	- obs-studio (optional)
+# ~ ADIGEN
+
+### Variables ###
+pids=(`pidof java`)
+no_instances=${#pids[@]}
+
+# OBS Macros
+macro=(KP_1 KP_2 KP_3 KP_4)
+
+alias k="xdotool key --delay 40"
+#################
+
+focused_pid=`xdotool getactivewindow getwindowpid`
+
+# Reset current instance
+k Escape shift+Tab Return
+
+# Get instance number from focused window pid
+for j in "${!pids[@]}"; do
+	if [[ "${pids[$j]}" = "${focused_pid}" ]]; then
+		ci="$[j+1]"
+	fi
+done
+
+# Hide this instance on OBS
+#k ${macro[$ci-1]}
+
+# Go to first instance if on last one
+if [[ $ci = $no_instances ]]; then
+	ci=1
+else
+	ci=$((ci+1))
+fi
+
+# switch to next instance
+#k ${macro[$ci-1]}
+
+# Focus on instance
+bspc node `xdotool search --any --pid ${pids[$ci-1]}` --focus
+
+# Close game menu after switching
+k Escape
