@@ -1,0 +1,43 @@
+#! /bin/sh
+
+#-- ssg --#
+# Ssg macro.
+# Dependencies:
+#	- xdotool
+#	- xclip
+# ~ ADIGEN
+
+##############
+### MACROS ###
+##############
+
+### Automation ###
+alias k="xdotool key --delay 20"
+
+echo "-3294725893620991126" | xclip -selection clipboard -i
+
+## New Seed ##
+k Tab Return
+
+k --repeat 3 Tab
+
+k Return
+
+k --repeat 2 Tab
+
+k --repeat 3 Return
+
+k --repeat 4 Tab
+
+k Return
+
+k --repeat 3 Tab
+
+k ctrl+v
+
+k --repeat 2 shift+Tab
+
+k Return
+##
+
+##################

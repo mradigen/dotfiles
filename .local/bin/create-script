@@ -1,7 +1,0 @@
-#! /bin/sh
-
-cd ~/.local/bin
-
-touch ${1}
-
-${EDITOR} ${1}

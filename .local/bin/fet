@@ -1,5 +1,9 @@
 #! /bin/zsh
 
+#-- fet --#
+# A nice looking fetch script.
+# ~ ADIGEN (mainly from safinsingh)
+
 function hcenter {
   text=$@
   cols=`tput cols`

@@ -1,5 +1,12 @@
 #! /bin/sh
 
+#-- sound --#
+# Neat script to use `emos` to write
+# a motivational quote on the wallpaper.
+# Dependencies:
+#	- imagemagick
+# ~ ADIGEN
+
 image=$1
 output=$2
 text_pos_x=$3

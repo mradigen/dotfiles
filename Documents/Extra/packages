@@ -35,10 +35,11 @@ grub
 helvum
 i2c-tools
 i3lock
+ifuse
 inetutils
 intel-ucode
+iwd
 j4-dmenu-desktop-git
-jdk8-openjdk
 jq
 jre-openjdk-headless
 jre8-openjdk-headless
@@ -47,8 +48,10 @@ lib32-gnutls
 lib32-nvidia-utils
 lib32-vkd3d
 libbsd
+libimobiledevice
 libnet
 libnotify
+libplist
 libtool
 libva-intel-driver
 libva-utils
@@ -57,14 +60,13 @@ linux
 linux-firmware
 linux-headers
 lutris
-lxappearance-gtk3
 m4
 maim
 make
 man-db
 marktext-bin
 masscan
-minecraft-launcher
+mcrcon
 moc
 mpv
 multimc5
@@ -116,6 +118,7 @@ typora
 ueberzug
 unrar
 unzip
+usbmuxd
 v4l2loopback-dkms
 vdpauinfo
 vivaldi
@@ -124,7 +127,6 @@ vkd3d
 wget
 which
 wine
-wpa_supplicant
 xcalib
 xclip
 xdotool
@@ -142,6 +144,7 @@ xorg-xrandr
 xorg-xrdb
 xorg-xset
 xorg-xsetroot
+xwinwrap-git
 yay-bin
 youtube-dl
 zip

@@ -1,0 +1,49 @@
+#! /bin/sh
+
+#-- easen --#
+# Scripts easen one's life.
+# Why not easen the job of making a script
+# by making another script?
+# ~ ADIGEN
+
+### Usage ###
+if [ $# = 0 ]; then
+    cat <<EOF
+Usage: $(basename "${0}") script_name
+    script_name        The name of the script to be created.
+	                   If the script already exists, it will be edited.
+EOF
+    exit 0
+fi
+#############
+
+### Variables ###
+SCRIPTS_DIR="${HOME}/.local/bin"
+AUTHOR="ADIGEN"
+SCRIPT_EDITOR="${EDITOR:-vim}"
+SCRIPT="${SCRIPTS_DIR}/${1}"
+TEMPLATE="#! /bin/sh
+
+#-- ${1} --#
+# Scripts easen one's life.
+# But we don't know much about what this one does.
+# (DESCRIPTION NOT PROVIDED)
+# Dependencies:
+#   - NOT_SET
+# ~ ${AUTHOR}"
+#################
+
+# Check if the script already exists.
+# If no, copy the template to the script.
+# The double quotes around the template are necessary to
+# preserve the newlines in the template.
+[ ! -f "${SCRIPTS_DIR}/${1}" ] && echo "${TEMPLATE}" > "${SCRIPT}"
+
+# Make it executable.
+chmod +x "${SCRIPT}"
+
+# Edit the script.
+${SCRIPT_EDITOR} "${SCRIPT}"
+
+# If the file is the exact same as the template, just delete it.
+[ "$(cat ${SCRIPT})" = "${TEMPLATE}" ] && rm "${SCRIPT}" && echo "Deleted ${SCRIPT} because it was the same as the template."

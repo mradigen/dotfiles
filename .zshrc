@@ -77,7 +77,8 @@ alias clean="yay -Qqdtt | yay -Rsn - || yay -Sc"
 #alias mocp="mocp --moc-dir ~/.config/moc"
 
 # PC Specifics
-alias turnofflights="sudo openrgb -c 000000 -m direct"
+# Use `lights 0` instead.
+#alias turnofflights="sudo openrgb -c 000000 -m direct"
 
 ###############
 ## Autostart ##

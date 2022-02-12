@@ -1,5 +1,14 @@
 #! /bin/sh
 
+#-- fsg --#
+# Lastest multi-thread FSG using the python script from Spencr
+# Dependencies:
+#	- python3
+# 	- python-requests
+#	- xdotool
+#	- xclip
+# ~ ADIGEN
+
 ############
 ### SEED ###
 ############

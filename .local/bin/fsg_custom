@@ -1,5 +1,11 @@
 #! /bin/sh
 
+#-- fsg_custom --#
+# Lastest single-threaded FSG using custom methods
+# Dependencies:
+#	- curl
+# ~ ADIGEN
+
 ########################
 ### GETTING THE SEED ###
 ########################

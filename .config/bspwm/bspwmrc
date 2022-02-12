@@ -14,6 +14,7 @@ xsetroot -cursor_name left_ptr &
 # This needs to be done before the pbstart and cannot be done asynchronesly.
 wal -q -R
 $(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
+lights &
 
 ###---Autostart---###
 sxhkd &

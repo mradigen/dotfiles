@@ -1,5 +1,13 @@
 #! /bin/sh
 
+#-- rice --#
+# A script to take a screenshot of the current rice.
+# Dependencies:
+#	- dunst
+#	- bspwm
+#	- maim
+# ~ ADIGEN
+
 alacritty --class=Music -e 'mocp' &
 alacritty -e ranger ~/.config/alacritty &
 alacritty -e pipes.sh -p 5 &

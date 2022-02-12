@@ -1,4 +1,9 @@
 #! /bin/sh
-# Overrides original .moc config directory
-# and instead uses ~/.config/moc
+
+#-- fsg --#
+# Overrides original .moc config directory and uses ~/.config/moc instead.
+# Dependencies:
+#	- mocp
+# ~ ADIGEN
+
 /usr/bin/mocp --moc-dir ~/.config/moc $@

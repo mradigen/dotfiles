@@ -1,7 +1,12 @@
 #! /bin/sh
 
-# A simple shell script to read xkcd comics (https://xkcd.com/).
-# Uses `curl` to get the comics and `feh` to display them.
+#-- xkcd --#
+# Minimal script to read xkcd comics (https://xkcd.com/).
+# Dependencies:
+#	- curl
+#	- feh
+# ~ ADIGEN
+
 cache_directory="$HOME/.cache/"
 feh_opts="--borderless --draw-filename --class xkcd --start-at"
 

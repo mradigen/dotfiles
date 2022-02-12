@@ -1,5 +1,9 @@
 #! /bin/sh
 
+#-- emos --#
+# Echo random motivational quotes.
+# ~ ADIGEN
+
 prompts="If you let someone else control your mind, isn't it ultimate slavery?
 Don't adore those who ignore you. Don't ignore those who adore you. 
 If you can't fly, run. If you can't run, walk. If you can't walk, crawl. But by all means keep moving.

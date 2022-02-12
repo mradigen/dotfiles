@@ -1,5 +1,11 @@
 #! /bin/sh
 
+#-- dunst-start --#
+# Start dunst with `wal` colors
+# Dependencies:
+#	- xrdb
+# ~ ADIGEN
+
 dunst \
 	-frame_color `xrdb -query | grep '*color5'| awk '{print $NF}'` \
 	-lb `xrdb -query | grep '*color0'| awk '{print $NF}'` \
