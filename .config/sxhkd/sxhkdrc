@@ -177,9 +177,9 @@ super + {_,shift +}b
 #	xdotool key Escape shift+Tab Return
 
 ~ctrl + Page_Down
-	rsg-sw
-	#fsg
+	fsg
+	#rsg-sw
 	#ssg
 
 ~alt + s
-	multi-macro-c
+	multi-macro
