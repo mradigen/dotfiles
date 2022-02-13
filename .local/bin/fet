@@ -2,6 +2,7 @@
 
 #-- fet --#
 # A nice looking fetch script.
+# Needs a lot of cleanup.
 # ~ ADIGEN (mainly from safinsingh)
 
 function hcenter {
@@ -80,4 +81,11 @@ separator="\033[0;32m"
 
 heading="${HOST}"
 
-center "${boldb}${heading}${s} \n${hlb}dis${separator}${s} Arch\n${hlb}pkg${separator}${s} $(pacman -Qq | wc -l)\n${hlb}cpu${separator}${s} i5 \n${hlb}ram${separator}${s} $(free -m | grep Mem | awk '{print $3}')\n${hlb}sda${separator}${s} $(df -h | grep sda1 | awk '{print $3}')\n $s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s"
+DIS="Arch"
+PKGS=`pacman -Qq | wc -l`
+CPU=`cat /proc/cpuinfo | grep "model name" | head -n 1 | cut -d ":" -f 2 | sed -e 's/^[ \t]*//' | awk '{print $4}'`
+RAM=`free -m | grep Mem | awk '{print $3}'`
+#SDA=`lsblk | grep / | grep G | awk '{print $4}'`
+SDA=`df -h | grep sda1 | awk '{print $3}'`
+
+center "${boldb}${heading}${s} \n ${hlb}dis${separator}${s} ${DIS}\n${hlb}pkg${separator}${s} ${PKGS}\n ${hlb}cpu${separator}${s} ${CPU}\n${hlb}ram${separator}${s} ${RAM}\n${hlb}sda${separator}${s} ${SDA}\n $s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s"
