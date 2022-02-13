@@ -1,4 +1,14 @@
 #! /bin/sh
+
+#-- switch-theme --#
+# A script to switch the GTK, Qt, and BetterDiscord themes.
+# Dependencies:
+#	- wal
+#	- feh
+#	- sassc
+#	- themix-theme-oomox-git
+# ~ ADIGEN
+
 wal -i $HOME/Pictures/Wallpapers/${1}.* &&
 feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
 
@@ -6,10 +16,26 @@ feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
 #wal -i $HOME/Pictures/Wallpapers/generated.png
 #feh --bg-fill $HOME/Pictures/Wallpapers/generated.png
 
+### Discord ###
 mkdir -p ~/.config/BetterDiscord/themes
 { echo -n '//META{"name":"wal","description":"Generated based on pywal colors","author":"wal-discord","version":"1.0"}*//'; sassc -t compact -I $HOME/.config/wal-discord -s < $HOME/.config/wal-discord/master.scss; } > $HOME/.config/BetterDiscord/themes/wall.theme.css &&
+###############
 
+### Dunst ###
+# source wal colors.
+source ~/.cache/wal/colors.sh
+
+DUNST_FILE=~/.config/dunst/dunstrc
+
+# update dunst based on pywal colors.
+sed -i '/background = /s/.*/    background = "'$color0'"/' $DUNST_FILE
+sed -i '/foreground = /s/.*/    foreground = "'$color7'"/' $DUNST_FILE
+sed -i '/frame_color = /s/.*/    frame_color = "'$color5'"/' $DUNST_FILE
+############
+
+### GTK ###
 oomox-cli -o wal -t $HOME/.local/share/themes $HOME/.cache/wal/colors-oomox &&
+###########
 
 bspc wm -r &&
 

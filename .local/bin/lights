@@ -8,9 +8,10 @@
 # ~ ADIGEN
 
 color_choosen=${1:-`xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-`}
+rgb_command="sudo openrgb --noautoconnect"
 
 # Doesn't work needs workaround below
 #sudo openrgb -c ${color_choosen} -m breathing
-sudo openrgb -c ${color_choosen} -m direct
-sudo openrgb -d 0 -c ${color_choosen} -m breathing
-sudo openrgb -d 1 -c ${color_choosen} -m breathing
+${rgb_command} -c ${color_choosen} -m direct
+${rgb_command} -d 0 -c ${color_choosen} -m breathing
+${rgb_command} -d 1 -c ${color_choosen} -m breathing
