@@ -72,6 +72,7 @@ mpv
 multimc5
 nano
 nct6687d-dkms-git
+neofetch
 neovim
 noto-fonts
 noto-fonts-emoji
@@ -112,7 +113,6 @@ sxhkd
 texinfo
 themix-theme-oomox-git
 tigervnc
-transmission-qt
 ttf-font-awesome
 typora
 ueberzug
