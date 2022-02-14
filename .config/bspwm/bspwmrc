@@ -28,7 +28,7 @@ greenclip daemon &
 LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
 
 ###---Fix Audio---###
-amixer -D hw:1 sset Master 60% -q &
+amixer -D hw:1 sset Master 50% -q &
 
 ###---BSPWM---###
 bspc monitor -d 1 2 3 4 5
@@ -57,7 +57,8 @@ bspc rule -a Vivaldi-stable desktop=1
 
 bspc rule -a Alacritty:Alsamixer state=floating rectangle=600x300+383+234
 bspc rule -a Alacritty:Startup state=floating rectangle=600x300+383+234
-bspc rule -a Alacritty:Music state=floating rectangle=600x300+383+234
+#bspc rule -a Alacritty:Music state=floating rectangle=600x300+383+234
+bspc rule -a Alacritty:Music state=floating rectangle=600x300+1300+760
 bspc rule -a Connman-gtk state=floating
 bspc rule -a discord state=floating rectangle=960x1080+0+0 sticky=on layer=above
 bspc rule -a Vivaldi-stable:discord.com__app state=floating rectangle=1362x384+0+380 sticky=on layer=above

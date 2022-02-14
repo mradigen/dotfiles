@@ -18,7 +18,7 @@ feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
 
 ### Discord ###
 mkdir -p ~/.config/BetterDiscord/themes
-{ echo -n '//META{"name":"wal","description":"Generated based on pywal colors","author":"wal-discord","version":"1.0"}*//'; sassc -t compact -I $HOME/.config/wal-discord -s < $HOME/.config/wal-discord/master.scss; } > $HOME/.config/BetterDiscord/themes/wall.theme.css &&
+{ echo -n '//META{"name":"wal","description":"Script generated theme mashing ClearVision with pywal colors.","author":"ADIGEN","version":"1.0"}*//'; sassc -t compact -I $HOME/.config/wal-discord -s < $HOME/.config/wal-discord/master.scss; } > $HOME/.config/BetterDiscord/themes/wall.theme.css &&
 ###############
 
 ### Dunst ###
