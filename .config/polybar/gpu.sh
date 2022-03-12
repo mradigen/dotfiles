@@ -1,6 +1,6 @@
 #! /bin/sh
 
-nvidia-smi > /dev/null
+nvidia-smi &> /dev/null
 
 if [ $? -eq 0 ]; then
 	echo "%{F$(xrdb -query | grep '*color7'| awk '{print $NF}')}%{F-} `nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits`°C "

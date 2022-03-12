@@ -183,3 +183,7 @@ super + {_,shift +}b
 
 ~alt + s
 	multi-macro
+
+~alt + d
+	curl "http://localhost:5000/seed" -d seed=rsg
+	#curl "http://localhost:5000/fsg"

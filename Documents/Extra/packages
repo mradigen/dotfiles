@@ -7,6 +7,7 @@ autoconf
 automake
 base
 bc
+betterdiscordctl
 binutils
 bison
 bluez
@@ -35,11 +36,11 @@ grub
 helvum
 i2c-tools
 i3lock
-ifuse
 inetutils
 intel-ucode
 iwd
 j4-dmenu-desktop-git
+jdk8-openjdk
 jq
 jre-openjdk-headless
 jre8-openjdk-headless
@@ -48,13 +49,11 @@ lib32-gnutls
 lib32-nvidia-utils
 lib32-vkd3d
 libbsd
-libimobiledevice
 libnet
 libnotify
-libplist
+libqalculate
 libtool
 libva-intel-driver
-libva-utils
 libva-vdpau-driver
 linux
 linux-firmware
@@ -84,6 +83,7 @@ nvidia-settings
 nvidia-utils
 obs-studio
 openal
+openbsd-netcat
 openrgb
 openshot
 openssh
@@ -97,6 +97,8 @@ pipewire-jack
 pipewire-pulse
 pkgconf
 polybar
+python-argparse
+python-colorama
 python-pywal
 python-requests
 python-yaml
@@ -118,9 +120,7 @@ typora
 ueberzug
 unrar
 unzip
-usbmuxd
 v4l2loopback-dkms
-vdpauinfo
 vivaldi
 vivaldi-ffmpeg-codecs
 vkd3d
@@ -144,7 +144,6 @@ xorg-xrandr
 xorg-xrdb
 xorg-xset
 xorg-xsetroot
-xwinwrap-git
 yay-bin
 youtube-dl
 zip
