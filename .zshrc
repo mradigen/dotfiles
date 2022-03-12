@@ -44,7 +44,7 @@ alias asdf="setxkbmap dvorak"
 alias aoeu="setxkbmap us"
 #alias cat="bat" # meh, gonna just use cat
 alias cls="clear"
-alias mnt="sudo mount -t auto -o umask=0,uid=$(echo $USER),gid=$(echo $USER)"
+alias mnt="sudo mount -t auto -o umask=0,uid=$(echo $USER),gid=$(echo $USER),rw"
 alias umnt="sudo umount"
 alias reset="reset; cat ~/.cache/wal/sequences"
 #alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-format flac --audio-quality 0 -o '%(title)s.%(ext)s'"
