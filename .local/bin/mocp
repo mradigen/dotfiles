@@ -1,6 +1,6 @@
 #! /bin/sh
 
-#-- fsg --#
+#-- mocp --#
 # Overrides original .moc config directory and uses ~/.config/moc instead.
 # Dependencies:
 #	- mocp

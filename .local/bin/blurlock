@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 #-- blurlock --#
 # Lock the screen using a blur effect.

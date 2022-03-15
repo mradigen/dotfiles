@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 
 #-- desk --#
 # Script to manage multiple montiors.
