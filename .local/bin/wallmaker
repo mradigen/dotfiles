@@ -1,6 +1,6 @@
 #! /bin/sh
 
-#-- sound --#
+#-- wallmaker --#
 # Neat script to use `emos` to write
 # a motivational quote on the wallpaper.
 # Dependencies:

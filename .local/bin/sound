@@ -11,17 +11,11 @@ alias amixer='amixer -D hw:1'
 
 case "${1}" in
 	"increase") amixer sset Master 5%+ && dunstify -t 500 -u low -r '92813' "Volume: `amixer sget Master | awk -F'[][]' '/%/ { print $2 }' | head -1`"
-	#"increase") amixer -D hw:PCH sset Speaker+LO 5%+ && dunstify -t 500 -u low -r '92813' "Volume: `amixer -D hw:PCH sget Speaker+LO | awk -F'[][]' '/%/ { print $2 }' | head -1`"
 	;;
 	"decrease") amixer sset Master 5%- && dunstify -t 500 -u low -r '92813' "Volume: `amixer sget Master | awk -F'[][]' '/%/ { print $2 }' | head -1`"
-	#"decrease") amixer -D hw:PCH sset Speaker+LO 5%-; dunstify -t 500 -u low -r '92813' "Volume: `amixer -D hw:PCH sget Speaker+LO | awk -F'[][]' '/%/ { print $2 }' | head -1`"
 	;;
 	"mute") amixer sset Master toggle; dunstify -t 500 -u low -r '92813' "Volume $(amixer sget Master | awk -F '[][]' '/dB/ {print $6}')"
 	;;
-	#"mincrease") amixer set 'Digital',0 60; dunstify -t 500 -u low -r '92813' "Mic on"
-	#"mincrease") amixer set 'Capture',0 32; dunstify -t 500 -u low -r '92813' "Mic on"
-	#"mdecrease") amixer set 'Digital',0 0; dunstify -t 500 -u low -r '92813' "Mic off"
-	#"mdecrease") amixer set 'Capture',0 0; dunstify -t 500 -u low -r '92813' "Mic off"
 	"mic") amixer set Capture toggle; dunstify -t 500 -u low -r '92813' "Mic $(amixer get Capture | awk -F'[][]' '/Left:/ {print $6}')"
 	;;
 esac
