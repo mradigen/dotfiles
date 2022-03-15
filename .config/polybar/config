@@ -53,7 +53,7 @@ scroll-down = #bspwm.next
 
 modules-left = bspwm
 modules-center = music-prev music music-next
-modules-right = battery gpu temperature memory date powermenu
+modules-right = gpu battery temperature memory date powermenu
 
 font-0 = "Iosevka:size=11:weight=bold;3"
 # For icons as icons and workspaces logos are messed up in sizing
@@ -176,18 +176,6 @@ ramp-0 = ""
 ramp-foreground = ${colors.white}
 label = "%temperature-c%"
 
-#format = "<ramp> "
-#format-warn = "<ramp> <label-warn> "
-#
-#label-warn = "%temperature-c%"
-#label-warn-foreground = #f00
-#
-#ramp-0 = %{F#00f}%{F-}
-#ramp-1 = 
-#ramp-2 = 
-#ramp-3 = %{F#f00}%{F-}
-#ramp-foreground = ${colors.white}
-
 [module/battery]
 type = internal/battery
 full-at = 99
@@ -202,12 +190,6 @@ format = " <ramp> <label> "
 label-foreground = ${colors.white}
 ramp-0 = ""
 label = "%percentage_raw%"
-
-#ramp-0 = ""
-#ramp-1 = 
-#ramp-2 = 
-#ramp-3 = %{F#f00}%{F-}
-#ramp-foreground = ${colors.white}
 
 ;-------------------------------------------------
 ;                                                ;
