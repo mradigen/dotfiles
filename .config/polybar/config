@@ -186,10 +186,10 @@ adapter = AC
 
 poll-interval = 5
 
-format = " <ramp> <label> "
-label-foreground = ${colors.white}
-ramp-0 = ""
-label = "%percentage_raw%"
+format-discharging = " <ramp-capacity> <label-discharging> "
+label-discharging-foreground = ${colors.white}
+ramp-capacity-0 = ""
+label-discharging = "%percentage_raw%%"
 
 ;-------------------------------------------------
 ;                                                ;
