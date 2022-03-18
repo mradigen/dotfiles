@@ -49,7 +49,7 @@ alias umnt="sudo umount"
 alias reset="reset; cat ~/.cache/wal/sequences"
 #alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-format flac --audio-quality 0 -o '%(title)s.%(ext)s'"
 #alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-quality 0 -o '%(title)s.%(ext)s'"
-alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-quality 0 -o '%(title)s.%(ext)s'"
+alias music="yt-dlp -x --yes-playlist --audio-quality 0 -o '%(title)s.%(ext)s'" # youtube-dl has issues
 alias sensors="watch -n 0.5 sensors"
 alias vpn="sudo openvpn ~/Documents/VPN/cysis.ovpn & disown"
 

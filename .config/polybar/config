@@ -53,7 +53,7 @@ scroll-down = #bspwm.next
 
 modules-left = bspwm
 modules-center = music-prev music music-next
-modules-right = gpu battery temperature memory date powermenu
+modules-right = battery gpu temperature memory date powermenu
 
 font-0 = "Iosevka:size=11:weight=bold;3"
 # For icons as icons and workspaces logos are messed up in sizing
