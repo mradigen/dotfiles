@@ -78,10 +78,6 @@ alias updots="pacman -Qqe > ~/Documents/Extra/packages && dotfiles commit -a -m 
 alias clean="yay -Qqdtt | yay -Rsn - || yay -Sc"
 #alias mocp="mocp --moc-dir ~/.config/moc"
 
-# PC Specifics
-# Use `lights 0` instead.
-#alias turnofflights="sudo openrgb -c 000000 -m direct"
-
 ###############
 ## Autostart ##
 ###############

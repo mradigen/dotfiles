@@ -1,14 +1,11 @@
-;-------------------------------------------------
-;                                                ;
-;           POLYBAR CONFIG FOR CYBERPUNK         ;
-;                                                ;
-;-------------------------------------------------
+##################
+# Polybar Config #
+#    ~ ADIGEN    #
+##################
 
-;-------------------------------------------------
-;                                                ;
-;          			COLORS 				         ;
-;                                                ;
-;-------------------------------------------------
+############
+## Colors ##
+############
 [colors]
 #background = #660C0C0B
 background = ${xrdb:color0:#0C0C0B}
@@ -17,12 +14,10 @@ foreground = ${xrdb:color5:#798D8F}
 blue  = ${xrdb:color3:#244E64}
 white = ${xrdb:color7:#E0E0E0}
 
-;-------------------------------------------------
-;                                                ;
-;          			BAR MODULE 				     ;
-;                                                ;
-;-------------------------------------------------
-[bar/example]
+##########
+## Bars ##
+##########
+[bar/main]
 width = 80%
 height = 30px
 offset-x = 10%
@@ -33,18 +28,13 @@ enable-ipc = true
 
 monitor = ${env:MONITOR:}
 
-;radius = 12
-
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 border-size = 2
 border-color = ${colors.foreground}
 
-;border-top-size=10
-;border-bottom-size=10
-;border-left-size=10
-;border-right-size=10
+;radius = 10
 
 wm-restack = bspwm
 
@@ -61,11 +51,9 @@ font-1 = "Font Awesome 6 Free Solid:size=12;3"
 font-2 = "Font Awesome 6 Free Solid:size=10;2"
 font-3 = "Font Awesome 6 Free Regular:size=10;2"
 
-;-------------------------------------------------
-;                                                ;
-;          			BSPWM PARAMETERS 		     ;
-;                                                ;
-;-------------------------------------------------
+###########
+## bspwm ##
+###########
 [module/bspwm]
 type = internal/bspwm
 format-padding = 1
@@ -83,37 +71,11 @@ label-focused-foreground = ${colors.white}
 label-occupied = %{T3}%{T-}
 label-empty = %{T4}%{T-}
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-;ws-icon-2 = 3;
-;ws-icon-3 = 4;
-;ws-icon-4 = 5;
-ws-icon-2 = 3;
-
-#label-focused = %{T3}%icon%%{T-}
-#label-focused-foreground = ${colors.blue}
-#label-occupied = %{T3}%icon%%{T-}
-#label-empty =
-
-;;;;;EXPERIMENT;;;;;;;
 label-monocle = %{T4}%{T-}
-;label-tiled = 
-;label-fullscreen = 
-;label-floating = %{T4}%{T-}
-;label-pseudotiled = P
-;label-locked = 
-;label-locked-foreground = #bd2c40label-sticky = 
-;label-sticky-foreground = #fba922
-;label-private = 
-;label-private-foreground = #bd2c40
-;label-marked = M
-;;;;;;;;;;;;;;;;;;;;;;
 
-;-------------------------------------------------
-;                                                ;
-;          		DATE PARAMETERS		 		     ;
-;                                                ;
-;-------------------------------------------------
+##########
+## Date ##
+##########
 [module/date]
 type = internal/date
 interval = 1.0
@@ -131,11 +93,9 @@ format-foreground = ${colors.white}
 label = %date% %time%
 label-foreground = ${colors.white}
 
-;-------------------------------------------------
-;                                                ;
-;          		POWER MENU PARAMETERS		 	 ;
-;                                                ;
-;-------------------------------------------------
+################
+## Power Menu ##
+################
 [module/powermenu]
 type = custom/menu
 
@@ -154,11 +114,9 @@ menu-0-padding = 1
 menu-0-0 = "SHUTDOWN "
 menu-0-0-exec = "sudo systemctl poweroff"
 
-;------------------------------------------------
-;                                               ;
-;              TEMPERATURE MODULE               ;
-;                                               ;
-;-------------------------------------------------
+#####################
+## CPU Temperature ##
+#####################
 [module/temperature]
 type = internal/temperature
 
@@ -176,6 +134,9 @@ ramp-0 = ""
 ramp-foreground = ${colors.white}
 label = "%temperature-c%"
 
+#############
+## Battery ##
+#############
 [module/battery]
 type = internal/battery
 full-at = 99
@@ -191,33 +152,9 @@ label-discharging-foreground = ${colors.white}
 ramp-capacity-0 = ""
 label-discharging = "%percentage_raw%%"
 
-;-------------------------------------------------
-;                                                ;
-;          		CPU MODULE PARAMETERS		 	 ;
-;                                                ;
-;-------------------------------------------------
-[module/cpu]
-type = internal/cpu
-interval = 1
-
-format = "<label> <ramp-coreload> "
-label = 
-label-foreground = ${colors.white}
-
-ramp-coreload-0 = ▁
-ramp-coreload-1 = ▂
-ramp-coreload-2 = ▃
-ramp-coreload-3 = ▄
-ramp-coreload-4 = ▅
-ramp-coreload-5 = ▆
-ramp-coreload-6 = ▇
-ramp-coreload-7 = █
-
-;-------------------------------------------------
-;                                                ;
-;          		RAM MODULE PARAMETERS		 	 ;
-;                                                ;
-;-------------------------------------------------
+###############
+## RAM Usage ##
+###############
 [module/memory]
 type = internal/memory
 interval = 1
@@ -234,22 +171,21 @@ ramp-used-5 = ▆
 ramp-used-6 = ▇
 ramp-used-7 = █
 
-;-------------------------------------------------
-;                                                ;
-;          		GPU MODULE PARAMETERS		 	 ;
-;                                                ;
-;-------------------------------------------------
+################
+# User Defined #
+################
+
+#####################
+## GPU Temperature ##
+#####################
 [module/gpu]
 type = custom/script
 exec = ~/.config/polybar/gpu.sh
-#exec = echo "%{F$(xrdb -query | grep '*color7'| awk '{print $NF}')}%{F-} `nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits`°C "
 interval = 1
 
-;--------------USER DEFINED MODULES---------------
-;These modules require scripts to run, you can find
-;the scripts and how to run them here:
-;https://github.com/jaagr/polybar/wiki/User-contributed-modules
-
+###########
+## Music ##
+###########
 [module/music]
 type = custom/script
 exec = ~/.config/polybar/music.sh
@@ -272,3 +208,5 @@ content = ""
 content-foreground = ${colors.blue}
 click-left = mocp -r
 click-right = alacritty --class="Music" -e mocp &
+
+# vim: ft=cfg
