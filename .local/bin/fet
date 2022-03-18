@@ -43,41 +43,27 @@ function vcenter {
 function center {
   text=$@
   vcenter "`hcenter $text`"
-  #hcenter "$text"
-  #echo
-  #echo
 }
 
-#i=" "
 s='\033[0;0m'
 i="aaaa"
 
 bla='\033[0;30;40m'
-#bla='\033[7;30m'
 r='\033[0;31;41m'
 g='\033[0;32;42m'
 y='\033[0;33;43m'
 b='\033[0;34;44m'
 m='\033[0;35;45m'
 c='\033[0;36;46m'
-#w='\033[0;37m'
 w='\033[0;37;47m'
 wh='\033[0;37m'
 bl='\033[0;32m'
 
 boldb='\033[1;32m'
 
-# hlb="${boldb}"
-# separator=":"
 
 hlb='\033[1;30;42m'
 separator="\033[0;32m"
-# prefixer="\033[0;32m"
-
-# echo -E "${boldb}Cysis\033[1;37mOS\n${boldb}dis:${boldw} Arch"
-# echo -E "$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s"
-
-# center "${prefixer}${hlb}CysisOS\033[0;32m${s}\n${hlb}dis${separator}${s} Arch\n${hlb}pkg${separator}${s} $(pacman -Qq | wc -l)\n${hlb}cpu${separator}${s} i5 \n${hlb}ram${separator}${s} $(free -m | grep Mem | awk '{print $3}')\n${hlb}sda${separator}${s} $(df -h | grep sda1 | awk '{print $3}')\n $s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s"
 
 heading="${HOST}"
 
@@ -85,7 +71,6 @@ DIS="Arch"
 PKGS=`pacman -Qq | wc -l`
 CPU=`cat /proc/cpuinfo | grep "model name" | head -n 1 | cut -d ":" -f 2 | sed -e 's/^[ \t]*//' | awk '{print $4}'`
 RAM=`free -m | grep Mem | awk '{print $3}'`
-#SDA=`lsblk | grep / | grep G | awk '{print $4}'`
-SDA=`df -h | grep sda1 | awk '{print $3}'`
+SDA=`df -h / | tail -1 | awk '{print $3}'`
 
 center "${boldb}${heading}${s} \n ${hlb}dis${separator}${s} ${DIS}\n${hlb}pkg${separator}${s} ${PKGS}\n ${hlb}cpu${separator}${s} ${CPU}\n${hlb}ram${separator}${s} ${RAM}\n${hlb}sda${separator}${s} ${SDA}\n $s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s\n$bla$i$r$i$g$i$y$i$b$i$m$i$c$i$w$i$s"
