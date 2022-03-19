@@ -1,7 +1,7 @@
 #! /bin/sh
 
 #-- switch-theme --#
-# A script to switch the GTK, Qt, and BetterDiscord themes.
+# A script to switch the GTK, Qt, dunst, and BetterDiscord themes.
 # Dependencies:
 #	- wal
 #	- feh
@@ -12,13 +12,12 @@
 wal -i $HOME/Pictures/Wallpapers/${1}.* &&
 feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
 
-#wallmaker $HOME/Pictures/Wallpapers/${1}.* ~/Pictures/Wallpapers/generated.png 50 50 `emos`
-#wal -i $HOME/Pictures/Wallpapers/generated.png
-#feh --bg-fill $HOME/Pictures/Wallpapers/generated.png
+# Moved to bspwmrc
+#$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
 
 ### Discord ###
 mkdir -p ~/.config/BetterDiscord/themes
-{ echo -n '//META{"name":"wal","description":"Script generated theme mashing ClearVision with pywal colors.","author":"ADIGEN","version":"1.0"}*//'; sassc -t compact -I $HOME/.config/wal-discord -s < $HOME/.config/wal-discord/master.scss; } > $HOME/.config/BetterDiscord/themes/wall.theme.css &&
+{ echo -n '//META{"name":"wal","description":"Script generated theme mashing ClearVision with pywal colors.","author":"ADIGEN","version":"1.0"}*//'; sassc -t compact -I $HOME/.config/wal-discord -s < $HOME/.config/wal-discord/master.scss; } > $HOME/.config/BetterDiscord/themes/wal.theme.css &&
 ###############
 
 ### Dunst ###
@@ -27,18 +26,19 @@ source ~/.cache/wal/colors.sh
 
 DUNST_FILE=~/.config/dunst/dunstrc
 
-# update dunst based on pywal colors.
+# Update dunst based on pywal colors.
 sed -i '/background = /s/.*/    background = "'$color0'"/' $DUNST_FILE
 sed -i '/foreground = /s/.*/    foreground = "'$color7'"/' $DUNST_FILE
 sed -i '/frame_color = /s/.*/    frame_color = "'$color5'"/' $DUNST_FILE
-############
+#############
 
-### GTK ###
+### GTK & Qt ###
 oomox-cli -o wal -t $HOME/.local/share/themes $HOME/.cache/wal/colors-oomox &&
-###########
+################
 
 bspc wm -r &&
 
-fixtheme ~/.config/alacritty/alacritty.yml &&
+fixtheme ~/.config/alacritty/alacritty.yml
 
-lights
+# Moved to bspwmrc
+#lights

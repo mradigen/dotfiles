@@ -41,7 +41,6 @@ bspc config borderless_monocle 	false
 bspc config gapless_monocle 	false
 
 bspc config focus_follows_pointer true
-
 bspc config ignore_ewmh_focus on
 
 . "${HOME}/.cache/wal/colors.sh"
@@ -55,11 +54,17 @@ bspc config presel_feedback_color "$color1"
 # Open on specific workspace
 bspc rule -a Vivaldi-stable desktop=1
 
-bspc rule -a Alacritty:Alsamixer state=floating rectangle=600x300+383+234
-bspc rule -a Alacritty:Startup state=floating rectangle=600x300+383+234
-#bspc rule -a Alacritty:Music state=floating rectangle=600x300+383+234
-bspc rule -a Alacritty:Music state=floating rectangle=600x300+1300+760
+X=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
+Y=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
+
+X2=$(($X/2))
+Y2=$(($Y/2))
+
+X3=$(($X/3))
+Y3=$(($Y/3))
+
+bspc rule -a Alacritty:Alsamixer state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
+bspc rule -a Alacritty:Music state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
 bspc rule -a Connman-gtk state=floating
-bspc rule -a discord state=floating rectangle=960x1080+0+0 sticky=on layer=above
-bspc rule -a Vivaldi-stable:discord.com__app state=floating rectangle=1362x384+0+380 sticky=on layer=above
+bspc rule -a discord state=floating rectangle=${X2}x${Y}+0+0 sticky=on layer=above
 bspc rule -a xkcd state=floating
