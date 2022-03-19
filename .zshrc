@@ -70,7 +70,7 @@ alias dots="dotfiles"
 # If you remove `nvidia` from packages, pacman won't install `xorg-server` because it wasn't in the list.
 #alias updots="pacman -Qqtte > ~/Documents/Extra/packages && dotfiles commit -a -m 'updots' && dotfiles push origin main"
 # This one counts all explicitly installed packages.
-alias updots="pacman -Qqe > ~/Documents/Extra/packages && dotfiles commit -a -m 'updots' && dotfiles push origin main"
+alias updots="pacman -Qqe > ~/Documents/Extra/packages && grep -Fvxf ~/Documents/Extra/packages.extra ~/Documents/Extra/packages > ~/Documents/Extra/packages.portable && dotfiles commit -a -m 'updots' && dotfiles push origin main"
 alias clean="yay -Qqdtt | yay -Rsn - || yay -Sc"
 #alias mocp="mocp --moc-dir ~/.config/moc"
 
