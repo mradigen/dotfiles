@@ -57,6 +57,7 @@ maim
 make
 man-db
 marktext-bin
+maven
 moc
 mpv
 multimc5
@@ -80,6 +81,7 @@ pipewire-jack
 pipewire-pulse
 pkgconf
 polybar
+python-pysimplegui
 python-pywal
 python-yaml
 qjackctl
