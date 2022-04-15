@@ -65,6 +65,7 @@ make
 man-db
 marktext-bin
 masscan
+maven
 mcrcon
 moc
 mpv
@@ -78,7 +79,6 @@ noto-fonts-emoji
 npm
 ntfs-3g
 nvidia
-nvidia-fake-powerd
 nvidia-settings
 nvidia-utils
 obs-studio
@@ -99,6 +99,7 @@ pkgconf
 polybar
 python-argparse
 python-colorama
+python-pysimplegui
 python-pywal
 python-requests
 python-yaml
