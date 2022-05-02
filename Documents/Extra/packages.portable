@@ -15,6 +15,7 @@ broadcom-wl-dkms
 bspwm
 btop
 cava
+cdrtools
 chaotic-keyring
 chaotic-mirrorlist
 connman
@@ -30,6 +31,7 @@ flex
 fuse2
 gcc
 git
+gpick
 groff
 grub
 helvum
@@ -74,6 +76,7 @@ openssh
 openvpn
 p7zip
 patch
+patchelf
 picom-ibhagwan-git
 pipes.sh
 pipewire-alsa
@@ -81,10 +84,11 @@ pipewire-jack
 pipewire-pulse
 pkgconf
 polybar
+portaudio
 python-pysimplegui
 python-pywal
 python-yaml
-qjackctl
+qpwgraph
 ranger
 reflector
 rofi-greenclip

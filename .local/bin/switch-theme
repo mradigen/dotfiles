@@ -9,6 +9,8 @@
 #	- themix-theme-oomox-git
 # ~ ADIGEN
 
+
+
 wal -i $HOME/Pictures/Wallpapers/${1}.* &&
 feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
 
@@ -36,9 +38,16 @@ sed -i '/frame_color = /s/.*/    frame_color = "'$color5'"/' $DUNST_FILE
 oomox-cli -o wal -t $HOME/.local/share/themes $HOME/.cache/wal/colors-oomox &&
 ################
 
-bspc wm -r &&
+fixtheme ~/.config/alacritty/alacritty.yml &&
 
-fixtheme ~/.config/alacritty/alacritty.yml
+#if [ -z $2 ]; then
+#	bspc wm -r
+#fi
+# Doing this instead
+bspc config normal_border_color "$color0"
+bspc config active_border_color "$color0"
+bspc config focused_border_color "$color5"
+bspc config presel_feedback_color "$color1"
 
-# Moved to bspwmrc
+# Moved to bspwmrc because it needs to be done every boot
 #lights

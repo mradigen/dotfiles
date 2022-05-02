@@ -24,3 +24,7 @@ libva-vdpau-driver
 inetutils
 i2c-tools
 archiso
+nuitka
+pyinstaller
+jre17-openjdk-headless
+python-paramiko
