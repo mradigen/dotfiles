@@ -14,12 +14,13 @@ if ! command -v openrgb >/dev/null 2>&1; then
 fi
 
 color_choosen=${1:-`xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-`}
-# Very stupid, the noautocconnect flag works but kills the whole script.1
-#rgb_command="sudo openrgb --noautoconnect"
-rgb_command="sudo openrgb"
+# Very stupid, the noautocconnect flag works but kills the whole script.
+rgb_command="sudo openrgb --noautoconnect"
+#rgb_command="sudo openrgb"
 
 # Doesn't work needs workaround below
+${rgb_command} -c ${color_choosen} -m static
+#${rgb_command} -d 0 -c ${color_choosen} -m breathing
+#${rgb_command} -d 1 -c ${color_choosen} -m breathing
+# Works now for some reason, v0.7 onwards I guess.
 #${rgb_command} -c ${color_choosen} -m breathing
-${rgb_command} -c ${color_choosen} -m direct
-${rgb_command} -d 0 -c ${color_choosen} -m breathing
-${rgb_command} -d 1 -c ${color_choosen} -m breathing

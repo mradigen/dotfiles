@@ -1,0 +1,23 @@
+#! /bin/sh
+
+#-- wallgrad --#
+# Generates a random gradient wallpaper.
+# Inspired by adi1090x's `canvas` script.
+# Dependencies:
+#   - convert (imagemagick)
+#	- switch-theme (my other theming script)
+# ~ ADIGEN
+
+output_file=~/Pictures/Wallpapers/random.jpg
+wal_cached_scheme_file=~/.cache/wal/schemes/_home_${USER}_Pictures_Wallpapers_random_jpg_dark_None_None_1.1.0.json
+
+convert -size "100x56" xc: +noise Random /tmp/noise.png
+
+convert /tmp/noise.png -virtual-pixel tile -blur 0x14 -auto-level -resize 1920x1080 ${output_file}
+
+rm /tmp/noise.png
+
+# Instead of removing that file, I have a scheme there which works well universally, therefore it matches most gradient wallpapers generated here.
+#rm ${wal_cached_scheme_file}
+
+switch-theme random aidbfh
