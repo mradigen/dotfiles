@@ -2,6 +2,8 @@
 
 #-- switch-theme --#
 # A script to switch the GTK, Qt, dunst, and BetterDiscord themes.
+# $1 - wallpaper filename (`mountain` resolves to ~/Pictures/Wallpapers/mountain.jpg)
+# $2 - (optional) set a background color
 # Dependencies:
 #	- wal
 #	- feh
@@ -9,9 +11,11 @@
 #	- themix-theme-oomox-git
 # ~ ADIGEN
 
-
-
-wal -i $HOME/Pictures/Wallpapers/${1}.* &&
+if [ -z $2 ]; then
+	wal -i $HOME/Pictures/Wallpapers/${1}.*
+else
+	wal -i $HOME/Pictures/Wallpapers/${1}.* -b $2
+fi
 feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
 
 # Moved to bspwmrc
@@ -40,9 +44,7 @@ oomox-cli -o wal -t $HOME/.local/share/themes $HOME/.cache/wal/colors-oomox &&
 
 fixtheme ~/.config/alacritty/alacritty.yml &&
 
-#if [ -z $2 ]; then
-#	bspc wm -r
-#fi
+#bspc wm -r
 # Doing this instead
 bspc config normal_border_color "$color0"
 bspc config active_border_color "$color0"

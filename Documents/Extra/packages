@@ -32,7 +32,6 @@ flex
 fuse2
 gcc
 git
-gpick
 groff
 grub
 helvum
@@ -95,7 +94,7 @@ openvpn
 p7zip
 patch
 patchelf
-picom-ibhagwan-git
+picom
 pipes.sh
 pipewire-alsa
 pipewire-jack

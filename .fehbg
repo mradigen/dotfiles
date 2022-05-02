@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/adigen/Pictures/Wallpapers/generated.png' 
+feh --no-fehbg --bg-fill '/home/adigen/Pictures/Wallpapers/random.jpg' 
