@@ -15,7 +15,7 @@ xsetroot -cursor_name left_ptr &
 #wal -q -R # simping for wallgrad rn
 wallgrad
 
-$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
+#$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
 lights &
 
 ###---Autostart---###

@@ -18,6 +18,8 @@ shift
 text="$@"
 length_wrap="512"
 
+#. ~/.cache/wal/colors.sh
+
 convert -fill white -background transparent -font Iosevka -pointsize 36 \
 	-size ${length_wrap}x caption:"${text}" \
 	$output
