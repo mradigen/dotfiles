@@ -23,7 +23,7 @@ colors:
 font:
   normal:
     family: Iosevka
-  size: 10.5
+  size: 12.5
 window:
   opacity: 1
   padding:
