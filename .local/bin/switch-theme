@@ -26,29 +26,38 @@ feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
 # Moved to bspwmrc
 #$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
 
-### Discord ###
+#############
+## Discord ##
+#############
 mkdir -p ~/.config/BetterDiscord/themes
 { echo -n '//META{"name":"wal","description":"Script generated theme mashing ClearVision with pywal colors.","author":"ADIGEN","version":"1.0"}*//'; sassc -t compact -I $HOME/.config/wal-discord -s < $HOME/.config/wal-discord/master.scss; } > $HOME/.config/BetterDiscord/themes/wal.theme.css &&
-###############
 
-### Dunst ###
-# source wal colors.
+###########
+## Dunst ##
+###########
 source ~/.cache/wal/colors.sh
-
 DUNST_FILE=~/.config/dunst/dunstrc
 
 # Update dunst based on pywal colors.
 sed -i '/background = /s/.*/    background = "'$color0'"/' $DUNST_FILE
 sed -i '/foreground = /s/.*/    foreground = "'$color7'"/' $DUNST_FILE
 sed -i '/frame_color = /s/.*/    frame_color = "'$color5'"/' $DUNST_FILE
-#############
 
-### GTK & Qt ###
+killall -q dunst; dunst-start & disown
+
+##############
+## GTK & Qt ##
+##############
 oomox-cli -o wal -t $HOME/.local/share/themes $HOME/.cache/wal/colors-oomox &&
-################
 
+###############
+## Alacritty ##
+###############
 fixtheme ~/.config/alacritty/alacritty.yml &&
 
+###########
+## BSPWM ##
+###########
 #bspc wm -r
 # Doing this instead
 bspc config normal_border_color "$color0"
@@ -56,7 +65,8 @@ bspc config active_border_color "$color0"
 bspc config focused_border_color "$color5"
 bspc config presel_feedback_color "$color1"
 
-killall -q dunst; dunst-start & disown
-
+#############
+## OpenRGB ##
+#############
 # Moved to bspwmrc because it needs to be done every boot
 #lights
