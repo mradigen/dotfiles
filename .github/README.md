@@ -53,7 +53,7 @@ You can also press `Super + Shift + h` in order to get a help on sxhkd shortcuts
 
 ## Japan
 
-(idk what it is in the background wallpaper pls dont get offended :D)
+(idk what it is written in the wallpaper so please don't mind the theme name :D)
 ![Japan](../Pictures/Screenshots/japan.png "Japan")
 
 ---
