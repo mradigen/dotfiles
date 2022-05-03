@@ -12,8 +12,8 @@ xsetroot -cursor_name left_ptr &
 
 ###---Theme!---###
 # This needs to be done before the pbstart and cannot be done asynchronesly.
-#wal -q -R # simping for wallgrad rn
-wallgrad
+wal -q -R # simping for wallgrad rn
+#wallgrad
 
 #$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
 lights &
