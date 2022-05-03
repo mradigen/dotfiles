@@ -15,5 +15,5 @@ alacritty -e pipes.sh -p 5 &
 bspc config window_gap 40 &
 
 ${EDITOR} ~/.local/bin/easen &
-dunstify -t 5000 -u low -r '92813' "Volume: `amixer sget Master | awk -F'[][]' '/%/ { print $2 }' | head -1`" &
+dunstify -t 5000 -u low -r '92813' "Screenshot taken!" &
 sleep 3 && maim -qu -m 10 "$HOME/Pictures/rices/$(date +%Y-%m-%d-%T.png)"
