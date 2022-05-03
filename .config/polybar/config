@@ -7,8 +7,8 @@
 ## Colors ##
 ############
 [colors]
-#background = #660C0C0B
-background = ${xrdb:color0:#0C0C0B}
+background = #660C0C0B
+#background = ${xrdb:color0:#0C0C0B}
 #background = #B40C0C0B
 foreground = ${xrdb:color5:#798D8F}
 blue  = ${xrdb:color3:#244E64}

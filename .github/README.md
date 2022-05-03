@@ -2,6 +2,8 @@
 
 Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, which can be choosen by pressing `Super + T`.
 
+You can also press `Super + Shift + h` in order to get a help on sxhkd shortcuts.
+
 ---
 
 # Theme (w/o blur):
@@ -70,13 +72,13 @@ Dotfiles for my bspwm rice on Arch Linux. This rice contains multiple themes, wh
 - ~[qutebrowser](https://github.com/qutebrowser/qutebrowser) [web browser]~
 - [vivaldi](https://vivaldi.com/) [web browser]
 - ~[neofetch](https://github.com/dylanaraps/neofetch) [terminal fetch for info]~
-- fet [a custom fetch script definitely not stolen from [them](https://github.com/safinsingh/)]
+- [fet](https://github.com/mradigen/dotfiles/blob/main/.local/bin/fet) [a custom fetch script definitely not stolen from [them](https://github.com/safinsingh/)]
 - ~[rofi](https://github.com/davatorium/rofi) [application opener]~
 - [dmenu](https://tools.suckless.org/dmenu/) [application opener] (With [j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop) for .desktop files)
 
 ### Etc.
 
-- [picom](https://aur.archlinux.org/packages/picom-ibhagwan-git/) [compositor]
+- [picom](https://github.com/yshui/picom) [compositor]
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) [shell]
 - [feh](https://github.com/derf/feh) [image viewer and wallpaper setter]
 - [pywal](https://github.com/dylanaraps/pywal) [theme color generator from wallpaper]
