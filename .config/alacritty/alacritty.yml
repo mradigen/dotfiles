@@ -1,25 +1,25 @@
 colors:
   bright:
-    black: '#829498'
-    blue: '#549DB2'
-    cyan: '#79C0CE'
-    green: '#47758C'
-    magenta: '#6CB4C5'
-    red: '#2D718D'
-    white: '#bbd4da'
-    yellow: '#348CA6'
+    black: '#a097aa'
+    blue: '#ED95EE'
+    cyan: '#E4ADF2'
+    green: '#D0A8D5'
+    magenta: '#D6B0E9'
+    red: '#E48EDA'
+    white: '#e5d8f3'
+    yellow: '#D196E7'
   normal:
-    black: '#12181a'
-    blue: '#549DB2'
-    cyan: '#79C0CE'
-    green: '#47758C'
-    magenta: '#6CB4C5'
-    red: '#2D718D'
-    white: '#bbd4da'
-    yellow: '#348CA6'
+    black: '#101622'
+    blue: '#ED95EE'
+    cyan: '#E4ADF2'
+    green: '#D0A8D5'
+    magenta: '#D6B0E9'
+    red: '#E48EDA'
+    white: '#e5d8f3'
+    yellow: '#D196E7'
   primary:
-    background: '#12181a'
-    foreground: '#bbd4da'
+    background: '#101622'
+    foreground: '#e5d8f3'
 font:
   normal:
     family: Iosevka

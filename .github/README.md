@@ -8,6 +8,19 @@ You can also press `Super + Shift + h` in order to get a help on sxhkd shortcuts
 
 # Theme (w/o blur):
 
+## [NEW] Pastel Gradient Wallpaper
+
+[wallgrad](https://github.com/mradigen/dotfiles/blob/main/.local/bin/wallgrad) can generate random (yet beautiful-looking) pastel gradient wallpapers. For example:
+
+![Gradient](../Pictures/Screenshots/random.png)
+
+||Green|Purple|
+|-|-|-|
+|Wallpaper|![img](../Pictures/Wallpapers/gradient-green.jpg)|![img](../Pictures/Wallpapers/gradient-purple.jpg)|
+|Rice|![img](../Pictures/Screenshots/random_green.png)|![img](../Pictures/Screenshots/random_purple.png)|
+
+---
+
 ## Mountain
 
 ![Mountain](../Pictures/Screenshots/mountain.png)
