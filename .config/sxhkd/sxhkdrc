@@ -1,18 +1,13 @@
 # BSPWM Hotkeys/keybindings
 
-~alt+g
-	godbridge
-#	xdotool click --clearmodifiers --repeat 10 --delay 100 3
-#	xdotool click --repeat 1000 --delay 65 3 & xdotool keydown s & xdotool keydown a
-#	autoclick
-
-#m
-#	xdotool click --repeat 5 --delay 150 1
-
 ###---Launch stuff---###
 
 alt+f
 	bspc node `cat $HOME/.cache/scratchpad | head -1` --focus
+
+# Help
+super + shift + h
+	awk '/^[a-z]/ && last \{print $0,"\t",last\} \{last=""\} /^#/\{last=$0\}' ~/.config/sxhkd/sxhkdrc | column -t -s $'\t' | run_dmenu -d
 
 # Terminal Emulator
 super + c
@@ -31,21 +26,9 @@ super + x
 super + z
 	alacritty --class=Music -e 'mocp'
 
-# Dmenu
+# Dmenu {Applications, Themes, Clipboard}
 super + {f, t, h}
 	run_dmenu -{ ,t,c}
-
-# Program Launcher
-#~super + f
-	#rofi -show drun
-
-# Theme switcher
-#super + t
-	#rofigen $HOME/.config/rofi/menus/theme-switcher
-
-# Clipboard
-#super + h
-	#rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # Switch desktops on secondary monitor
 super + g
@@ -59,10 +42,6 @@ super + g
 super + m
 	alacritty --class=Alsamixer -e 'alsamixer'
 
-# nlyt dir
-super + n
-	alacritty --title=nlyt -e ranger ~/Desktop/nlyt/
-
 # Scratchpad
 super + r
 	scratchpad
@@ -71,15 +50,12 @@ super + r
 # Screenshot
 Print
 	screenshot
-#	flameshot gui -p ~/Pictures/Screenshots
 
 ######------------######
 
 ###---Keybinds---###
 
-# Quit application
-#super + {_,shift + }q
-#	bspc node -{c,k}
+# Quit application {Focused, xkill}
 super + {_,shift + }q
 	{bspc node -c,xkill}
 
@@ -95,46 +71,49 @@ super + shift + x
 
 ###---Moving Around---###
 
-# Switch between nodes
+# Switch between recently focused windows
 super + Tab
 	bspc node last --focus
-#	bspc node -f next.local
 
-# Focus or move
-super + {_,shift + }{a,s,w,d}
-	bspc node -{f,s} {west,south,north,east}
+# Focus on window in selected direction
+super + {a,s,w,d}
+	bspc node -f {west,south,north,east}
 
+# Move focused window in chain mode
+super + shift + s : {a,s,w,d}
+	bspc node -s {west,south,north,east}
+
+# Switch to selected desktop
 super + {1-9,0}
 	bspc desktop -f '^{1-9,10}'
 
+# Move window to selected desktop
 super + shift + {1-9,0}
 	id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}
 
 ### Never going to use the resizing anyways cause right click resize is better
-# Expand a window from the outsides
-super + ctrl + {a,s,w,d}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-# Expand a window from the insides
-super + ctrl + shift + {a,s,w,d}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+# Resize focused window in chain mode
+super + ctrl + s : {a,s,w,d}
+    STEP=20; SELECTION={1,2,3,4}; \
+    bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
+    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
 super + {_,shift +}e
 	{bspc desktop -l next, bspc node -t \~fullscreen}
 
-# Hiding polybar
+# Hide polybar
 super + shift + f
 	pbtoggle
 
-# Floating Windows
+# Toggle floating
 super + space
-#	bspc node focused -t "~floating"
 	if [ -z "$(bspc query -N -n focused.floating)" ]; then \
         bspc node focused -t floating; \
     else \
         bspc node focused -t tiled; \
     fi
 
+# Toggle pseudo-tiled
 super + alt + space
 	if [ -z "$(bspc query -N -n focused.pseudo_tiled)" ]; then \
         bspc node focused -t pseudo_tiled; \
@@ -149,16 +128,7 @@ super + alt + space
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
 	sound {increase,decrease}
 
-#XF86AudioMute
-	#exec ~/.config/polybar/mic.sh toggle
-
-#ctrl + {semicolon, apostrophe}
-#	sound {mdecrease,mincrease}
-#ctrl + apostrophe
-XF86AudioMicMute
-	sound mic
-
-XF86AudioMute
+{XF86AudioMute,XF86AudioMicMute}
 	sound mic
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown} 
@@ -172,9 +142,6 @@ super + Escape
 
 super + {_,shift +}b
 	{blurlock, blurlock; sudo systemctl suspend}
-
-#~ctrl + End
-#	xdotool key Escape shift+Tab Return
 
 ~ctrl + Page_Down
 	fsg

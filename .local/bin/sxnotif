@@ -1,0 +1,28 @@
+#! /bin/sh
+
+#-- sxnotif --#
+# Notifiers the user when they
+# are in sxhkd's chain mode.
+# This script is also used in
+# my polybar module to display
+# a `` when in chain mode.
+# Dependencies:
+#   - sxhkd
+#	- dunst
+# ~ ADIGEN
+
+notifier=dunstify
+fifo_file=/tmp/sfifo
+
+while read -r line ; do 
+    case $line in
+        B*)
+            ${notifier} "Chain mode" -t 0 -r 56489
+			echo 
+            ;;
+        E*)
+            ${notifier} -C 56489
+			echo
+            ;;
+    esac
+done <${fifo_file}
