@@ -13,6 +13,7 @@
 # Cache the pid of the current window on the scratchpad
 cache_file="$HOME/.cache/scratchpad"
 focus_after_toggle="true"
+notifier="dunstify"
 
 cat ${cache_file} > /dev/null
 # If file doesn't exist, then make one
@@ -38,5 +39,5 @@ else
 	# If it failed due to invalid pid, means that the window was exited
 	# Delete the cache file and move the current focused window into scratchpad
 	rm ${cache_file}
-	scratchpad-modified
+	${notifier} "No window in scratchpad"
 fi
