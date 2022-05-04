@@ -100,7 +100,16 @@ emos
 ## FUNCTIONS ##
 ###############
 
-### ARCHIVE EXTRACTION
+### Creates a box around text
+# usage: box <text>
+box() {
+	c="## $1 ##"
+	echo $c | sed 's/./#/g'
+	echo $c
+	echo $c | sed 's/./#/g'
+}
+
+### Archine extraction (from DT)
 # usage: ex <file>
 ex() {
   if [ -f $1 ] ; then

@@ -1,9 +1,8 @@
 # BSPWM Hotkeys/keybindings
 
-###---Launch stuff---###
-
-alt+f
-	bspc node `cat $HOME/.cache/scratchpad | head -1` --focus
+##################
+## Applications ##
+##################
 
 # Help
 super + shift + h
@@ -16,7 +15,6 @@ super + c
 # Web Browser
 super + v
 	vivaldi-stable --profile-directory="Default"
-	#qutebrowser
 
 # File Browser
 super + x
@@ -30,14 +28,6 @@ super + z
 super + {f, t, h}
 	run_dmenu -{ ,t,c}
 
-# Switch desktops on secondary monitor
-super + g
-	if [[ `bspc query --desktops --monitor \^2 --desktop focused --names` = 6 ]]; then \
-        bspc desktop -f 7; \
-    else \
-        bspc desktop -f 6; \
-    fi
-
 # Alsamixer
 super + m
 	alacritty --class=Alsamixer -e 'alsamixer'
@@ -45,18 +35,21 @@ super + m
 # Scratchpad
 super + r
 	scratchpad
-#	scratchpad-old discord "apulse discord"
 
-# Screenshot
-Print
-	screenshot
+##############
+## Keybinds ##
+##############
 
-######------------######
+# Lock the system (shift to also suspend)
+super + {_,shift +} b
+	{blurlock, blurlock; sudo systemctl suspend}
 
-###---Keybinds---###
+###########
+## bspwm ##
+###########
 
 # Quit application {Focused, xkill}
-super + {_,shift + }q
+super + {_,shift +} q
 	{bspc node -c,xkill}
 
 # Restart BSPWM
@@ -67,9 +60,21 @@ super + shift + r
 super + shift + x
 	bspc quit
 
-######------------######
+# Switch to selected desktop
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
 
-###---Moving Around---###
+# Move window to selected desktop
+super + shift + {1-9,0}
+	id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}
+
+# Switch desktops on secondary monitor
+super + g
+	if [[ `bspc query --desktops --monitor \^2 --desktop focused --names` = 6 ]]; then \
+        bspc desktop -f 7; \
+    else \
+        bspc desktop -f 6; \
+    fi
 
 # Switch between recently focused windows
 super + Tab
@@ -79,20 +84,11 @@ super + Tab
 super + {a,s,w,d}
 	bspc node -f {west,south,north,east}
 
-# Move focused window in chain mode
+# Move focused window in chain mode (or use Super + Left Click Drag instead)
 super + shift + s : {a,s,w,d}
 	bspc node -s {west,south,north,east}
 
-# Switch to selected desktop
-super + {1-9,0}
-	bspc desktop -f '^{1-9,10}'
-
-# Move window to selected desktop
-super + shift + {1-9,0}
-	id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}
-
-### Never going to use the resizing anyways cause right click resize is better
-# Resize focused window in chain mode
+# Resize focused window in chain mode (or use Super + Right Click Drag instead)
 super + ctrl + s : {a,s,w,d}
     STEP=20; SELECTION={1,2,3,4}; \
     bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
@@ -121,9 +117,9 @@ super + alt + space
         bspc node focused -t tiled; \
     fi
 
-######-------------######
-
-###---Extras---###
+############
+## Extras ##
+############
 
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
 	sound {increase,decrease}
@@ -137,11 +133,11 @@ super + alt + space
 XF86Display
 	desk
 
+Print
+	screenshot
+
 super + Escape
 	dunstctl history-pop
-
-super + {_,shift +}b
-	{blurlock, blurlock; sudo systemctl suspend}
 
 ~ctrl + Page_Down
 	fsg

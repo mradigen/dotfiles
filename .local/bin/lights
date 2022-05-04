@@ -2,6 +2,12 @@
 
 #-- lights --#
 # Change rgb lights on my PC
+# (DISCLAIMER) OpenRGB is very very
+# buggy when used on commandline, let
+# alone in scripts. If your lights get
+# bricked, just run this script in a
+# loop, and it should (hopefully)
+# start working again.
 # Dependencies:
 #	- openrgb
 #	- Execute `openrgb` with sudo privileges without password.
@@ -14,9 +20,7 @@ if ! command -v openrgb >/dev/null 2>&1; then
 fi
 
 color_choosen=${1:-`xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-`}
-# Very stupid, the noautocconnect flag works but kills the whole script.
 rgb_command="sudo openrgb --noautoconnect"
-#rgb_command="sudo openrgb"
 
 # Doesn't work needs workaround below
 ${rgb_command} -c ${color_choosen} -m static & disown
