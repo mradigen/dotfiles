@@ -11,11 +11,8 @@ call plug#end()
 " wal.vim
 colorscheme wal
 
-set autoindent
-set noexpandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+setlocal autoindent noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType python setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 autoindent
 
 " Mouse support
 set mouse=a

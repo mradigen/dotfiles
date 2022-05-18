@@ -2,7 +2,8 @@ v4l2loopback-dkms
 typora
 vkd3d
 wine
-qemu-headless
+winetricks
+qemu-base
 python-requests
 python-argparse
 python-colorama
@@ -17,7 +18,6 @@ nvidia
 npm
 mcrcon
 masscan
-jre8-openjdk
 lib32-nvidia-utils
 lib32-vkd3d
 libva-vdpau-driver
@@ -26,5 +26,16 @@ i2c-tools
 archiso
 nuitka
 pyinstaller
-jre17-openjdk-headless
 python-paramiko
+virt-manager
+dnsmasq
+openresolv
+docker
+jre-openjdk
+jre-openjdk-headless
+jre17-openjdk-headless
+jre8-openjdk
+jre8-openjdk-headless
+maven
+upx
+
