@@ -1,0 +1,2 @@
+[default-nodes]
+default.configured.audio.sink=alsa_output.pci-0000_2d_00.4.analog-stereo

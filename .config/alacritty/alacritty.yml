@@ -1,25 +1,5 @@
-colors:
-  bright:
-    black: '#98978e'
-    blue: '#D2CC8E'
-    cyan: '#C8E984'
-    green: '#95E4A4'
-    magenta: '#E0C78F'
-    red: '#AFCDAE'
-    white: '#dad9cb'
-    yellow: '#A5E4A2'
-  normal:
-    black: '#101622'
-    blue: '#D2CC8E'
-    cyan: '#C8E984'
-    green: '#95E4A4'
-    magenta: '#E0C78F'
-    red: '#AFCDAE'
-    white: '#dad9cb'
-    yellow: '#A5E4A2'
-  primary:
-    background: '#101622'
-    foreground: '#dad9cb'
+import:
+  - ~/.cache/wal/colors-alacritty.yml
 font:
   normal:
     family: Iosevka

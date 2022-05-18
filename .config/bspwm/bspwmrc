@@ -21,7 +21,7 @@ lights &
 ###---Autostart---###
 $(mkfifo /tmp/sfifo; sxhkd -s /tmp/sfifo) & # For the polybar module to detect whether sxhkd is in chain mode
 dunst-start &
-picom --experimental-backends -b &
+picom -b &
 #exec ~/.fehbg &
 pbstart &
 greenclip daemon &

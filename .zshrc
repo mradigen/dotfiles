@@ -21,6 +21,12 @@ source $ZSH/oh-my-zsh.sh
 ## Environment Variables ##
 ###########################
 
+# XDG
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
 #export ALSA_CARD=PCH # Shifted task to ~/.asoundrc
 export ANDROID_HOME="$HOME/.android"
 export ANDROID_NDK="$HOME/.android/ndk"
@@ -38,7 +44,6 @@ alias androidvnc="adb forward tcp:2301 tcp:5901"
 alias androidvnc-kill="adb forward --remove-all"
 alias asdf="setxkbmap dvorak"
 alias aoeu="setxkbmap us"
-#alias cat="bat" # meh, gonna just use cat
 alias cls="clear"
 alias mnt="sudo mount -t auto -o umask=0,uid=$(echo $USER),gid=$(echo $USER),rw"
 alias umnt="sudo umount"
