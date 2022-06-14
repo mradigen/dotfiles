@@ -6,7 +6,7 @@
 # Dependencies:
 #	- wal
 #	- feh
-#	- wallmaker (my wallpaper maker script)
+#	- wallmaker (my wallpaper maker script) (optional)
 #	- sassc
 #	- themix-theme-oomox-git
 #	- bspwm
@@ -34,7 +34,7 @@ source ~/.cache/wal/colors.sh
 ## feh ##
 #########
 #feh --bg-fill --conversion-timeout 100 $HOME/Pictures/Wallpapers/${1}.*
-$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
+#$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
 
 #############
 ## Discord ##
