@@ -97,9 +97,13 @@ echo # Enters a line at top
 fet # Runs the custom fetch
 
 # Print a motivational message in bold
-tput bold
-echo
-emos
+#tput bold
+#echo
+#emos
+
+#echo "\033[7;34m ~ \033[0;34m\ue0b0 \033[0mtodo" # Adds a nice prompt as if the command was ran
+#tput bold
+#todo
 
 ###############
 ## FUNCTIONS ##
