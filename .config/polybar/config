@@ -124,7 +124,7 @@ interval = 1
 
 #thermal-zone = 6
 
-hwmon-path = /sys/devices/platform/nct6687.2592/hwmon/hwmon2/temp1_input
+#hwmon-path = /sys/devices/platform/nct6687.2592/hwmon/hwmon2/temp1_input
 
 base-temperature = 50
 warn-temperature = 80
@@ -139,18 +139,29 @@ label = "%temperature-c%"
 #############
 [module/battery]
 type = internal/battery
-full-at = 99
-low-at = 20
+poll-interval = 5
 
 battery = BAT0
 adapter = AC
 
-poll-interval = 5
+full-at = 99
+low-at = 20
 
-format-discharging = " <ramp-capacity> <label-discharging> "
+format-discharging = " <label-discharging> "
 label-discharging-foreground = ${colors.white}
-ramp-capacity-0 = ""
-label-discharging = "%percentage_raw%%"
+label-discharging = " %percentage_raw%%"
+
+format-charging = " <label-charging> "
+label-charging-foreground = ${colors.white}
+label-charging = " %percentage_raw%%"
+
+format-low = " <label-low> "
+label-low-foreground = ${colors.blue}
+label-low = " %percentage_raw%%"
+
+format-full = " <label-full> "
+label-full-foreground = ${colors.white}
+label-full = " %percentage_raw%%"
 
 ###############
 ## RAM Usage ##
