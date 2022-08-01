@@ -34,6 +34,7 @@ amixer -D hw:1 sset Master 50% -q &
 
 ###---BSPWM---###
 bspc monitor -d 1 2 3 4 5
+bspc monitor ^2 -d 6 7
 
 bspc config border_width 		2
 bspc config window_gap 			20
@@ -56,14 +57,14 @@ bspc config presel_feedback_color "$color1"
 # Open on specific workspace
 bspc rule -a Vivaldi-stable desktop=1
 
-X=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
-Y=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
+X=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1 | head -1)
+Y=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2 | head -1)
 
-X2=$(($X/2))
-Y2=$(($Y/2))
+X2=$[X/2]
+Y2=$[Y/2]
 
-X3=$(($X/3))
-Y3=$(($Y/3))
+X3=$[X/3]
+Y3=$[Y/3]
 
 bspc rule -a Alacritty:Alsamixer state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
 bspc rule -a Alacritty:Music state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}

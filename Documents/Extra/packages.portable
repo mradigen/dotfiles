@@ -2,7 +2,6 @@ alacritty
 alsa-utils
 amd-ucode
 android-file-transfer
-asciiquarium
 autoconf
 automake
 base
@@ -20,6 +19,7 @@ chaotic-keyring
 chaotic-mirrorlist
 connman
 connman-gtk
+cython
 discord_arch_electron
 dmenu
 dunst
@@ -38,6 +38,7 @@ i3lock
 intel-ucode
 iwd
 j4-dmenu-desktop
+jad
 jdk8-openjdk
 jq
 lib32-glibc
@@ -88,12 +89,13 @@ reflector
 rofi-greenclip
 rsync
 slop
+sshfs
 sublime-text-4
 sudo
 sxhkd
+sxiv
 texinfo
 themix-theme-oomox-git
-thunar
 tigervnc
 ttf-font-awesome
 ueberzug
@@ -105,6 +107,7 @@ wget
 which
 xcalib
 xclip
+xcolor
 xdotool
 xf86-video-intel
 xorg-server

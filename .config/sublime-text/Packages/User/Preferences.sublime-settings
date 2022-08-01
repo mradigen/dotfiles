@@ -1,6 +1,6 @@
 {
-	"color_scheme": "Packages/ayu/ayu-dark.sublime-color-scheme",
-	// "color_scheme": "Packages/User/PyWal.sublime-color-scheme",
+	// "color_scheme": "Packages/ayu/ayu-dark.sublime-color-scheme",
+	"color_scheme": "ayu-dark.sublime-color-scheme",
 	"font_face": "Iosevka",
 	"font_size": 14,
 	"ignored_packages":

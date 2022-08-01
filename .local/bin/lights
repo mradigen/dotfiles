@@ -19,7 +19,12 @@ if ! command -v openrgb >/dev/null 2>&1; then
 	exit
 fi
 
-color_choosen=${1:-`xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-`}
+# xrdb doesn't work with ssh
+#color_choosen=${1:-`xrdb -query | grep '*color5' | awk '{print $2}' | cut -c 2-`}
+. "${HOME}/.cache/wal/colors.sh"
+
+color_choosen=${1:-${color5:1}}
+echo $color_choosen
 rgb_command="sudo openrgb --noautoconnect"
 
 # Doesn't work needs workaround below
