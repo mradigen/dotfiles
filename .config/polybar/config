@@ -124,7 +124,7 @@ interval = 1
 
 #thermal-zone = 6
 
-#hwmon-path = /sys/devices/platform/nct6687.2592/hwmon/hwmon2/temp1_input
+hwmon-path = /sys/devices/platform/nct6687.2592/hwmon/hwmon2/temp1_input
 
 base-temperature = 50
 warn-temperature = 80

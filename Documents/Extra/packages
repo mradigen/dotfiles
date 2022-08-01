@@ -3,7 +3,6 @@ alsa-utils
 amd-ucode
 android-file-transfer
 archiso
-asciiquarium
 autoconf
 automake
 base
@@ -21,8 +20,10 @@ chaotic-keyring
 chaotic-mirrorlist
 connman
 connman-gtk
+cython
 discord_arch_electron
 dmenu
+dnsmasq
 dunst
 electron13
 fakeroot
@@ -37,10 +38,10 @@ grub
 helvum
 i2c-tools
 i3lock
-inetutils
 intel-ucode
 iwd
 j4-dmenu-desktop
+jad
 jdk8-openjdk
 jq
 jre-openjdk-headless
@@ -67,7 +68,6 @@ make
 man-db
 marktext-bin
 masscan
-mcrcon
 moc
 mpv
 multimc5
@@ -111,12 +111,13 @@ reflector
 rofi-greenclip
 rsync
 slop
+sshfs
 sublime-text-4
 sudo
 sxhkd
+sxiv
 texinfo
 themix-theme-oomox-git
-thunar
 tigervnc
 ttf-font-awesome
 ueberzug
@@ -133,6 +134,7 @@ which
 wine
 xcalib
 xclip
+xcolor
 xdotool
 xf86-video-intel
 xorg-server

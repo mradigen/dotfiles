@@ -1,15 +1,15 @@
 call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/goyo.vim'
-"	Plug 'preservim/nerdtree'
 	Plug 'dylanaraps/wal.vim'
-	Plug 'github/copilot.vim'
+"	Plug 'github/copilot.vim'
+"	Plug 'preservim/nerdtree'
 "	Plug 'kevinhwang91/rnvimr'
-    Plug 'francoiscabrol/ranger.vim'
-    Plug 'rbgrouleff/bclose.vim'
+" Ranger >   Plug 'francoiscabrol/ranger.vim'
+"        >   Plug 'rbgrouleff/bclose.vim'
 call plug#end()
 
 " wal.vim
-colorscheme wal
+"colorscheme wal " Default is good enough
 
 setlocal autoindent noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 autoindent
