@@ -1,7 +1,7 @@
 #! /bin/sh
 
 ###--Close these programs---###
-killall -q sxhkd xss-lock dunst picom greenclip kdeconnectd polybar discord-rpc-status
+killall -q sxhkd dunst picom greenclip polybar discord-rpc-status
 
 ##---Fix Displays---###
 xcalib ~/.local/share/icc/techless_G24F.icm &
@@ -12,8 +12,7 @@ xsetroot -cursor_name left_ptr &
 
 ###---Theme!---###
 # This needs to be done before the pbstart and cannot be done asynchronesly.
-wal -q -R # simping for wallgrad rn
-#wallgrad
+wal -q -R
 
 #$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
 lights &
@@ -22,7 +21,6 @@ lights &
 $(mkfifo /tmp/sfifo; sxhkd -s /tmp/sfifo) & # For the polybar module to detect whether sxhkd is in chain mode
 dunst-start &
 picom -b &
-#exec ~/.fehbg &
 pbstart &
 greenclip daemon &
 
