@@ -140,8 +140,8 @@ super + Escape
 	dunstctl history-pop
 
 ~ctrl + Page_Down
-	fsg
-	#rsg-sw
+	rsg-sw
+	#fsg
 	#ssg
 
 ~alt + s

@@ -1,20 +1,66 @@
-#! /bin/bash
+#!/bin/sh
 
 #-- blurlock --#
 # Lock the screen using a blur effect.
 # Dependencies:
-#	- imagemagick
-#	- i3lock
+#	- i3lock-color
+#	- emos (optional)
+#	- fold (optional)
 # ~ ADIGEN
 
-# Take screenshot.
-icon="$HOME/Pictures/adigen.png"
-import -window root /tmp/screenshot.png
+. "${HOME}/.cache/wal/colors.sh"
 
-# Blur it.
-convert /tmp/screenshot.png -scale 10% -scale 1000% $icon -gravity center -composite -matte /tmp/screenshotblur.png
-rm /tmp/screenshot.png
+BLANK="${color0}00"
+CLEAR="${color0}00"
+DEFAULT="${color5}"
+TEXT="${color5}"
+WRONG="${color0}"
+VERIFYING="${color7}"
 
-# Lock screen displaying this image.
-i3lock -i /tmp/screenshotblur.png
-exit 0
+i3lock \
+--radius 150 \
+--ring-width 9 \
+\
+--insidever-color=$CLEAR     \
+--ringver-color=$VERIFYING   \
+\
+--insidewrong-color=$CLEAR   \
+--ringwrong-color=$WRONG     \
+\
+--inside-color=$BLANK        \
+--ring-color=$DEFAULT        \
+--line-color=$BLANK          \
+--separator-color=$DEFAULT   \
+\
+--verif-color=$TEXT          \
+--wrong-color=$TEXT          \
+--time-color=$TEXT           \
+--date-color=$TEXT           \
+--layout-color=$TEXT         \
+--keyhl-color=$WRONG         \
+--bshl-color=$WRONG          \
+--greeter-color=$TEXT		 \
+\
+--screen 1                   \
+--blur 5                     \
+--clock                      \
+\
+--greeter-text="`emos | fold -w 50 -s`" \
+--greeter-font=Iosevka \
+--greeter-align 1 \
+--greeter-pos="600:270" \
+\
+--time-str="%H:%M:%S"        \
+--date-str="%A, %Y-%m-%d"       \
+--date-font=Iosevka \
+--time-font=Iosevka \
+--time-size=50 \
+--date-size=20 \
+\
+--verif-text="Verifying" \
+--wrong-text="Incorrect" \
+--noinput-text="Emtpy" \
+\
+--no-verify \
+--indicator \
+
