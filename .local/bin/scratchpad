@@ -10,10 +10,19 @@
 #	- bspwm
 # ~ ADIGEN
 
+
 # Cache the pid of the current window on the scratchpad
 cache_file="$HOME/.cache/scratchpad"
 focus_after_toggle="true"
 notifier="dunstify"
+
+# If an executable was passed, throw that into the scratchpad by running it first
+#if [ $# != 0 ]; then
+#	$@ &
+#	echo `sleep 3; xdotool search --pid $! | head -1` > ${cache_file}
+#	exec $0
+#	exit
+#fi
 
 cat ${cache_file} > /dev/null
 # If file doesn't exist, then make one

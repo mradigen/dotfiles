@@ -21,11 +21,11 @@ chaotic-mirrorlist
 connman
 connman-gtk
 cython
-discord_arch_electron
+discord-electron-bin
 dmenu
 dnsmasq
 dunst
-electron13
+electron13-bin
 fakeroot
 feh
 ffmpeg
@@ -39,7 +39,6 @@ helvum
 i2c-tools
 i3lock-color-git
 intel-ucode
-iwd
 j4-dmenu-desktop
 jad
 jdk8-openjdk
@@ -119,6 +118,8 @@ sxiv
 texinfo
 themix-theme-oomox-git
 tigervnc
+tlpui
+todo-bin
 ttf-font-awesome
 ueberzug
 unrar
@@ -132,6 +133,7 @@ vkd3d
 wget
 which
 wine
+wpa_supplicant
 xcalib
 xclip
 xcolor

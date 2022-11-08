@@ -20,7 +20,7 @@ lights &
 ###---Autostart---###
 $(mkfifo /tmp/sfifo; sxhkd -s /tmp/sfifo) & # For the polybar module to detect whether sxhkd is in chain mode
 dunst-start &
-picom -b &
+picom --experimental-backends -b &
 pbstart &
 greenclip daemon &
 
@@ -64,8 +64,11 @@ Y2=$[Y/2]
 X3=$[X/3]
 Y3=$[Y/3]
 
-bspc rule -a Alacritty:Alsamixer state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
-bspc rule -a Alacritty:Music state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
+bspc rule -a Alsamixer state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
+bspc rule -a Music state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
 bspc rule -a Connman-gtk state=floating
 bspc rule -a discord state=floating rectangle=${X2}x${Y}+0+0 sticky=on layer=above
 bspc rule -a xkcd state=floating
+
+###--Programs---###
+#scratchpad discord
