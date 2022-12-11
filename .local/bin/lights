@@ -28,7 +28,9 @@ echo $color_choosen
 rgb_command="sudo openrgb --noautoconnect"
 
 # Doesn't work needs workaround below
-${rgb_command} -c ${color_choosen} -m static & disown
+${rgb_command} -d 0 -c ${color_choosen} -m static -d 1 -c ${color_choosen} -m static
+${rgb_command} -d 3 -c ${color_choosen} -m Custom 
+#${rgb_command} -c ${color_choosen} -m static & disown
 #${rgb_command} -d 0 -c ${color_choosen} -m breathing
 #${rgb_command} -d 1 -c ${color_choosen} -m breathing
 # Works now for some reason, v0.7 onwards I guess.

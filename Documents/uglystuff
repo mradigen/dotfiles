@@ -7,3 +7,4 @@ Installed `python-requests` to run FSG seed generator findSeed.py.
 
 Installed portaudio just to use cava
 
+`xdg-user-dirs` to run Spotube

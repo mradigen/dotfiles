@@ -53,7 +53,10 @@ alias reset="reset; cat ~/.cache/wal/sequences"
 #alias music="cd ~/Music/YT; youtube-dl -x --yes-playlist --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias music="yt-dlp -x --yes-playlist --audio-quality 0 -o '%(title)s.%(ext)s'" # youtube-dl has issues
 alias sensors="watch -n 0.5 sensors"
+alias vnc="~/.vnc/noVNC/utils/novnc_proxy --vnc localhost:5901 --listen 0.0.0.0:5600 & vncserver :1 & ssh -N -R 5600:0.0.0.0:5600 as; killall -q Xvnc; bspc wm -r"
+alias vnc-end="killall -q Xvnc ssh && bspc wm -r"
 alias vpn="sudo openvpn ~/Documents/VPN/cysis.ovpn & disown"
+alias zxc='sudo $(fc -ln -1)'
 
 # Pacman
 alias update="yay -Syu"

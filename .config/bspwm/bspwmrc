@@ -20,7 +20,7 @@ lights &
 ###---Autostart---###
 $(mkfifo /tmp/sfifo; sxhkd -s /tmp/sfifo) & # For the polybar module to detect whether sxhkd is in chain mode
 dunst-start &
-picom --experimental-backends -b &
+picom -b &
 pbstart &
 greenclip daemon &
 
@@ -34,8 +34,8 @@ amixer -D hw:1 sset Master 50% -q &
 bspc monitor -d 1 2 3 4 5
 bspc monitor ^2 -d 6 7
 
-bspc config border_width 		2
-bspc config window_gap 			20
+bspc config border_width 		1
+bspc config window_gap 			40
 
 bspc config split_ratio 		0.52
 bspc config borderless_monocle 	false
@@ -64,8 +64,10 @@ Y2=$[Y/2]
 X3=$[X/3]
 Y3=$[Y/3]
 
-bspc rule -a Alsamixer state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
-bspc rule -a Music state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
+#bspc rule -a Alsamixer state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
+#bspc rule -a Music state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
+bspc rule -a "YouTube Music" state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
+bspc rule -a Floating state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
 bspc rule -a Connman-gtk state=floating
 bspc rule -a discord state=floating rectangle=${X2}x${Y}+0+0 sticky=on layer=above
 bspc rule -a xkcd state=floating

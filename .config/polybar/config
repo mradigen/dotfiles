@@ -7,9 +7,10 @@
 ## Colors ##
 ############
 [colors]
-#background = #660C0C0B
-#background = ${xrdb:color0:#0C0C0B}
-background = #B40C0C0B
+#background = #660C0C0B # 40% transparency
+#background = #B40C0C0B # 70% transparency
+background = ${xrdb:color0:#0C0C0B}
+#background = #880C0C0B
 foreground = ${xrdb:color5:#798D8F}
 blue  = ${xrdb:color3:#244E64}
 white = ${xrdb:color7:#E0E0E0}
@@ -18,10 +19,10 @@ white = ${xrdb:color7:#E0E0E0}
 ## Bars ##
 ##########
 [bar/main]
-width = 80%
-height = 30px
-offset-x = 10%
-offset-y = 1%
+width = 70%
+height = 35px
+offset-x = 15%
+offset-y = 20px
 fixed-center = true
 
 enable-ipc = true
@@ -31,10 +32,10 @@ monitor = ${env:MONITOR:}
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-size = 2
+border-size = 1
 border-color = ${colors.foreground}
 
-;radius = 10
+#radius = 12
 
 wm-restack = bspwm
 
@@ -43,13 +44,21 @@ scroll-down = #bspwm.next
 
 modules-left = bspwm sxhkd
 modules-center = music-prev music music-next
-modules-right = battery gpu temperature memory date powermenu
+modules-right = tray battery bluetooth gpu temperature memory date powermenu
 
 font-0 = "Iosevka:size=11:weight=bold;3"
 # For icons as icons and workspaces logos are messed up in sizing
 font-1 = "Font Awesome 6 Free Solid:size=12;3"
 font-2 = "Font Awesome 6 Free Solid:size=10;2"
 font-3 = "Font Awesome 6 Free Regular:size=10;2"
+font-4 = "Font Awesome 6 Brands:size=14;4"
+
+##########
+## tray ##
+##########
+[module/tray]
+type = internal/tray
+format = <tray>
 
 ###########
 ## bspwm ##
@@ -211,21 +220,39 @@ exec = ~/.config/polybar/music.sh
 interval = 1
 label-padding = 1
 label-foreground = ${colors.white}
-click-left = mocp -G
-click-right = alacritty --class="Music" -e mocp &
+#click-left = mocp -G
+#click-right = alacritty --class="Floating" -e mocp &
+click-left = playerctl play-pause 
+click-right = youtube-music
+
+# Switched to youtube-music
 
 [module/music-next]
 type = custom/text
 content = ""
 content-foreground = ${colors.blue}
-click-left = mocp -f
-click-right = alacritty --class="Music" -e mocp &
+#click-left = mocp -f
+#click-right = alacritty --class="Floating" -e mocp &
+click-left = playerctl next
+click-right = youtube-music
 
 [module/music-prev]
 type = custom/text
 content = ""
 content-foreground = ${colors.blue}
-click-left = mocp -r
-click-right = alacritty --class="Music" -e mocp &
+#click-left = mocp -r
+#click-right = alacritty --class="Floating" -e mocp &
+click-left = playerctl previous
+click-right = youtube-music
+
+[module/bluetooth]
+type = custom/script
+exec = "bluetoothctl devices Connected | awk -vORS=', ' '{for(i=3;i<=NF;i++){ printf("%s",( (i>3) ? OFS : "" ) $i) };print"";}' | sed -e 's/, $/\n/'"
+#exec-if = "[ $(bluetoothctl show | grep 'Powered: yes' | wc -l) -gt 0 ]"
+interval = 10
+click-right = alacritty --class="Floating" -e bluetoothctl &
+format-prefix-foreground = ${colors.white}
+format-prefix = %{T4} %{T-}
+format-padding = 1
 
 # vim: ft=cfg
