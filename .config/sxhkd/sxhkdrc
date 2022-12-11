@@ -22,7 +22,8 @@ super + x
 
 # Music Player
 super + z
-	alacritty --class=Music -e 'mocp'
+	youtube-music
+	#alacritty --class=Floating -e 'mocp'
 
 # Dmenu {Applications, Themes, Clipboard}
 super + {f, t, h}
@@ -30,7 +31,7 @@ super + {f, t, h}
 
 # Alsamixer
 super + m
-	alacritty --class=Alsamixer -e 'alsamixer'
+	alacritty --class=Floating -e 'alsamixer'
 
 # Scratchpad
 super + r
@@ -120,6 +121,9 @@ super + alt + space
 ############
 ## Extras ##
 ############
+
+XF86Audio{Play,Pause,Prev,Next}
+	playerctl {play-pause,play-pause,previous,next}
 
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
 	sound {increase,decrease}

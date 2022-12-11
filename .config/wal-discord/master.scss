@@ -6,6 +6,11 @@
 /* IMPORT CSS */
 @import url(https://clearvision.gitlab.io/v6/main.css);
 
+/* ClearVision overwrites the new gg sans font that's why we need to manually set it */
+body, button, input, select, textarea, ::placeholder {
+    font-family: var(--font-primary);
+}
+
 .container-YkUktl:after, .container-YkUktl:before {
   content: "" !important;
 }
