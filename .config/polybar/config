@@ -56,9 +56,9 @@ font-4 = "Font Awesome 6 Brands:size=14;4"
 ##########
 ## tray ##
 ##########
-[module/tray]
-type = internal/tray
-format = <tray>
+#[module/tray]
+#type = internal/tray
+#format = <tray>
 
 ###########
 ## bspwm ##
