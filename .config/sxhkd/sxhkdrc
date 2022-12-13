@@ -131,8 +131,8 @@ XF86Audio{Play,Pause,Prev,Next}
 {XF86AudioMute,XF86AudioMicMute}
 	sound mic
 
-{XF86MonBrightnessUp,XF86MonBrightnessDown} 
-	{brightness 5 & dunstify -t 500 -u low -r "92813" "Brightness: $(cat /sys/class/backlight/intel_backlight/brightness)", brightness -5 & dunstify -t 500 -u low -r "92813" "Brightness: $(cat /sys/class/backlight/intel_backlight/brightness)"}
+{XF86MonBrightnessUp,XF86MonBrightnessDown}
+	xbacklight -{inc,dec} 5 && dunstify -t 500 -u low -r "92813" "Brightness: `xbacklight -get`"
 
 XF86Display
 	desk

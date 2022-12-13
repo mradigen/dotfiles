@@ -2,6 +2,7 @@ alacritty
 alsa-utils
 amd-ucode
 android-file-transfer
+anydesk-bin
 autoconf
 automake
 base
@@ -27,6 +28,7 @@ electron13-bin
 fakeroot
 feh
 ffmpeg
+ffmpeg4.4
 flex
 fuse2
 gcc
@@ -77,7 +79,8 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 pkgconf
-polybar
+playerctl
+polybar-git
 portaudio
 python-pip
 python-pywal
@@ -106,6 +109,7 @@ vivaldi
 vivaldi-ffmpeg-codecs
 wget
 which
+wireplumber
 wpa_supplicant
 xcalib
 xclip
@@ -126,6 +130,7 @@ xorg-xrdb
 xorg-xset
 xorg-xsetroot
 yay-bin
+youtube-music-bin
 yt-dlp
 zip
 zsh
