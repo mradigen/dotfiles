@@ -42,13 +42,13 @@ wm-restack = bspwm
 scroll-up = #bspwm.prev
 scroll-down = #bspwm.next
 
-modules-left = bspwm sxhkd
+modules-left = bspwm sxhkd pacman
 modules-center = music-prev music music-next
 modules-right = tray battery bluetooth gpu temperature memory date powermenu
 
 font-0 = "Iosevka:size=11:weight=bold;3"
 # For icons as icons and workspaces logos are messed up in sizing
-font-1 = "Font Awesome 6 Free Solid:size=12;3"
+font-1 = "Font Awesome 6 Free Solid:size=12;2"
 font-2 = "Font Awesome 6 Free Solid:size=10;2"
 font-3 = "Font Awesome 6 Free Regular:size=10;2"
 font-4 = "Font Awesome 6 Brands:size=14;4"
@@ -222,7 +222,7 @@ label-padding = 1
 label-foreground = ${colors.white}
 #click-left = mocp -G
 #click-right = alacritty --class="Floating" -e mocp &
-click-left = playerctl play-pause 
+click-left = playerctl --player=youtube-music play-pause 
 click-right = youtube-music
 
 # Switched to youtube-music
@@ -233,7 +233,7 @@ content = ""
 content-foreground = ${colors.blue}
 #click-left = mocp -f
 #click-right = alacritty --class="Floating" -e mocp &
-click-left = playerctl next
+click-left = playerctl --player=youtube-music next
 click-right = youtube-music
 
 [module/music-prev]
@@ -242,17 +242,22 @@ content = ""
 content-foreground = ${colors.blue}
 #click-left = mocp -r
 #click-right = alacritty --class="Floating" -e mocp &
-click-left = playerctl previous
+click-left = playerctl --player=youtube-music previous
 click-right = youtube-music
 
 [module/bluetooth]
 type = custom/script
-exec = "bluetoothctl devices Connected | awk -vORS=', ' '{for(i=3;i<=NF;i++){ printf("%s",( (i>3) ? OFS : "" ) $i) };print"";}' | sed -e 's/, $/\n/'"
-#exec-if = "[ $(bluetoothctl show | grep 'Powered: yes' | wc -l) -gt 0 ]"
-interval = 10
+exec = bluetoothctl devices Connected | awk -vORS=', ' '{for(i=3;i<=NF;i++){ printf("%s",( (i>3) ? OFS : "" ) $i) };print"";}' | sed -e 's/, $/\n/'
+exec-if = [ $(bluetoothctl devices Connected | wc -l) -gt 0 ]
+interval = 1
 click-right = alacritty --class="Floating" -e bluetoothctl &
 format-prefix-foreground = ${colors.white}
 format-prefix = %{T4} %{T-}
 format-padding = 1
+
+[module/pacman]
+type = custom/script
+exec = ~/.config/polybar/pacman.sh
+interval = 600
 
 # vim: ft=cfg

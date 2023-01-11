@@ -2,7 +2,6 @@ alacritty
 alsa-utils
 amd-ucode
 android-file-transfer
-anydesk-bin
 autoconf
 automake
 base
@@ -11,6 +10,7 @@ betterdiscordctl
 binutils
 bison
 bluez
+bluez-hid2hci
 bluez-utils
 broadcom-wl-dkms
 bspwm
@@ -53,11 +53,13 @@ libva-intel-driver
 linux
 linux-firmware
 linux-headers
+lzlib
 m4
 maim
 make
 man-db
 marktext-bin
+mindustry-bin
 moc
 mpv
 multimc5
@@ -72,6 +74,7 @@ openbsd-netcat
 openssh
 openvpn
 p7zip
+pacman-contrib
 patch
 picom
 pipes.sh

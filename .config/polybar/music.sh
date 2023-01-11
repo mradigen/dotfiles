@@ -1,6 +1,6 @@
 #! /bin/sh
 
-playerctl metadata -f "%{F$(xrdb -query | grep '*color7'| awk '{print $NF}')}{{duration(mpris:length - position)}}%{F-}" 2> /dev/null || echo "%{F$(xrdb -query | grep '*color5'| awk '{print $NF}')}--:--%{F-}"
+playerctl --player=youtube-music metadata -f "%{F$(xrdb -query | grep '*color7'| awk '{print $NF}')}{{duration(mpris:length - position)}}%{F-}" 2> /dev/null || echo "%{F$(xrdb -query | grep '*color5'| awk '{print $NF}')}--:--%{F-}"
 
 # Switched to youtube-music
 #musicplay=`mocp -Q %tl 2> /dev/null`
