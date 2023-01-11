@@ -84,33 +84,7 @@ alias updots="pacman -Qqe > ~/Documents/Extra/packages && grep -Fvxf ~/Documents
 #alias mocp="mocp --moc-dir ~/.config/moc"
 
 ###############
-## Autostart ##
-###############
-
-# startx if we are on tty1
-if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-    startx
-fi
-
-#############
-## Startup ##
-#############
-
-echo "\033[7;34m ~ \033[0;34m\ue0b0 \033[0mfet" # Adds a nice prompt as if the command was ran
-echo # Enters a line at top
-fet # Runs the custom fetch
-
-# Print a motivational message in bold
-#tput bold
-#echo
-#emos
-
-#echo "\033[7;34m ~ \033[0;34m\ue0b0 \033[0mtodo" # Adds a nice prompt as if the command was ran
-#tput bold
-todo
-
-###############
-## FUNCTIONS ##
+## Functions ##
 ###############
 
 ### Creates a box around text
@@ -122,7 +96,7 @@ box() {
 	echo $c | sed 's/./#/g'
 }
 
-### Archine extraction (from DT)
+### Archive extraction (from DT)
 # usage: ex <file>
 ex() {
   if [ -f $1 ] ; then
@@ -147,3 +121,28 @@ ex() {
     echo "'$1' is not a valid file"
   fi
 }
+
+displayprompt() {
+	echo "\033[7;34m ~ \033[0;34m\ue0b0 \033[0m${1}"	
+}
+
+###############
+## Autostart ##
+###############
+
+# startx if we are on tty1
+if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
+    startx
+fi
+
+#############
+## Startup ##
+#############
+
+# Starting display
+displayprompt fet; echo; fet # Custom fetch
+#tput bold; echo; emos
+#displayprompt todo; tput bold; todo
+
+# Starting commands
+regularupdate
