@@ -2,7 +2,6 @@ alacritty
 alsa-utils
 amd-ucode
 android-file-transfer
-anydesk-bin
 archiso
 autoconf
 automake
@@ -12,6 +11,7 @@ betterdiscordctl
 binutils
 bison
 bluez
+bluez-hid2hci
 bluez-utils
 broadcom-wl-dkms
 bspwm
@@ -63,18 +63,21 @@ linux
 linux-firmware
 linux-headers
 lutris
+lzlib
 m4
 maim
 make
 man-db
 marktext-bin
 masscan
+mindustry-bin
 moc
 mpv
 multimc5
 nct6687d-dkms-git
 neofetch
 neovim
+nodejs-lts-hydrogen
 noto-fonts
 noto-fonts-emoji
 npm
@@ -91,6 +94,7 @@ openshot
 openssh
 openvpn
 p7zip
+pacman-contrib
 patch
 picom
 pipes.sh

@@ -38,4 +38,5 @@ jre8-openjdk
 jre8-openjdk-headless
 maven
 upx
+nodejs-lts-hydrogen
 

@@ -64,6 +64,7 @@ alias dump="yay -S"
 alias yeet="yay -Rsn"
 alias search="yay -Ss"
 alias polish="sudo reflector --verbose --latest 10 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist"
+alias clean="yay -Qqdtt | yay -Rsn - ; yay -Sc"
 
 # Ricing
 alias zshconf="${EDITOR} ~/.zshrc"
@@ -80,7 +81,6 @@ alias dots="dotfiles"
 #alias updots="pacman -Qqtte > ~/Documents/Extra/packages && dotfiles commit -a -m 'updots' && dotfiles push origin main"
 # This one counts all explicitly installed packages.
 alias updots="pacman -Qqe > ~/Documents/Extra/packages && grep -Fvxf ~/Documents/Extra/packages.extra ~/Documents/Extra/packages > ~/Documents/Extra/packages.portable && dotfiles commit -a -m 'updots' && dotfiles push origin main"
-alias clean="yay -Qqdtt | yay -Rsn - || yay -Sc"
 #alias mocp="mocp --moc-dir ~/.config/moc"
 
 ###############
@@ -107,7 +107,7 @@ fet # Runs the custom fetch
 
 #echo "\033[7;34m ~ \033[0;34m\ue0b0 \033[0mtodo" # Adds a nice prompt as if the command was ran
 #tput bold
-#todo
+todo
 
 ###############
 ## FUNCTIONS ##

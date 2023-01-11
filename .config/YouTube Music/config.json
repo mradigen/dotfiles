@@ -1,9 +1,9 @@
 {
 	"window-size": {
-		"width": 1275,
-		"height": 433
+		"width": 640,
+		"height": 360
 	},
-	"url": "https://music.youtube.com/watch?v=z624mpxCAOk&list=RDAMPLOLAK5uy_nXT_6dFmylbEuU9upPWlwkhtcKXPWmsr4&index=0",
+	"url": "https://music.youtube.com/watch?v=xSXzw1XiDVw&list=PLt_-XlQln5ZetGyQ86UYTHnwc6RQ5uu7V&index=0",
 	"options": {
 		"tray": true,
 		"appVisible": false,
@@ -71,7 +71,7 @@
 			}
 		},
 		"sponsorblock": {
-			"enabled": false,
+			"enabled": true,
 			"apiURL": "https://sponsor.ajay.app",
 			"categories": [
 				"sponsor",
@@ -115,10 +115,10 @@
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "1.18.0"
+			"version": "1.19.0"
 		}
 	},
-	"window-maximized": true,
+	"window-maximized": false,
 	"window-position": {
 		"x": 641,
 		"y": 361
