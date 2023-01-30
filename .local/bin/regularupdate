@@ -13,7 +13,9 @@ last_update=`grep "synchronizing package lists" /var/log/pacman.log | tail -n 1 
 last_update_time=`date +%s -d ${last_update}`
 current_time=`date +%s`
 time_since=$[current_time - last_update_time]
-[[ $time_since < $time_difference ]] && exit 0
+
+(( $time_since < $time_difference )) && exit 0
+#(( $time_since < $time_difference )) && echo $time_since $time_difference
 
 echo "Check for updates?"
 read -st 3 -n 1 ans
