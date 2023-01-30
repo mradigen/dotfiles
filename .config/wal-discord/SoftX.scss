@@ -18,6 +18,7 @@ $ac-light: lighten($ac, 30%);
 
     --background-mentioned: #{darken($ac,40%)};
     --info-warning-foreground: #{$ac};
+    --transition: .2s;
 
     --channels-width: 250px;
     --guilds-width: 75px;
@@ -116,6 +117,17 @@ $ac-light: lighten($ac, 30%);
             color: $ac-bg !important;
         }
         background-color: $ac;
+    }
+
+    /* Text box */
+    .channelTextArea-1FufC0:hover {
+        &:hover {
+            box-shadow: 0px 1px 10px 0px $ac;
+            transform: translateY(-2px);
+        }
+    }
+    .channelTextArea-1FufC0:focus-within {
+        box-shadow: unset;
     }
 }
 
