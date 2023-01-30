@@ -145,4 +145,4 @@ displayprompt fet; echo; fet # Custom fetch
 #displayprompt todo; tput bold; todo
 
 # Starting commands
-regularupdate
+regularupdate 43200
