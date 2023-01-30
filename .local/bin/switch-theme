@@ -40,7 +40,7 @@ source ~/.cache/wal/colors.sh
 ## Discord ##
 #############
 mkdir -p ~/.config/BetterDiscord/themes
-{ echo -n '//META{"name":"wal","description":"Script generated theme mashing ClearVision with pywal colors.","author":"ADIGEN","version":"1.0"}*//'; sassc -t compact -I $HOME/.config/wal-discord -s < $HOME/.config/wal-discord/master.scss; } > $HOME/.config/BetterDiscord/themes/wal.theme.css &&
+{ echo -n '//META{"name":"wal","description":"Script generated theme mashing an existing theme with pywal colors.","author":"ADIGEN","version":"2.0","source":"https://github.com/mradigen/dotfiles/blob/main/.local/bin/switch-theme","website":"https://github.com/mradigen/dotfiles"}*//'; sassc -t compact -I $HOME/.config/wal-discord -s < $HOME/.config/wal-discord/master.scss; } > $HOME/.config/BetterDiscord/themes/wal.theme.css &&
 
 ###########
 ## Dunst ##

@@ -58,6 +58,16 @@ $ac-light: lighten($ac, 30%);
             background-color: $ac;
         }
     }
+    /* Muted Channel */
+    .modeMuted-2T4MDZ {
+        .name-28HaxV, .icon-2W8DHg {
+            color: #{darken($ac, 50%)} !important;
+            // color: #{rgba($ac, 0.2)} !important;
+        }
+        .unreadRelevant-2f-VSK {
+            background-color: #{rgba($ac, 0.5)};
+        }
+    }
 
     /* Selected Channel */
     .modeSelected-3DmyhH {
