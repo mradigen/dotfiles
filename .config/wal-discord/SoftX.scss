@@ -16,7 +16,7 @@ $ac-light: lighten($ac, 30%);
     --backdrop-background: #{rgba($ac-bg, 0.1)};
     --backdrop-blur: 3px;
 
-    --background-mentioned: #{darken($ac,40%)};
+    --background-mentioned: #{rgba($ac,0.3)};
     --info-warning-foreground: #{$ac};
     --transition: .2s;
     --border: #{rgba($ac-dark,0.2)};
@@ -120,6 +120,13 @@ $ac-light: lighten($ac, 30%);
         background-color: $ac;
     }
 
+    /* Stupid SoftX member list issue fix */
+    .membersWrap-3NUR2t {
+        // height: 100%;
+        // max-height: unset; 
+        height: -webkit-fill-available;
+    }
+
     /* Text box */
     .channelTextArea-1FufC0:hover {
         &:hover {
@@ -139,9 +146,16 @@ $ac-light: lighten($ac, 30%);
     }
 
     /* Avatars */
-    #app-mount .wrapper-1VLyxH:not([style*="80px;"]):not([style*="120px;"]):not([style*="16px"]) > svg > foreignObject:not(:only-child) img {
-        -webkit-clip-path: unset; 
-        clip-path: unset; 
+    // .wrapper-1VLyxH:not([style*="80px;"]):not([style*="120px;"]):not([style*="16px"]) > svg > foreignObject:not(:only-child) img {
+    //     -webkit-clip-path: unset;
+    //     clip-path: unset;
+    // }
+    .wrapper-1VLyxH[style*="100%"] > svg > foreignObject:not(:only-child) img {
+        -webkit-clip-path: unset;
+        clip-path: unset;
+    }
+    .avatar-b5OQ1N, .avatarSpeaking-33RRJU {
+         height: unset; 
     }
 }
 

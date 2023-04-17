@@ -1,25 +1,26 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-export UPDATE_ZSH_DAYS=13
-
+#########
+## ZSH ##
+#########
+#export ZSH="$HOME/.oh-my-zsh" # Path to your oh-my-zsh installation.
+#export UPDATE_ZSH_DAYS=13
+export ZSH="/usr/share/oh-my-zsh" # Path to your oh-my-zsh installation.
 ZSH_THEME="agnoster"
 ZDOTDIR="$HOME/.cache/zsh"
 HISTFILE="$HOME/.cache/zsh/zsh_history"
-ENABLE_CORRECTION="false"
-
-# Display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
+COMPLETION_WAITING_DOTS="true" # Display red dots whilst waiting for completion.
 plugins=(git zsh-autosuggestions)
-
 source $ZSH/oh-my-zsh.sh
+
+# Override theme: don't print user@machine
+prompt_context() {}
 
 ###########################
 ## Environment Variables ##
 ###########################
+
+# Basic
+export TERMINAL=alacritty
+export POLYBAR_BAR=top
 
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -70,7 +71,7 @@ alias clean="yay -Qqdtt | yay -Rsn - ; yay -Sc"
 alias zshconf="${EDITOR} ~/.zshrc"
 alias bspconf="${EDITOR} ~/.config/bspwm/bspwmrc"
 alias sxconf="${EDITOR} ~/.config/sxhkd/sxhkdrc"
-alias pbconf="${EDITOR} ~/.config/polybar/config"
+alias pbconf="${EDITOR} ~/.config/polybar/config.ini"
 alias piconf="${EDITOR} ~/.config/picom/picom.conf"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dots="dotfiles"
@@ -88,12 +89,13 @@ alias updots="pacman -Qqe > ~/Documents/Extra/packages && grep -Fvxf ~/Documents
 ###############
 
 ### Creates a box around text
-# usage: box <text>
+# usage: box <text> <border-char>
 box() {
-	c="## $1 ##"
-	echo $c | sed 's/./#/g'
+	s=${2:-'#'}
+	c="${s}${s} $1 ${s}${s}"
+	echo $c | sed "s/./\\${s}/g"
 	echo $c
-	echo $c | sed 's/./#/g'
+	echo $c | sed "s/./\\${s}/g"
 }
 
 ### Archive extraction (from DT)

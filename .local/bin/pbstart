@@ -6,6 +6,8 @@
 #	- polybar
 # ~ ADIGEN
 
+POLYBAR_BAR=${POLYBAR_BAR:-top}
+
 # Terminate already running bar instances
 killall -q polybar
 # If all your bars have ipc enabled, you can also use 
@@ -13,5 +15,5 @@ killall -q polybar
 
 # Launch bar example
 for m in $(polybar --list-monitors | cut -d":" -f1); do
-	MONITOR=$m polybar --reload main &
+	MONITOR=$m polybar --reload $POLYBAR_BAR &
 done

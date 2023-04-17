@@ -4,8 +4,15 @@ font:
   normal:
     family: Iosevka
   size: 12.5
+
 window:
-  opacity: 1
+  opacity: 0.6
   padding:
     x: 10
     y: 10
+
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+  thickness: 0.2
