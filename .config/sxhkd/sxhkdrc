@@ -29,6 +29,10 @@ super + z
 super + {f, t, h}
 	run_dmenu -{ ,t,c}
 
+# Dmenu File manager
+super + shift + d
+	FM_OPENER=rifle dmenufm -m 'run_dmenu -d'
+
 # Alsamixer
 super + m
 	alacritty --class=Floating -e 'alsamixer'

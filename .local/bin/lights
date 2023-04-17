@@ -25,13 +25,10 @@ fi
 
 color_choosen=${1:-${color5:1}}
 echo $color_choosen
-rgb_command="sudo openrgb --noautoconnect"
+rgb_command="openrgb --noautoconnect"
 
 # Doesn't work needs workaround below
-${rgb_command} -d 0 -c ${color_choosen} -m static -d 1 -c ${color_choosen} -m static
+${rgb_command} -d 2 -c ${color_choosen} -m static -b 100
+${rgb_command} -d 0 -c ${color_choosen} -m Rainbow -d 1 -c ${color_choosen} -m Rainbow
+#${rgb_command} -d 0 -d 1 -d 2 -c ${color_choosen} -m static
 ${rgb_command} -d 3 -c ${color_choosen} -m Custom 
-#${rgb_command} -c ${color_choosen} -m static & disown
-#${rgb_command} -d 0 -c ${color_choosen} -m breathing
-#${rgb_command} -d 1 -c ${color_choosen} -m breathing
-# Works now for some reason, v0.7 onwards I guess.
-#${rgb_command} -c ${color_choosen} -m breathing

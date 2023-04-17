@@ -1,7 +1,7 @@
 #! /bin/sh
 
 ###--Close these programs---###
-killall -q sxhkd dunst picom greenclip polybar discord-rpc-status
+killall -q sxhkd dunst picom greenclip polybar discord-rpc-status pidswallow
 
 ##---Fix Displays---###
 xcalib ~/.local/share/icc/techless_G24F.icm &
@@ -20,9 +20,15 @@ lights &
 ###---Autostart---###
 $(mkfifo /tmp/sfifo; sxhkd -s /tmp/sfifo) & # For the polybar module to detect whether sxhkd is in chain mode
 dunst-start &
-picom -b &
+picom --experimental-backends -b &
 pbstart &
 greenclip daemon &
+
+##--Terminal Swallowing--##
+export PIDSWALLOW_SWALLOW_COMMAND='bspc node $pwid --flag hidden=on'
+export PIDSWALLOW_VOMIT_COMMAND='bspc node $pwid --flag hidden=off'
+export PIDSWALLOW_PREGLUE_HOOK='bspc query -N -n $pwid.floating >/dev/null && bspc node $cwid --state floating'
+pgrep -fl 'pidswallow -V -gl' || pidswallow -V -gl & # Terminal swallowing
 
 ###---Discord RPC---###
 LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
@@ -37,9 +43,14 @@ bspc monitor ^2 -d 6 7
 bspc config border_width 		1
 bspc config window_gap 			40
 
-bspc config split_ratio 		0.52
+bspc config split_ratio 		0.5
 bspc config borderless_monocle 	false
 bspc config gapless_monocle 	false
+
+# Master stack layout experiment
+#bspc config automatic_scheme longest_side
+#bspc config initial_polarity second_child
+#bspc config removal_adjustment true
 
 bspc config focus_follows_pointer true
 bspc config ignore_ewmh_focus on
@@ -64,12 +75,13 @@ Y2=$[Y/2]
 X3=$[X/3]
 Y3=$[Y/3]
 
-#bspc rule -a Alsamixer state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
-#bspc rule -a Music state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
-bspc rule -a "YouTube Music" state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
+X4=$[X/4]
+Y4=$[Y/4]
+
+bspc rule -a "Youtube Music" state=floating rectangle=${X2}x${Y2}+${X4}+${Y4}
 bspc rule -a Floating state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
 bspc rule -a Connman-gtk state=floating
-bspc rule -a discord state=floating rectangle=${X2}x${Y}+0+0 sticky=on layer=above
+bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
 bspc rule -a xkcd state=floating
 
 ###--Programs---###
