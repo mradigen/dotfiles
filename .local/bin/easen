@@ -54,4 +54,5 @@ ${SCRIPT_EDITOR} "${SCRIPT}"
 # If it hasn't exited, meaning the file was saved, prompt the user to add it to their dotfiles.
 echo "Add to dotfiles?"
 read -st 3 -n 1 ans
-[[ $ans = 'y' ]] && git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add ${SCRIPT}
+#[[ $ans = 'y' ]] && git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add ${SCRIPT}
+[[ $ans = 'y' ]] && scripts add ${SCRIPT}

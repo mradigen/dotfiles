@@ -148,9 +148,9 @@ super + Escape
 	dunstctl history-pop
 
 ~ctrl + Page_Down
-	rsg-sw
-	#fsg
-	#ssg
+	mc-rsg-sw
+	#mc-fsg
+	#mc-ssg
 
 ~alt + s
 	multi-macro

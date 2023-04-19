@@ -1,12 +1,9 @@
-[submodule "Documents/todo-startpage"]
+[submodule "todo-startpage"]
 	path = Documents/todo-startpage
 	url = https://github.com/mradigen/todo-startpage.git
-[submodule ".config/nvim/plugged/wal.vim"]
-	path = .config/nvim/plugged/wal.vim
-	url = https://github.com/dylanaraps/wal.vim.git
-[submodule ".config/nvim/plugged/goyo.vim"]
-	path = .config/nvim/plugged/goyo.vim
-	url = https://github.com/junegunn/goyo.vim.git
-[submodule "Documents/DiscordRPC"]
+[submodule "DiscordRPC"]
 	path = Documents/DiscordRPC
 	url = https://github.com/mradigen/discord-rpc-status.git
+[submodule "scripts"]
+	path = .local/bin
+	url = https://github.com/mradigen/scripts.git
