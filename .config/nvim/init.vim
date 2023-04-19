@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/goyo.vim'
-	Plug 'dylanaraps/wal.vim'
+"	Plug 'dylanaraps/wal.vim'
 "	Plug 'github/copilot.vim'
 "	Plug 'preservim/nerdtree'
 "	Plug 'kevinhwang91/rnvimr'

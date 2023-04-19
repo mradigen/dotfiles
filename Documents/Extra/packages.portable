@@ -2,7 +2,6 @@ alacritty
 alsa-utils
 amd-ucode
 android-file-transfer
-anydesk-bin
 autoconf
 automake
 base
@@ -21,7 +20,6 @@ chaotic-keyring
 chaotic-mirrorlist
 connman
 connman-gtk
-cython
 discord-electron-bin
 discover-overlay
 dmenu
@@ -55,7 +53,7 @@ libqalculate
 libtool
 libva-intel-driver
 libva-utils
-lightdm
+lightdm-webkit-theme-aether
 linux
 linux-firmware
 linux-headers
@@ -114,7 +112,6 @@ themix-theme-oomox-git
 tigervnc
 tlpui
 todo-bin
-transmission-gtk
 ttf-font-awesome
 ueberzug
 unrar

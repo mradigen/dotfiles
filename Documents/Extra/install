@@ -56,7 +56,7 @@ cp -r .git ~/.dotfiles
 cd ~
 chmod +x .config/bspwm/bspwmrc
 chmod +x .config/sxhkd/sxhkdrc
-chmod +x .config/polybar/music.sh
+chmod +x .config/polybar/*.sh
 chmod +x .local/bin/*
 chmod +x .fehbg .xinitrc
 chmod +x .screenlayout/*.sh

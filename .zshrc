@@ -19,7 +19,7 @@ prompt_context() {}
 ###########################
 
 # Basic
-export TERMINAL=alacritty
+# Stuff like EDITOR, TERMINAL, VISUAL are all in .profile
 export POLYBAR_BAR=top
 
 # XDG
@@ -33,8 +33,6 @@ export ANDROID_HOME="$HOME/.android"
 export ANDROID_NDK="$HOME/.android/ndk"
 export PATH="$PATH:$HOME/.android/platform-tools"
 export NLYT="$HOME/Desktop/nlyt"
-export EDITOR=/usr/bin/nvim
-export VISUAL=/usr/bin/subl
 
 #############
 ## Aliases ##
