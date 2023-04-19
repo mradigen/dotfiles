@@ -7,3 +7,6 @@
 [submodule "scripts"]
 	path = .local/bin
 	url = https://github.com/mradigen/scripts.git
+[submodule ".local/bin"]
+	path = .local/bin
+	url = ./.local/bin
