@@ -71,7 +71,7 @@ alias bspconf="${EDITOR} ~/.config/bspwm/bspwmrc"
 alias sxconf="${EDITOR} ~/.config/sxhkd/sxhkdrc"
 alias pbconf="${EDITOR} ~/.config/polybar/config.ini"
 alias piconf="${EDITOR} ~/.config/picom/picom.conf"
-alias scripts="/usr/bin/git --git-dir=$HOME/.local/bin/.scripts/ --work-tree=$HOME/.local/bin"
+alias scripts="/usr/bin/git --git-dir=$HOME/.local/bin/.git --work-tree=$HOME/.local/bin"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dots="dotfiles"
 # This one only counts packages the minimal way.
