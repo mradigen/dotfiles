@@ -19,7 +19,9 @@ prompt_context() {}
 ###########################
 
 # Basic
-# Stuff like EDITOR, TERMINAL, VISUAL are all in .profile
+# Stuff like EDITOR, TERMINAL, VISUAL are all in .profile, so source it.
+# Its there since bspwm and other stuff source .profile and not this
+source $HOME/.profile
 export POLYBAR_BAR=top
 
 # XDG
