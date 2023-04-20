@@ -74,6 +74,7 @@ alias piconf="${EDITOR} ~/.config/picom/picom.conf"
 alias scripts="/usr/bin/git --git-dir=$HOME/.local/bin/.git --work-tree=$HOME/.local/bin"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dots="dotfiles"
+# Shifted updots to a dedicated script
 
 ###############
 ## Functions ##
@@ -135,7 +136,7 @@ fi
 # Starting display
 displayprompt fet; echo; fet # Custom fetch
 #tput bold; echo; emos
-#displayprompt todo; tput bold; todo
+displayprompt todo; tput bold; todo
 
 # Starting commands
 regularupdate 43200
