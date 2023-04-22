@@ -6,7 +6,7 @@ font:
   size: 12.5
 
 window:
-  opacity: 0.6
+  opacity: 0.5
   padding:
     x: 10
     y: 10

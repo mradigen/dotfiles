@@ -20,7 +20,8 @@ lights &
 ###---Autostart---###
 $(mkfifo /tmp/sfifo; sxhkd -s /tmp/sfifo) & # For the polybar module to detect whether sxhkd is in chain mode
 dunst-start &
-picom --experimental-backends -b &
+#picom --experimental-backends -b &
+picom -b &
 pbstart &
 greenclip daemon &
 
@@ -41,7 +42,7 @@ bspc monitor -d 1 2 3 4 5
 bspc monitor ^2 -d 6 7
 
 bspc config border_width 		1
-bspc config window_gap 			40
+bspc config window_gap 			30
 
 bspc config split_ratio 		0.5
 bspc config borderless_monocle 	false
