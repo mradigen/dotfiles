@@ -137,7 +137,7 @@ fi
 # Starting display
 displayprompt fet; echo; fet # Custom fetch
 #tput bold; echo; emos
-displayprompt todo; tput bold; todo
+displayprompt todo; todo
 
 # Starting commands
 regularupdate 43200
