@@ -32,6 +32,7 @@ configuration {
     selected:                    @color5;
     active:                      @color3;
     urgent:                      @color2;
+	border-radius:				 6px;
 }
 
 /*****----- Main Window -----*****/
@@ -40,14 +41,14 @@ window {
     transparency:                "real";
     location:                    center;
     anchor:                      center;
-    fullscreen:                  true;
+    fullscreen:                  false;
     width:                       1000px;
     x-offset:                    0px;
     y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               15px;
+    border-radius:               @border-radius;
     cursor:                      "default";
     background-color:            rgba(0, 0, 0, 0.7);
 }
@@ -86,7 +87,7 @@ inputbar {
     enabled:                     true;
     spacing:                     10px;
     padding:                     15px;
-    border-radius:               10px;
+    border-radius:               @border-radius;
     background-color:            @background-alt;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
@@ -116,7 +117,7 @@ mode-switcher{
 }
 button {
     padding:                     15px;
-    border-radius:               10px;
+    border-radius:               @border-radius;
     background-color:            @background-alt;
     text-color:                  inherit;
     cursor:                      pointer;
@@ -150,7 +151,7 @@ element {
     enabled:                     true;
     spacing:                     15px;
     padding:                     8px;
-    border-radius:               10px;
+    border-radius:               @border-radius;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
@@ -199,7 +200,7 @@ message {
 }
 textbox {
     padding:                     15px;
-    border-radius:               10px;
+    border-radius:               @border-radius;
     background-color:            @background-alt;
     text-color:                  @foreground;
     vertical-align:              0.5;
@@ -207,7 +208,7 @@ textbox {
 }
 error-message {
     padding:                     15px;
-    border-radius:               20px;
+    border-radius:               @border-radius;
     background-color:            @background;
     text-color:                  @foreground;
 }
