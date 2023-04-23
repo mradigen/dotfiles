@@ -23,7 +23,6 @@ connman-gtk
 discord-electron-bin
 discover-overlay
 dmenu
-dmenufm
 dunst
 electron13-bin
 fakeroot
@@ -82,7 +81,7 @@ openvpn
 p7zip
 pacman-contrib
 patch
-picom-animations-git
+picom-ftlabs-git
 pidswallow
 pipes.sh
 pipewire-alsa
@@ -99,6 +98,7 @@ python-yaml
 qpwgraph
 ranger
 reflector
+rofi
 rofi-greenclip
 rsync
 slop

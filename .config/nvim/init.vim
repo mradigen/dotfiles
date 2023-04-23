@@ -32,6 +32,10 @@ autocmd VimResized * if exists('#goyo') | exe "normal \<c-w>=" | endif
 autocmd VimEnter * Goyo
 """""""
 
+call plug#begin()
+	Plug 'Exafunction/codeium.vim'
+call plug#end()
+
 " wal.vim
 "colorscheme wal " Default is good enough
 

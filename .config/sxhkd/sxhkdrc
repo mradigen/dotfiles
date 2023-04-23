@@ -26,12 +26,16 @@ super + z
 	#alacritty --class=Floating -e 'mocp'
 
 # Dmenu {Applications, Themes, Clipboard}
+#super + {f, t, h}
+#	run_dmenu -{ ,t,c}
+
+# Rofi {Applications, Themes, Clipboard}
 super + {f, t, h}
-	run_dmenu -{ ,t,c}
+	~/.config/rofi/launcher.sh {drun,theme,clipboard}
 
 # Dmenu File manager
-super + shift + d
-	FM_OPENER=rifle dmenufm -m 'run_dmenu -d'
+#super + shift + d
+#	FM_OPENER=rifle dmenufm -m 'run_dmenu -d'
 
 # Alsamixer
 super + m
@@ -63,7 +67,7 @@ super + shift + r
 
 # Exit BSPWM
 super + shift + x
-	bspc quit
+	~/.config/rofi/powermenu.sh
 
 # Switch to selected desktop
 super + {1-9,0}

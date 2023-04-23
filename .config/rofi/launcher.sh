@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-rofi -show drun -theme ~/.config/rofi/launcher.rasi
+mode=${1:-drun}
+rofi -show $mode -theme ~/.config/rofi/launcher.rasi

@@ -1,6 +1,7 @@
 alacritty
 alsa-utils
 amd-ucode
+an-anime-game-launcher-bin
 android-file-transfer
 archiso
 autoconf
@@ -22,9 +23,9 @@ chaotic-mirrorlist
 connman
 connman-gtk
 discord-electron-bin
+discord-screenaudio
 discover-overlay
 dmenu
-dmenufm
 dnsmasq
 dunst
 electron13-bin
@@ -42,6 +43,7 @@ i2c-tools
 i3lock-color-git
 intel-ucode
 j4-dmenu-desktop
+jdk11-openjdk
 jdk8-openjdk
 jq
 jre-openjdk-headless
@@ -100,7 +102,7 @@ openvpn
 p7zip
 pacman-contrib
 patch
-picom-animations-git
+picom-ftlabs-git
 pidswallow
 pipes.sh
 pipewire-alsa
@@ -120,6 +122,7 @@ qemu-base
 qpwgraph
 ranger
 reflector
+rofi
 rofi-greenclip
 rsync
 slop

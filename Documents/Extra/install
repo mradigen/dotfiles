@@ -38,19 +38,22 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 sudo pacman -Syy
 
 # Clone dotfiles
-git clone --recurse-submodules https://github.com/mradigen/dotfiles.git # Recurse to install submodules like goyo and todo-startpage
-cd dotfiles
+cd ~
+git clone --bare https://github.com/mradigen/dotfiles.git $HOME/.dotfiles
+alias dots="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+dots checkout # This won't work if there are files, have to do `dots reset` instead
+dots submodule init
+dots submodule update
+dots config status.showUntrackedFiles no
 
 sudo mv /etc/pacman.conf /etc/pacman.conf.old
 sudo cp Documents/Extra/ROOT_DIR/etc/pacman.conf /etc/pacman.conf
-sudo cp Documents/Extra/ROOT_DIR/etc/profile.d/customvars.sh /etc/profile.d
 
 # Install EVERYTHING
 yay -S --needed --noconfirm - < Documents/Extra/packages
 
-# Copy dotfiles
-rsync -r --exclude ".git/" . ~
-cp -r .git ~/.dotfiles
+# LightDM
+systemctl enable lightdm
 
 # Change execution permissions
 cd ~
