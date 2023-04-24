@@ -31,7 +31,7 @@ super + z
 
 # Rofi {Applications, Themes, Clipboard}
 super + {f, t, h}
-	~/.config/rofi/launcher.sh {drun,theme,clipboard}
+	~/.config/rofi/launcher.sh {'',theme,clipboard}
 
 # Dmenu File manager
 #super + shift + d

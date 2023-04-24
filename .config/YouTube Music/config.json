@@ -1,9 +1,9 @@
 {
 	"window-size": {
-		"width": 441,
-		"height": 464
+		"width": 1304,
+		"height": 671
 	},
-	"url": "https://music.youtube.com/watch?v=on_XWoKCFUU&list=RDAMVMjPAEqrW9tdc&index=0",
+	"url": "https://music.youtube.com/watch?v=8gs9-nav6yg&list=RDAMVMjPAEqrW9tdc&index=0",
 	"options": {
 		"tray": true,
 		"appVisible": false,
@@ -120,7 +120,7 @@
 	},
 	"window-maximized": false,
 	"window-position": {
-		"x": 1448,
-		"y": 88
+		"x": 31,
+		"y": 66
 	}
 }
