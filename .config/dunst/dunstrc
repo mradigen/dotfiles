@@ -4,7 +4,7 @@
 
 	# Frame
     frame_width = 2
-    frame_color = "#9FC5DC"
+    frame_color = "#059DE2"
 
 	# Text
     font = Iosevka 10
@@ -21,23 +21,23 @@
 	#transparency = 60
 
 [urgency_low]
-    background = "#03111A"
-    foreground = "#e0ebf3"
+    background = "#03022F"
+    foreground = "#a7dff5"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#03111A"
-    foreground = "#e0ebf3"
+    background = "#03022F"
+    foreground = "#a7dff5"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#03111A"
-    foreground = "#e0ebf3"
-    frame_color = "#9FC5DC"
+    background = "#03022F"
+    foreground = "#a7dff5"
+    frame_color = "#059DE2"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon

@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
-mode=${1:-drun}
+#! /bin/sh
+mode=${1:-combi}
 rofi -show $mode -theme ~/.config/rofi/launcher.rasi
