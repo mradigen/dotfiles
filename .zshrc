@@ -59,7 +59,7 @@ alias vpn="sudo openvpn ~/Documents/VPN/cysis.ovpn & disown"
 alias zxc='sudo $(fc -ln -1)'
 
 # Pacman
-alias update="yay -Syu"
+alias update="yay -Syu --removemake"
 alias dump="yay -S"
 alias yeet="yay -Rsn"
 alias search="yay -Ss"

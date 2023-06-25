@@ -2,6 +2,7 @@ alacritty
 alsa-utils
 amd-ucode
 android-file-transfer
+anydesk-bin
 autoconf
 automake
 base
@@ -20,11 +21,11 @@ chaotic-keyring
 chaotic-mirrorlist
 connman
 connman-gtk
-discord-electron-bin
+discord-electron
 discover-overlay
 dmenu
 dunst
-electron13-bin
+electron22-bin
 fakeroot
 feh
 ffmpeg
@@ -95,7 +96,9 @@ python-pip
 python-pygame
 python-pywal
 python-yaml
+python310
 qpwgraph
+qt5-webkit
 ranger
 reflector
 rofi
@@ -131,6 +134,7 @@ xorg-xauth
 xorg-xbacklight
 xorg-xev
 xorg-xinit
+xorg-xinput
 xorg-xkill
 xorg-xmodmap
 xorg-xprop

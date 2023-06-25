@@ -19,7 +19,7 @@ lights &
 
 ###---Autostart---###
 $(mkfifo /tmp/sfifo; sxhkd -s /tmp/sfifo) & # For the polybar module to detect whether sxhkd is in chain mode
-dunst-start &
+#dunst-start & # no need to start dunst, it autostarts anyways
 #picom --experimental-backends -b &
 picom -b # no & cause we want picom to start properly first and then start polybar so shadows work along with ftlabs' animations
 pbstart &

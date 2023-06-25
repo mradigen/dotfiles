@@ -1,9 +1,9 @@
 {
 	"window-size": {
-		"width": 1304,
-		"height": 671
+		"width": 1858,
+		"height": 983
 	},
-	"url": "https://music.youtube.com/watch?v=8gs9-nav6yg&list=RDAMVMjPAEqrW9tdc&index=0",
+	"url": "https://music.youtube.com/watch?v=yKipyTSxtVo",
 	"options": {
 		"tray": true,
 		"appVisible": false,
@@ -59,7 +59,11 @@
 			"enabled": true,
 			"unpauseNotification": false,
 			"urgency": "low",
-			"interactive": false
+			"interactive": false,
+			"toastStyle": 1,
+			"refreshOnPlayPause": false,
+			"trayControls": true,
+			"hideButtonText": false
 		},
 		"precise-volume": {
 			"enabled": false,
@@ -111,11 +115,90 @@
 		},
 		"blur-nav-bar": {
 			"enabled": false
+		},
+		"visualizer": {
+			"enabled": false,
+			"type": "butterchurn",
+			"butterchurn": {
+				"preset": "martin [shadow harlequins shape code] - fata morgana",
+				"renderingFrequencyInMs": 500,
+				"blendTimeInSeconds": 2.7
+			},
+			"vudio": {
+				"effect": "lighting",
+				"accuracy": 128,
+				"lighting": {
+					"maxHeight": 160,
+					"maxSize": 12,
+					"lineWidth": 1,
+					"color": "#49f3f7",
+					"shadowBlur": 2,
+					"shadowColor": "rgba(244,244,244,.5)",
+					"fadeSide": true,
+					"prettify": false,
+					"horizontalAlign": "center",
+					"verticalAlign": "middle",
+					"dottify": true
+				}
+			},
+			"wave": {
+				"animations": [
+					{
+						"type": "Cubes",
+						"config": {
+							"bottom": true,
+							"count": 30,
+							"cubeHeight": 5,
+							"fillColor": {
+								"gradient": [
+									"#FAD961",
+									"#F76B1C"
+								]
+							},
+							"lineColor": "rgba(0,0,0,0)",
+							"radius": 20
+						}
+					},
+					{
+						"type": "Cubes",
+						"config": {
+							"top": true,
+							"count": 12,
+							"cubeHeight": 5,
+							"fillColor": {
+								"gradient": [
+									"#FAD961",
+									"#F76B1C"
+								]
+							},
+							"lineColor": "rgba(0,0,0,0)",
+							"radius": 10
+						}
+					},
+					{
+						"type": "Circles",
+						"config": {
+							"lineColor": {
+								"gradient": [
+									"#FAD961",
+									"#FAD961",
+									"#F76B1C"
+								],
+								"rotate": 90
+							},
+							"lineWidth": 4,
+							"diameter": 20,
+							"count": 10,
+							"frequencyBand": "base"
+						}
+					}
+				]
+			}
 		}
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "1.19.0"
+			"version": "1.20.0"
 		}
 	},
 	"window-maximized": false,
