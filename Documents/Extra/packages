@@ -3,6 +3,7 @@ alsa-utils
 amd-ucode
 an-anime-game-launcher-bin
 android-file-transfer
+anydesk-bin
 archiso
 autoconf
 automake
@@ -22,13 +23,12 @@ chaotic-keyring
 chaotic-mirrorlist
 connman
 connman-gtk
-discord-electron-bin
-discord-screenaudio
+discord-electron
 discover-overlay
 dmenu
 dnsmasq
 dunst
-electron13-bin
+electron22-bin
 fakeroot
 feh
 ffmpeg
@@ -118,8 +118,10 @@ python-pygame
 python-pywal
 python-requests
 python-yaml
+python310
 qemu-base
 qpwgraph
+qt5-webkit
 ranger
 reflector
 rofi
@@ -159,6 +161,7 @@ xorg-xauth
 xorg-xbacklight
 xorg-xev
 xorg-xinit
+xorg-xinput
 xorg-xkill
 xorg-xmodmap
 xorg-xprop

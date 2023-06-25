@@ -35,6 +35,11 @@ configuration {
     foreground-selected:         white;
 }
 
+* {
+    /* Resolution : 1366x728 */
+    mainbox-margin:              0px 100px;
+}
+
 /*****----- Main Window -----*****/
 window {
     transparency:                "real";
