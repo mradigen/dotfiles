@@ -1,3 +1,4 @@
+adobe-base-14-fonts
 alacritty
 alsa-utils
 amd-ucode
@@ -13,6 +14,7 @@ bison
 bluez
 bluez-hid2hci
 bluez-utils
+bottles
 broadcom-wl-dkms
 bspwm
 btop
@@ -70,6 +72,7 @@ multimc5
 nct6687d-dkms-git
 neofetch
 neovim
+netstat-nat
 noto-fonts
 noto-fonts-emoji
 ntfs-3g
@@ -104,8 +107,10 @@ reflector
 rofi
 rofi-greenclip
 rsync
+rxvt-unicode
 slop
 sshfs
+steam
 sublime-text-4
 sudo
 sxhkd
