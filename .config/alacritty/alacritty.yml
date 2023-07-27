@@ -3,7 +3,7 @@ import:
 font:
   normal:
     family: "Iosevka"
-  size: 12.5
+  size: 10.5
 
 window:
   opacity: 0.5
