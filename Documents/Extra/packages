@@ -27,6 +27,7 @@ grub
 helvum
 i3lock-color-git
 j4-dmenu-desktop
+libinput-gestures
 libnotify
 libqalculate
 libva-mesa-driver
@@ -63,7 +64,9 @@ pipewire-jack
 pipewire-pulse
 playerctl
 polybar
+powertop
 python-pywal
+radeontop
 ranger
 reflector
 rofi
@@ -89,6 +92,7 @@ wireplumber
 wpa_supplicant
 xclip
 xcolor
+xdotool
 xf86-video-amdgpu
 xorg-xev
 xorg-xinit
