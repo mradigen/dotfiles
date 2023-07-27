@@ -13,6 +13,17 @@ sudo -v
 # Sudo loop
 while sleep 200; do sudo -v; done &
 sudoloop=$!
+
+cleanup()
+{
+	echo "EXITING and killing sudoloop"
+	kill "$sudoloop"
+}
+
+trap cleanup 1 2 3 6
+
+set -e
+
 ############
 
 # Get closest mirrors before installing stuff
@@ -22,7 +33,7 @@ sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Update
 sudo pacman -Syyuu
-sudo pacman -S --needed --noconfirm git base-devel rsync
+sudo pacman -S --needed --noconfirm git base-devel
 
 # Yay
 git clone https://aur.archlinux.org/yay-bin.git
@@ -32,25 +43,27 @@ cd ..
 sudo rm -rf yay-bin
 
 # Chaotic AUR
-sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key FBA220DFC880C036
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 sudo pacman -Syy
 
 # Clone dotfiles
+shopt -s expand_aliases
 cd ~
 git clone --bare https://github.com/mradigen/dotfiles.git $HOME/.dotfiles
 alias dots="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 dots checkout # This won't work if there are files, have to do `dots reset` instead
 dots submodule init
 dots submodule update
+dots submodule foreach 'git checkout main'
 dots config status.showUntrackedFiles no
 
 sudo mv /etc/pacman.conf /etc/pacman.conf.old
 sudo cp Documents/Extra/ROOT_DIR/etc/pacman.conf /etc/pacman.conf
 
 # Install EVERYTHING
-yay -S --needed --noconfirm - < Documents/Extra/packages
+yay -S --needed --noconfirm - < ~/new_packages
 
 # LightDM
 systemctl enable lightdm
@@ -64,8 +77,13 @@ chmod +x .local/bin/*
 chmod +x .fehbg .xinitrc
 chmod +x .screenlayout/*.sh
 
-kill "$sudoloop"
+~/.local/bin/switch-theme dark-desert
 
-~/.local/bin/switch-theme mountain
+sudo usermod --shell /usr/bin/zsh adigen
+
+mkdir -p ~/.cache/zsh
+touch ~/.cache/zsh/zsh_history
+
+kill "$sudoloop"
 
 #systemctl reboot
