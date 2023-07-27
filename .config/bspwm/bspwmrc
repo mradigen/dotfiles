@@ -4,8 +4,8 @@
 killall -q sxhkd dunst picom greenclip polybar discord-rpc-status pidswallow
 
 ##---Fix Displays---###
-xcalib ~/.local/share/icc/techless_G24F.icm &
-~/.screenlayout/fix.sh &
+#xcalib ~/.local/share/icc/techless_G24F.icm &
+#~/.screenlayout/fix.sh &
 
 ###---Fix Cursor---###
 xsetroot -cursor_name left_ptr &
@@ -15,7 +15,7 @@ xsetroot -cursor_name left_ptr &
 wal -q -R
 
 #$(wallmaker `cat ~/.cache/wal/wal` $HOME/Pictures/Wallpapers/generated.png 50 50 `emos` && feh --bg-fill $HOME/Pictures/Wallpapers/generated.png) &
-lights &
+#lights &
 
 ###---Autostart---###
 $(mkfifo /tmp/sfifo; sxhkd -s /tmp/sfifo) & # For the polybar module to detect whether sxhkd is in chain mode
