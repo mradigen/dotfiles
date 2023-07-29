@@ -1,1 +1,1 @@
-exec ~/.screenlayout/G24F.sh
+exec ~/.screenlayout/dualoffset.sh

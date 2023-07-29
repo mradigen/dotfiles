@@ -20,6 +20,9 @@ picom -b # no & cause we want picom to start properly first and then start polyb
 pbstart &
 greenclip daemon &
 
+###---Touchpad---###
+libinput-gestures &
+
 ##--Terminal Swallowing--##
 export PIDSWALLOW_SWALLOW_COMMAND='bspc node $pwid --flag hidden=on'
 export PIDSWALLOW_VOMIT_COMMAND='bspc node $pwid --flag hidden=off'
@@ -30,11 +33,11 @@ pgrep -fl 'pidswallow -V -gl' || pidswallow -V -gl & # Terminal swallowing
 LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
 
 ###---Fix Audio---###
-amixer -D hw:1 sset Master 50% -q &
+#amixer -D hw:1 sset Master 50% -q &
 
 ###---BSPWM---###
 bspc monitor -d 1 2 3 4 5
-bspc monitor ^2 -d 6 7
+#bspc monitor ^2 -d 6 7
 
 bspc config border_width 		1
 bspc config window_gap 			30

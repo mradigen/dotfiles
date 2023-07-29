@@ -3,6 +3,7 @@ alacritty
 alsa-utils
 amd-ucode
 android-file-transfer
+android-sdk-platform-tools
 base
 base-devel
 betterdiscordctl-git
@@ -36,6 +37,7 @@ linux
 linux-firmware
 maim
 man-db
+mangohud
 marktext-bin
 masscan
 mesa-vdpau
