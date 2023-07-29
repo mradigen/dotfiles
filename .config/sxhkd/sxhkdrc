@@ -136,7 +136,7 @@ XF86Audio{Play,Pause,Prev,Next}
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
 	sound {increase,decrease}
 
-{XF86AudioMute,XF86AudioMicMute}
+{XF86AudioMute,XF86AudioMicMute,ctrl + m}
 	sound mic
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown}

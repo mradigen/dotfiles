@@ -64,6 +64,10 @@ passwd ${_USERNAME}
 
 usermod -aG wheel,audio,video,optical,storage,network ${_USERNAME}
 
+# DNS server
+#echo "DNS=1.1.1.1" >> /etc/systemd/resolved.conf
+#systemctl enable systemd-resolved.service
+
 # I know this is not recomended
 EDITOR=nvim visudo
 
