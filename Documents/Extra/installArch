@@ -54,7 +54,7 @@ mkinitcpio -P
 # Password
 passwd
 
-pacman -S wpa_supplicant connman nano ranger grub vim sudo
+pacman -S wpa_supplicant connman ranger grub neovim sudo
 
 systemctl enable wpa_supplicant.service
 systemctl enable connman.service

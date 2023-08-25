@@ -4,9 +4,12 @@ alsa-utils
 amd-ucode
 android-file-transfer
 android-sdk-platform-tools
+arandr
+awesome
 base
 base-devel
 betterdiscordctl-git
+blender
 bluez
 bluez-hid2hci
 bluez-utils
@@ -15,8 +18,10 @@ bspwm
 btop
 chaotic-keyring
 chaotic-mirrorlist
+cmatrix
 connman
 connman-gtk
+dhcpcd
 discord-electron
 dmenu
 dunst
@@ -56,6 +61,7 @@ nvtop
 obs-studio
 oh-my-zsh-git
 oh-my-zsh-plugin-autosuggestions
+openal
 openssh
 pacman-contrib
 picom-ftlabs-git
@@ -67,6 +73,7 @@ pipewire-pulse
 playerctl
 polybar
 powertop
+python-pip
 python-pywal
 radeontop
 ranger
@@ -92,6 +99,7 @@ vulkan-radeon
 wget
 wireplumber
 wpa_supplicant
+xcalib
 xclip
 xcolor
 xdotool
