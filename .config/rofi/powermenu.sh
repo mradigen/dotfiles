@@ -16,11 +16,11 @@ uptime="`uptime -p | sed -e 's/up //g'`"
 host=`hostname`
 
 # Options
-shutdown=''
-reboot=''
-lock=''
-suspend=''
-logout=''
+shutdown='\uf011'
+reboot='\uf2f1'
+lock='\uf023'
+suspend='\uf186'
+logout='\uf08b'
 yes=''
 no=''
 
@@ -52,7 +52,8 @@ run_rofi() {
 
 # Execute Command
 run_cmd() {
-	selected="$(confirm_exit)"
+	#selected="$(confirm_exit)"
+	selected="$yes"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
 			systemctl poweroff
