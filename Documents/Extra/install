@@ -80,6 +80,8 @@ chmod +x .screenlayout/*.sh
 
 ~/.local/bin/switch-theme dark-desert
 
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
 sudo usermod --shell /usr/bin/zsh adigen
 
 mkdir -p ~/.cache/zsh
