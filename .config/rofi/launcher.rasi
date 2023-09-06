@@ -11,7 +11,7 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "combi,drun,clipboard:greenclip print,run,filebrowser,theme:switch-theme";
+	modi:                       "combi,drun,clipboard:greenclip print,run,filebrowser,theme:~/.config/rofi/theme.sh";
 	// Icons in these cause combi mode doesn't take icons from display-<mode>
 	combi-modi:                 "drun,:greenclip print,run,filebrowser,:switch-theme";
 	//combi-modi:                 "drun,:greenclip print,run,filebrowser,:switch-theme";

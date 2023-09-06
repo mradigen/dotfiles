@@ -8,3 +8,6 @@ Installed `python-requests` to run FSG seed generator findSeed.py.
 Installed portaudio just to use cava
 
 `xdg-user-dirs` to run Spotube
+
+Extra wine packages:
+lib32-libxcomposite lib32-alsa-lib lib32-ncurses lib32-libva lib32-gtk3 lib32-vulkan-icd-loader lib32-gst-plugins-base-libs lib32-libxinerama lib32-libpulse lib32-ocl-icd alsa-plugins lib32-mpg123 lib32-giflib lib32-libjpeg-turbo lib32-libxslt lib32-sqlite lib32-alsa-plugins openal lib32-openal lib32-v4l-utils

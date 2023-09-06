@@ -87,8 +87,8 @@ Y4=$[Y/4]
 bspc rule -a "Youtube Music" state=floating rectangle=${X2}x${Y2}+${X4}+${Y4}
 bspc rule -a Floating state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
 bspc rule -a Connman-gtk state=floating
-#bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-bspc rule -a discord state=floating rectangle=${X2}x${Y}+0+0 sticky=on layer=above
+bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+#bspc rule -a discord state=floating rectangle=${X2}x${Y}+0+0 sticky=on layer=above
 bspc rule -a xkcd state=floating
 
 ###--Programs---###
