@@ -34,6 +34,7 @@ autocmd VimEnter * Goyo
 
 call plug#begin()
 	Plug 'Exafunction/codeium.vim'
+	Plug 'williamboman/mason.nvim'
 call plug#end()
 
 " wal.vim

@@ -65,9 +65,9 @@ sudo cp Documents/Extra/ROOT_DIR/etc/pacman.conf /etc/pacman.conf
 # Install EVERYTHING
 yay -S --needed --noconfirm - < ~/Documents/Extra/install
 
-# LightDM
+# LightDM (need to add commands to configure lightdm to change the profile picture)
 sudo systemctl enable lightdm.service bluetooth.service
-systemctl enable --user pipewire.service
+systemctl enable --user wireplumber.service pipewire.service
 
 # Change execution permissions
 cd ~

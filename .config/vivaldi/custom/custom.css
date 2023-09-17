@@ -1,6 +1,10 @@
 /*@import url('/home/adigen/.cache/wal/colors.css');*/
 @import url('colors.css');
 
+* {
+	font-family: Iosevka !important;
+}
+
 div {
 	--colorBg: var(--background);
 	--colorFg: var(--color3);

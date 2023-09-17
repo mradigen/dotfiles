@@ -18,7 +18,7 @@
 	# Actions
 	show_indicators = false
 
-	#transparency = 60
+	transparency = 50
 
 [urgency_low]
     background = "#141512"

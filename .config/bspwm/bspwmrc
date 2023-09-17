@@ -4,6 +4,7 @@
 killall -q sxhkd dunst picom greenclip polybar discord-rpc-status pidswallow
 
 ##---Fix Displays---###
+xcalib ~/.config/display_calibration.icm
 #./.screenlayout something I don't remember
 
 ###---Fix keyboard--###
@@ -70,7 +71,6 @@ bspc config presel_feedback_color "$color1"
 
 ###---Rules---###
 # Open on specific workspace
-bspc rule -a Vivaldi-stable desktop=1
 
 X=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1 | head -1)
 Y=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2 | head -1)
@@ -84,10 +84,16 @@ Y3=$[Y/3]
 X4=$[X/4]
 Y4=$[Y/4]
 
+# Oneshots, only apply to the first window
+bspc rule -a Vivaldi-stable -o desktop=1
+bspc rule -a Alacritty -o desktop=2
+
 bspc rule -a "Youtube Music" state=floating rectangle=${X2}x${Y2}+${X4}+${Y4}
 bspc rule -a Floating state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
 bspc rule -a Connman-gtk state=floating
+bspc rule -a iwgtk state=floating
 bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+bspc rule -a Electron state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
 #bspc rule -a discord state=floating rectangle=${X2}x${Y}+0+0 sticky=on layer=above
 bspc rule -a xkcd state=floating
 

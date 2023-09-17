@@ -59,12 +59,13 @@ alias vpn="sudo openvpn ~/Documents/VPN/cysis.ovpn & disown"
 alias zxc='sudo $(fc -ln -1)'
 
 # Pacman
-alias update="yay -Syu --removemake"
-alias dump="yay -S"
+alias update="yay -Syu --removemake --noconfirm"
+alias dump="yay -S --removemake"
 alias yeet="yay -Rsn"
 alias search="yay -Ss"
 alias polish="sudo reflector --verbose --latest 10 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist"
 alias clean="yay -Qqdtt | yay -Rsn - ; yay -Sc"
+alias query="yay -Si"
 
 # Ricing
 alias zshconf="${EDITOR} ~/.zshrc"

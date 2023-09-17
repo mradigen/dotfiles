@@ -20,9 +20,9 @@ shutdown='\uf011'
 reboot='\uf2f1'
 lock='\uf023'
 suspend='\uf186'
-logout='\uf08b'
-yes=''
-no=''
+logout=''
+yes='1'
+no='0'
 
 # Rofi CMD
 rofi_cmd() {
@@ -54,6 +54,8 @@ run_rofi() {
 run_cmd() {
 	#selected="$(confirm_exit)"
 	selected="$yes"
+	echo asfabsdf
+	echo $selected
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
 			systemctl poweroff
@@ -81,6 +83,7 @@ run_cmd() {
 
 # Actions
 chosen="$(run_rofi)"
+echo $chosen $logout
 case ${chosen} in
     $shutdown)
 		run_cmd --shutdown
