@@ -24,8 +24,8 @@ configuration {
     element-padding:             35px 40px;
     element-border-radius:       20px;
 
-    prompt-font:                 "Iosevka 72";
-    textbox-font:                "Iosevka 14";
+    prompt-font:                 "Iosevka NF 72";
+    textbox-font:                "Iosevka NF 14";
     element-text-font:           "Font Awesome 6 Free Regular 64";
 
     background-window:           black/30%;
