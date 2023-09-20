@@ -2,7 +2,7 @@ import:
   - ~/.cache/wal/colors-alacritty.yml
 font:
   normal:
-    family: "Iosevka Nerd Font Mono"
+    family: "Iosevka NF"
   size: 9.5
 
 window:
