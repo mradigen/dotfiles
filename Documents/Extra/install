@@ -4,8 +4,8 @@
 ### Sudo ###
 ############
 if [[ $EUID -eq 0 ]]; then
-    error "Do not run this script as the root user."
-    exit 1
+	error "Do not run this script as the root user."
+	exit 1
 fi
 
 sudo -v
@@ -14,8 +14,7 @@ sudo -v
 while sleep 200; do sudo -v; done &
 sudoloop=$!
 
-cleanup()
-{
+cleanup() {
 	echo "EXITING and killing sudoloop"
 	kill "$sudoloop"
 }
@@ -63,7 +62,7 @@ sudo mv /etc/pacman.conf /etc/pacman.conf.old
 sudo cp Documents/Extra/ROOT_DIR/etc/pacman.conf /etc/pacman.conf
 
 # Install EVERYTHING
-yay -S --needed --noconfirm - < ~/Documents/Extra/install
+yay -S --needed --noconfirm - <~/Documents/Extra/packages.portable
 
 # LightDM (need to add commands to configure lightdm to change the profile picture)
 sudo systemctl enable lightdm.service bluetooth.service
