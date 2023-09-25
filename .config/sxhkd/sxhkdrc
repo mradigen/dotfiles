@@ -93,6 +93,10 @@ super + Tab
 super + {a,s,w,d}
 	bspc node -f {west,south,north,east}
 
+# Focus on window in selected direction
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
 # Move focused window in chain mode (or use Super + Left Click Drag instead)
 super + shift + s : {a,s,w,d}
 	bspc node -s {west,south,north,east}

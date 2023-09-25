@@ -6,10 +6,10 @@ amd-ucode
 android-file-transfer
 android-sdk-platform-tools
 arandr
+audacity
 base
 base-devel
 betterdiscordctl-git
-blender
 bluez
 bluez-hid2hci
 bluez-utils
@@ -62,6 +62,7 @@ maim
 man-db
 mangohud
 marktext-bin
+mesa-utils
 mesa-vdpau
 mimi
 mindustry-bin
@@ -71,6 +72,7 @@ noto-fonts
 noto-fonts-emoji
 ntfs-3g
 nvtop
+obsidian
 oh-my-zsh-git
 oh-my-zsh-plugin-autosuggestions
 openal
@@ -91,6 +93,7 @@ python-pywal
 radeontop
 ranger
 reflector
+ripgrep
 rofi
 rofi-greenclip
 slop
