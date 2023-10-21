@@ -47,13 +47,13 @@ super + r
 	scratchpad-tiles
 	# scratchpad
 
-# Scratchpad Discord
-super + d
-	scratchpad-old discord discord
-
-# Scratchpad WhatsApp
-super + w
-	scratchpad-old whatsapp "vivaldi-stable --app="https://web.whatsapp.com""
+# # Scratchpad Discord
+# super + d
+# 	scratchpad-old discord discord
+#
+# # Scratchpad WhatsApp
+# super + w
+# 	scratchpad-old whatsapp "vivaldi-stable --app="https://web.whatsapp.com""
 
 ##############
 ## Keybinds ##
@@ -107,7 +107,9 @@ super + Tab
 # Focus on window in selected direction
 super + {h,j,k,l}
 	bspc node -f {west,south,north,east}
-
+super + {a,s,w,d}
+	bspc node -f {west,south,north,east}
+	
 # Move focused window in chain mode (or use Super + Left Click Drag instead)
 super + shift + s : {a,s,w,d}
 	bspc node -s {west,south,north,east}
