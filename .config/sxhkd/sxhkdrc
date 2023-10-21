@@ -22,7 +22,8 @@ super + x
 
 # Music Player
 super + z
-	youtube-music
+	scratchpad-old "youtube music" youtube-music
+	# youtube-music
 	#alacritty --class=Floating -e 'mocp'
 
 # Dmenu {Applications, Themes, Clipboard}
@@ -30,7 +31,7 @@ super + z
 #	run_dmenu -{ ,t,c}
 
 # Rofi {Applications, Themes, Clipboard}
-super + {f, t, h}
+super + {f, t, g}
 	~/.config/rofi/launcher.sh {'',theme,clipboard}
 
 # Dmenu File manager
@@ -43,7 +44,16 @@ super + m
 
 # Scratchpad
 super + r
-	scratchpad
+	scratchpad-tiles
+	# scratchpad
+
+# Scratchpad Discord
+super + d
+	scratchpad-old discord discord
+
+# Scratchpad WhatsApp
+super + w
+	scratchpad-old whatsapp "vivaldi-stable --app="https://web.whatsapp.com""
 
 ##############
 ## Keybinds ##
@@ -90,8 +100,9 @@ super + Tab
 	bspc node last --focus
 
 # Focus on window in selected direction
-super + {a,s,w,d}
-	bspc node -f {west,south,north,east}
+# Shifted to scratchpad applications instead
+# super + {a,s,w,d}
+# 	bspc node -f {west,south,north,east}
 
 # Focus on window in selected direction
 super + {h,j,k,l}

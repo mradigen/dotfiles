@@ -7,12 +7,6 @@ killall -q sxhkd dunst picom greenclip polybar discord-rpc-status pidswallow
 xcalib ~/.config/display_calibration.icm
 #./.screenlayout something I don't remember
 
-###---Fix keyboard--###
-xmodmap -e "keycode 112 = Home"
-xmodmap -e "keycode 110 = Prior"
-xmodmap -e "keycode 117 = End"
-xmodmap -e "keycode 115 = Next"
-
 ###---Fix Cursor---###
 xsetroot -cursor_name left_ptr &
 
@@ -51,7 +45,7 @@ bspc monitor -d 1 2 3 4 5
 #bspc monitor ^2 -d 6 7
 
 bspc config border_width 1
-bspc config window_gap 30
+bspc config window_gap 10
 
 bspc config split_ratio 0.5
 bspc config borderless_monocle false
@@ -92,6 +86,7 @@ bspc rule -a Vivaldi-stable -o desktop=1
 bspc rule -a Alacritty -o desktop=2
 
 #bspc rule -a Youtube\ Music state=floating rectangle=${X2}x${Y2}+${X4}+${Y4}
+bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
 bspc rule -a YouTube\ Music:\* state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
 bspc rule -a Floating state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
 bspc rule -a Connman-gtk state=floating
@@ -103,3 +98,10 @@ bspc rule -a xkcd state=floating
 
 ###--Programs---###
 #scratchpad discord
+
+###---Fix keyboard--###
+xmodmap -e "keycode 112 = Home"
+xmodmap -e "keycode 110 = Prior"
+xmodmap -e "keycode 117 = End"
+xmodmap -e "keycode 115 = Next"
+

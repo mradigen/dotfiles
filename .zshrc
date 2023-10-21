@@ -137,12 +137,27 @@ if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
 fi
 
+##################
+## Key bindings ##
+##################
+# Get `showkey -a`
+
+# Ctrl + Backspace to delete a word
+bindkey '^H' backward-kill-word
+
 #############
 ## Startup ##
 #############
 
+# Zoxide
+eval "$(zoxide init zsh)"
+alias cd="z"
+
+# Don't output fet and todo if launching shell from ranger
+[ $RANGER_LEVEL ] && return
+
 # Starting display
-displayprompt fet; echo; fet # Custom fetch
+#displayprompt fet; echo; fet # Custom fetch
 #tput bold; echo; emos
 displayprompt todo; todo
 
