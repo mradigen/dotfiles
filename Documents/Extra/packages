@@ -79,6 +79,7 @@ mimi
 mindustry-bin
 mpv
 multimc-bin
+neofetch
 neovim
 nmap
 noto-fonts
@@ -124,7 +125,6 @@ sudo
 sxhkd
 sxiv
 themix-theme-oomox-git
-thunar
 tigervnc
 tlp
 tlpui

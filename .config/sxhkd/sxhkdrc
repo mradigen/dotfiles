@@ -5,7 +5,7 @@
 ##################
 
 # Help
-super + shift + h
+super + question
 	awk '/^[a-z]/ && last \{print $0,"\t",last\} \{last=""\} /^#/\{last=$0\}' ~/.config/sxhkd/sxhkdrc | column -t -s $'\t' | run_dmenu -d
 
 # Terminal Emulator
@@ -44,7 +44,7 @@ super + m
 
 # Scratchpad
 super + r
-	scratchpad-tiles
+	scratchpad-tiles toggle ~/.config/scratchpad/new
 	# scratchpad
 
 # # Scratchpad Discord
