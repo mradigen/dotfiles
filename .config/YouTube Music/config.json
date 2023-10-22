@@ -3,7 +3,7 @@
 		"width": 960,
 		"height": 540
 	},
-	"url": "https://music.youtube.com/watch?v=2EpBqtqf8Go",
+	"url": "https://music.youtube.com/watch?v=aVDLBQpWefM&list=RDAMVMZxv3zKosM1U&index=0",
 	"options": {
 		"tray": false,
 		"appVisible": true,
@@ -15,7 +15,7 @@
 		"trayClickPlayPause": false,
 		"autoResetAppCache": false,
 		"resumeOnStart": true,
-		"proxy": "",
+		"proxy": "socks5://127.0.0.1:1081",
 		"hideMenuWarned": true,
 		"removeUpgradeButton": true,
 		"themes": [

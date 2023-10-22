@@ -95,6 +95,7 @@ bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on 
 bspc rule -a Electron state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
 #bspc rule -a discord state=floating rectangle=${X2}x${Y}+0+0 sticky=on layer=above
 bspc rule -a xkcd state=floating
+# bspc rule -a blur state=floating rectangle=${X}x${Y}+0+0 layer=normal
 
 ###--Programs---###
 #scratchpad discord

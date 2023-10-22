@@ -13,7 +13,7 @@
 configuration {
 	modi:                       "combi,drun,clipboard:greenclip print,run,filebrowser,theme:~/.config/rofi/theme.sh";
 	// Icons in these cause combi mode doesn't take icons from display-<mode>
-	combi-modi:                 "drun, :greenclip print,run,filebrowser,:switch-theme";
+	combi-modi:                 "drun, :greenclip print,run,filebrowser,:switch-theme";
 	//combi-modi:                 "drun, :greenclip print,run,filebrowser,:switch-theme";
     show-icons:					false;
     display-drun:               " ";
@@ -22,7 +22,7 @@ configuration {
     display-window:             " ";
 	display-clipboard:			" ";
 	display-combi:				" ";
-	display-theme:				" ";
+	display-theme:				" ";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
