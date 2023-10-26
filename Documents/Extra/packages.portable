@@ -20,6 +20,7 @@ chaotic-keyring
 chaotic-mirrorlist
 cmatrix
 connman-gtk
+dhcpcd
 discord-electron
 dmenu
 dunst
@@ -62,10 +63,11 @@ libinput-gestures
 libnotify
 libqalculate
 libva-mesa-driver
+light-locker
 lightdm-webkit-theme-aether
 linux
 linux-firmware
-linux-wifi-hotspot
+lsof
 maim
 man-db
 mangohud
@@ -110,6 +112,7 @@ ripgrep
 rofi
 rofi-greenclip
 slop
+speedtest-cli
 starship
 steghide
 sublime-text-4
@@ -131,11 +134,11 @@ waybar
 wget
 wireplumber
 wmctrl
+wpa_supplicant
 xcalib
 xclip
 xcolor
 xdotool
-xf86-input-mtrack
 xf86-video-amdgpu
 xorg-xev
 xorg-xinit
