@@ -68,6 +68,11 @@ yay -S --needed --noconfirm - <~/Documents/Extra/packages.portable
 sudo systemctl enable lightdm.service bluetooth.service
 systemctl enable --user wireplumber.service pipewire.service
 
+# LightDM icon
+# sudo chmod 644 $HOME/.face
+# sudo chmod 710 $HOME
+# sudo usermod -aG $USER lightdm
+
 # Change execution permissions
 cd ~
 chmod +x .config/bspwm/bspwmrc

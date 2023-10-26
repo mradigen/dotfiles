@@ -3,7 +3,7 @@
 		"width": 960,
 		"height": 540
 	},
-	"url": "https://music.youtube.com/watch?v=aVDLBQpWefM&list=RDAMVMZxv3zKosM1U&index=0",
+	"url": "https://music.youtube.com/watch?v=_GWKkqNoyEA&list=RDAMVM7CNHJLh8omE&index=0",
 	"options": {
 		"tray": false,
 		"appVisible": true,
@@ -15,7 +15,7 @@
 		"trayClickPlayPause": false,
 		"autoResetAppCache": false,
 		"resumeOnStart": true,
-		"proxy": "socks5://127.0.0.1:1081",
+		"proxy": "",
 		"hideMenuWarned": true,
 		"removeUpgradeButton": true,
 		"themes": [
@@ -56,7 +56,7 @@
 			"enabled": false,
 			"activityTimoutEnabled": true,
 			"activityTimoutTime": 600000,
-			"listenAlong": true
+			"playOnYouTubeMusic": true
 		},
 		"notifications": {
 			"enabled": true,
@@ -204,7 +204,7 @@
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "2.1.1"
+			"version": "2.1.3"
 		}
 	},
 	"window-maximized": false,

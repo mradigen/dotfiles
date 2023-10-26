@@ -36,23 +36,43 @@ M.base_30 = {{
   folder_bg = "#98a3af",
 }}
 
+-- M.base_16 = {{
+--   base00 = '{color0}',
+--   base01 = '{color1}',
+--   base02 = '{color2}',
+--   base03 = '{color3}',
+--   base04 = '{color4}',
+--   base05 = '{color5}',
+--   base06 = '{color6}',
+--   base07 = '{color7}',
+--   base08 = '{color8}',
+--   base09 = '{color9}',
+--   base0A = '{color10}',
+--   base0B = '{color11}',
+--   base0C = '{color12}',
+--   base0D = '{color13}',
+--   base0E = '{color14}',
+--   base0F = '{color15}',
+-- }}
+
+-- This weird config because NvTerm doesn't know how to fetch colors properly
 M.base_16 = {{
   base00 = '{color0}',
-  base01 = '{color1}',
-  base02 = '{color2}',
-  base03 = '{color3}',
-  base04 = '{color4}',
-  base05 = '{color5}',
-  base06 = '{color6}',
-  base07 = '{color7}',
-  base08 = '{color8}',
-  base09 = '{color9}',
-  base0A = '{color10}',
-  base0B = '{color11}',
-  base0C = '{color12}',
-  base0D = '{color13}',
-  base0E = '{color14}',
-  base0F = '{color15}',
+  base01 = '{color0}',
+  base02 = '{color0}',
+  base03 = '{color1}',
+  base04 = '{color2}',
+  base05 = '{color7}',
+  base06 = '{color5}',
+  base07 = '{color6}',
+  base08 = '{color1}',
+  base09 = '{color2}',
+  base0A = '{color3}',
+  base0B = '{color2}',
+  base0C = '{color6}',
+  base0D = '{color4}',
+  base0E = '{color5}',
+  base0F = '{color0}',
 }}
 
 -- M.polish_hl = {{
