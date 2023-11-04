@@ -68,6 +68,10 @@ alias polish="sudo reflector --verbose --latest 10 --protocol http,https --sort 
 alias clean="yay -Qqdtt | yay -Rsn - ; yay -Sc"
 alias query="yay -Si"
 
+# Network
+alias connect="iwctl station wlan0 connect"
+alias connectb="bluetoothctl connect"
+
 # Ricing
 alias zshconf="${EDITOR} ~/.zshrc"
 alias bspconf="${EDITOR} ~/.config/bspwm/bspwmrc"
@@ -77,12 +81,14 @@ alias piconf="${EDITOR} ~/.config/picom/picom.conf"
 alias scripts="/usr/bin/git --git-dir=$HOME/.local/bin/.git --work-tree=$HOME/.local/bin"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dots="dotfiles"
+alias tt="tt -notheme -t 10"
 # Shifted updots to a dedicated script
 
 #################
 ## Development ##
 #################
 alias npm="pnpm"
+alias npx="pnpx"
 # pnpm
 export PNPM_HOME="/home/adigen/.local/share/pnpm"
 case ":$PATH:" in
@@ -165,6 +171,7 @@ alias cd="z"
 
 # Starting display
 #displayprompt fet; echo; fet # Custom fetch
+# displayprompt lugfetch; lugfetch # Custom fetch
 #tput bold; echo; emos
 displayprompt todo; todo
 
