@@ -6,6 +6,7 @@ amd-ucode
 android-file-transfer
 android-sdk-platform-tools
 arandr
+asar
 audacity
 base
 base-devel
@@ -16,6 +17,7 @@ bluez-utils
 bottles
 bspwm
 btop
+c-lolcat
 chaotic-keyring
 chaotic-mirrorlist
 cmatrix
@@ -110,9 +112,11 @@ pnpm
 polybar
 powertop
 psiphon-console-client
+python-html2text
 python-pip
 python-pywal
 python-xlib
+qemu-system-x86
 radeontop
 ranger
 reflector
@@ -127,10 +131,12 @@ sublime-text-4
 sudo
 sxhkd
 sxiv
+syncthing
 themix-theme-oomox-git
 tigervnc
 tlp
 tlpui
+tt-bin
 ttf-font-awesome
 ueberzug
 unrar
