@@ -1,1 +1,1 @@
-exec ~/.screenlayout/dualoffset.sh
+exec ~/.screenlayout/mirror.sh

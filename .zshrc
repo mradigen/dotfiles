@@ -96,6 +96,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+#
+alias venv="python -m venv .venv"
+alias activate="source .venv/bin/activate"
 
 ###############
 ## Functions ##

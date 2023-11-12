@@ -7,7 +7,6 @@ android-file-transfer
 android-sdk-platform-tools
 arandr
 asar
-audacity
 base
 base-devel
 betterdiscordctl-git
@@ -21,11 +20,13 @@ c-lolcat
 chaotic-keyring
 chaotic-mirrorlist
 cmatrix
-connman-gtk
 dhcpcd
+dirbuster
 discord-electron
 dmenu
 dunst
+fbterm
+fbv
 feh
 ffmpeg
 gdb
@@ -40,7 +41,6 @@ i3lock-color-git
 iwd
 iwgtk
 j4-dmenu-desktop
-jdk17-openjdk
 jq
 lib32-alsa-lib
 lib32-alsa-plugins
@@ -82,7 +82,6 @@ mpv
 multimc-bin
 neofetch
 neovim
-nmap
 noto-fonts
 noto-fonts-emoji
 ntfs-3g
@@ -92,7 +91,9 @@ oh-my-zsh-git
 oh-my-zsh-plugin-autosuggestions
 openal
 openssh
+openvpn
 pacman-contrib
+pam_usb
 picom-ftlabs-git
 pidswallow
 pipes.sh
@@ -109,16 +110,17 @@ python-pip
 python-pywal
 python-xlib
 qemu-system-x86
+qpdf
 radeontop
 ranger
 reflector
 ripgrep
 rofi
 rofi-greenclip
+screen
 slop
 speedtest-cli
 starship
-steghide
 sublime-text-4
 sudo
 sxhkd
@@ -128,8 +130,11 @@ themix-theme-oomox-git
 tigervnc
 tlp
 tlpui
+tmux
+trid
 tt-bin
 ttf-font-awesome
+ttf-hannom
 ueberzug
 unrar
 unzip
@@ -139,6 +144,7 @@ vulkan-radeon
 waybar
 wget
 wireplumber
+wireshark-qt
 wmctrl
 wpa_supplicant
 xcalib
