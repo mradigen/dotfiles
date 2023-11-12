@@ -1,1 +1,0 @@
-exec ~/.screenlayout/mirror.sh
