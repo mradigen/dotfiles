@@ -4,6 +4,9 @@
 ## Applications ##
 ##################
 
+super + n
+	xcolor -s
+
 # Help
 super + question
 	awk '/^[a-z]/ && last \{print $0,"\t",last\} \{last=""\} /^#/\{last=$0\}' ~/.config/sxhkd/sxhkdrc | column -t -s $'\t' | run_dmenu -d
@@ -44,8 +47,8 @@ super + m
 
 # Scratchpad
 super + r
-	scratchpad-tiles toggle ~/.config/scratchpad/new
-	# scratchpad
+	scratchpad
+	# scratchpad-tiles toggle ~/.config/scratchpad/new
 
 # # Scratchpad Discord
 # super + d
@@ -81,11 +84,11 @@ super + shift + x
 
 # Switch to selected desktop
 super + {1-9,0}
-	bspc desktop -f '^{1-9,10}'
+	bspc desktop -f '{1-9,10}'
 
 # Move window to selected desktop
 super + shift + {1-9,0}
-	id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}
+	id=$(bspc query -N -n); bspc node -d {1-9,10}; bspc node -f ${id}
 
 # Switch desktops on secondary monitor
 super + g
@@ -160,7 +163,8 @@ XF86Audio{Play,Pause,Prev,Next}
 	xbacklight -{inc,dec} 5 && dunstify -t 500 -u low -r "92813" "Brightness: `xbacklight -get`"
 
 XF86Display
-	desk
+	echo "Dual\nSingle Main\nSingle Secondary\nMirror" | rofi -dmenu -theme ~/.config/rofi/launcher.rasi | tr '[:upper:]' '[:lower:]' | sed 's/ /_/g' > ~/.screenlayout/current && bspc wm -r
+	# desk
 
 Print
 	screenshot
