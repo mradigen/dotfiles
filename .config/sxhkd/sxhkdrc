@@ -4,6 +4,7 @@
 ## Applications ##
 ##################
 
+
 super + n
 	xcolor -s
 
@@ -47,8 +48,8 @@ super + m
 
 # Scratchpad
 super + r
-	scratchpad
-	# scratchpad-tiles toggle ~/.config/scratchpad/new
+	scratchpad-tiles toggle ~/.config/scratchpad/mainrc
+	# scratchpad
 
 # # Scratchpad Discord
 # super + d
@@ -101,6 +102,7 @@ super + g
 # Switch between recently focused windows
 super + Tab
 	bspc node last --focus
+	# ~/.config/rofi/alttab.sh
 
 # Focus on window in selected direction
 # Shifted to scratchpad applications instead
@@ -162,7 +164,7 @@ XF86Audio{Play,Pause,Prev,Next}
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
 	xbacklight -{inc,dec} 5 && dunstify -t 500 -u low -r "92813" "Brightness: `xbacklight -get`"
 
-XF86Display
+{super + p, XF86Display}
 	echo "Dual\nSingle Main\nSingle Secondary\nMirror" | rofi -dmenu -theme ~/.config/rofi/launcher.rasi | tr '[:upper:]' '[:lower:]' | sed 's/ /_/g' > ~/.screenlayout/current && bspc wm -r
 	# desk
 
@@ -172,14 +174,14 @@ Print
 super + Escape
 	dunstctl history-pop
 
-~ctrl + Page_Down
-	mc-rsg-sw
-	#mc-fsg
-	#mc-ssg
-
-~alt + s
-	multi-macro
-
-~alt + d
-	curl "http://localhost:5000/seed" -d seed=rsg
-	#curl "http://localhost:5000/fsg"
+# ~ctrl + Page_Down
+# 	mc-rsg-sw
+# 	#mc-fsg
+# 	#mc-ssg
+#
+# ~alt + s
+# 	multi-macro
+#
+# ~alt + d
+# 	curl "http://localhost:5000/seed" -d seed=rsg
+# 	#curl "http://localhost:5000/fsg"

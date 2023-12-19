@@ -1,9 +1,9 @@
 {
 	"window-size": {
-		"width": 943,
-		"height": 1011
+		"width": 939,
+		"height": 995
 	},
-	"url": "https://music.youtube.com/watch?v=SBf9yKwU4sI&list=PLt_-XlQln5ZcX_4wnO5OTxiiyx7Uy_xi6&index=0",
+	"url": "https://music.youtube.com/watch?v=ZieyZDHLqyk&list=RDAMPLPLt_-XlQln5ZfHfGfX6d2WRT17sG67Ur-o&index=0",
 	"options": {
 		"tray": false,
 		"appVisible": true,
@@ -56,7 +56,9 @@
 			"enabled": false,
 			"activityTimoutEnabled": true,
 			"activityTimoutTime": 600000,
-			"playOnYouTubeMusic": true
+			"playOnYouTubeMusic": true,
+			"activityTimeoutEnabled": true,
+			"activityTimeoutTime": 600000
 		},
 		"notifications": {
 			"enabled": true,
@@ -204,12 +206,12 @@
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "2.2.0"
+			"version": "3.1.0"
 		}
 	},
 	"window-maximized": false,
 	"window-position": {
-		"x": 11,
-		"y": 58
+		"x": 968,
+		"y": 73
 	}
 }
