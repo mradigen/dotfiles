@@ -1,12 +1,10 @@
 #! /bin/sh
 ###--Close these programs---###
-killall -q sxhkd dunst picom greenclip polybar discord-rpc-status pidswallow
+killall -q sxhkd dunst picom greenclip polybar discord-rpc-status pidswallow touchegg
 
 ##---Fix Displays---###
-# sh ~/.screenlayout/tmp.sh
 ~/.screenlayout/$(cat ~/.screenlayout/current).sh
 xcalib ~/.config/display_calibration.icm
-# ./.screenlayout something I don't remember
 
 ###---Fix Cursor---###
 xsetroot -cursor_name left_ptr &
@@ -27,7 +25,8 @@ pbstart &
 greenclip daemon &
 
 ###---Touchpad---###
-libinput-gestures-setup restart &
+# libinput-gestures-setup restart &
+touchegg &
 
 ##--Terminal Swallowing--##
 export PIDSWALLOW_SWALLOW_COMMAND='bspc node $pwid --flag hidden=on'
@@ -92,13 +91,12 @@ bspc rule -a Alacritty -o desktop=2
 
 #bspc rule -a Youtube\ Music state=floating rectangle=${X2}x${Y2}+${X4}+${Y4}
 bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
-bspc rule -a YouTube\ Music:\* state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
 bspc rule -a Floating state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
 bspc rule -a Connman-gtk state=floating
 bspc rule -a iwgtk state=floating
-bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-bspc rule -a Electron state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-#bspc rule -a discord state=floating rectangle=${X2}x${Y}+0+0 sticky=on layer=above
+# bspc rule -a Electron state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+# bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+# bspc rule -a YouTube\ Music:\* state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
 bspc rule -a xkcd state=floating
 # bspc rule -a blur state=floating rectangle=${X}x${Y}+0+0 layer=normal
 

@@ -1,23 +1,24 @@
 import:
-  - ~/.cache/wal/colors-alacritty.yml
+    - ~/.cache/wal/colors-alacritty.yml
 font:
-  normal:
-    family: "Iosevka NF"
-  size: 12.5
-  # size: 10
+    normal:
+        family: 'Iosevka NF'
+        # family: "scientifica"
+    # size: 14.5
+    # size: 12.5
+    size: 10
 
 window:
-  opacity: 0.6
-  # opacity: 1
-  padding:
-    x: 10
-    y: 10
+    # opacity: 0.6
+    opacity: 1
+    padding:
+        x: 10
+        y: 10
 
 cursor:
-  style:
-    shape: Beam
-    blinking: On
-  thickness: 0.2
-
+    style:
+        shape: Beam
+        blinking: On
+    thickness: 0.2
 # key_bindings:
 #   - { key: Back,      mods: Control, mode: Search,     action: SearchDeleteWord      }

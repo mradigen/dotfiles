@@ -70,6 +70,8 @@ alias query="yay -Si"
 
 # Network
 alias connect="iwctl station wlan0 connect"
+alias wi="iwctl station wlan0"
+alias b="bluetoothctl connect"
 alias connectb="bluetoothctl connect"
 
 # Ricing
@@ -87,6 +89,7 @@ alias tt="tt -notheme -t 10"
 #################
 ## Development ##
 #################
+alias nvim="neovide --multigrid --novsync --nofork"
 alias npm="pnpm"
 alias npx="pnpx"
 # pnpm
@@ -175,6 +178,7 @@ alias cd="z"
 # Starting display
 #displayprompt fet; echo; fet # Custom fetch
 # displayprompt lugfetch; lugfetch # Custom fetch
+# displayprompt ~/LUG/lugfetch/lugfetch; ~/LUG/lugfetch/lugfetch # Custom fetch
 #tput bold; echo; emos
 displayprompt todo; todo
 

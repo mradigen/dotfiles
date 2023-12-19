@@ -15,7 +15,7 @@
 #mkdir /mnt/boot
 #mount /dev/sda2 /mnt/boot
 
-#pacstrap -K /mnt base linux linux-firmware nvim
+#pacstrap -K /mnt base linux linux-firmware neovim
 #genfstab -U /mnt > /mnt/etc/fstab
 #arch-chroot /mnt
 # Run the script once chrooted.
@@ -62,11 +62,12 @@ systemctl enable connman.service
 useradd -m ${_USERNAME}
 passwd ${_USERNAME}
 
-usermod -aG wheel,audio,video,optical,storage,network ${_USERNAME}
+usermod -aG wheel,audio,video,optical,storage,network,input ${_USERNAME}
 
 # DNS server
-#echo "DNS=1.1.1.1" >> /etc/systemd/resolved.conf
-#systemctl enable systemd-resolved.service
+# echo "DNS=1.1.1.1" >> /etc/systemd/resolved.conf
+echo "nameserver 1.1.1.1" >> /etc/resolv.conf
+systemctl enable systemd-resolved.service
 
 # I know this is not recomended
 EDITOR=nvim visudo
