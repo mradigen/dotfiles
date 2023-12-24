@@ -19,6 +19,7 @@ btop
 chaotic-keyring
 chaotic-mirrorlist
 cmatrix
+dirbuster
 discord-electron
 dmenu
 docker
@@ -127,6 +128,7 @@ sxiv
 syncthing
 themix-theme-oomox-git
 tigervnc
+tk
 tlp
 tlpui
 tmux

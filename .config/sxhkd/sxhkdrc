@@ -18,11 +18,11 @@ super + c
 
 # Web Browser
 super + v
-	vivaldi-stable --profile-directory="Default"
+	open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
 
 # File Browser
 super + x
-	alacritty --title=Ranger -e ranger ~/.config
+	open-or-switch-to ranger alacritty --title=Ranger -e ranger ~/.config
 
 # Music Player
 super + z
