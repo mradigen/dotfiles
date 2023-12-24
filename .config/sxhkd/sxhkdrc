@@ -169,7 +169,7 @@ XF86Audio{Play,Pause,Prev,Next}
 	# desk
 
 Print
-	screenshot
+	shot
 
 super + Escape
 	dunstctl history-pop
