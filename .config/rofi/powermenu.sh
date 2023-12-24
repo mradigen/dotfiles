@@ -54,9 +54,10 @@ run_rofi() {
 run_cmd() {
 	#selected="$(confirm_exit)"
 	selected="$yes"
-	echo asfabsdf
 	echo $selected
+	echo $1
 	if [[ "$selected" == "$yes" ]]; then
+
 		if [[ $1 == '--shutdown' ]]; then
 			systemctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
@@ -66,15 +67,7 @@ run_cmd() {
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
-			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
-				openbox --exit
-			elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
-				bspc quit
-			elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
-				i3-msg exit
-			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
-				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
-			fi
+			bspc quit
 		fi
 	else
 		exit 0
