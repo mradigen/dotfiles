@@ -10,3 +10,15 @@
 [submodule "Documents/scripts/todo"]
 	path = Documents/scripts/todo
 	url = https://github.com/mradigen/todo.git
+[submodule "Documents/scripts/xkcd"]
+	path = Documents/scripts/xkcd
+	url = https://github.com/mradigen/xkcd.git
+[submodule "Documents/scripts/fetch"]
+	path = Documents/scripts/fetch
+	url = https://github.com/mradigen/fetch.git
+[submodule "Documents/scripts/shot"]
+	path = Documents/scripts/shot
+	url = https://github.com/mradigen/shot.git
+[submodule "Documents/scripts/scratchpad"]
+	path = Documents/scripts/scratchpad
+	url = https://github.com/mradigen/scratchpad.git
