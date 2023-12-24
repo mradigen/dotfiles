@@ -7,3 +7,6 @@
 [submodule "scripts"]
 	path = .local/bin
 	url = https://github.com/mradigen/scripts.git
+[submodule "Documents/scripts/todo"]
+	path = Documents/scripts/todo
+	url = https://github.com/mradigen/todo.git
