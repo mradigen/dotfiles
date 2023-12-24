@@ -22,3 +22,6 @@
 [submodule "Documents/scripts/scratchpad"]
 	path = Documents/scripts/scratchpad
 	url = https://github.com/mradigen/scratchpad.git
+[submodule "Documents/scripts/updots"]
+	path = Documents/scripts/updots
+	url = https://github.com/mradigen/updots.git
