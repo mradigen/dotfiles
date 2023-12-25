@@ -1,9 +1,9 @@
 {
 	"window-size": {
-		"width": 943,
+		"width": 859,
 		"height": 1011
 	},
-	"url": "https://music.youtube.com/watch?v=Pl1UdJYSL_0",
+	"url": "https://music.youtube.com/watch?v=qQ7WSMZsvwI&list=OLAK5uy_mq5PW_D_bT677OU_BjSPZw7w0GHywiiKY&index=0",
 	"options": {
 		"tray": false,
 		"appVisible": true,
@@ -18,7 +18,10 @@
 		"proxy": "",
 		"hideMenuWarned": true,
 		"removeUpgradeButton": true,
-		"themes": [],
+		"themes": [
+			"/home/adigen/.config/YouTube Music/Themes/wal.css",
+			"/home/adigen/.config/YouTube Music/Themes/theme.css"
+		],
 		"ForceShowLikeButtons": false,
 		"singleInstanceLock": true
 	},
@@ -208,7 +211,7 @@
 	},
 	"window-maximized": false,
 	"window-position": {
-		"x": 967,
-		"y": 59
+		"x": 1009,
+		"y": 50
 	}
 }

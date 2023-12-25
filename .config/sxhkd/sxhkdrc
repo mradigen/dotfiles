@@ -48,8 +48,8 @@ super + m
 
 # Scratchpad
 super + r
-	scratchpad-tiles toggle ~/.config/scratchpad/mainrc
-	# scratchpad
+	scratchpad
+	# scratchpad-tiles toggle ~/.config/scratchpad/mainrc
 
 # # Scratchpad Discord
 # super + d

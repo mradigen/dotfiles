@@ -89,7 +89,7 @@ alias tt="tt -notheme -t 10"
 #################
 ## Development ##
 #################
-alias nvim="neovide --multigrid --novsync --nofork"
+alias nvim="neovide --novsync --nofork"
 alias npm="pnpm"
 alias npx="pnpx"
 # pnpm
