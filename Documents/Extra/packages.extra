@@ -42,4 +42,5 @@ upx
 nodejs-lts-hydrogen
 an-anime-game-launcher-bin
 discord-screenaudio
-
+cuda
+ollama-cuda
