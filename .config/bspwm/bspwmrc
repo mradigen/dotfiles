@@ -90,14 +90,15 @@ bspc rule -a Vivaldi-stable -o desktop=1
 bspc rule -a Alacritty -o desktop=2
 
 #bspc rule -a Youtube\ Music state=floating rectangle=${X2}x${Y2}+${X4}+${Y4}
-bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
 bspc rule -a Floating state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
 bspc rule -a Connman-gtk state=floating
 bspc rule -a iwgtk state=floating
-# bspc rule -a Electron state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-# bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-# bspc rule -a YouTube\ Music:\* state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
 bspc rule -a xkcd state=floating
+
+# Scratchpad windows
+bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
+bspc rule -a YouTube\ Music:\* state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
 # bspc rule -a blur state=floating rectangle=${X}x${Y}+0+0 layer=normal
 
 ###--Programs---###

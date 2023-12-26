@@ -1,6 +1,7 @@
 #! /bin/sh
 
-# Script for installing after creating partitions, installing basics, and genfstab. Example:
+# Script for installing after creating partitions, installing basics, and genfstab.
+# Unneat, needs a lot of cleanup and fancy options
 
 # Legacy boot
 #cfdisk /dev/sda
@@ -54,10 +55,9 @@ mkinitcpio -P
 # Password
 passwd
 
-pacman -S wpa_supplicant connman ranger grub neovim sudo
+pacman -S iwd ranger grub neovim sudo
 
-systemctl enable wpa_supplicant.service
-systemctl enable connman.service
+systemctl enable iwd.service
 
 useradd -m ${_USERNAME}
 passwd ${_USERNAME}

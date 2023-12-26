@@ -48,16 +48,16 @@ super + m
 
 # Scratchpad
 super + r
-	scratchpad
+	scratchpad-global-toggle
 	# scratchpad-tiles toggle ~/.config/scratchpad/mainrc
 
 # # Scratchpad Discord
-# super + d
-# 	scratchpad-old discord discord
+super + d
+	scratchpad-old discord discord
 #
 # # Scratchpad WhatsApp
-# super + w
-# 	scratchpad-old whatsapp "vivaldi-stable --app="https://web.whatsapp.com""
+super + w
+	scratchpad-old whatsapp "vivaldi-stable --app="https://web.whatsapp.com""
 
 ##############
 ## Keybinds ##
@@ -112,8 +112,6 @@ super + Tab
 # Focus on window in selected direction
 super + {h,j,k,l}
 	bspc node -f {west,south,north,east}
-super + {a,s,w,d}
-	bspc node -f {west,south,north,east}
 	
 # Move focused window in chain mode (or use Super + Left Click Drag instead)
 super + shift + s : {a,s,w,d}
@@ -134,19 +132,11 @@ super + shift + f
 
 # Toggle floating
 super + space
-	if [ -z "$(bspc query -N -n focused.floating)" ]; then \
-        bspc node focused -t floating; \
-    else \
-        bspc node focused -t tiled; \
-    fi
+	bspc node focused -t \~floating
 
 # Toggle pseudo-tiled
 super + alt + space
-	if [ -z "$(bspc query -N -n focused.pseudo_tiled)" ]; then \
-        bspc node focused -t pseudo_tiled; \
-    else \
-        bspc node focused -t tiled; \
-    fi
+	bspc node focused -t \~pseudo_tiled
 
 ############
 ## Extras ##
