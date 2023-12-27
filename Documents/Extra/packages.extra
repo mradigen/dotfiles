@@ -40,7 +40,13 @@ jdk11-openjdk
 maven
 upx
 nodejs-lts-hydrogen
+nodejs
+node-gyp
 an-anime-game-launcher-bin
 discord-screenaudio
 cuda
+cudann
 ollama-cuda
+python-tensorflow-opt-cuda
+python-scikit-learn
+steam

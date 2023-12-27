@@ -20,6 +20,7 @@ chaotic-keyring
 chaotic-mirrorlist
 cmatrix
 cuda
+cudnn
 dirbuster
 discord-electron
 dmenu
@@ -114,6 +115,8 @@ psiphon-console-client
 python-html2text
 python-pip
 python-pywal
+python-scikit-learn
+python-tensorflow-opt-cuda
 python-xlib
 qemu-system-x86
 radeontop
@@ -124,6 +127,7 @@ rofi
 rofi-greenclip
 slop
 speedtest-cli
+steam
 sublime-text-4
 sudo
 sxhkd
