@@ -1,0 +1,1 @@
+/home/adigen/.cache/wal/colors-nvchad.lua
