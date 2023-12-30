@@ -21,6 +21,7 @@ chaotic-mirrorlist
 cmatrix
 cuda
 cudnn
+dhcpcd
 dirbuster
 discord-electron
 dmenu
@@ -30,6 +31,8 @@ fbterm
 fbv
 feh
 ffmpeg
+filezilla
+firefox
 git
 gnu-netcat
 grub
@@ -72,6 +75,7 @@ linux
 linux-firmware
 lugfetch
 lutris
+lxappearance-gtk3
 maim
 man-db
 mangohud

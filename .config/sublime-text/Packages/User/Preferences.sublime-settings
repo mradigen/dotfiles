@@ -8,4 +8,5 @@
 		"Vintage",
 	],
 	"theme": "ayu-mirage.sublime-theme",
+	"index_files": true,
 }
