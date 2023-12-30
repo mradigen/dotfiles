@@ -20,6 +20,7 @@ chaotic-keyring
 chaotic-mirrorlist
 cmatrix
 cudnn
+dhcpcd
 dirbuster
 discord-electron
 dmenu
@@ -28,6 +29,8 @@ fbterm
 fbv
 feh
 ffmpeg
+filezilla
+firefox
 git
 gnu-netcat
 grub
@@ -68,6 +71,7 @@ lightdm-webkit-theme-aether
 linux
 linux-firmware
 lugfetch
+lxappearance-gtk3
 maim
 man-db
 mangohud
