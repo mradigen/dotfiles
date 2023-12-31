@@ -43,7 +43,7 @@ end })
 local M = {
 	plugins = "custom.plugins",
 	ui = {
-		theme = "wal",
+		theme = "catppuccin",
 		hl_override = {
 			Comment = {
 				italic = true

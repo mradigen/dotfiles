@@ -107,6 +107,7 @@ pnpm
 polybar
 powertop
 psiphon-console-client
+python-bottle
 python-html2text
 python-pip
 python-pywal
