@@ -1,6 +1,6 @@
 #! /bin/sh
 ###--Close these programs---###
-killall -q sxhkd dunst picom greenclip polybar discord-rpc-status pidswallow touchegg
+killall -q sxhkd dunst picom greenclip polybar discord-rpc-status pidswallow touchegg bash
 
 ##---Fix Displays---###
 ~/.screenlayout/$(cat ~/.screenlayout/current).sh
@@ -21,8 +21,16 @@ $(
 #dunst-start & # no need to start dunst, it autostarts anyways
 #picom --experimental-backends -b &
 picom -b # no & cause we want picom to start properly first and then start polybar so shadows work along with ftlabs' animations
-pbstart &
 greenclip daemon &
+
+## Polybar ##
+$(
+	pbstart & sleep 2
+	bspc config top_padding 0
+	# hideIt.sh --name '^polybar-top_eDP' --region 0x0+1920+10 -d top -p 0
+	hideIt.sh --name '^polybar-top_eDP' --hover -d top -p 1
+) &
+##
 
 ###---Touchpad---###
 # libinput-gestures-setup restart &
