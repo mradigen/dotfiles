@@ -2,8 +2,8 @@
 -- Neovide --
 -------------
 if vim.g.neovide then
-	vim.o.guifont = "Iosevka NF:h12.5"
-	-- vim.o.guifont = "Iosevka NF:h10"
+	-- vim.o.guifont = "Iosevka NF:h12.5"
+	vim.o.guifont = "Iosevka NF:h10"
 	-- vim.g.neovide_transparency = 0.6
 	vim.g.neovide_cursor_trail_size = 0.7
 	vim.g.neovide_refresh_rate = 60
@@ -100,7 +100,7 @@ local plugins = {
 		}
 	},
 	{
-		"willianboman/mason-lspconfig.nvim",
+		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			local lspconfig = require("lspconfig")
 			-- local on_attach = require("plugins.configs.lspconfig").on_attach
