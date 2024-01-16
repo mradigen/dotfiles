@@ -24,12 +24,15 @@ picom -b # no & cause we want picom to start properly first and then start polyb
 greenclip daemon &
 
 ## Polybar ##
-$(
-	pbstart & sleep 2
-	bspc config top_padding 0
-	# hideIt.sh --name '^polybar-top_eDP' --region 0x0+1920+10 -d top -p 0
-	hideIt.sh --name '^polybar-top_eDP' --hover -d top -p 1
-) &
+pbstart
+
+[[ $POLYBAR_BAR = "top" ]] &&  hideIt.sh --name '^polybar-top_eDP' --hover -d top -p 1 --wait &
+# $(
+# 	pbstart & sleep 2
+# 	bspc config top_padding 0
+# 	# hideIt.sh --name '^polybar-top_eDP' --region 0x0+1920+10 -d top -p 0
+# 	hideIt.sh --name '^polybar-top_eDP' --hover -d top -p 1
+# ) &
 ##
 
 ###---Touchpad---###
@@ -105,8 +108,8 @@ bspc rule -a xkcd state=floating
 
 # Scratchpad windows
 bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
-bspc rule -a YouTube\ Music:\* state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} layer=above
+bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+bspc rule -a YouTube\ Music:\* state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
 # bspc rule -a blur state=floating rectangle=${X}x${Y}+0+0 layer=normal
 
 ###--Programs---###

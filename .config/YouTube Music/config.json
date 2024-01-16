@@ -3,7 +3,7 @@
 		"width": 960,
 		"height": 540
 	},
-	"url": "https://music.youtube.com/watch?v=5XoViQN_41Q&list=RDAMVMYYquZt1UW7g&index=0",
+	"url": "https://music.youtube.com/watch?v=JgI6z6aQhEA&list=PLt_-XlQln5ZebLDY-73jt1w_C2cFpkVwO&index=0",
 	"options": {
 		"tray": false,
 		"appVisible": true,
@@ -206,7 +206,7 @@
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "3.2.1"
+			"version": "3.2.2"
 		}
 	},
 	"window-maximized": false,

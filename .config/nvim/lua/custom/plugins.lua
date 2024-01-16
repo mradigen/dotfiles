@@ -3,7 +3,7 @@
 -------------
 if vim.g.neovide then
 	-- vim.o.guifont = "Iosevka NF:h12.5"
-	vim.o.guifont = "Iosevka NF:h10"
+	vim.o.guifont = "Iosevka NF:h9"
 	-- vim.g.neovide_transparency = 0.6
 	vim.g.neovide_cursor_trail_size = 0.7
 	vim.g.neovide_refresh_rate = 60
