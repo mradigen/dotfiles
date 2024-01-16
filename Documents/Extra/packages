@@ -19,6 +19,7 @@ btop
 chaotic-keyring
 chaotic-mirrorlist
 cmatrix
+cmus
 cuda
 cudnn
 dhcpcd
@@ -85,6 +86,7 @@ mesa-utils
 mesa-vdpau
 mimi
 mindustry-bin
+moc-pulse
 mpv
 multimc-bin
 neofetch
@@ -133,6 +135,7 @@ rofi
 rofi-greenclip
 slop
 speedtest-cli
+sqlitebrowser
 steam
 sublime-text-4
 sudo
