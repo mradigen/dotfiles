@@ -76,7 +76,7 @@ EDITOR=nvim visudo
 grub-install $_DISK
 # UEFI boot
 #grub-install --target=i386-pc --recheck $_DISK
-#grub-install --target=x86_64-efi --efi-directory /boot --recheck --removable
+#grub-install --target=x86_64-efi --efi-directory=/boot --recheck --removable
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
