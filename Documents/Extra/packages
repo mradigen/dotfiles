@@ -92,6 +92,7 @@ multimc-bin
 neofetch
 neovide
 neovim
+nicotine+
 noto-fonts
 noto-fonts-emoji
 npm
@@ -136,7 +137,6 @@ rofi-greenclip
 slop
 speedtest-cli
 sqlitebrowser
-steam
 sublime-text-4
 sudo
 sxhkd
