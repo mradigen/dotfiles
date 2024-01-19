@@ -86,7 +86,7 @@ chmod +x .screenlayout/*.sh
 
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
-sudo usermod --shell /usr/bin/zsh adigen
+sudo usermod --shell /usr/bin/zsh $USER
 
 mkdir -p ~/.cache/zsh
 touch ~/.cache/zsh/zsh_history
