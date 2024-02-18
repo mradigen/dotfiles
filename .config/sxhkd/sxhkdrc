@@ -18,7 +18,8 @@ super + c
 
 # Web Browser
 super + v
-	open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
+	brave
+	# open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
 
 # File Browser
 super + x
