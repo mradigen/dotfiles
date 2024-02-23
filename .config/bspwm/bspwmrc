@@ -97,7 +97,7 @@ X4=$[X/4]
 Y4=$[Y/4]
 
 # Oneshots, only apply to the first window
-bspc rule -a Vivaldi-stable -o desktop=1
+bspc rule -a Brave-browser -o desktop=1
 bspc rule -a Alacritty -o desktop=2
 
 #bspc rule -a Youtube\ Music state=floating rectangle=${X2}x${Y2}+${X4}+${Y4}
@@ -108,7 +108,7 @@ bspc rule -a xkcd state=floating
 
 # Scratchpad windows
 bspc rule -a discord state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+bspc rule -a Brave-browser:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
 bspc rule -a YouTube\ Music:\* state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
 # bspc rule -a blur state=floating rectangle=${X}x${Y}+0+0 layer=normal
 
