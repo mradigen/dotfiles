@@ -18,7 +18,7 @@ super + c
 
 # Web Browser
 super + v
-	brave
+	open-or-switch-to brave-browser brave 
 	# open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
 
 # File Browser
@@ -58,7 +58,7 @@ super + d
 #
 # # Scratchpad WhatsApp
 super + w
-	scratchpad-old whatsapp "vivaldi-stable --app="https://web.whatsapp.com""
+	scratchpad-old whatsapp "brave --app="https://web.whatsapp.com""
 
 ##############
 ## Keybinds ##
