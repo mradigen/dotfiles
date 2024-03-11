@@ -1,4 +1,4 @@
-<align="center">
+<div align="center">
 
 ## Dotfiles
 
