@@ -33,7 +33,6 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export ANDROID_HOME="$HOME/.android"
 export ANDROID_NDK="$HOME/.android/ndk"
 export PATH="$PATH:$HOME/.android/platform-tools"
-export NLYT="$HOME/Desktop/nlyt"
 
 #############
 ## Aliases ##
@@ -58,6 +57,8 @@ alias vnc="~/.vnc/noVNC/utils/novnc_proxy --vnc localhost:5901 --listen 0.0.0.0:
 alias vnc-end="killall -q Xvnc ssh && bspc wm -r"
 alias vpn="sudo openvpn ~/Documents/VPN/cysis.ovpn & disown"
 alias zxc='sudo $(fc -ln -1)'
+alias restart="sudo systemctl restart"
+alias status="systemctl status"
 
 # Pacman
 alias update="yay -Syu --removemake --noconfirm"

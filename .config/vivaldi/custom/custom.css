@@ -29,13 +29,15 @@ div {
 }
 
 /* Remove margin on tab bar */
-.tabs-left .tab-position .tab, .tabs-right .tab-position .tab {
-    margin: 0;
+.tabs-left .tab-position .tab,
+.tabs-right .tab-position .tab {
+	margin: 0;
 }
 
 /* Remove background filter on tab favicon */
-.theme-dark .tab-position .tab.active .tab-header .favicon:not(.svg), .acc-dark.color-behind-tabs-off .tab-position .tab.active .tab-header .favicon:not(.svg) {
-    filter: none;
+.theme-dark .tab-position .tab.active .tab-header .favicon:not(.svg),
+.acc-dark.color-behind-tabs-off .tab-position .tab.active .tab-header .favicon:not(.svg) {
+	filter: none;
 }
 
 /* Prevent favicon glitch */
@@ -46,3 +48,100 @@ div {
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
 }*/
+
+/**/
+/* .tabbar-wrapper:hover { */
+/* 	width: 150px !important; */
+/* } */
+/**/
+/* #tabs-tabbar-container { */
+/* 	width: auto !important; */
+/* } */
+/**/
+/**/
+/* #tabs-container.left, */
+/* #tabs-subcontainer.left, */
+/* #tabs-container.right, */
+/* #tabs-subcontainer.right, */
+/* #tabs-tabbar-container.left, */
+/* #tabs-tabbar-container.right, */
+/* .tabbar-wrapper { */
+/* 	min-width: unset !important; */
+/* 	transition: width 200ms ease-out !important; */
+/* } */
+/**/
+/* 	{ */
+/* 	width: auto !important; */
+/* } */
+
+/*https://forum.vivaldi.net/topic/82900/collapsing-vertical-tabs-that-expand-on-hover-with-and-without-floating-tabs/10*/
+#tabs-container.left,
+#tabs-subcontainer.left,
+#tabs-container.right,
+#tabs-subcontainer.right {
+	min-width: 30px;
+	transition: min-width 200ms ease-out !important;
+}
+
+#tabs-container.left:hover,
+#tabs-subcontainer.left:hover,
+#tabs-container.right:hover,
+#tabs-subcontainer.right:hover,
+#tabs-tabbar-container:hover {
+	min-width: 200px !important;
+	width: auto !important;
+}
+
+.tabbar-wrapper {
+	width: 30px !important;
+	transition: width 200ms ease-out !important;
+}
+
+.tabbar-wrapper:hover {
+	width: 200px !important;
+}
+
+.tabbar-workspace-button {
+	width: 100% !important;
+}
+
+#tabs-tabbar-container {
+	width: auto !important;
+	min-width: 30px;
+	transition: min-width 200ms ease-out !important;
+}
+
+.button-toolbar.newtab {
+	left: 0px !important;
+	width: 200px;
+}
+
+/** Make the expanded tabbar float on the webpage. Use with tab-expansion mod. **/
+#main>.inner>div:has(#tabs-tabbar-container:is(.left, .right)) {
+	position: absolute;
+	z-index: 2;
+	opacity: 1;
+	background-color: var(--colorBg);
+	height: 100% !important;
+}
+
+#browser.transparent-tabbar .inner>div:has(#tabs-tabbar-container:is(.left, .right)) {
+	background-color: var(--colorImageFgHeaviest);
+}
+
+.inner #webpage-stack {
+	margin-left: 30px;
+}
+
+.inner:has(#tabs-subcontainer:is(.left, .right)) #webpage-stack {
+	margin-left: 64px;
+}
+
+/* .tabs-left .tab-position .tab, */
+/* .tabs-right .tab-position .tab { */
+/* 	margin: 0px !important; */
+/* } */
+
+.vivaldi {
+	margin: 0px !important;
+}
