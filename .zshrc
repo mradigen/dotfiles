@@ -81,6 +81,7 @@ alias bspconf="${EDITOR} ~/.config/bspwm/bspwmrc"
 alias sxconf="${EDITOR} ~/.config/sxhkd/sxhkdrc"
 alias pbconf="${EDITOR} ~/.config/polybar/config.ini"
 alias piconf="${EDITOR} ~/.config/picom/picom.conf"
+alias hyprconf="${EDITOR} ~/.config/hypr/hyprland.conf"
 alias scripts="/usr/bin/git --git-dir=$HOME/.local/bin/.git --work-tree=$HOME/.local/bin"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dots="dotfiles"
@@ -164,6 +165,8 @@ fi
 
 # Ctrl + Backspace to delete a word
 bindkey '^H' backward-kill-word
+# Ctrl + Enter to simulate left arrow to autocomplete
+bindkey '^L' forward-char
 
 #############
 ## Startup ##

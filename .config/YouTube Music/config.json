@@ -1,9 +1,9 @@
 {
 	"window-size": {
-		"width": 960,
-		"height": 540
+		"width": 970,
+		"height": 1015
 	},
-	"url": "https://music.youtube.com/watch?v=63E8netP2xM",
+	"url": "https://music.youtube.com/watch?v=0KhGMfCmSjE&list=PLt_-XlQln5ZetGyQ86UYTHnwc6RQ5uu7V&index=0&sq=1",
 	"options": {
 		"tray": false,
 		"appVisible": true,
@@ -110,7 +110,7 @@
 			]
 		},
 		"no-google-login": {
-			"enabled": true
+			"enabled": false
 		},
 		"quality-changer": {
 			"enabled": false
@@ -122,7 +122,7 @@
 			"enabled": false
 		},
 		"visualizer": {
-			"enabled": false,
+			"enabled": true,
 			"type": "butterchurn",
 			"butterchurn": {
 				"preset": "martin [shadow harlequins shape code] - fata morgana",
@@ -202,16 +202,22 @@
 		},
 		"audio-compressor": {
 			"enabled": false
+		},
+		"music-together": {
+			"enabled": false
+		},
+		"lumiastream": {
+			"enabled": false
 		}
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "3.3.2"
+			"version": "3.3.6"
 		}
 	},
 	"window-maximized": false,
 	"window-position": {
-		"x": 936,
-		"y": 15
+		"x": 23,
+		"y": 36
 	}
 }
