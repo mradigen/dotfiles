@@ -129,7 +129,7 @@ div {
 	background-color: var(--colorImageFgHeaviest);
 }
 
-.inner #webpage-stack {
+.normal .inner #webpage-stack {
 	margin-left: 30px;
 }
 

@@ -23,7 +23,8 @@ super + v
 
 # File Browser
 super + x
-	open-or-switch-to ranger alacritty --title=Ranger -e ranger ~/.config
+	alacritty --title=Ranger -e ranger ~/.config
+	# open-or-switch-to ranger alacritty --title=Ranger -e ranger ~/.config
 
 # Music Player
 super + z

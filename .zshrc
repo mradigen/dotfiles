@@ -102,7 +102,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 #
-alias venv="python -m venv .venv"
+alias venv="python -m venv .venv && source .venv/bin/activate"
 alias activate="source .venv/bin/activate"
 
 ###############
@@ -165,8 +165,11 @@ fi
 
 # Ctrl + Backspace to delete a word
 bindkey '^H' backward-kill-word
-# Ctrl + Enter to simulate left arrow to autocomplete
+# Ctrl + L to simulate left arrow to autocomplete
 bindkey '^L' forward-char
+# Ctrl + K to go up history
+bindkey '^K' up-line-or-beginning-search
+bindkey '^J' down-line-or-beginning-search
 
 #############
 ## Startup ##

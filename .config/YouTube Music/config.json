@@ -1,9 +1,9 @@
 {
 	"window-size": {
-		"width": 970,
-		"height": 1015
+		"width": 960,
+		"height": 540
 	},
-	"url": "https://music.youtube.com/watch?v=0KhGMfCmSjE&list=PLt_-XlQln5ZetGyQ86UYTHnwc6RQ5uu7V&index=0&sq=1",
+	"url": "https://music.youtube.com/watch?v=jPAEqrW9tdc&list=PLt_-XlQln5ZedMfPckyvzF1B891OySs-X&index=0",
 	"options": {
 		"tray": false,
 		"appVisible": true,
@@ -32,7 +32,11 @@
 		"adblocker": {
 			"enabled": true,
 			"cache": true,
-			"additionalBlockLists": []
+			"blocker": "With blocklists",
+			"additionalBlockLists": [
+				"https://filters.adtidy.org/extension/ublock/filters/122_optimized.txt"
+			],
+			"disableDefaultLists": false
 		},
 		"shortcuts": {
 			"enabled": true,
@@ -217,7 +221,7 @@
 	},
 	"window-maximized": false,
 	"window-position": {
-		"x": 23,
-		"y": 36
+		"x": 26,
+		"y": 529
 	}
 }

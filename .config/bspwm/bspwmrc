@@ -52,12 +52,15 @@ LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-r
 #amixer -D hw:1 sset Master 50% -q &
 
 ###---BSPWM---###
-# bspc monitor eDP -d  1 2 3 4 5
-# bspc monitor HDMI-A-0 -d 6
-# Second monitor
-# bspc monitor HDMI-A-0 -d 1 2 3 4 5 # Second display
-# bspc monitor eDP -d 6
-bspc monitor primary -d 1 2 3 4 5
+current_layout=`cat ~/.screenlayout/current`
+if [[ current_layout  == 'dual' || current_layout == 'single_secondary' ]]; then
+	# Second monitor
+	bspc monitor HDMI-A-0 -d 1 2 3 4 5 # Second display
+	bspc monitor eDP -d 6
+else
+	# Display
+	bspc monitor primary -d 1 2 3 4 5
+fi
 
 bspc config border_width 1
 bspc config window_gap 10
