@@ -13,6 +13,11 @@ vim.opt.expandtab = false
 -- Fucking neovim overriding shit in unimaginable ways
 if vim.bo.filetype == "python" then
     vim.opt.expandtab = true
+elseif vim.bo.filetype == "yaml" then
+	-- vim.opt.tabstop = 2
+	-- vim.opt.shiftwidth = 2
+	-- vim.opt.softtabstop = 2
+    vim.opt.expandtab = true
 end
 
 -- Auto-reload file
@@ -21,8 +26,17 @@ vim.cmd[[
 au CursorHold * checktime
 ]]
 
--- Auto open nvim-tree if nvim launched with a directory
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = function(data)
+
+	---------------
+	-- alacritty --
+	---------------
+	os.execute('alacritty msg config window.padding.x=0 window.padding.y=0')
+
+	-----------------
+	-- directories --
+	-----------------
+	-- Auto open nvim-tree if nvim launched with a directory
 	-- buffer is a directory
 	local directory = vim.fn.isdirectory(data.file) == 1
 
@@ -35,6 +49,13 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = function(data)
 
 	-- open the tree
 	require("nvim-tree.api").tree.open()
+end })
+
+vim.api.nvim_create_autocmd({ "VimLeavePre" }, { callback = function()
+	---------------
+	-- alacritty --
+	---------------
+	os.execute('alacritty msg config -r')
 end })
 
 ------------
