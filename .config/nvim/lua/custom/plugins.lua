@@ -2,8 +2,8 @@
 -- Neovide --
 -------------
 if vim.g.neovide then
-	-- vim.o.guifont = "Iosevka NF:h12.5"
-	vim.o.guifont = "Iosevka NF:h9"
+	vim.o.guifont = "Iosevka NF:h12.5"
+	-- vim.o.guifont = "Iosevka NF:h9"
 	-- vim.g.neovide_transparency = 0.6
 	vim.g.neovide_cursor_trail_size = 0.7
 	vim.g.neovide_refresh_rate = 60
@@ -134,7 +134,7 @@ local plugins = {
 			formatters_by_ft = {
 				["*"] = { "prettier" },
 			},
-			format_on_save = {
+			format_after_save = {
 				lsp_fallback = true,
 				async = true,
 				timeout_ms = 1000,
@@ -164,7 +164,12 @@ local plugins = {
 				"astro",
 				"svelte",
 			},
-			autotag = {
+		}
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		opts = {
+			opts = {
 				enable = true,
 				enable_rename = true,
 				enable_close = true,
@@ -176,12 +181,8 @@ local plugins = {
 					'markdown',
 					'astro', 'glimmer', 'handlebars', 'hbs'
 				}
-			},
+			}
 		},
-	},
-	{
-		"windwp/nvim-ts-autotag",
-		opts = {},
 		lazy = false
 	},
 	{
