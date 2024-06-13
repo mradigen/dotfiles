@@ -2,8 +2,8 @@
 	"wallpaper": "/home/adigen/Pictures/Wallpapers/catppuccin.jpg",
 	"alpha": "100",
 	"special": {
-		"//background": "#1E1E2E",
-		"background": "#101622",
+		"background": "#1E1E2E",
+		"//background": "#101622",
 		"foreground": "#D9E0EE",
 		"cursor": "#D9E0EE"
 	},
@@ -26,8 +26,8 @@
 		"color15": "#D9E0EE"
 	},
 	"colors": {
-		"//color0": "#1E1E2E",
-		"color0": "#101622",
+		"color0": "#1E1E2E",
+		"//color0": "#101622",
 		"color1": "#F38BA8",
 		"color2": "#A6E3A1",
 		"color3": "#F9E2AF",

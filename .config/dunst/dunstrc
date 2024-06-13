@@ -21,21 +21,21 @@
 	transparency = 50
 
 [urgency_low]
-    background = "#101622"
+    background = "#1E1E2E"
     foreground = "#D9E0EE"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#101622"
+    background = "#1E1E2E"
     foreground = "#D9E0EE"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#101622"
+    background = "#1E1E2E"
     foreground = "#D9E0EE"
     frame_color = "#F5C2E7"
     timeout = 0

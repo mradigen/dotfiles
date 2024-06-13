@@ -91,7 +91,7 @@ alias tt="tt -notheme -t 10"
 #################
 ## Development ##
 #################
-alias nvim="neovide --no-vsync --no-fork"
+#alias nvim="neovide --no-vsync --no-fork"
 alias npm="pnpm"
 alias npx="pnpx"
 # pnpm
