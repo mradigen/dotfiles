@@ -1,9 +1,9 @@
 {
 	"window-size": {
-		"width": 960,
-		"height": 540
+		"width": 920,
+		"height": 484
 	},
-	"url": "https://music.youtube.com/watch?v=jPAEqrW9tdc&list=PLt_-XlQln5ZedMfPckyvzF1B891OySs-X&index=0",
+	"url": "https://music.youtube.com/watch?v=mneDuKb3BT8&list=RDAMPLOLAK5uy_mq5PW_D_bT677OU_BjSPZw7w0GHywiiKY&index=0&sq=1",
 	"options": {
 		"tray": false,
 		"appVisible": true,
@@ -216,12 +216,12 @@
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "3.3.6"
+			"version": "3.3.12"
 		}
 	},
 	"window-maximized": false,
 	"window-position": {
-		"x": 26,
-		"y": 529
+		"x": 980,
+		"y": 585
 	}
 }

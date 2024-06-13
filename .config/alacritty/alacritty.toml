@@ -9,9 +9,8 @@ shape = "Beam"
 
 [font]
 # size = 15.5
-#size = 12.5
-size = 12.5
-#size = 9
+# size = 12.5
+size = 9
 
 [font.normal]
 # family = "Dank Mono"
