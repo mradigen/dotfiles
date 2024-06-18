@@ -31,7 +31,7 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = function(data)
 	---------------
 	-- alacritty --
 	---------------
-	os.execute('alacritty msg config window.padding.x=0 window.padding.y=0')
+	-- os.execute('alacritty msg config window.padding.x=0 window.padding.y=0')
 
 	-----------------
 	-- directories --
@@ -51,12 +51,12 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = function(data)
 	require("nvim-tree.api").tree.open()
 end })
 
-vim.api.nvim_create_autocmd({ "VimLeavePre" }, { callback = function()
-	---------------
-	-- alacritty --
-	---------------
-	os.execute('alacritty msg config -r')
-end })
+-- vim.api.nvim_create_autocmd({ "VimLeavePre" }, { callback = function()
+-- 	---------------
+-- 	-- alacritty --
+-- 	---------------
+-- 	os.execute('alacritty msg config -r')
+-- end })
 
 ------------
 -- NvChad --
@@ -69,6 +69,9 @@ local M = {
 			Comment = {
 				italic = true
 			}
+		},
+		statusline = {
+			separator_style = "arrow",
 		}
 	}
 }
