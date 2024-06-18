@@ -2,7 +2,7 @@
 -- Neovide --
 -------------
 if vim.g.neovide then
-	vim.o.guifont = "Iosevka NF:h12.5"
+	vim.o.guifont = "Iosevka NF:h9"
 	-- vim.o.guifont = "Iosevka NF:h9"
 	-- vim.g.neovide_transparency = 0.6
 	vim.g.neovide_cursor_trail_size = 0.7
@@ -55,7 +55,7 @@ local plugins = {
 	},
 	{
 		"folke/noice.nvim",
-		event = "VeryLazy",
+		-- event = "VeryLazy",
 		opts = {
 			-- messages = {
 			--   enabled = false -- view for warnings
@@ -65,6 +65,7 @@ local plugins = {
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 		},
+		-- lazy = false
 	},
 	{
 		"rcarriga/nvim-notify",
@@ -125,7 +126,7 @@ local plugins = {
 				}
 			end
 		end,
-		lazy = false
+		event = { "BufReadPre" } -- dont load on empty buffer
 	},
 	{
 		"stevearc/conform.nvim",
@@ -143,7 +144,7 @@ local plugins = {
 	},
 	{
 		"mg979/vim-visual-multi",
-		lazy = false,
+		keys = { "<C-d>", "<M-C-Down>", "<M-C-Up>" }
 	},
 	{
 		"max397574/better-escape.nvim",
@@ -183,23 +184,24 @@ local plugins = {
 				}
 			}
 		},
-		lazy = false
+		event = { "BufReadPre" } -- dont load on empty buffer
 	},
-	{
-		"hrsh7th/nvim-cmp",
-		opts = {
-			mapping = {
-				["<CR>"] = require("cmp").config.disable,
-				["<C-CR>"] = require("cmp").mapping.confirm {
-					behavior = require("cmp").ConfirmBehavior.Insert,
-					select = true,
-				},
-			},
-			completion = {
-				completeopt = "menu,menuone,noselect",
-			}
-		},
-	}
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	event = "InsertEnter",
+	-- 	opts = {
+	-- 		mapping = {
+	-- 			["<CR>"] = require("cmp").config.disable,
+	-- 			["<C-CR>"] = require("cmp").mapping.confirm {
+	-- 				behavior = require("cmp").ConfirmBehavior.Insert,
+	-- 				select = true,
+	-- 			},
+	-- 		},
+	-- 		completion = {
+	-- 			completeopt = "menu,menuone,noselect",
+	-- 		}
+	-- 	},
+	-- },
 }
 
 return plugins
