@@ -1,6 +1,6 @@
 # Key Verifier
 
-Tags: `hard` `ascii` `binary` `c` `assembly`
+Tags: `medium` `ascii` `binary` `c` `assembly`
 
 Setup:
 
