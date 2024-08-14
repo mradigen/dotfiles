@@ -24,35 +24,35 @@ local plugins = {
 		ft = { "markdown" },
 		build = function() vim.fn["mkdp#util#install"]() end,
 	},
-	{
-		"echasnovski/mini.indentscope",
-		version = false, -- wait till new 0.7.0 release to put it back on semver
-		event = { "BufReadPre", "BufNewFile" },
-		opts = {
-			symbol = "│",
-			options = { try_as_border = true },
-		},
-		init = function()
-			vim.api.nvim_create_autocmd("FileType", {
-				pattern = {
-					"help",
-					"alpha",
-					"dashboard",
-					"neo-tree",
-					"Trouble",
-					"lazy",
-					"mason",
-					"notify",
-					"toggleterm",
-					"lazyterm",
-					"zsh"
-				},
-				callback = function()
-					vim.b.miniindentscope_disable = true
-				end,
-			})
-		end,
-	},
+	-- {
+	-- 	"echasnovski/mini.indentscope",
+	-- 	version = false, -- wait till new 0.7.0 release to put it back on semver
+	-- 	event = { "BufReadPre", "BufNewFile" },
+	-- 	opts = {
+	-- 		symbol = "│",
+	-- 		options = { try_as_border = true },
+	-- 	},
+	-- 	init = function()
+	-- 		vim.api.nvim_create_autocmd("FileType", {
+	-- 			pattern = {
+	-- 				"help",
+	-- 				"alpha",
+	-- 				"dashboard",
+	-- 				"neo-tree",
+	-- 				"Trouble",
+	-- 				"lazy",
+	-- 				"mason",
+	-- 				"notify",
+	-- 				"toggleterm",
+	-- 				"lazyterm",
+	-- 				"zsh"
+	-- 			},
+	-- 			callback = function()
+	-- 				vim.b.miniindentscope_disable = true
+	-- 			end,
+	-- 		})
+	-- 	end,
+	-- },
 	{
 		"folke/noice.nvim",
 		-- event = "VeryLazy",
@@ -65,7 +65,7 @@ local plugins = {
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 		},
-		-- lazy = false
+		lazy = false
 	},
 	{
 		"rcarriga/nvim-notify",
@@ -115,7 +115,11 @@ local plugins = {
 				"tailwindcss",
 				"svelte",
 				"astro",
-				"pylsp"
+				"pylsp",
+
+				"ansiblels",
+				"dockerls",
+				"docker_compose_language_service"
 			}
 
 			for _, lsp in ipairs(servers) do
@@ -176,7 +180,8 @@ local plugins = {
 				enable_close = true,
 				enable_close_on_slash = true,
 				filetypes = {
-					'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'tsx', 'jsx', 'rescript',
+					'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'tsx',
+					'jsx', 'rescript',
 					'xml',
 					'php',
 					'markdown',
@@ -186,22 +191,22 @@ local plugins = {
 		},
 		event = { "BufReadPre" } -- dont load on empty buffer
 	},
-	-- {
-	-- 	"hrsh7th/nvim-cmp",
-	-- 	event = "InsertEnter",
-	-- 	opts = {
-	-- 		mapping = {
-	-- 			["<CR>"] = require("cmp").config.disable,
-	-- 			["<C-CR>"] = require("cmp").mapping.confirm {
-	-- 				behavior = require("cmp").ConfirmBehavior.Insert,
-	-- 				select = true,
-	-- 			},
-	-- 		},
-	-- 		completion = {
-	-- 			completeopt = "menu,menuone,noselect",
-	-- 		}
-	-- 	},
-	-- },
+	{
+		"hrsh7th/nvim-cmp",
+		event = "InsertEnter",
+		opts = {
+			mapping = {
+				["<CR>"] = require("cmp").config.disable,
+				["<C-CR>"] = require("cmp").mapping.confirm {
+					behavior = require("cmp").ConfirmBehavior.Insert,
+					select = true,
+				},
+			},
+			completion = {
+				completeopt = "menu,menuone,noselect",
+			}
+		},
+	},
 }
 
 return plugins

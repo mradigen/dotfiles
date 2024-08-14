@@ -1,0 +1,5 @@
+#! /bin/bash
+
+cd /root
+cd generators
+./setup.sh $1
