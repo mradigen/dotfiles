@@ -9,15 +9,15 @@ shape = "Beam"
 
 [font]
 # size = 15.5
-# size = 12.5
-size = 9
+size = 12.5
+# size = 9
 
 [font.normal]
 # family = "Dank Mono"
 family = "Iosevka NF"
 
 [window]
-opacity = 1
+ opacity = 1
 # opacity = 0.6
 
 [window.padding]

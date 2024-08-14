@@ -59,6 +59,7 @@ alias vpn="sudo openvpn ~/Documents/VPN/cysis.ovpn & disown"
 alias zxc='sudo $(fc -ln -1)'
 alias restart="sudo systemctl restart"
 alias status="systemctl status"
+alias r="[ $RANGER_LEVEL ] && exit || ranger"
 
 # Pacman
 alias update="yay -Syu --removemake --noconfirm"
@@ -92,7 +93,7 @@ alias tt="tt -notheme -t 10"
 ## Development ##
 #################
 #alias nvim="neovide --no-vsync --no-fork"
-alias npm="pnpm"
+# alias npm="pnpm"
 alias npx="pnpx"
 # pnpm
 export PNPM_HOME="/home/adigen/.local/share/pnpm"
@@ -191,3 +192,5 @@ displayprompt todo; todo
 
 # Starting commands
 regularupdate 43200
+alias lfm='/home/adigen/Testing/LiteFM/build/litefm'
+alias lfm='/home/adigen/Testing/LiteFM/build/litefm'

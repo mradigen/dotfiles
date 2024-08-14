@@ -5,6 +5,9 @@
 ##################
 
 
+super + u
+	fuckvit
+
 super + n
 	xcolor -s
 
@@ -18,7 +21,8 @@ super + c
 
 # Web Browser
 super + v
-	open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
+	vivaldi-stable --profile-directory="Default"
+	#open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
 	# open-or-switch-to brave-browser brave 
 
 # File Browser
