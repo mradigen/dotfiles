@@ -12,7 +12,6 @@ ansible-core
 arandr
 arduino-ide
 asar
-audacity
 base
 base-devel
 bat
@@ -25,7 +24,6 @@ bspwm
 btop
 chaotic-keyring
 chaotic-mirrorlist
-cmake
 cmus
 dhcpcd
 dirbuster-wordlists
@@ -111,7 +109,6 @@ obs-studio
 obsidian
 oh-my-zsh-git
 oh-my-zsh-plugin-autosuggestions
-ollama-cuda
 openal
 openbsd-netcat
 openssh
@@ -119,6 +116,7 @@ openvpn
 otf-jost
 pacman-contrib
 pam_usb
+perl-image-exiftool
 picom-ftlabs-git
 pidswallow
 pipes.sh
@@ -150,6 +148,8 @@ sudo
 sxhkd
 sxiv
 syncthing
+tailscale
+telegram-desktop
 themix-theme-oomox-git
 tigervnc
 tk
@@ -171,7 +171,6 @@ vulkan-radeon
 wget
 wine
 wireplumber
-wireshark-qt
 xcalib
 xclip
 xcolor
