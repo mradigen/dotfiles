@@ -22,6 +22,7 @@ bluez-utils
 bottles
 bspwm
 btop
+burpsuite
 chaotic-keyring
 chaotic-mirrorlist
 cmus
@@ -140,6 +141,7 @@ sxiv
 syncthing
 tailscale
 telegram-desktop
+tesseract-data-eng
 themix-theme-oomox-git
 tigervnc
 tk
