@@ -171,6 +171,9 @@ XF86Audio{Play,Pause,Prev,Next}
 Print
 	shot
 
+shift + Print
+	ocr
+
 super + Escape
 	dunstctl history-pop
 
