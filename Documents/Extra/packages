@@ -16,6 +16,7 @@ base
 base-devel
 bat
 betterdiscordctl-git
+binwalk
 bluez
 bluez-hid2hci
 bluez-utils
