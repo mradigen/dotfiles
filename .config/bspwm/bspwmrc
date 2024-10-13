@@ -26,18 +26,9 @@ kdeconnectd &
 
 ## Polybar ##
 pbstart
-
 [[ $POLYBAR_BAR = "top" ]] &&  hideIt.sh --name '^polybar-top_eDP' --hover -d top -p 1 --wait &
-# $(
-# 	pbstart & sleep 2
-# 	bspc config top_padding 0
-# 	# hideIt.sh --name '^polybar-top_eDP' --region 0x0+1920+10 -d top -p 0
-# 	hideIt.sh --name '^polybar-top_eDP' --hover -d top -p 1
-# ) &
-##
 
 ###---Touchpad---###
-# libinput-gestures-setup restart &
 touchegg &
 
 ##--Terminal Swallowing--##
@@ -49,19 +40,16 @@ pgrep -fl 'pidswallow -V -gl' || pidswallow -V -gl & # Terminal swallowing
 ###---Discord RPC---###
 LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
 
-###---Fix Audio---###
-#amixer -D hw:1 sset Master 50% -q &
-
 ###---BSPWM---###
-current_layout=`cat ~/.screenlayout/current`
-if [[ current_layout  == 'dual' || current_layout == 'single_secondary' ]]; then
-	# Second monitor
-	bspc monitor HDMI-A-0 -d 1 2 3 4 5 # Second display
-	bspc monitor eDP -d 6
-else
-	# Display
-	bspc monitor primary -d 1 2 3 4 5
-fi
+# current_layout=`cat ~/.screenlayout/current`
+# if [[ current_layout  == 'dual' || current_layout == 'single_secondary' ]]; then
+# 	# Second monitor
+# 	bspc monitor HDMI-A-0 -d 1 2 3 4 5 # Second display
+# 	bspc monitor eDP -d 6
+# else
+# 	# Display
+bspc monitor primary -d 1 2 3 4 5
+# # fi
 
 bspc config border_width 1
 bspc config window_gap 10
@@ -76,7 +64,12 @@ bspc config gapless_monocle false
 #bspc config removal_adjustment true
 
 bspc config focus_follows_pointer true
+bspc config pointer_follows_monitor true
 bspc config ignore_ewmh_focus on
+bspc config swallow_first_click false
+# bspc config remove_disabled_monitors true
+# bspc config remove_unplugged_monitors true
+# bspc config merge_overlapping_monitors true
 
 . "${HOME}/.cache/wal/colors.sh"
 
