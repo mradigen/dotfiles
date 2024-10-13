@@ -28,6 +28,7 @@ super + v
 # File Browser
 super + x
 	alacritty --title=Ranger -e ranger ~/.config
+	# alacritty --title=Yazi -e yazi ~/.config
 	# open-or-switch-to ranger alacritty --title=Ranger -e ranger ~/.config
 
 # Music Player
@@ -124,7 +125,7 @@ super + {h,j,k,l}
 	bspc node -f {west,south,north,east}
 	
 # Move focused window in chain mode (or use Super + Left Click Drag instead)
-super + shift + s : {a,s,w,d}
+super + shift + s : {h,j,k,l}
 	bspc node -s {west,south,north,east}
 
 # Resize focused window in chain mode (or use Super + Right Click Drag instead)
