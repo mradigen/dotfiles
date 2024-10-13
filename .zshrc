@@ -146,6 +146,18 @@ ex() {
   fi
 }
 
+### yazi ###
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+
+
 displayprompt() {
 	echo "\033[7;34m ~ \033[0;34m\ue0b0 \033[0m${1}"	
 }
@@ -191,6 +203,4 @@ alias cd="z"
 displayprompt todo; todo
 
 # Starting commands
-regularupdate 43200
-alias lfm='/home/adigen/Testing/LiteFM/build/litefm'
-alias lfm='/home/adigen/Testing/LiteFM/build/litefm'
+# regularupdate 43200

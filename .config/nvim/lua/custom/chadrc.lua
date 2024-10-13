@@ -1,5 +1,5 @@
 -- I prefer having all the config in one file
--- But NvChad
+-- But NvChad :(
 
 ----------
 -- Vars --
@@ -12,51 +12,55 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = false
 -- Fucking neovim overriding shit in unimaginable ways
 if vim.bo.filetype == "python" then
-    vim.opt.expandtab = true
+	vim.opt.expandtab = true
 elseif vim.bo.filetype == "yaml" then
 	-- vim.opt.tabstop = 2
 	-- vim.opt.shiftwidth = 2
 	-- vim.opt.softtabstop = 2
-    vim.opt.expandtab = true
+	vim.opt.expandtab = true
 end
 
 -- Auto-reload file
 vim.opt.autoread = true
-vim.cmd[[
+vim.cmd [[
 au CursorHold * checktime
 ]]
 
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = function(data)
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+	callback = function(data)
+		---------------
+		-- alacritty --
+		---------------
+		os.execute('alacritty msg config window.padding.x=0 window.padding.y=0')
 
-	---------------
-	-- alacritty --
-	---------------
-	-- os.execute('alacritty msg config window.padding.x=0 window.padding.y=0')
+		-----------------
+		-- directories --
+		-----------------
+		-- Auto open nvim-tree if nvim launched with a directory
+		-- buffer is a directory
+		-- local directory = vim.fn.isdirectory(data.file) == 1
+		--
+		-- if not directory then
+		-- 	return
+		-- end
+		--
+		-- -- change to the directory
+		-- vim.cmd.cd(data.file)
 
-	-----------------
-	-- directories --
-	-----------------
-	-- Auto open nvim-tree if nvim launched with a directory
-	-- buffer is a directory
-	local directory = vim.fn.isdirectory(data.file) == 1
-
-	if not directory then
-		return
+		-- open the tree
+		require("nvim-tree.api").tree.open()
+		vim.api.nvim_command("wincmd p")
 	end
+})
 
-	-- change to the directory
-	vim.cmd.cd(data.file)
-
-	-- open the tree
-	require("nvim-tree.api").tree.open()
-end })
-
--- vim.api.nvim_create_autocmd({ "VimLeavePre" }, { callback = function()
--- 	---------------
--- 	-- alacritty --
--- 	---------------
--- 	os.execute('alacritty msg config -r')
--- end })
+vim.api.nvim_create_autocmd({ "VimLeavePre" }, {
+	callback = function()
+		---------------
+		-- alacritty --
+		---------------
+		os.execute('alacritty msg config -r')
+	end
+})
 
 ------------
 -- NvChad --
@@ -84,7 +88,7 @@ M.mappings = {
 		n = {
 			["<leader>w"] = { "<cmd> w <CR>", "Save file" },
 			["<leader>q"] = { "<cmd> q <CR>", "Quit" },
-			["<leader>wq"] = { "<cmd> wq <CR>", "Save file and quit" },
+			["<leader>wq"] = { "<cmd> wqa <CR>", "Save file and quit" },
 			["<C-left>"] = { "<cmd>vertical resize -2<cr>", "Decrease width" },
 			["<C-right>"] = { "<cmd>vertical resize +2<cr>", "Increase width" },
 			["<C-up>"] = { "<cmd>horizontal resize +2<cr>", "Increase height" },
@@ -142,9 +146,9 @@ M.mappings = {
 }
 
 for i = 1, 9, 1 do
-  vim.keymap.set("n", string.format("<A-%s>", i), function()
-    vim.api.nvim_set_current_buf(vim.t.bufs[i])
-  end)
+	vim.keymap.set("n", string.format("<A-%s>", i), function()
+		vim.api.nvim_set_current_buf(vim.t.bufs[i])
+	end)
 end
 
 vim.cmd [[
