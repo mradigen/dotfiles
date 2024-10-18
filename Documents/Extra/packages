@@ -1,4 +1,5 @@
 acpilight
+aircrack-ng
 alacritty
 alsa-plugins
 alsa-utils
@@ -34,6 +35,7 @@ docker
 docker-compose
 dunst
 electron28
+emby-server
 fbterm
 fbv
 feh
@@ -126,7 +128,6 @@ openssh
 openvpn
 otf-jost
 pacman-contrib
-pam_usb
 perl-image-exiftool
 picom-ftlabs-git
 pidswallow
