@@ -48,8 +48,8 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
 		-- vim.cmd.cd(data.file)
 
 		-- open the tree
-		require("nvim-tree.api").tree.open()
-		vim.api.nvim_command("wincmd p")
+		-- require("nvim-tree.api").tree.open()
+		-- vim.api.nvim_command("wincmd p")
 	end
 })
 
