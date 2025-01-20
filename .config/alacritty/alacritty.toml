@@ -1,4 +1,3 @@
-import = ["/home/adigen/.cache/wal/colors-alacritty.toml"]
 
 [cursor]
 thickness = 0.2
@@ -8,9 +7,10 @@ blinking = "On"
 shape = "Beam"
 
 [font]
-# size = 15.5
 size = 12.5
+# offset.x = -1
 # size = 9
+# size = 11
 
 [font.normal]
 # family = "Dank Mono"
@@ -23,3 +23,6 @@ opacity = 0.6
 [window.padding]
 x = 10
 y = 10
+
+[general]
+import = ["/home/adigen/.cache/wal/colors-alacritty.toml"]
