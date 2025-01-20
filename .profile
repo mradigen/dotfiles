@@ -1,6 +1,7 @@
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR=nvim
 # export EDITOR=edit
+export BROWSER=zen-browser
 export VISUAL=$EDITOR
 export TERMINAL=alacritty
 export POLYBAR_BAR=float

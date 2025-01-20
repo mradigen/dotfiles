@@ -1,0 +1,81 @@
+#! /bin/bash
+
+_usage() {
+	cat <<EOF
+NAME
+	installDebian - Install debian without a live USB.
+
+USAGE
+	installDebian
+
+DESCRIPTION
+	Script to install Debian Stable with a few utilities without needing a live USB.
+
+DEPENDENCIES
+	- debootstrap
+
+AUTHOR
+	ADIGEN (https://aadivishnu.com)
+EOF
+}
+
+#################
+## Environment ##
+#################
+set -e
+alias echo="echo -e"
+# Confirmation prompt
+read -s -n 1 -p 'Are you sure that you have gone through the variables before running? (y/n): ' ans
+[[ $ans = 'y' ]] || exit 1
+
+_HOSTNAME="Skyla"
+_USERNAME="adigen"
+MOUNTED_DIR="/mnt"
+
+
+################################
+## Disk setup and debootstrap ##
+################################
+# losetup -fP server.img
+# cfdisk /dev/loop0 # use dos and make a linux filesystem bootable
+# mkfs.ext4 /dev/loop0p1
+# mount /dev/loop0p1 /mnt
+# debootstrap stable /mnt
+
+# Allows installing kernel
+mount --make-rslave --rbind /proc ${MOUNTED_DIR}/proc
+mount --make-rslave --rbind /sys ${MOUNTED_DIR}/sys
+mount --make-rslave --rbind /dev ${MOUNTED_DIR}/dev
+mount --make-rslave --rbind /run ${MOUNTED_DIR}/run
+
+# Manually create fstab
+read -s -n 1 -p 'Create the /etc/fstab file from host and press (y): ' ans
+[[ $ans = 'y' ]] || exit 1
+
+#############
+## Install ##
+#############
+cat << EOF | chroot ${MOUNTED_DIR}
+apt install neovim locales sudo
+do fstab stuff
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+sudo locale-gen
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+apt install linux-image-amd64
+echo ${_HOSTNAME} > /etc/hostname
+apt install iwd
+passwd
+sudo useradd -m ${_USERNAME}
+sudo usermod -aG sudo ${_USERNAME}
+passwd ${_USERNAME}
+apt install grub2
+sudo update-grub
+sudo grub-install --root-directory / /dev/loop0
+exit # exit chroot
+EOF
+
+##################
+## Disk unsetup ##
+##################
+umount -R ${MOUNTED_DIR}
+losetup -D
