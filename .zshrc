@@ -8,6 +8,8 @@ ZSH_THEME="agnoster"
 ZDOTDIR="$HOME/.cache/zsh"
 HISTFILE="$HOME/.cache/zsh/zsh_history"
 COMPLETION_WAITING_DOTS="true" # Display red dots whilst waiting for completion.
+
+# export ENABLE_CORRECTION="true"
 plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
@@ -75,6 +77,7 @@ alias connect="iwctl station wlan0 connect"
 alias wi="iwctl station wlan0"
 alias b="bluetoothctl connect"
 alias connectb="bluetoothctl connect"
+alias ts="sudo tailscale"
 
 # Ricing
 alias zshconf="${EDITOR} ~/.zshrc"
@@ -93,18 +96,25 @@ alias tt="tt -notheme -t 10"
 ## Development ##
 #################
 #alias nvim="neovide --no-vsync --no-fork"
+
+## Node
 # alias npm="pnpm"
 alias npx="pnpx"
 # pnpm
-export PNPM_HOME="/home/adigen/.local/share/pnpm"
+export PNPM_HOME="/home/${USER}/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-#
+
+## Python
 alias venv="python -m venv .venv && source .venv/bin/activate"
 alias activate="source .venv/bin/activate"
+
+## Go
+export GOPATH="$HOME/.cache/go"
+
 
 ###############
 ## Functions ##
@@ -155,8 +165,6 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-
-
 
 displayprompt() {
 	echo "\033[7;34m ~ \033[0;34m\ue0b0 \033[0m${1}"	

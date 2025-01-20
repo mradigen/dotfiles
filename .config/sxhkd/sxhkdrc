@@ -21,19 +21,20 @@ super + c
 
 # Web Browser
 super + v
-	vivaldi-stable --profile-directory="Default"
+	zen-browser
+	# vivaldi-stable --profile-directory="Default"
 	#open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
 	# open-or-switch-to brave-browser brave 
 
 # File Browser
 super + x
-	alacritty --title=Ranger -e ranger ~/.config
+	alacritty --title=Ranger -e ranger
 	# alacritty --title=Yazi -e yazi ~/.config
 	# open-or-switch-to ranger alacritty --title=Ranger -e ranger ~/.config
 
 # Music Player
 super + z
-	scratchpad-old "youtube music" youtube-music
+	scratchpad-old "com.github.th_ch.youtube_music" youtube-music
 	# youtube-music
 	#alacritty --class=Floating -e 'mocp'
 
@@ -57,6 +58,10 @@ super + m
 super + r
 	scratchpad-global-toggle
 	# scratchpad-tiles toggle ~/.config/scratchpad/mainrc
+
+# Scratchpad Phone
+super + a
+	scratchpad-old scrcpy "scrcpy --video-codec=h265 --max-size=1920 --no-audio --keyboard=uhid"
 
 # Scratchpad Discord
 super + d
@@ -163,7 +168,7 @@ XF86Audio{Play,Pause,Prev,Next}
 	sound mic
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
-	xbacklight -{inc,dec} 5 && dunstify -t 500 -u low -r "92813" "Brightness: `xbacklight -get`"
+	xbacklight -{inc,dec} 5 && dunstify -t 500 -u low -r "92813" -h int:value:`xbacklight -get` "Brightness"
 
 {super + p, XF86Display}
 	echo "Dual\nSingle Main\nSingle Secondary\nMirror" | rofi -dmenu -theme ~/.config/rofi/launcher.rasi | tr '[:upper:]' '[:lower:]' | sed 's/ /_/g' > ~/.screenlayout/current && bspc wm -r
@@ -189,3 +194,6 @@ super + Escape
 # ~alt + d
 # 	curl "http://localhost:5000/seed" -d seed=rsg
 # 	#curl "http://localhost:5000/fsg"
+
+ctrl + shift + 2
+	sleep 1; xdotool type --delay 10 "$(xclip -o -selection clipboard | sed 's/^[ \t]*//')"

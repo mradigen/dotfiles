@@ -88,15 +88,23 @@ local plugins = {
 				"lua-language-server",
 				"bash-language-server",
 
-				-- web dev stuff
-				-- "deno",
+				-- Web
 				"prettier",
 				"html-lsp",
 				"css-lsp",
 				"typescript-language-server",
 				"tailwindcss-language-server",
 				"svelte-language-server",
-				"astro-language-server"
+				"astro-language-server",
+
+				-- General
+				"bash-language-server",
+
+				-- DevOps
+				"gopls",
+				"ansible-language-server",
+				"dockerfile-language-server",
+				"docker-compose-language-service"
 			}
 		}
 	},
@@ -104,28 +112,34 @@ local plugins = {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			local lspconfig = require("lspconfig")
-			-- local on_attach = require("plugins.configs.lspconfig").on_attach
+			local on_attach = require("plugins.configs.lspconfig").on_attach
 			-- local capabilities = require("plugins.configs.lspconfig").capabilities
 
 			local servers = {
+				-- Web
 				"html",
 				"cssls",
-				"tsserver",
-				"bashls",
+				"ts_ls",
 				"tailwindcss",
 				"svelte",
 				"astro",
-				"pylsp",
 
+				-- General
+				"bashls",
+				"pylsp",
+				"clangd",
+
+				-- DevOps
 				"ansiblels",
 				"dockerls",
-				"docker_compose_language_service"
+				"docker_compose_language_service",
+				"gopls"
 			}
 
 			for _, lsp in ipairs(servers) do
 				lspconfig[lsp].setup {
 					-- This NvChad thing fucks shit up
-					-- on_attach = on_attach, -- This adds LSP code actions
+					on_attach = on_attach, -- This adds LSP code actions
 					-- capabilities = capabilities,
 				}
 			end
@@ -196,11 +210,11 @@ local plugins = {
 		event = "InsertEnter",
 		opts = {
 			mapping = {
-				["<CR>"] = require("cmp").config.disable,
-				["<C-CR>"] = require("cmp").mapping.confirm {
-					behavior = require("cmp").ConfirmBehavior.Insert,
-					select = true,
-				},
+				-- ["<CR>"] = require("cmp").config.disable,
+				-- ["<C-CR>"] = require("cmp").mapping.confirm {
+				-- 	behavior = require("cmp").ConfirmBehavior.Insert,
+				-- 	select = true,
+				-- },
 			},
 			completion = {
 				completeopt = "menu,menuone,noselect",

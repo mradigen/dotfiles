@@ -106,7 +106,8 @@ bspc rule -a xkcd state=floating
 # Scratchpad windows
 bspc rule -a vesktop state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
 bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-bspc rule -a YouTube\ Music:\* state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+bspc rule -a com.github.th_ch.youtube_music state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+bspc rule -a scrcpy rectangle=456x986+1453+82 state=floating sticky=on layer=above
 # bspc rule -a blur state=floating rectangle=${X}x${Y}+0+0 layer=normal
 
 ###--Programs---###
