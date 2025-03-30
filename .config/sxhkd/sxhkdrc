@@ -21,7 +21,7 @@ super + c
 
 # Web Browser
 super + v
-	zen-browser
+	zen-browser -P "Default (alpha)"
 	# vivaldi-stable --profile-directory="Default"
 	#open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
 	# open-or-switch-to brave-browser brave 
@@ -69,7 +69,7 @@ super + d
 
 # Scratchpad WhatsApp
 super + w
-	scratchpad-old whatsapp "vivaldi-stable --app="https://web.whatsapp.com""
+	scratchpad-old whatsapp 'vivaldi-stable --app=https://web.whatsapp.com --profile-directory="Profile 1"'
 
 # Scratchpad WhatsApp
 super + s
@@ -182,6 +182,9 @@ shift + Print
 
 super + Escape
 	dunstctl history-pop
+
+super + shift + a
+	dunstify -r 48920 "Connecting to ADIGEN"; (iwctl station wlan0 scan on && iwctl station wlan0 connect ADIGEN) && msg="Connected to ADIGEN" || msg="Failed to connect to ADIGEN"; dunstify -r 48920 ${msg}
 
 # ~ctrl + Page_Down
 # 	mc-rsg-sw
