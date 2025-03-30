@@ -212,3 +212,4 @@ displayprompt todo; todo
 
 # Starting commands
 # regularupdate 43200
+#source /home/adigen/Testing/inLimbo/assets/completions/inLimbo-completions.zsh
