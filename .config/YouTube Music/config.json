@@ -1,9 +1,9 @@
 {
 	"window-size": {
-		"width": 960,
-		"height": 540
+		"width": 937,
+		"height": 1049
 	},
-	"url": "https://music.youtube.com/watch?v=dUVY1ijQPBc&list=PLt_-XlQln5ZdQpVlMjC8i44-6WjVFr9n7&index=0",
+	"url": "https://music.youtube.com/watch?v=BddCuRYJTsU&list=RDAMPLPLt_-XlQln5ZdQpVlMjC8i44-6WjVFr9n7&index=0",
 	"options": {
 		"tray": false,
 		"appVisible": true,
@@ -212,16 +212,19 @@
 		},
 		"lumiastream": {
 			"enabled": false
+		},
+		"amuse": {
+			"enabled": true
 		}
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "3.7.2"
+			"version": "3.8.0"
 		}
 	},
 	"window-maximized": false,
 	"window-position": {
-		"x": 981,
-		"y": 22
+		"x": 970,
+		"y": 18
 	}
 }

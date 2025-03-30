@@ -13,10 +13,10 @@ vim.opt.expandtab = false
 -- Fucking neovim overriding shit in unimaginable ways
 if vim.bo.filetype == "python" then
 	vim.opt.expandtab = true
-elseif vim.bo.filetype == "yaml" then
-	-- vim.opt.tabstop = 2
-	-- vim.opt.shiftwidth = 2
-	-- vim.opt.softtabstop = 2
+elseif vim.bo.filetype == "yaml.docker-compose" or vim.bo.filetype == "yaml" then
+	vim.opt.tabstop = 2
+	vim.opt.shiftwidth = 2
+	vim.opt.softtabstop = 2
 	vim.opt.expandtab = true
 end
 
@@ -159,5 +159,17 @@ let g:VM_maps["Select Cursor Down"] = '<M-C-Down>'      " start selecting down
 let g:VM_maps["Select Cursor Up"]   = '<M-C-Up>'        " start selecting up
 ]]
 --------------
+
+--- Docker LSP fix:
+function Docker_fix()
+	local filename = vim.fn.expand("%:t")
+
+	if filename == "docker-compose.yml" then
+		vim.bo.filetype = "yaml.docker-compose"
+	end
+end
+
+vim.cmd [[au BufRead * lua Docker_fix()]]
+
 
 return M

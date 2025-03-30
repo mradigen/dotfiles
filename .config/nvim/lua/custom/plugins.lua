@@ -151,13 +151,14 @@ local plugins = {
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			formatters_by_ft = {
+				["yaml"] = { "" },
 				["*"] = { "prettier" },
 			},
 			format_after_save = {
 				lsp_fallback = true,
 				async = true,
 				timeout_ms = 1000,
-			},
+			}
 		},
 	},
 	{
