@@ -180,6 +180,10 @@ local plugins = {
 				"html",
 				"css",
 				"typescript",
+				"javascript",
+				"go",
+				"dockerfile",
+				"yaml",
 				"bash",
 				"astro",
 				"svelte",
@@ -211,11 +215,11 @@ local plugins = {
 		event = "InsertEnter",
 		opts = {
 			mapping = {
-				-- ["<CR>"] = require("cmp").config.disable,
-				-- ["<C-CR>"] = require("cmp").mapping.confirm {
-				-- 	behavior = require("cmp").ConfirmBehavior.Insert,
-				-- 	select = true,
-				-- },
+				["<CR>"] = require("cmp").config.disable,
+				["<C-CR>"] = require("cmp").mapping.confirm {
+					behavior = require("cmp").ConfirmBehavior.Insert,
+					select = true,
+				},
 			},
 			completion = {
 				completeopt = "menu,menuone,noselect",
