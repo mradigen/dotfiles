@@ -92,6 +92,9 @@ alias dots="dotfiles"
 alias tt="tt -notheme -t 10"
 # Shifted updots to a dedicated script
 
+# Cybersec
+alias nmap="nmap --min-rate=5000"
+
 #################
 ## Development ##
 #################
@@ -192,6 +195,14 @@ bindkey '^L' forward-char
 bindkey '^K' up-line-or-beginning-search
 bindkey '^J' down-line-or-beginning-search
 
+##########
+## CTFS ##
+##########
+
+function vol2() {
+	docker run --rm --user=$(id -u):$(id -g) -v "$(pwd)":/dumps:ro,Z -ti phocean/volatility $@
+}
+
 #############
 ## Startup ##
 #############
@@ -201,14 +212,14 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 
 # Don't output fet and todo if launching shell from ranger
-[ $RANGER_LEVEL ] && return
+[ $RANGER_LEVEL ] && return || true
 
 # Starting display
 #displayprompt fet; echo; fet # Custom fetch
 # displayprompt lugfetch; lugfetch # Custom fetch
 # displayprompt ~/LUG/lugfetch/lugfetch; ~/LUG/lugfetch/lugfetch # Custom fetch
 #tput bold; echo; emos
-displayprompt todo; todo
+# displayprompt todo; todo
 
 # Starting commands
 # regularupdate 43200

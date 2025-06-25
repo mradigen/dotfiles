@@ -1,0 +1,51 @@
+{
+  "npm.packageManager": "pnpm",
+  "svelte.enable-ts-plugin": true,
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "redhat.telemetry.enabled": false,
+  "ansible.validation.lint.path": "",
+  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.activityBar.location": "top",
+  "workbench.statusBar.visible": false,
+  // "workbench.editor.showTabs": "single",
+
+  "workbench.colorCustomizations": {
+    "editorCursor.background": "#000000",
+    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
+    "editorOverviewRuler.selectionHighlightForeground": "#0000",
+    "editorOverviewRuler.rangeHighlightForeground": "#0000",
+    "editorOverviewRuler.wordHighlightForeground": "#0000",
+    "editorOverviewRuler.bracketMatchForeground": "#0000",
+    "editorOverviewRuler.findMatchForeground": "#0000",
+    "editorOverviewRuler.modifiedForeground": "#0000",
+    "editorOverviewRuler.deletedForeground": "#0000",
+    "editorOverviewRuler.warningForeground": "#0000",
+    "editorOverviewRuler.addedForeground": "#0000",
+    "editorOverviewRuler.errorForeground": "#0000",
+    "editorOverviewRuler.infoForeground": "#0000",
+    "editorOverviewRuler.border": "#0000",
+  },
+
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "Dank Mono",
+  // "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.5,
+  "editor.cursorSmoothCaretAnimation": "on",
+ 
+  "breadcrumbs.enabled": false,
+  "breadcrumbs.filePath": "last",
+
+  "window.zoomLevel": 2,
+  "window.titleBarStyle": "native",
+  "window.menuBarVisibility": "toggle",
+  "window.customTitleBarVisibility": "never",
+
+  "git.autofetch": true,
+}

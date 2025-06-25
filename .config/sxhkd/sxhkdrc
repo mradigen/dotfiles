@@ -65,7 +65,8 @@ super + a
 
 # Scratchpad Discord
 super + d
-	scratchpad-old vesktop vesktop
+	scratchpad-old discord discord
+	# scratchpad-old vesktop vesktop
 
 # Scratchpad WhatsApp
 super + w
