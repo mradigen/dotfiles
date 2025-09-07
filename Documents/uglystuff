@@ -15,4 +15,6 @@ lib32-libxcomposite lib32-alsa-lib lib32-ncurses lib32-libva lib32-gtk3 lib32-vu
 
 enabled virtqemud, virtstoraged
 
-installed qemu-system-x86, qmeu-img, virt-manager
+installed qemu-system-x86, qmeu-img, virt-manager, qemu-hw-usb-host (uninstalled)
+
+For Samsung Prism: visqol, miniconda3 (uninstalled)
