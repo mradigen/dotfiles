@@ -12,7 +12,6 @@
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.activityBar.location": "top",
-  "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "single",
 
   "workbench.colorCustomizations": {
@@ -48,4 +47,16 @@
   "window.customTitleBarVisibility": "never",
 
   "git.autofetch": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "git.confirmSync": false,
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false
+  },
 }

@@ -3,7 +3,7 @@
 		"width": 960,
 		"height": 540
 	},
-	"url": "https://music.youtube.com/watch?v=H2YfBAVbrsY&list=OLAK5uy_kLPHK1RM9r_ntCgAdCJzLp4-WJ7_moVJo&index=0",
+	"url": "https://music.youtube.com/watch?v=4Y9Ch1PAbCg&list=RDAMPLPLt_-XlQln5ZebLDY-73jt1w_C2cFpkVwO&index=0",
 	"options": {
 		"tray": false,
 		"appVisible": true,
@@ -219,12 +219,12 @@
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "3.9.0"
+			"version": "3.10.0"
 		}
 	},
 	"window-maximized": false,
 	"window-position": {
-		"x": 481,
-		"y": 271
+		"x": 480,
+		"y": 270
 	}
 }
