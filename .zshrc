@@ -114,6 +114,8 @@ esac
 ## Python
 alias venv="python -m venv .venv && source .venv/bin/activate"
 alias activate="source .venv/bin/activate"
+# Conda
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 ## Go
 export GOPATH="$HOME/.cache/go"

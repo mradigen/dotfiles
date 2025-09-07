@@ -62,6 +62,7 @@ sudo mv /etc/pacman.conf /etc/pacman.conf.old
 sudo cp Documents/Extra/ROOT_DIR/etc/pacman.conf /etc/pacman.conf
 
 # Install EVERYTHING
+# Install oh-my-zsh-plugin-autosuggestions manually to /usr/share/oh-my-zsh after installed the oh-my-zsh-git package
 yay -S --needed --noconfirm - <~/Documents/Extra/packages.portable
 
 # LightDM (need to add commands to configure lightdm to change the profile picture)
