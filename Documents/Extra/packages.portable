@@ -32,6 +32,7 @@ cracklib
 crunch
 debootstrap
 dhcpcd
+dirbuster-wordlists
 discord
 docker-compose
 dunst
@@ -52,14 +53,13 @@ hideit.sh-git
 httptoolkit-bin
 i3lock-color-git
 imagemagick
-inter-font
+iperf3
 iwd
 iwgtk
 jq
 jre11-openjdk
 k9s
 kdeconnect
-kdenlive
 kubectl
 lazydocker
 lazygit
@@ -94,7 +94,7 @@ linux-firmware
 lsof
 lugfetch
 lvm2
-lxappearance-gtk3
+lxappearance
 maim
 man-db
 mangohud
@@ -126,7 +126,7 @@ otf-jost
 packer
 pacman-contrib
 perl-image-exiftool
-picom-ftlabs-git
+picom-pijulius-next-git
 pipes.sh
 pipewire-alsa
 pipewire-jack
@@ -134,6 +134,7 @@ pipewire-pulse
 playerctl
 pnpm
 polybar
+poppler
 powertop
 psiphon-console-client
 python-dnspython
@@ -145,9 +146,11 @@ python-pyserial
 python-pywal
 python-standard-cgi
 python-xlib
+qemu-img
 qt5-svg
 radeontop
 ranger
+rclone
 reflector
 ripgrep
 rofi
@@ -159,6 +162,9 @@ seclists
 slop
 socat
 sox
+spotify
+sqlitebrowser
+sqlmap
 sshfs
 sudo
 sxhkd
@@ -166,10 +172,12 @@ sxiv
 syncthing
 sysbench
 sysdig
+tabula
 tailscale
 terraform
 tesseract-data-eng
 themix-theme-oomox-git
+thunderbird
 tigervnc
 tk
 tlpui
@@ -195,6 +203,7 @@ wget
 wireplumber
 wireshark-qt
 woff2-font-awesome
+wpscan
 xcalib
 xclip
 xcolor
@@ -208,6 +217,7 @@ xorg-xinput
 xorg-xkill
 xorg-xprop
 xorg-xrandr
+xorg-xset
 xorg-xsetroot
 yay-bin
 youtube-music-bin
