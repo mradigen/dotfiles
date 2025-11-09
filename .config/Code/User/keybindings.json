@@ -72,5 +72,20 @@
         "key": "ctrl+alt+a",
         "command": "github.copilot.completions.toggle",
         "when": "github.copilot.activated"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "-workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
     }
 ]

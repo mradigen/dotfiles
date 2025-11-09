@@ -34,21 +34,21 @@ super + x
 
 # Music Player
 super + z
-	scratchpad-old "com.github.th_ch.youtube_music" youtube-music
-	# youtube-music
+	scratchpad-old "spotify" spotify
+	#scratchpad-old "com.github.th_ch.youtube_music" youtube-music
 	#alacritty --class=Floating -e 'mocp'
 
-# Dmenu {Applications, Themes, Clipboard}
-#super + {f, t, h}
-#	run_dmenu -{ ,t,c}
-
 # Rofi {Applications, Themes, Clipboard}
-super + {f, t, g}
-	~/.config/rofi/launcher.sh {'',theme,clipboard}
+# super + {f, t, g}
+# 	~/.config/rofi/launcher.sh {'',theme,clipboard}
+super + Tab
+	rofi -show combi -modes combi -combi-modes "window,drun"
 
-# Dmenu File manager
-#super + shift + d
-#	FM_OPENER=rifle dmenufm -m 'run_dmenu -d'
+super + {t, g}
+	~/.config/rofi/launcher.sh {theme,clipboard}
+
+super + shift + w
+	rofi -show window
 
 # Alsamixer
 super + m
@@ -56,25 +56,34 @@ super + m
 
 # Scratchpad
 super + r
-	scratchpad-global-toggle
+	scratchpad-workspace
+	# scratchpad-global-toggle
 	# scratchpad-tiles toggle ~/.config/scratchpad/mainrc
 
+# Floating terminal
+super + w
+	alacritty --class=FloatingSmall -e 'nvim'
+
+# Floating Ranger
+super + d
+	scratchpad-old FloatingSide "alacritty --class=FloatingSide"
+
 # Scratchpad Phone
-super + a
-	scratchpad-old scrcpy "scrcpy --video-codec=h265 --max-size=1920 --no-audio --keyboard=uhid"
+# super + a
+# 	scratchpad-old scrcpy "scrcpy --video-codec=h265 --max-size=1920 --no-audio --keyboard=uhid"
 
 # Scratchpad Discord
-super + d
-	scratchpad-old vesktop vesktop
+# super + d
+# 	scratchpad-old vesktop vesktop
 	# scratchpad-old discord discord
 
 # Scratchpad WhatsApp
-super + w
-	scratchpad-old whatsapp 'vivaldi-stable --app=https://web.whatsapp.com --profile-directory="Profile 1"'
+# super + w
+# 	scratchpad-old whatsapp 'vivaldi-stable --app=https://web.whatsapp.com --profile-directory="Profile 1"'
 
 # Scratchpad WhatsApp
-super + s
-	scratchpad-old obsidian "obsidian"
+# super + s
+# 	scratchpad-old obsidian "obsidian"
 
 ##############
 ## Keybinds ##
@@ -117,9 +126,9 @@ super + g
     fi
 
 # Switch between recently focused windows
-super + Tab
-	bspc node last --focus
-	# ~/.config/rofi/alttab.sh
+# super + Tab
+# 	bspc node last --focus
+# 	# ~/.config/rofi/alttab.sh
 
 # Focus on window in selected direction
 # Shifted to scratchpad applications instead

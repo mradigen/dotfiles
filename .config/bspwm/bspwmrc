@@ -48,7 +48,7 @@ LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-r
 # 	bspc monitor eDP -d 6
 # else
 # 	# Display
-bspc monitor primary -d 1 2 3 4 5
+bspc monitor primary -d 1 2 3 4 5 6
 # # fi
 
 bspc config border_width 1
@@ -66,6 +66,7 @@ bspc config gapless_monocle false
 bspc config focus_follows_pointer true
 bspc config pointer_follows_monitor true
 bspc config ignore_ewmh_focus on
+# bspc config ignore_ewmh_struts false
 bspc config swallow_first_click false
 # bspc config remove_disabled_monitors true
 # bspc config remove_unplugged_monitors true
@@ -93,25 +94,30 @@ Y3=$[Y/3]
 X4=$[X/4]
 Y4=$[Y/4]
 
-# Oneshots, only apply to the first window
-bspc rule -a Vivaldi-stable -o desktop=1
-bspc rule -a Alacritty -o desktop=2
-
-#bspc rule -a Youtube\ Music state=floating rectangle=${X2}x${Y2}+${X4}+${Y4}
-bspc rule -a Floating state=floating rectangle=${X3}x${Y3}+${X3}+${Y3}
+bspc rule -a FloatingSmall state=floating rectangle=${X3}x${Y3}+${X3}+0
+bspc rule -a FloatingMedium state=floating rectangle=${X2}x${Y2}+${X4}+${Y4}
+bspc rule -a FloatingSide state=floating rectangle=${X3}x${Y}+$[X-X3]+0
 bspc rule -a Connman-gtk state=floating
 bspc rule -a iwgtk state=floating
 bspc rule -a xkcd state=floating
 
-# Scratchpad windows
-bspc rule -a vesktop state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-bspc rule -a com.github.th_ch.youtube_music state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-bspc rule -a scrcpy rectangle=456x986+1453+82 state=floating sticky=on layer=above
-# bspc rule -a blur state=floating rectangle=${X}x${Y}+0+0 layer=normal
+# # Scratchpad windows (old, when using scratchpad-global-toggle)
+# bspc rule -a vesktop state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+# bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+# bspc rule -a com.github.th_ch.youtube_music state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
+# bspc rule -a scrcpy rectangle=456x986+1453+82 state=floating sticky=on layer=above
+# # bspc rule -a blur state=floating rectangle=${X}x${Y}+0+0 layer=normal
 
-###--Programs---###
-#scratchpad discord
+bspc rule -a zen desktop=1
+bspc rule -a Code desktop=2
+bspc rule -a Vivaldi-stable desktop=3
+bspc rule -a obsidian desktop=4
+
+# NEW Scratchpad windows (scratchpad-workspace)
+bspc rule -a vesktop desktop=6 
+bspc rule -a Vivaldi-stable:web.whatsapp.com desktop=6
+bspc rule -a com.github.th_ch.youtube_music desktop=6
+bspc rule -a Spotify desktop=6
 
 ###---Fix keyboard--###
 xmodmap -e "keycode 112 = Home"
