@@ -1,4 +1,5 @@
 export PATH="$HOME/.local/bin:$PATH"
+export GOPATH="$HOME/.cache/go"
 export EDITOR=nvim
 # export EDITOR=edit
 export BROWSER=zen-browser

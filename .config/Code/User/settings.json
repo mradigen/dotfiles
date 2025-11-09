@@ -32,23 +32,24 @@
   },
 
   "editor.minimap.enabled": false,
-  "editor.fontFamily": "Dank Mono",
-  // "editor.fontSize": 14,
+  // "editor.fontFamily": "Dank Mono",
+  "editor.fontFamily": "Iosevka Nerd Font",
+  "editor.fontSize": 15,
   "editor.fontLigatures": true,
+  "editor.letterSpacing": 1.2,
   "editor.lineHeight": 1.5,
   "editor.cursorSmoothCaretAnimation": "on",
+
+  "terminal.integrated.fontFamily": "Iosevka",
  
   "breadcrumbs.enabled": false,
   "breadcrumbs.filePath": "last",
-
-  "window.zoomLevel": 2,
   "window.titleBarStyle": "native",
   "window.menuBarVisibility": "toggle",
-  "window.customTitleBarVisibility": "never",
 
   "git.autofetch": true,
-  "github.copilot.nextEditSuggestions.enabled": true,
   "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "inlineChat.lineNaturalLanguageHint": false,
   "github.copilot.enable": {
     "*": false,
     "plaintext": false,
@@ -59,4 +60,7 @@
   "[python]": {
     "diffEditor.ignoreTrimWhitespace": false
   },
+  "window.zoomLevel": 1,
+  "workbench.editor.empty.hint": "hidden",
+  "window.customTitleBarVisibility": "never",
 }

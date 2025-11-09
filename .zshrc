@@ -68,7 +68,7 @@ alias update="yay -Syu --removemake --noconfirm"
 alias dump="yay -S --removemake"
 alias yeet="yay -Rsn"
 alias search="yay -Ss"
-alias polish="sudo reflector --verbose --latest 10 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist"
+alias polish="sudo reflector --verbose --latest 10 --protocol http,https --country India --sort rate --save /etc/pacman.d/mirrorlist"
 alias clean="yay -Qqdtt | yay -Rsn - ; yay -Sc"
 alias query="yay -Si"
 
@@ -114,16 +114,16 @@ esac
 ## Python
 alias venv="python -m venv .venv && source .venv/bin/activate"
 alias activate="source .venv/bin/activate"
-# Conda
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
-
-## Go
-export GOPATH="$HOME/.cache/go"
-
 
 ###############
 ## Functions ##
 ###############
+
+c() {
+	z $1
+	code .
+	exit
+}
 
 ### Creates a box around text
 # usage: box <text> <border-char>
