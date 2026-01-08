@@ -7,17 +7,17 @@ blinking = "On"
 shape = "Beam"
 
 [font]
-# size = 9
-size = 11
-# size = 13
+size = 9
+# size = 11
+# offset = { x = 1, y = 1}
 
 [font.normal]
 # family = "Dank Mono"
 family = "Iosevka NF"
 
 [window]
-# opacity = 1
-opacity = 0.6
+opacity = 1
+# opacity = 0.6
 
 [window.padding]
 x = 10
@@ -25,3 +25,8 @@ y = 10
 
 [general]
 import = ["/home/adigen/.cache/wal/colors-alacritty.toml"]
+
+# [keyboard]
+# bindings = [
+# 	{ key = "D", mods = "Control|Shift", chars = "\\e[68;5u" }
+# ]

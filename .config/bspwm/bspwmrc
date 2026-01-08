@@ -38,7 +38,7 @@ export PIDSWALLOW_PREGLUE_HOOK='bspc query -N -n $pwid.floating >/dev/null && bs
 pgrep -fl 'pidswallow -V -gl' || pidswallow -V -gl & # Terminal swallowing
 
 ###---Discord RPC---###
-LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
+# LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
 
 ###---BSPWM---###
 # current_layout=`cat ~/.screenlayout/current`
@@ -49,6 +49,8 @@ LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-r
 # else
 # 	# Display
 bspc monitor primary -d 1 2 3 4 5 6
+# bspc monitor primary -d 6 5 4 3 2 1
+bspc monitor --swap eDP
 # # fi
 
 bspc config border_width 1
@@ -94,9 +96,10 @@ Y3=$[Y/3]
 X4=$[X/4]
 Y4=$[Y/4]
 
-bspc rule -a FloatingSmall state=floating rectangle=${X3}x${Y3}+${X3}+0
-bspc rule -a FloatingMedium state=floating rectangle=${X2}x${Y2}+${X4}+${Y4}
-bspc rule -a FloatingSide state=floating rectangle=${X3}x${Y}+$[X-X3]+0
+bspc rule -a FloatingSmall state=floating rectangle=${X3}x${Y3}+${X3}+0 sticky=on
+# bspc rule -a FloatingMedium state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on
+bspc rule -a FloatingMedium state=floating rectangle=$[X2+400]x$[Y2+200]+$[X4-200]+$[Y4-100] sticky=on
+bspc rule -a FloatingSide state=floating rectangle=${X2}x${Y2}+${X4}+${Y2} sticky=on
 bspc rule -a Connman-gtk state=floating
 bspc rule -a iwgtk state=floating
 bspc rule -a xkcd state=floating
@@ -118,6 +121,10 @@ bspc rule -a vesktop desktop=6
 bspc rule -a Vivaldi-stable:web.whatsapp.com desktop=6
 bspc rule -a com.github.th_ch.youtube_music desktop=6
 bspc rule -a Spotify desktop=6
+bspc rule -a discord desktop=6
+
+# Picture in Picture
+bspc rule -a zen:Toolkit:Picture-in-Picture sticky=on state=floating rectangle=212x119+0+961
 
 ###---Fix keyboard--###
 xmodmap -e "keycode 112 = Home"
@@ -125,3 +132,7 @@ xmodmap -e "keycode 110 = Prior"
 xmodmap -e "keycode 117 = End"
 xmodmap -e "keycode 115 = Next"
 
+# Open applications
+pgrep zen || $BROWSER &
+pgrep vivaldi || vivaldi-stable --app="https://web.whatsapp.com" &
+pgrep spotify || spotify &

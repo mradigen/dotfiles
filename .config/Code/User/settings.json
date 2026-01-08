@@ -63,4 +63,8 @@
   "window.zoomLevel": 1,
   "workbench.editor.empty.hint": "hidden",
   "window.customTitleBarVisibility": "never",
+  "vscode-pets.petSize": "medium",
+  "vscode-pets.throwBallWithMouse": true,
+  "terminal.integrated.suggest.enabled": false,
+  "workbench.statusBar.visible": false,
 }
