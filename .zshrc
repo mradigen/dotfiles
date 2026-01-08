@@ -61,7 +61,14 @@ alias vpn="sudo openvpn ~/Documents/VPN/cysis.ovpn & disown"
 alias zxc='sudo $(fc -ln -1)'
 alias restart="sudo systemctl restart"
 alias status="systemctl status"
+
+# Shorts
 alias r="[ $RANGER_LEVEL ] && exit || ranger"
+alias q="qalc"
+alias d="docker"
+alias dc="docker compose"
+alias cd="z"
+alias zj="zellij"
 
 # Pacman
 alias update="yay -Syu --removemake --noconfirm"
@@ -211,7 +218,6 @@ function vol2() {
 
 # Zoxide
 eval "$(zoxide init zsh)"
-alias cd="z"
 
 # Don't output fet and todo if launching shell from ranger
 [ $RANGER_LEVEL ] && return || true
