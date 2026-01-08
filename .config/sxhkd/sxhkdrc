@@ -19,28 +19,30 @@ super + question
 super + c
 	alacritty
 
+
 # Web Browser
-super + v
-	zen-browser -P "Default (alpha)"
+super + a
+	open-or-switch-to zen zen-browser -P DefaultAlpha
 	# vivaldi-stable --profile-directory="Default"
-	#open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
+#open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
 	# open-or-switch-to brave-browser brave 
 
+# Code
+super + s
+	open-or-switch-to Code code-project
+
+# Browser 2
+super + d
+	open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory=VIT
+
+# Obsidian
+super + f
+	open-or-switch-to obsidian obsidian
+
 # File Browser
-super + x
-	alacritty --title=Ranger -e ranger
-	# alacritty --title=Yazi -e yazi ~/.config
-	# open-or-switch-to ranger alacritty --title=Ranger -e ranger ~/.config
+# super + x
+# 	alacritty --title=Ranger -e ranger
 
-# Music Player
-super + z
-	scratchpad-old "spotify" spotify
-	#scratchpad-old "com.github.th_ch.youtube_music" youtube-music
-	#alacritty --class=Floating -e 'mocp'
-
-# Rofi {Applications, Themes, Clipboard}
-# super + {f, t, g}
-# 	~/.config/rofi/launcher.sh {'',theme,clipboard}
 super + Tab
 	rofi -show combi -modes combi -combi-modes "window,drun"
 
@@ -61,12 +63,18 @@ super + r
 	# scratchpad-tiles toggle ~/.config/scratchpad/mainrc
 
 # Floating terminal
-super + w
-	alacritty --class=FloatingSmall -e 'nvim'
+# super + w
+# 	alacritty --class=FloatingSmall -e 'nvim'
 
 # Floating Ranger
-super + d
+super + w
 	scratchpad-old FloatingSide "alacritty --class=FloatingSide"
+
+super + x
+	scratchpad-old FloatingMedium "alacritty --class=FloatingMedium -e ranger"
+
+super + v
+	bspc node focused.\!sticky --flag sticky=on || bspc node focused.sticky --flag sticky=off
 
 # Scratchpad Phone
 # super + a
@@ -168,8 +176,9 @@ super + alt + space
 ## Extras ##
 ############
 
-XF86Audio{Play,Pause,Prev,Next}
-	playerctl {play-pause,play-pause,previous,next}
+# Inteferes with avrcp on bluetooth devices (in ear detection)
+# XF86Audio{Play,Pause,Prev,Next}
+# 	playerctl {play-pause,play-pause,previous,next}
 
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
 	sound {increase,decrease}
@@ -208,5 +217,8 @@ super + shift + a
 # 	curl "http://localhost:5000/seed" -d seed=rsg
 # 	#curl "http://localhost:5000/fsg"
 
+# ctrl + shift + 2
+# 	sleep 1; xdotool type --delay 10 "$(xclip -o -selection clipboard | sed 's/^[ \t]*//')"
+
 ctrl + shift + 2
-	sleep 1; xdotool type --delay 10 "$(xclip -o -selection clipboard | sed 's/^[ \t]*//')"
+	sleep 1; xdotool type --delay 10 "$(xclip -o -selection clipboard)"
