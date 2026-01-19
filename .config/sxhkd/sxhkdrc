@@ -22,7 +22,8 @@ super + c
 
 # Web Browser
 super + a
-	open-or-switch-to zen zen-browser -P DefaultAlpha
+	open-or-switch-to Brave-browser brave --password-store=basic --force-device-scale-factor=1.3 
+	# open-or-switch-to zen zen-browser -P Default
 	# vivaldi-stable --profile-directory="Default"
 #open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
 	# open-or-switch-to brave-browser brave 
@@ -33,7 +34,7 @@ super + s
 
 # Browser 2
 super + d
-	open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory=VIT
+	vivaldi-stable --profile=Default
 
 # Obsidian
 super + f
@@ -187,13 +188,19 @@ super + alt + space
 	sound mic
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
-	xbacklight -{inc,dec} 5 && dunstify -t 500 -u low -r "92813" -h int:value:`xbacklight -get` "Brightness"
+	brightnessctl -d amdgpu_bl1 s {+10%,10%-} && dunstify -t 500 -u low -r "92813" -h int:value:$(echo $[`brightnessctl -d amdgpu_bl1 g` * 100 / `cat /sys/class/backlight/amdgpu_bl1/max_brightness`]) "Brightness"
+
+XF86KbdBrightness{Up,Down}
+	asusctl leds {next,prev} > /dev/null
 
 {super + p, XF86Display}
 	echo "Dual\nSingle Main\nSingle Secondary\nMirror" | rofi -dmenu -theme ~/.config/rofi/launcher.rasi | tr '[:upper:]' '[:lower:]' | sed 's/ /_/g' > ~/.screenlayout/current && bspc wm -r
 	# desk
 
 Print
+	shot
+
+XF86Launch1
 	shot
 
 shift + Print
