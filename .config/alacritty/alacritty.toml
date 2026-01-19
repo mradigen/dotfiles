@@ -16,8 +16,9 @@ size = 9
 family = "Iosevka NF"
 
 [window]
-opacity = 1
-# opacity = 0.6
+# opacity = 1
+opacity = 0.6
+dynamic_padding = true
 
 [window.padding]
 x = 10

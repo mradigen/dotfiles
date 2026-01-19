@@ -12,6 +12,7 @@
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.activityBar.location": "top",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
   // "workbench.editor.showTabs": "single",
 
   "workbench.colorCustomizations": {
@@ -51,20 +52,21 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "inlineChat.lineNaturalLanguageHint": false,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": false,
-    "scminput": false
+    "scminput": false,
+    "python": true
   },
   "git.confirmSync": false,
   "[python]": {
     "diffEditor.ignoreTrimWhitespace": false
   },
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "workbench.editor.empty.hint": "hidden",
   "window.customTitleBarVisibility": "never",
   "vscode-pets.petSize": "medium",
   "vscode-pets.throwBallWithMouse": true,
   "terminal.integrated.suggest.enabled": false,
-  "workbench.statusBar.visible": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
 }

@@ -10,7 +10,9 @@ HISTFILE="$HOME/.cache/zsh/zsh_history"
 COMPLETION_WAITING_DOTS="true" # Display red dots whilst waiting for completion.
 
 # export ENABLE_CORRECTION="true"
-plugins=(git zsh-autosuggestions)
+#plugins=(git zsh-autosuggestions) # zsh-autosuggestions is installed using pacman to zsh, not in oh-my-zsh directory
+plugins=(git)
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 
 # Override theme: don't print user@machine

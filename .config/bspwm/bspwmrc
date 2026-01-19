@@ -2,27 +2,20 @@
 ###--Close these programs---###
 killall -q sxhkd dunst picom greenclip polybar discord-rpc-status pidswallow touchegg bash kdeconnectd
 
-##---Fix Displays---###
-~/.screenlayout/$(cat ~/.screenlayout/current).sh
-xcalib ~/.config/display_calibration.icm
-
 ###---Fix Cursor---###
 xsetroot -cursor_name left_ptr &
+xset +dpms dpms 60 60 60 &
 
 ###---Theme!---###
 # This needs to be done before the pbstart and cannot be done asynchronesly.
 wal -q -R
 
 ###---Autostart---###
-$(
-	mkfifo /tmp/sfifo
-	sxhkd -s /tmp/sfifo
-) & # For the polybar module to detect whether sxhkd is in chain mode
-#dunst-start & # no need to start dunst, it autostarts anyways
-#picom --experimental-backends -b &
-picom -b # no & cause we want picom to start properly first and then start polybar so shadows work along with ftlabs' animations
+$(mkfifo /tmp/sfifo; sxhkd -s /tmp/sfifo) &
+picom -b
 greenclip daemon &
 kdeconnectd &
+skippy-xd --start-daemon &
 
 ## Polybar ##
 pbstart
@@ -37,21 +30,8 @@ export PIDSWALLOW_VOMIT_COMMAND='bspc node $pwid --flag hidden=off'
 export PIDSWALLOW_PREGLUE_HOOK='bspc query -N -n $pwid.floating >/dev/null && bspc node $cwid --state floating'
 pgrep -fl 'pidswallow -V -gl' || pidswallow -V -gl & # Terminal swallowing
 
-###---Discord RPC---###
-# LD_LIBRARY_PATH=~/Documents/DiscordRPC/lib exec ~/Documents/DiscordRPC/discord-rpc-status &
-
 ###---BSPWM---###
-# current_layout=`cat ~/.screenlayout/current`
-# if [[ current_layout  == 'dual' || current_layout == 'single_secondary' ]]; then
-# 	# Second monitor
-# 	bspc monitor HDMI-A-0 -d 1 2 3 4 5 # Second display
-# 	bspc monitor eDP -d 6
-# else
-# 	# Display
 bspc monitor primary -d 1 2 3 4 5 6
-# bspc monitor primary -d 6 5 4 3 2 1
-bspc monitor --swap eDP
-# # fi
 
 bspc config border_width 1
 bspc config window_gap 10
@@ -60,19 +40,11 @@ bspc config split_ratio 0.5
 bspc config borderless_monocle false
 bspc config gapless_monocle false
 
-# Master stack layout experiment
-#bspc config automatic_scheme longest_side
-#bspc config initial_polarity second_child
-#bspc config removal_adjustment true
-
 bspc config focus_follows_pointer true
 bspc config pointer_follows_monitor true
 bspc config ignore_ewmh_focus on
 # bspc config ignore_ewmh_struts false
 bspc config swallow_first_click false
-# bspc config remove_disabled_monitors true
-# bspc config remove_unplugged_monitors true
-# bspc config merge_overlapping_monitors true
 
 . "${HOME}/.cache/wal/colors.sh"
 
@@ -104,14 +76,7 @@ bspc rule -a Connman-gtk state=floating
 bspc rule -a iwgtk state=floating
 bspc rule -a xkcd state=floating
 
-# # Scratchpad windows (old, when using scratchpad-global-toggle)
-# bspc rule -a vesktop state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-# bspc rule -a Vivaldi-stable:web.whatsapp.com state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-# bspc rule -a com.github.th_ch.youtube_music state=floating rectangle=${X2}x${Y2}+${X4}+${Y4} sticky=on layer=above
-# bspc rule -a scrcpy rectangle=456x986+1453+82 state=floating sticky=on layer=above
-# # bspc rule -a blur state=floating rectangle=${X}x${Y}+0+0 layer=normal
-
-bspc rule -a zen desktop=1
+bspc rule -a Brave-browser desktop=1
 bspc rule -a Code desktop=2
 bspc rule -a Vivaldi-stable desktop=3
 bspc rule -a obsidian desktop=4
@@ -125,12 +90,6 @@ bspc rule -a discord desktop=6
 
 # Picture in Picture
 bspc rule -a zen:Toolkit:Picture-in-Picture sticky=on state=floating rectangle=212x119+0+961
-
-###---Fix keyboard--###
-xmodmap -e "keycode 112 = Home"
-xmodmap -e "keycode 110 = Prior"
-xmodmap -e "keycode 117 = End"
-xmodmap -e "keycode 115 = Next"
 
 # Open applications
 pgrep zen || $BROWSER &
