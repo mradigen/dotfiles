@@ -2,7 +2,7 @@ export GOPATH="$HOME/.cache/go"
 export PATH="$HOME/.local/bin:$GOPATH/bin:$PATH"
 export EDITOR=nvim
 # export EDITOR=edit
-export BROWSER="zen-browser"
+export BROWSER="browser-scale"
 export VISUAL=$EDITOR
 export TERMINAL=alacritty
 export POLYBAR_BAR=float
@@ -11,6 +11,6 @@ export __GL_SHADER_DISK_CACHE_PATH="$HOME/.cache/nv"
 
 export GDK_DPI_SCALE=1.25
 
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-	exec startx
-fi
+# if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+# 	exec startx
+# fi

@@ -1,146 +1,92 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
-@import "~/.cache/wal/colors-rofi.rasi"
-
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "combi,drun,clipboard:greenclip print,run,filebrowser,theme:~/.config/rofi/theme.sh";
-	// Icons in these cause combi mode doesn't take icons from display-<mode>
-	combi-modi:                 "drun, :greenclip print,run,filebrowser,:switch-theme";
-	//combi-modi:                 "drun, :greenclip print,run,filebrowser,:switch-theme";
-    show-icons:					false;
-    display-drun:               " ";
-    display-run:                " ";
-    display-filebrowser:        " ";
-    display-window:             " ";
-	display-clipboard:			" ";
-	display-combi:				" ";
-	display-theme:				" ";
-	drun-display-format:        "{name}";
-	window-format:              "{w} · {c} · {t}";
+    modi:                       "combi,drun,clipboard:greenclip print,run,filebrowser,theme:~/.config/rofi/theme.sh";
+    combi-modi:                 "drun,clipboard,run,filebrowser";
+    show-icons:                 false; 
+    display-drun:               "  Apps";
+    display-run:                "  Run";
+    display-filebrowser:        "  Files";
+    display-window:             "  Window";
+    display-clipboard:          "  Clip";
+    display-combi:              "  Combi";
+    display-theme:              "  Theme";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+    
+    /* Enable hover for mouse interaction */
+    hover-select:               true;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
 }
 
 /*****----- Global Properties -----*****/
+@import "~/.cache/wal/colors-rofi.rasi"
+
 * {
-    //font:                        "JetBrains Mono Nerd Font 10";
-	font:						 "Iosevka NF 12";
-    background:                  @color0;
-    background-alt:              @color5;
-    foreground:                  @color7;
-    foreground-selected:         @background;
-    selected:                    @color3;
-    active:                      @color3;
-    urgent:                      #2FC6D8;
-	radius:						 6px;
+    font:                        "Iosevka NF 12";
+    
+    /* Map Pywal colors to semantic names for easier tweaking */
+    background-col:              @background;
+    border-col:                  @color4;  /* Using Blue/Cyan for border to match your accents */
+    selected-col:                @color2;  /* Green/Secondary for selection */
+    fg-col:                      @foreground;
+    fg-col2:                     @background;
+    grey:                        @color8;
+    
+    /* Dimensions */
+    width:                       800;
+    border-radius:               0px; /* Sharp corners match the tiling vibe better than 6px */
 }
 
 /*****----- Main Window -----*****/
 window {
-    /* properties for window widget */
-    transparency:                "real";
-    fullscreen:                  true;
-    //location:                    west;
-    //anchor:                      west;
-    //width:                       800px;
-	//height:						 100%;
-    x-offset:                    0px;
-    y-offset:                    0px;
-
-    /* properties for all widgets */
-    enabled:                     true;
-    border-radius:               @radius;
-    cursor:                      "default";
-    background-color:            @background;
+    height:                      450px;
+    width:                       600px;
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    
+    border:                      2px; /* Thin border like your terminal windows */
+    border-color:                @border-col;
+    
+    background-color:            @background-col;
+    spacing:                     0;
+    children:                    [ "inputbar", "listview", "message" ];
 }
 
-/*****----- Main Box -----*****/
-mainbox {
-    enabled:                     true;
-    spacing:                     0px;
-    background-color:            transparent;
-    orientation:                 vertical;
-    children:                    [ "inputbar", "listbox" ];
-}
-
-listbox {
-    spacing:                     20px;
-    padding:                     20px;
-    background-color:            transparent;
-    orientation:                 vertical;
-    children:                    [ "message", "listview" ];
-}
-
-/*****----- Inputbar -----*****/
+/*****----- Input Bar (Top Area) -----*****/
 inputbar {
-    enabled:                     true;
-    spacing:                     10px;
-    //padding:                     100px 60px;
-    padding:                     60px;
-    background-color:            transparent;
-    //background-image:            @wallpaper;
-    background-color:            black;
-    text-color:                  @background;
-    orientation:                 horizontal;
-    children:                    [ "textbox-prompt-colon", "entry", "dummy", "mode-switcher" ];
+    background-color:            @background-col;
+    text-color:                  @fg-col;
+    children:                    [ "prompt", "entry" ];
+    spacing:                     0px;
+    padding:                     10px;
+    border:                      0px 0px 1px 0px;
+    border-color:                @grey;
 }
-textbox-prompt-colon {
-    enabled:                     true;
-    expand:                      false;
-    str:                         "";
-    padding:                     12px 15px;
-    border-radius:               @radius;
-    background-color:            @background-alt;
-    text-color:                  inherit;
+
+prompt {
+    background-color:            @border-col;
+    text-color:                  @background-col;
+    padding:                     5px 10px;
+    border-radius:               2px;
+    margin:                      0px 10px 0px 0px;
 }
+
 entry {
-    enabled:                     true;
-    expand:                      false;
-    width:                       250px;
-    padding:                     12px 16px;
-    border-radius:               @radius;
-    background-color:            @background-alt;
-    text-color:                  inherit;
-    cursor:                      text;
-    placeholder:                 "Search";
-    placeholder-color:           inherit;
-}
-dummy {
-    expand:                      true;
     background-color:            transparent;
+    text-color:                  @fg-col;
+    placeholder:                 "Search...";
+    placeholder-color:           @grey;
+    vertical-align:              0.5;
 }
 
-/*****----- Mode Switcher -----*****/
-mode-switcher{
-    enabled:                     true;
-    spacing:                     10px;
-    background-color:            transparent;
-    text-color:                  @foreground;
-}
-button {
-    width:                       45px;
-    padding:                     12px;
-    border-radius:               @radius;
-    background-color:            @background-alt;
-    text-color:                  @foreground-selected;
-    cursor:                      pointer;
-}
-button selected {
-    background-color:            @selected;
-    text-color:                  @background;
-}
-
-/*****----- Listview -----*****/
+/*****----- List View (Results) -----*****/
 listview {
-    enabled:                     true;
-    columns:                     3;
+    background-color:            transparent;
+    columns:                     1;
     lines:                       8;
+    spacing:                     5px;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -149,75 +95,63 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     10px;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    cursor:                      "default";
+    border:                      0px;
+    padding:                     10px;
 }
 
-/*****----- Elements -----*****/
+/*****----- Elements (Rows) -----*****/
 element {
-    enabled:                     true;
-    spacing:                     10px;
-    padding:                     12px;
-    border-radius:               @radius;
     background-color:            transparent;
-    text-color:                  @foreground;
-    cursor:                      pointer;
+    text-color:                  @fg-col;
+    orientation:                 horizontal;
+    border-radius:               2px;
+    padding:                     6px;
 }
-element normal.normal {
-    background-color:            inherit;
-    text-color:                  inherit;
-}
-element normal.urgent {
-    background-color:            @urgent;
-    text-color:                  @foreground;
-}
-element normal.active {
-    background-color:            @active;
-    text-color:                  @foreground;
-}
-element selected.normal {
-    background-color:            @selected;
-    text-color:                  @foreground-selected;
-}
-element selected.urgent {
-    background-color:            @urgent;
-    text-color:                  @foreground;
-}
-element selected.active {
-    background-color:            @urgent;
-    text-color:                  @foreground;
-}
+
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        32px;
+    size:                        24px;
     cursor:                      inherit;
 }
+
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
+    highlight:                   inherit;
     cursor:                      inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
 
-/*****----- Message -----*****/
-message {
-    background-color:            transparent;
+/*****----- Selection State -----*****/
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  @fg-col;
 }
+
+element selected.normal {
+    background-color:            @selected-col; /* Highlights the row with Pywal accent */
+    text-color:                  @background-col; /* Text becomes dark for contrast */
+    border:                      0px;
+}
+
+element alternate.normal {
+    background-color:            inherit;
+    text-color:                  @fg-col;
+}
+
+/*****----- Message (Error/Mode switch info) -----*****/
+message {
+    background-color:            @background-col;
+    padding:                     10px;
+    border:                      1px solid 0px 0px;
+    border-color:                @border-col;
+}
+
 textbox {
-    padding:                     12px;
-    border-radius:               @radius;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    background-color:            transparent;
+    text-color:                  @fg-col;
     vertical-align:              0.5;
     horizontal-align:            0.0;
-}
-error-message {
-    padding:                     12px;
-    border-radius:               @radius;
-    background-color:            @background;
-    text-color:                  @foreground;
 }

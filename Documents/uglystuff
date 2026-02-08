@@ -25,3 +25,14 @@ For Samsung Prism: visqol, miniconda3 (uninstalled)
 Packages (10) ninja-1.13.2-2  python-iniconfig-2.1.0-3  python-packaging-25.0-4  python-pluggy-1.6.0-3
               python-pygments-2.19.2-3  python-tqdm-4.67.1-5  check-0.15.2-3  meson-1.10.0-4
               python-pytest-1:8.4.2-3  wayland-protocols-1.47-1
+
+
+niri waybar swayidle swaylock matugen hyprpicker xwayland-satellite cliphist swaybg
+
+install aubio for niri-caelestia-git
+
+dms
+
+greetd-dms
+
+mako
