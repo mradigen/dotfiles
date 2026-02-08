@@ -71,6 +71,7 @@ alias d="docker"
 alias dc="docker compose"
 alias cd="z"
 alias zj="zellij"
+alias s="sudo systemctl"
 
 # Pacman
 alias update="yay -Syu --removemake --noconfirm"
@@ -99,6 +100,9 @@ alias scripts="/usr/bin/git --git-dir=$HOME/.local/bin/.git --work-tree=$HOME/.l
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dots="dotfiles"
 alias tt="tt -notheme -t 10"
+
+alias niconf="${EDITOR} ~/.config/niri/config.kdl"
+
 # Shifted updots to a dedicated script
 
 # Cybersec
@@ -188,10 +192,11 @@ displayprompt() {
 ## Autostart ##
 ###############
 
+# shifted to .profile
 # startx if we are on tty1
-if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-    startx
-fi
+# if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
+#     startx
+# fi
 
 ##################
 ## Key bindings ##

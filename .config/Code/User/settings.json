@@ -42,7 +42,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
 
   "terminal.integrated.fontFamily": "Iosevka",
- 
+
   "breadcrumbs.enabled": false,
   "breadcrumbs.filePath": "last",
   "window.titleBarStyle": "native",
@@ -56,11 +56,11 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false,
-    "python": true
+    "python": true,
   },
   "git.confirmSync": false,
   "[python]": {
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
   },
   "window.zoomLevel": 2,
   "workbench.editor.empty.hint": "hidden",
@@ -69,4 +69,11 @@
   "vscode-pets.throwBallWithMouse": true,
   "terminal.integrated.suggest.enabled": false,
   "github.copilot.nextEditSuggestions.enabled": true,
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //   "editor.formatOnSave": true
+  // },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "workbench.statusBar.visible": false,
 }

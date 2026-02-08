@@ -22,7 +22,8 @@ super + c
 
 # Web Browser
 super + a
-	open-or-switch-to Brave-browser brave --password-store=basic --force-device-scale-factor=1.3 
+	open-or-switch-to Microsoft-edge browser-scale
+	# browser-scale
 	# open-or-switch-to zen zen-browser -P Default
 	# vivaldi-stable --profile-directory="Default"
 #open-or-switch-to vivaldi-stable vivaldi-stable --profile-directory="Default"
@@ -32,12 +33,14 @@ super + a
 super + s
 	open-or-switch-to Code code-project
 
-# Browser 2
-super + d
-	vivaldi-stable --profile=Default
+# # Browser 2
+# super + d
+# 	open-or-switch-to Microsoft-edge microsoft-edge-stable
+# 	# browser-scale --profile-directory=VIT
+# 	# open-or-switch-to Thorium-browser brave-scale --profile-directory=VIT
 
 # Obsidian
-super + f
+super + d
 	open-or-switch-to obsidian obsidian
 
 # File Browser
@@ -45,10 +48,12 @@ super + f
 # 	alacritty --title=Ranger -e ranger
 
 super + Tab
-	rofi -show combi -modes combi -combi-modes "window,drun"
+	rofi -show drun
+	# rofi -show combi -modes combi -combi-modes "window,drun"
 
 super + {t, g}
-	~/.config/rofi/launcher.sh {theme,clipboard}
+	rofi -show {theme,clipboard}
+	# ~/.config/rofi/launcher.sh {theme,clipboard}
 
 super + shift + w
 	rofi -show window
@@ -158,8 +163,11 @@ super + ctrl + s : {a,s,w,d}
     bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
     bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
-super + {_,shift +}e
-	{bspc desktop -l next, bspc node -t \~fullscreen}
+# super + {_,shift +}e
+# 	{bspc desktop -l next, bspc node -t \~fullscreen}
+
+super + e
+	bspc node -t \~fullscreen
 
 # Hide polybar
 super + shift + f
@@ -172,6 +180,10 @@ super + space
 # Toggle pseudo-tiled
 super + alt + space
 	bspc node focused -t \~pseudo_tiled
+
+# Force tiled
+super + shift + space
+	bspc node focused -t \~tiled
 
 ############
 ## Extras ##
@@ -211,6 +223,9 @@ super + Escape
 
 super + shift + a
 	dunstify -r 48920 "Connecting to ADIGEN"; (iwctl station wlan0 scan on && iwctl station wlan0 connect ADIGEN) && msg="Connected to ADIGEN" || msg="Failed to connect to ADIGEN"; dunstify -r 48920 ${msg}
+
+super + shift + d
+	rofi-bluetooth
 
 # ~ctrl + Page_Down
 # 	mc-rsg-sw

@@ -4,7 +4,7 @@ killall -q sxhkd dunst picom greenclip polybar discord-rpc-status pidswallow tou
 
 ###---Fix Cursor---###
 xsetroot -cursor_name left_ptr &
-xset +dpms dpms 60 60 60 &
+xset +dpms dpms 120 120 120 &
 
 ###---Theme!---###
 # This needs to be done before the pbstart and cannot be done asynchronesly.
@@ -78,20 +78,22 @@ bspc rule -a xkcd state=floating
 
 bspc rule -a Brave-browser desktop=1
 bspc rule -a Code desktop=2
-bspc rule -a Vivaldi-stable desktop=3
-bspc rule -a obsidian desktop=4
+# bspc rule -a Vivaldi-stable desktop=3
+bspc rule -a obsidian desktop=3
 
 # NEW Scratchpad windows (scratchpad-workspace)
 bspc rule -a vesktop desktop=6 
-bspc rule -a Vivaldi-stable:web.whatsapp.com desktop=6
+bspc rule -a Throium-browser:web.whatsapp.com desktop=6
 bspc rule -a com.github.th_ch.youtube_music desktop=6
 bspc rule -a Spotify desktop=6
 bspc rule -a discord desktop=6
+bspc rule -a Polybar layer=above
 
 # Picture in Picture
 bspc rule -a zen:Toolkit:Picture-in-Picture sticky=on state=floating rectangle=212x119+0+961
 
 # Open applications
-pgrep zen || $BROWSER &
-pgrep vivaldi || vivaldi-stable --app="https://web.whatsapp.com" &
-pgrep spotify || spotify &
+# pgrep thorium || $BROWSER &
+# pgrep thorium || thorium-browser --profile-directory=VIT --app="https://web.whatsapp.com" &
+#pgrep spotify || spotify &
+pgrep -f microsoft-edge-stable || $BROWSER &

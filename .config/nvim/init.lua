@@ -12,6 +12,8 @@ vim.opt.signcolumn = "yes"    -- Keep sign column open to prevent shifting
 vim.opt.tabstop = 4           -- 2 spaces for tabs
 vim.opt.shiftwidth = 4        -- 2 spaces for indentation
 vim.opt.expandtab = false      -- Use spaces instead of tabs
+vim.opt.swapfile = false
+vim.opt.autoread = true
 
 
 -- 2. PLUGIN MANAGER (LAZY.NVIM)
