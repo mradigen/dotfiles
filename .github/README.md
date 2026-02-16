@@ -1,4 +1,4 @@
-# This is the old archived dotfiles on bspwm, it has a lot of files (themes, and fonts) stripped from history to save file space when cloning
+# This is the old archived dotfiles on bspwm, it has a lot of files (themes, and fonts) stripped from history to save file space when cloning, find the latest dotfiles on the `main` branch
 
 <div align="center">
 
