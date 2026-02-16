@@ -1,0 +1,189 @@
+include "dms/colors.kdl"
+include "dms/wpblur.kdl"
+include "dms/outputs.kdl"
+// output "eDP-1" {
+//     mode "2560x1600@240.000"
+//     scale 1.0
+// }
+
+//////////
+// MISC //
+//////////
+
+hotkey-overlay { skip-at-startup; }
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+cursor { xcursor-theme "Sweet-cursors"; xcursor-size 32; }
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+        }
+    }
+    touchpad {
+        tap
+        natural-scroll
+		scroll-factor 1.0
+    }
+    focus-follows-mouse
+	workspace-auto-back-and-forth
+	// warp-mouse-to-focus
+}
+
+////////////
+// LAYOUT //
+////////////
+
+layout {
+    gaps 15
+    center-focused-column "never"
+	always-center-single-column
+
+    preset-column-widths {
+        proportion 0.5
+		proportion 0.9
+        proportion 1.0
+    }
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 1
+    }
+
+    shadow {
+        on
+        // softness 12
+        // spread 0
+        softness 30
+        spread 5
+        offset x=0 y=5
+        draw-behind-window true
+        color "#00000070"
+    }
+}
+
+///////////
+// RULES //
+///////////
+
+workspace "social" 
+
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="^FloatingMedium$"
+    open-floating true
+	default-column-width { fixed 1600; }
+	default-window-height { fixed 1000; }
+}
+
+window-rule { match app-id="org.twosheds.iwgtk|org.quickshell"; open-floating true; }
+
+window-rule { match app-id="microsoft-edge|spotify|discord|msedge-web.whatsapp.com__-Default|obsidian"; scroll-factor 0.5; default-column-width { proportion 0.9; }; }
+
+window-rule { match app-id="spotify|discord|msedge-web.whatsapp.com__-Default"; open-on-workspace "social"; }
+
+//////////////
+// KEYBINDS //
+//////////////
+
+binds {
+
+    Mod+Q { close-window; }
+    Mod+W { spawn "dms" "ipc" "call" "bar" "toggleAutoHide" "index" "0"; }
+    Mod+E { fullscreen-window; }
+    Mod+R { switch-preset-column-width; }
+
+    Mod+A { spawn "open-or-switch-to-niri" "microsoft-edge" "browser-scale"; }
+    Mod+S { spawn "open-or-switch-to-niri" "code" "code-project"; }
+    Mod+D { spawn "open-or-switch-to-niri" "obsidian" "obsidian"; }
+	Mod+F { focus-workspace "social"; }
+
+    Mod+C { spawn "alacritty"; }
+    // Mod+X { spawn "alacritty" "--class" "FloatingMedium" "-e" "ranger"; }
+    Mod+X { spawn "alacritty" "-e" "ranger"; }
+    Mod+V { spawn "dms" "ipc" "clipboard" "toggle"; }
+    Mod+B { spawn "dms" "ipc" "lock" "lock"; }
+
+    
+    Mod+N { spawn "hyprpicker" "-a"; } 
+    Mod+M { spawn "alacritty" "--class" "FloatingMedium" "-e" "alsamixer"; }
+
+    // Mod+Tab { spawn "rofi" "-show" "drun"; }
+    Mod+Tab { spawn "dms" "ipc" "spotlight" "toggle"; }
+    // Mod+Shift+W { spawn "rofi" "-show" "window"; }
+
+    Mod+Space { toggle-window-floating; }
+
+    Mod+Shift+X { spawn "dms" "ipc" "powermenu" "toggle"; }
+
+    Mod+H { focus-column-left; }
+    Mod+L { focus-column-right; }
+    Mod+J { focus-workspace-down; }
+    Mod+K { focus-workspace-up; }
+
+    Mod+Shift+H { move-column-left; }
+    Mod+Shift+L { move-column-right; }
+    Mod+Shift+J { move-window-down; }
+    Mod+Shift+K { move-window-up; }
+    
+    Mod+Ctrl+H { set-column-width "-10%"; }
+    Mod+Ctrl+L { set-column-width "+10%"; }
+
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+
+    Mod+Shift+1 { move-window-to-workspace 1; }
+    Mod+Shift+2 { move-window-to-workspace 2; }
+    Mod+Shift+3 { move-window-to-workspace 3; }
+    Mod+Shift+6 { move-window-to-workspace 6; }
+
+    XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
+    XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
+    XF86AudioMute        { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute     { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    XF86MonBrightnessUp   { spawn "brightness" "+2%"; }
+    XF86MonBrightnessDown { spawn "brightness" "2%-"; }
+
+	XF86KbdBrightnessUp { spawn "asusctl" "leds" "next"; }
+	XF86KbdBrightnessDown { spawn "asusctl" "leds" "prev"; }
+
+	XF86Launch1 { screenshot; }
+	Shift+XF86Launch1 { screenshot-window; }
+
+	
+    Mod+TouchpadScrollDown { spawn "brightness" "+2%"; }
+    Mod+TouchpadScrollUp   { spawn "brightness" "2%-"; }
+
+	Mod+Period { spawn "dms" "ipc" "settings" "focusOrToggle"; }
+
+    // Mod+MouseLeft    { fullscreen-window; }
+}
+
+
+/////////////
+// STARTUP //
+/////////////
+
+// spawn-at-startup "systemctl" "start" "--user" "dms.service"
+
+spawn-at-startup "swayidle" "-w" "timeout" "60" "'niri msg action power-off-monitors'" "resume" "'niri msg action power-on-monitors'"
+
+spawn-at-startup "spotify"
+spawn-at-startup "discord"
+spawn-at-startup "~/.config/niri/wait-for-notify.sh" "browser-scale" "--app='https://web.whatsapp.com'"
+
+spawn-at-startup "niri" "msg" "action" "focus-workspace-down"

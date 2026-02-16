@@ -1,0 +1,27 @@
+[colors.primary]
+background = "{{colors.surface.default.hex}}"
+foreground = "{{colors.on_surface.default.hex}}"
+
+[colors.cursor]
+text = "{{colors.on_surface.default.hex}}"
+cursor = "{{colors.on_surface.default.hex}}"
+
+[colors.normal]
+black   = "{{colors.surface.default.hex}}"
+red     = "{{colors.inverse_primary.default.hex}}"
+green   = "{{colors.secondary_fixed.default.hex}}"
+yellow  = "{{colors.inverse_primary.default.hex}}"
+blue    = "{{colors.primary.default.hex}}"
+magenta = "{{colors.secondary.default.hex}}"
+cyan    = "{{colors.surface_tint.default.hex}}"
+white   = "{{colors.on_surface.default.hex}}"
+
+[colors.bright]
+black   = "{{colors.surface.default.hex}}"
+red     = "{{colors.inverse_primary.default.hex}}"
+green   = "{{colors.secondary_fixed.default.hex}}"
+yellow  = "{{colors.inverse_primary.default.hex}}"
+blue    = "{{colors.primary.default.hex}}"
+magenta = "{{colors.secondary.default.hex}}"
+cyan    = "{{colors.surface_tint.default.hex}}"
+white   = "{{colors.on_surface.default.hex}}"

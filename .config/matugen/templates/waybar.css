@@ -1,0 +1,30 @@
+/* Matugen Waybar Colors */
+
+@define-color background {{colors.background.default.hex}};
+@define-color foreground {{colors.on_background.default.hex}};
+@define-color on_background {{colors.on_background.default.hex}};
+@define-color surface {{colors.surface.default.hex}};
+@define-color on_surface {{colors.on_surface.default.hex}};
+
+@define-color primary {{colors.primary.default.hex}};
+@define-color on_primary {{colors.on_primary.default.hex}};
+
+@define-color secondary {{colors.secondary.default.hex}};
+@define-color on_secondary {{colors.on_secondary.default.hex}};
+
+@define-color tertiary {{colors.tertiary.default.hex}};
+@define-color on_tertiary {{colors.on_tertiary.default.hex}};
+
+@define-color error {{colors.error.default.hex}};
+@define-color on_error {{colors.on_error.default.hex}};
+
+/* Custom mappings to match previous pywal generic names if needed */
+@define-color color0 {{colors.surface.default.hex}};
+@define-color color1 {{colors.error.default.hex}};
+@define-color color2 {{colors.primary.default.hex}};
+@define-color color3 {{colors.secondary.default.hex}};
+@define-color color4 {{colors.tertiary.default.hex}};
+@define-color color5 {{colors.primary_container.default.hex}};
+@define-color color6 {{colors.secondary_container.default.hex}};
+@define-color color7 {{colors.on_surface.default.hex}};
+@define-color color8 {{colors.outline.default.hex}};

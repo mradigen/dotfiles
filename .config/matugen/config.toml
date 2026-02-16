@@ -1,0 +1,32 @@
+[config]
+reload_on_change = true
+
+#### USING DANK SHELL ITSELF
+# 1. Configure Swaybg as the wallpaper tool
+# [config.wallpaper]
+# command = "/home/adigen/.config/matugen/set-wallpaper.sh"
+# arguments = []
+#
+# # 2. Define Templates
+# [templates.niri]
+# input_path = "~/.config/matugen/templates/niri.kdl"
+# output_path = "~/.config/niri/colors.kdl"
+# # Niri hot-reloads automatically when config changes.
+#
+# [templates.waybar]
+# input_path = "~/.config/matugen/templates/waybar.css"
+# output_path = "~/.config/waybar/colors.css"
+# post_hook = "pkill -SIGUSR2 waybar"
+# 
+# [templates.alacritty]
+# input_path = "~/.config/matugen/templates/alacritty.toml"
+# output_path = "~/.config/alacritty/colors.toml"
+#
+# [templates.rofi]
+# input_path = "~/.config/matugen/templates/rofi.rasi"
+# output_path = "~/.config/rofi/colors.rasi"
+
+[templates.asus_aura]
+input_path = "~/.config/matugen/templates/asus-aura.sh"
+output_path = "~/.config/matugen/scripts/asus-aura.sh"
+post_hook = "chmod +x ~/.config/matugen/scripts/asus-aura.sh && ~/.config/matugen/scripts/asus-aura.sh"
