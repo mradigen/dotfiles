@@ -1,6 +1,7 @@
 include "dms/colors.kdl"
 include "dms/wpblur.kdl"
 include "dms/outputs.kdl"
+include "dms/cursor.kdl"
 // output "eDP-1" {
 //     mode "2560x1600@240.000"
 //     scale 1.0
@@ -14,7 +15,7 @@ hotkey-overlay { skip-at-startup; }
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-cursor { xcursor-theme "Sweet-cursors"; xcursor-size 32; }
+// cursor { xcursor-theme "Sweet-cursors"; xcursor-size 32; }
 
 input {
     keyboard {
@@ -104,15 +105,15 @@ binds {
     Mod+D { spawn "open-or-switch-to-niri" "obsidian" "obsidian"; }
 	Mod+F { focus-workspace "social"; }
 
-    Mod+C { spawn "alacritty"; }
+    Mod+C { spawn "kitty"; }
     // Mod+X { spawn "alacritty" "--class" "FloatingMedium" "-e" "ranger"; }
-    Mod+X { spawn "alacritty" "-e" "ranger"; }
+    Mod+X { spawn "kitty" "ranger"; }
     Mod+V { spawn "dms" "ipc" "clipboard" "toggle"; }
     Mod+B { spawn "dms" "ipc" "lock" "lock"; }
 
     
     Mod+N { spawn "hyprpicker" "-a"; } 
-    Mod+M { spawn "alacritty" "--class" "FloatingMedium" "-e" "alsamixer"; }
+    Mod+M { spawn "kitty" "--class" "FloatingMedium" "alsamixer"; }
 
     // Mod+Tab { spawn "rofi" "-show" "drun"; }
     Mod+Tab { spawn "dms" "ipc" "spotlight" "toggle"; }
@@ -129,8 +130,8 @@ binds {
 
     Mod+Shift+H { move-column-left; }
     Mod+Shift+L { move-column-right; }
-    Mod+Shift+J { move-window-down; }
-    Mod+Shift+K { move-window-up; }
+    Mod+Shift+J { move-window-to-workspace-down; }
+    Mod+Shift+K { move-window-to-workspace-up; }
     
     Mod+Ctrl+H { set-column-width "-10%"; }
     Mod+Ctrl+L { set-column-width "+10%"; }

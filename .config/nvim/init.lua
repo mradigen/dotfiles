@@ -114,19 +114,18 @@ map('n', '<M-S-Up>', '<C-Up>', { remap = true, desc = 'Select Cursor Up' })
 
 map('n', '<C-s>', ':w<CR>', { remap = true, desc = 'Save' })
 
--- Alacritty --
+-- Kitty --
 
 -- Create a group to prevent duplicating autocommands on reload
-local alacritty_group = vim.api.nvim_create_augroup('AlacrittyPadding', { clear = true })
+local kitty_group = vim.api.nvim_create_augroup('KittyPadding', { clear = true })
 
 -- 1. Remove padding on startup (Async)
 vim.api.nvim_create_autocmd('VimEnter', {
-    group = alacritty_group,
+    group = kitty_group,
     callback = function()
         -- Use jobstart for async execution
-        -- Syntax: alacritty msg config window.padding.x=0 window.padding.y=0
         vim.fn.jobstart(
-            { 'alacritty', 'msg', 'config', 'window.padding.x=0', 'window.padding.y=0' },
+            { 'kitty', '@', 'set-spacing', 'padding=0' },
             { detach = true }
         )
     end,
@@ -134,11 +133,10 @@ vim.api.nvim_create_autocmd('VimEnter', {
 
 -- 2. Reset config on exit (Async)
 vim.api.nvim_create_autocmd('VimLeavePre', {
-    group = alacritty_group,
+    group = kitty_group,
     callback = function()
-        -- Syntax: alacritty msg config -r
         vim.fn.jobstart(
-            { 'alacritty', 'msg', 'config', '-r' },
+            { 'kitty', '@', 'set-spacing', 'padding=default' },
             { detach = true }
         )
     end,

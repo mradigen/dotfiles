@@ -1,19 +1,38 @@
 {
-  "npm.packageManager": "pnpm",
-  "svelte.enable-ts-plugin": true,
-  "chat.editing.alwaysSaveWithGeneratedChanges": true,
-  "redhat.telemetry.enabled": false,
-  "ansible.validation.lint.path": "",
-  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
-  "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false,
-
+  // --- Appearance & UI ---
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.activityBar.location": "top",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.editor.empty.hint": "hidden",
   // "workbench.editor.showTabs": "single",
+
+  "window.titleBarStyle": "native",
+  "window.menuBarVisibility": "toggle",
+  "window.customTitleBarVisibility": "never",
+  "window.zoomLevel": 2,
+
+  "breadcrumbs.enabled": false,
+  "breadcrumbs.filePath": "last",
+
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  // --- Editor Styling & Behavior ---
+  "editor.fontSize": 15,
+  "editor.fontFamily": "Iosevka Nerd Font Spaced",
+  "debug.console.fontFamily": "Iosevka Nerd Font Spaced",
+  // "editor.fontFamily": "Iosevka Nerd Font",
+  // "editor.letterSpacing": 1.2,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.5,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.minimap.enabled": false,
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
 
   "workbench.colorCustomizations": {
     "editorCursor.background": "#000000",
@@ -32,25 +51,12 @@
     "editorOverviewRuler.border": "#0000",
   },
 
-  "editor.minimap.enabled": false,
-  // "editor.fontFamily": "Dank Mono",
-  "editor.fontFamily": "Iosevka Nerd Font",
-  "editor.fontSize": 15,
-  "editor.fontLigatures": true,
-  "editor.letterSpacing": 1.2,
-  "editor.lineHeight": 1.5,
-  "editor.cursorSmoothCaretAnimation": "on",
-
+  // --- Terminal ---
   "terminal.integrated.fontFamily": "Iosevka",
-
-  "breadcrumbs.enabled": false,
-  "breadcrumbs.filePath": "last",
-  "window.titleBarStyle": "native",
-  "window.menuBarVisibility": "toggle",
-
-  "git.autofetch": true,
   "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "inlineChat.lineNaturalLanguageHint": false,
+  "terminal.integrated.suggest.enabled": false,
+
+  // --- AI & Copilot ---
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
@@ -58,22 +64,31 @@
     "scminput": false,
     "python": true,
   },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  // "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  // "inlineChat.lineNaturalLanguageHint": false,
+
+  // --- Source Control (Git) ---
+  "git.autofetch": true,
   "git.confirmSync": false,
+
+  // --- Languages & Tooling ---
+  "npm.packageManager": "pnpm",
+  "svelte.enable-ts-plugin": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "oxc.typeAware": true,
+  "oxc.enable.oxfmt": true,
+  "oxc.enable.oxlint": true,
+
   "[python]": {
     "diffEditor.ignoreTrimWhitespace": false,
   },
-  "window.zoomLevel": 2,
-  "workbench.editor.empty.hint": "hidden",
-  "window.customTitleBarVisibility": "never",
-  "vscode-pets.petSize": "medium",
-  "vscode-pets.throwBallWithMouse": true,
-  "terminal.integrated.suggest.enabled": false,
-  "github.copilot.nextEditSuggestions.enabled": true,
+  "debug.breakpointsView.presentation": "tree",
+  "chat.viewSessions.orientation": "stacked",
+  "workbench.statusBar.visible": false,
   // "[typescript]": {
   //   "editor.defaultFormatter": "esbenp.prettier-vscode",
   //   "editor.formatOnSave": true
   // },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "workbench.statusBar.visible": false,
 }

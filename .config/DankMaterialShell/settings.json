@@ -121,7 +121,7 @@
   "workspaceScrolling": false,
   "showWorkspaceApps": true,
   "workspaceDragReorder": true,
-  "maxWorkspaceIcons": 3,
+  "maxWorkspaceIcons": 10,
   "workspaceAppIconSizeOffset": 10,
   "groupWorkspaceApps": false,
   "workspaceFollowFocus": false,
@@ -312,6 +312,8 @@
   "dockMaxVisibleRunningApps": 0,
   "dockShowOverflowBadge": true,
   "notificationOverlayEnabled": true,
+  "notificationPopupShadowEnabled": true,
+  "notificationPopupPrivacyMode": false,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
   "lockScreenShowSystemIcons": true,
@@ -333,6 +335,8 @@
   "notificationTimeoutCritical": 0,
   "notificationCompactMode": false,
   "notificationPopupPosition": 0,
+  "notificationAnimationSpeed": 1,
+  "notificationCustomAnimationDuration": 400,
   "notificationHistoryEnabled": true,
   "notificationHistoryMaxCount": 50,
   "notificationHistoryMaxAgeDays": 7,
@@ -413,6 +417,10 @@
           "id": "music",
           "enabled": true,
           "mediaSize": 1
+        },
+        {
+          "id": "systemUpdate",
+          "enabled": true
         }
       ],
       "centerWidgets": [
@@ -427,7 +435,7 @@
           "enabled": true
         },
         {
-          "id": "dankActions:variant_1770495728971",
+          "id": "dankKDEConnect",
           "enabled": true
         },
         {
@@ -436,7 +444,7 @@
           "minimumWidth": true
         },
         {
-          "id": "dankKDEConnect",
+          "id": "dankActions:variant_1770495728971",
           "enabled": true
         },
         {
