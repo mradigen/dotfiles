@@ -27,6 +27,8 @@ input {
         tap
         natural-scroll
 		scroll-factor 1.0
+        // accel-speed -0.1
+        // accel-profile "flat"
     }
     focus-follows-mouse
 	workspace-auto-back-and-forth
@@ -99,6 +101,7 @@ binds {
     Mod+W { spawn "dms" "ipc" "call" "bar" "toggleAutoHide" "index" "0"; }
     Mod+E { fullscreen-window; }
     Mod+R { switch-preset-column-width; }
+	Mod+T { spawn "dms" "ipc" "dankdash" "wallpaper"; }
 
     Mod+A { spawn "open-or-switch-to-niri" "microsoft-edge" "browser-scale"; }
     Mod+S { spawn "open-or-switch-to-niri" "code" "code-project"; }
@@ -106,22 +109,19 @@ binds {
 	Mod+F { focus-workspace "social"; }
 
     Mod+C { spawn "kitty"; }
-    // Mod+X { spawn "alacritty" "--class" "FloatingMedium" "-e" "ranger"; }
     Mod+X { spawn "kitty" "ranger"; }
     Mod+V { spawn "dms" "ipc" "clipboard" "toggle"; }
     Mod+B { spawn "dms" "ipc" "lock" "lock"; }
 
     
-    Mod+N { spawn "hyprpicker" "-a"; } 
+    Mod+N { spawn "dms" "ipc" "color-picker" "open"; } 
     Mod+M { spawn "kitty" "--class" "FloatingMedium" "alsamixer"; }
 
-    // Mod+Tab { spawn "rofi" "-show" "drun"; }
     Mod+Tab { spawn "dms" "ipc" "spotlight" "toggle"; }
-    // Mod+Shift+W { spawn "rofi" "-show" "window"; }
 
     Mod+Space { toggle-window-floating; }
 
-    Mod+Shift+X { spawn "dms" "ipc" "powermenu" "toggle"; }
+    Mod+Z { spawn "dms" "ipc" "powermenu" "toggle"; }
 
     Mod+H { focus-column-left; }
     Mod+L { focus-column-right; }
@@ -169,7 +169,18 @@ binds {
     Mod+TouchpadScrollDown { spawn "brightness" "+2%"; }
     Mod+TouchpadScrollUp   { spawn "brightness" "2%-"; }
 
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
+
+    Mod+Shift+WheelScrollDown { move-window-to-workspace-down; }
+    Mod+Shift+WheelScrollUp   { move-window-to-workspace-up; }
+
 	Mod+Period { spawn "dms" "ipc" "settings" "focusOrToggle"; }
+	Mod+Slash { spawn "dms" "ipc" "notepad" "toggle"; }
+
+	Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+	Mod+I { spawn "iwgtk"; }
 
     // Mod+MouseLeft    { fullscreen-window; }
 }
@@ -183,8 +194,10 @@ binds {
 
 spawn-at-startup "swayidle" "-w" "timeout" "60" "'niri msg action power-off-monitors'" "resume" "'niri msg action power-on-monitors'"
 
+spawn-at-startup "dimland" "-a" "0" "-r" "6"
+
 spawn-at-startup "spotify"
 spawn-at-startup "discord"
-spawn-at-startup "~/.config/niri/wait-for-notify.sh" "browser-scale" "--app='https://web.whatsapp.com'"
+spawn-sh-at-startup "~/.config/niri/wait-for-notify.sh browser-scale --app='https://web.whatsapp.com'"
 
 spawn-at-startup "niri" "msg" "action" "focus-workspace-down"

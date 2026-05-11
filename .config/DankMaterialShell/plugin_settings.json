@@ -25,5 +25,20 @@
         "name": "Wattage"
       }
     ]
+  },
+  "dankTodo": {
+    "enabled": false
+  },
+  "dankCalendar": {
+    "enabled": true,
+    "caldavUrl": "https://dav.phy0.in/dav.php",
+    "caldavUsername": "adigen",
+    "caldavPassword": "e@Isv3Jvh58DWq"
+  },
+  "clipboardPlus": {
+    "enabled": true
+  },
+  "unifiedTaskbar": {
+    "enabled": true
   }
 }

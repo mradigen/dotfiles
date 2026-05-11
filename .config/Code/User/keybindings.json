@@ -87,5 +87,27 @@
         "key": "ctrl+shift+d",
         "command": "-workbench.view.debug",
         "when": "viewContainer.workbench.view.debug.enabled"
+    },
+    {
+        "key": "ctrl+shift+,",
+        "command": "workbench.view.extension.claude-sessions-sidebar"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "-workbench.action.chat.open",
+        "when": "!chatSetupDisabled && !chatSetupHidden"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "-workbench.action.toggleAuxiliaryBar"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "-workbench.panel.chat",
+        "when": "workbench.panel.chat.view.copilot.active"
     }
 ]

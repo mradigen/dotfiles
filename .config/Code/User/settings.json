@@ -10,8 +10,7 @@
 
   "window.titleBarStyle": "native",
   "window.menuBarVisibility": "toggle",
-  "window.customTitleBarVisibility": "never",
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1,
 
   "breadcrumbs.enabled": false,
   "breadcrumbs.filePath": "last",
@@ -27,12 +26,16 @@
   // "editor.letterSpacing": 1.2,
   "editor.fontLigatures": true,
   "editor.lineHeight": 1.5,
+  "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
   "editor.minimap.enabled": false,
-  // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
 
   "workbench.colorCustomizations": {
     "editorCursor.background": "#000000",
@@ -49,6 +52,8 @@
     "editorOverviewRuler.errorForeground": "#0000",
     "editorOverviewRuler.infoForeground": "#0000",
     "editorOverviewRuler.border": "#0000",
+    // "diffEditor.insertedTextBackground": "#5689ff57", // A shade of blue for added lines
+    // "diffEditor.removedTextBackground": "#e2676755"  // A shade of red for removed lines
   },
 
   // --- Terminal ---
@@ -86,9 +91,13 @@
   },
   "debug.breakpointsView.presentation": "tree",
   "chat.viewSessions.orientation": "stacked",
+  "chat.agentsControl.enabled": false,
+  "chat.tools.terminal.enableAutoApprove": false,
+  "window.customTitleBarVisibility": "never",
+  "claudeCode.preferredLocation": "panel",
+  "gitTreeCompare.diffMode": "merge",
+  "chat.tips.enabled": false,
+  "diffEditor.renderSideBySide": true,
   "workbench.statusBar.visible": false,
-  // "[typescript]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  //   "editor.formatOnSave": true
-  // },
+  "terminal.integrated.smoothScrolling": true,
 }

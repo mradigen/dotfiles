@@ -11,28 +11,3 @@ Installed portaudio just to use cava
 
 Extra wine packages:
 lib32-libxcomposite lib32-alsa-lib lib32-ncurses lib32-libva lib32-gtk3 lib32-vulkan-icd-loader lib32-gst-plugins-base-libs lib32-libxinerama lib32-libpulse lib32-ocl-icd alsa-plugins lib32-mpg123 lib32-giflib lib32-libjpeg-turbo lib32-libxslt lib32-sqlite lib32-alsa-plugins openal lib32-openal lib32-v4l-utils
-
-
-enabled virtqemud, virtstoraged
-
-installed qemu-system-x86, qmeu-img, virt-manager, qemu-hw-usb-host (uninstalled)
-
-For Samsung Prism: visqol, miniconda3 (uninstalled)
-
-
-
-
-Packages (10) ninja-1.13.2-2  python-iniconfig-2.1.0-3  python-packaging-25.0-4  python-pluggy-1.6.0-3
-              python-pygments-2.19.2-3  python-tqdm-4.67.1-5  check-0.15.2-3  meson-1.10.0-4
-              python-pytest-1:8.4.2-3  wayland-protocols-1.47-1
-
-
-niri waybar swayidle swaylock matugen hyprpicker xwayland-satellite cliphist swaybg
-
-install aubio for niri-caelestia-git
-
-dms
-
-greetd-dms
-
-mako

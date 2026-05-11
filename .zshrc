@@ -63,6 +63,10 @@ alias vpn="sudo openvpn ~/Documents/VPN/cysis.ovpn & disown"
 alias zxc='sudo $(fc -ln -1)'
 alias restart="sudo systemctl restart"
 alias status="systemctl status"
+alias getip="curl icanhazip.com"
+alias getip6= "curl -6 icanhazip.com"
+alias ping1="ping 1.1.1.1"
+alias focus="mpv ~/Music/Work\ Music\ for\ Serious\ Grind\ ｜\ Stay\ Aligned.opus"
 
 # Shorts
 alias r="[ $RANGER_LEVEL ] && exit || ranger"
@@ -95,12 +99,12 @@ alias zshconf="${EDITOR} ~/.zshrc"
 # alias sxconf="${EDITOR} ~/.config/sxhkd/sxhkdrc"
 # alias pbconf="${EDITOR} ~/.config/polybar/config.ini"
 # alias piconf="${EDITOR} ~/.config/picom/picom.conf"
+alias niconf="${EDITOR} ~/.config/niri/config.kdl"
 alias scripts="/usr/bin/git --git-dir=$HOME/.local/bin/.git --work-tree=$HOME/.local/bin"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dots="dotfiles"
 alias tt="tt -notheme -t 10"
 
-alias niconf="${EDITOR} ~/.config/niri/config.kdl"
 
 # Shifted updots to a dedicated script
 
@@ -238,3 +242,4 @@ eval "$(zoxide init zsh)"
 # Starting commands
 # regularupdate 43200
 #source /home/adigen/Testing/inLimbo/assets/completions/inLimbo-completions.zsh
+export _ZO_DOCTOR=0.

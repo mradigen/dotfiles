@@ -1,2 +1,2 @@
 #!/bin/bash
-asusctl aura effect static -c 544c2d
+asusctl aura effect static -c 2b728b
