@@ -98,6 +98,5 @@
   "gitTreeCompare.diffMode": "merge",
   "chat.tips.enabled": false,
   "diffEditor.renderSideBySide": true,
-  "workbench.statusBar.visible": false,
   "terminal.integrated.smoothScrolling": true,
 }
